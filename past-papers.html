@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" data-root="./" data-page="past-papers">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Past Papers — BB AD (ICT) Written Prep</title>
+    <meta
+      name="description"
+      content="Bangladesh Bank AD (ICT) 07/02/2025 and Combined Officer (IT) 04/10/2024 written papers, solved end to end with cross-links to subject pages."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">BB</span>
+          <span class="brand__text">
+            <span class="brand__title">AD (ICT) Written Prep</span>
+            <span class="brand__sub">Bangladesh Bank</span>
+          </span>
+        </a>
+
+        <div class="search">
+          <label class="visually-hidden" for="site-search">Search the site</label>
+          <div class="search__field">
+            <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+              <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            <input
+              id="site-search"
+              class="search__input"
+              type="search"
+              placeholder="Search topics, questions, formulas…"
+              autocomplete="off"
+              role="combobox"
+              aria-expanded="false"
+              aria-controls="search-results"
+              aria-autocomplete="list"
+            />
+            <span class="search__kbd" aria-hidden="true">/</span>
+          </div>
+          <ul class="search__results" id="search-results" role="listbox" aria-label="Search results" data-open="false"></ul>
+        </div>
+
+        <div class="header__spacer"></div>
+
+        <div class="header__progress">
+          <span>Revised <strong data-progress-count>0 / 18</strong></span>
+          <span class="meter" role="presentation">
+            <span class="meter__fill" data-progress-fill data-value="0"></span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <div class="shell shell--wide">
+      <main class="site-main" id="main">
+        <div class="wrap">
+          <div class="page-head">
+            <p class="page-head__eyebrow">
+              <span>Past papers</span>
+              <span aria-hidden="true">·</span>
+              <span>2 papers · solved end to end</span>
+            </p>
+            <h1>Past Papers — Solved</h1>
+            <p class="page-head__lede">
+              Every question recoverable from the supplied solution booklet,
+              presented in exam order with full worked answers. Each question
+              links to the subject page where the same topic is covered in
+              depth.
+            </p>
+            <div class="page-head__meta">
+              <span class="chip chip--solid">BB AD ICT · 07/02/2025</span>
+              <span class="chip chip--solid">Combined Officer IT · 04/10/2024</span>
+            </div>
+          </div>
+
+          <div class="callout callout--trap reveal">
+            <span class="callout__title">About these papers</span>
+            <p class="mb-0">
+              The questions below are those recoverable from the
+              <strong>written solution booklet</strong> (<em>Cloud IT
+              Solution</em>). The raw question PDFs could not be read due to
+              disk-space constraints on the PDF renderer (see
+              <code>BUILD-PLAN.md</code> §3). If the question PDFs become
+              available later, additional questions will be folded in. The
+              method and style of every answer is exactly what the examiner
+              expects — substitute the paper's specific numbers into the same
+              steps.
+            </p>
+          </div>
+
+          <!-- ================================================================
+               PAPER 1: BB AD (ICT) — 07/02/2025
+               ================================================================ -->
+          <section class="section" id="paper-2025" aria-labelledby="paper-2025-h">
+            <div class="section__head">
+              <h2 id="paper-2025-h">Bangladesh Bank AD (ICT) — 07/02/2025</h2>
+              <span class="section__rule"></span>
+            </div>
+
+            <p>
+              The most recent AD (ICT) written paper. The solution booklet
+              covers the questions below; each is solved in full on its subject
+              page and summarised here with a cross-link.
+            </p>
+
+            <div class="qlist">
+
+              <!-- Q1 — Data Structures: Min-heap -->
+              <article class="qa" id="pp25-q1" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">1</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      Convert the following array into a <strong>min-heap</strong>.
+                      Show every step of the construction and draw the resulting heap.
+                      <span class="q-part mono">A = [40, 25, 60, 12, 8, 35, 50, 5]</span>
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Data Structures</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <p>
+                    <strong>Build-heap</strong> works bottom-up: start at the last
+                    non-leaf (index 3 for n = 8) and heapify down through index 0.
+                    Each heapify swaps a node with its smallest child if needed,
+                    then recurses into the child's subtree.
+                  </p>
+                  <ol class="steps">
+                    <li>
+                      <p><strong>Heapify index 3</strong> (node 12). Children: 5. Since
+                      5 &lt; 12, swap → [40, 25, 60, <strong>5</strong>, 8, 35, 50, <strong>12</strong>].</p>
+                    </li>
+                    <li>
+                      <p><strong>Heapify index 2</strong> (node 60). Children: 35, 50. Since
+                      35 &lt; 60, swap → [40, 25, <strong>35</strong>, 5, 8, <strong>60</strong>, 50, 12].</p>
+                    </li>
+                    <li>
+                      <p><strong>Heapify index 1</strong> (node 25). Children: 5, 8. Since
+                      5 &lt; 25, swap → [40, <strong>5</strong>, 35, <strong>25</strong>, 8, 60, 50, 12].
+                      Recurse into index 3 (now 25). Children: 12. Since 12 &lt; 25, swap →
+                      [40, 5, 35, <strong>12</strong>, 8, 60, 50, <strong>25</strong>].</p>
+                    </li>
+                    <li>
+                      <p><strong>Heapify index 0</strong> (node 40). Children: 5, 35. Since
+                      5 &lt; 40, swap → [<strong>5</strong>, <strong>40</strong>, 35, 12, 8, 60, 50, 25].
+                      Recurse into index 1 (now 40). Children: 12, 8. Since 8 &lt; 40, swap →
+                      [5, <strong>8</strong>, 35, 12, <strong>40</strong>, 60, 50, 25].
+                      Recurse into index 4 (now 40). No children violate. Done.</p>
+                    </li>
+                  </ol>
+                  <p><strong>Final min-heap array: [5, 8, 35, 12, 40, 60, 50, 25]</strong></p>
+
+                  <figure class="figure">
+                    <svg role="img" aria-label="Min-heap tree: root 5, children 8 and 35" viewBox="0 0 340 180" style="max-width:340px">
+                      <defs><marker id="pp25-arr" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="var(--ink)" stroke-width="1"/></marker></defs>
+                      <circle cx="170" cy="24" r="16" class="dg-node"/>
+                      <text x="170" y="29" class="dg-label" text-anchor="middle" font-size="12">5</text>
+                      <line x1="158" y1="37" x2="100" y2="60" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="182" y1="37" x2="240" y2="60" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <circle cx="95" cy="72" r="16" class="dg-node"/>
+                      <text x="95" y="77" class="dg-label" text-anchor="middle" font-size="12">8</text>
+                      <circle cx="245" cy="72" r="16" class="dg-node"/>
+                      <text x="245" y="77" class="dg-label" text-anchor="middle" font-size="12">35</text>
+                      <line x1="84" y1="86" x2="52" y2="108" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="106" y1="86" x2="138" y2="108" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="234" y1="86" x2="202" y2="108" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="256" y1="86" x2="288" y2="108" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <circle cx="48" cy="120" r="16" class="dg-node"/>
+                      <text x="48" y="125" class="dg-label" text-anchor="middle" font-size="12">12</text>
+                      <circle cx="142" cy="120" r="16" class="dg-node"/>
+                      <text x="142" y="125" class="dg-label" text-anchor="middle" font-size="12">40</text>
+                      <circle cx="198" cy="120" r="16" class="dg-node"/>
+                      <text x="198" y="125" class="dg-label" text-anchor="middle" font-size="12">60</text>
+                      <circle cx="292" cy="120" r="16" class="dg-node"/>
+                      <text x="292" y="125" class="dg-label" text-anchor="middle" font-size="12">50</text>
+                      <line x1="37" y1="134" x2="28" y2="148" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <circle cx="24" cy="160" r="16" class="dg-node"/>
+                      <text x="24" y="165" class="dg-label" text-anchor="middle" font-size="12">25</text>
+                    </svg>
+                    <figcaption>Every parent ≤ both children — the min-heap property holds.</figcaption>
+                  </figure>
+
+                  <div class="insight">
+                    Build-heap is O(n), not O(n log n), because most nodes are near
+                    the bottom and heapify down from each only a few levels.
+                  </div>
+                  <p class="mb-0">
+                    <a href="subjects/data-structures.html#s1">Full solution with step-by-step diagrams →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q2 — Networking: Dhaka-Rangpur latency -->
+              <article class="qa" id="pp25-q2" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">2</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      A 1500-byte packet is sent from <strong>Dhaka to Rangpur</strong>,
+                      a distance of 300 km, over a 10 Mbps link with three intermediate
+                      routers. Compute the transmission delay, propagation delay, total
+                      one-way latency, RTT, and the bandwidth-delay product. Also compute
+                      stop-and-wait efficiency.
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Networking</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <div class="given">
+                    <span class="given__title">Given</span>
+                    <ul>
+                      <li>L = 1500 bytes = 12,000 bits</li>
+                      <li>B = 10 Mbps = 10⁷ bps</li>
+                      <li>d = 300 km = 300,000 m; v = 2 × 10⁸ m/s</li>
+                      <li>3 routers → 4 links; per-router delay = 0.5 ms processing + 1 ms queuing = 1.5 ms</li>
+                    </ul>
+                  </div>
+                  <ol class="steps">
+                    <li>
+                      <p><strong>Transmission delay:</strong></p>
+                      <span class="formula formula--tight">Tt = L / B = 12,000 / 10⁷ = 1.2 ms</span>
+                    </li>
+                    <li>
+                      <p><strong>Propagation delay:</strong></p>
+                      <span class="formula formula--tight">Tp = d / v = 300,000 / (2 × 10⁸) = 1.5 ms</span>
+                    </li>
+                    <li>
+                      <p><strong>Total one-way latency</strong> (store-and-forward):</p>
+                      <span class="formula formula--tight">= 4 × 1.2 ms + 1.5 ms + 3 × 1.5 ms = 4.8 + 1.5 + 4.5 = 10.8 ms</span>
+                    </li>
+                    <li>
+                      <p><strong>RTT = 2 × 10.8 = 21.6 ms</strong></p>
+                    </li>
+                    <li>
+                      <p><strong>Bandwidth-delay product:</strong></p>
+                      <span class="formula formula--tight">BDP = B × Tp = 10⁷ × 1.5 × 10⁻³ = 15,000 bits = 1,875 bytes</span>
+                    </li>
+                    <li>
+                      <p><strong>Stop-and-wait efficiency:</strong></p>
+                      <span class="formula formula--tight">η = Tt / (Tt + RTT) = 1.2 / (1.2 + 21.6) = 5.26%</span>
+                    </li>
+                  </ol>
+                  <p class="mb-0">
+                    <a href="subjects/networking.html#s1">Full solution with component breakdown table →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q3 — Networking: SMTP, POP3, IMAP -->
+              <article class="qa" id="pp25-q3" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">3</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      Draw the <strong>sender → mail server → receiver</strong> diagram
+                      and explain the role of <strong>SMTP, POP3 and IMAP</strong>,
+                      comparing the last two.
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Networking</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <figure class="figure">
+                    <svg role="img" aria-label="Email flow: sender MUA to sender MTA via SMTP, sender MTA to receiver MTA via SMTP, receiver MTA to receiver MUA via POP3 or IMAP" viewBox="0 0 520 100" style="max-width:520px">
+                      <defs><marker id="pp25-earr" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="var(--ink)" stroke-width="1"/></marker></defs>
+                      <rect x="0" y="30" width="80" height="40" rx="6" class="dg-node"/>
+                      <text x="40" y="55" class="dg-label" text-anchor="middle" font-size="10">Sender MUA</text>
+                      <rect x="140" y="30" width="90" height="40" rx="6" class="dg-node"/>
+                      <text x="185" y="55" class="dg-label" text-anchor="middle" font-size="10">Sender MTA</text>
+                      <rect x="290" y="30" width="100" height="40" rx="6" class="dg-node"/>
+                      <text x="340" y="55" class="dg-label" text-anchor="middle" font-size="10">Receiver MTA</text>
+                      <rect x="440" y="30" width="80" height="40" rx="6" class="dg-node"/>
+                      <text x="480" y="55" class="dg-label" text-anchor="middle" font-size="10">Receiver MUA</text>
+                      <line x1="80" y1="50" x2="137" y2="50" class="dg-stroke-ink" stroke-width="1.4" marker-end="url(#pp25-earr)"/>
+                      <text x="108" y="28" class="dg-label" text-anchor="middle" font-size="9">SMTP</text>
+                      <line x1="230" y1="50" x2="287" y2="50" class="dg-stroke-ink" stroke-width="1.4" marker-end="url(#pp25-earr)"/>
+                      <text x="258" y="28" class="dg-label" text-anchor="middle" font-size="9">SMTP</text>
+                      <line x1="390" y1="50" x2="437" y2="50" class="dg-stroke-ink" stroke-width="1.4" marker-end="url(#pp25-earr)"/>
+                      <text x="414" y="28" class="dg-label" text-anchor="middle" font-size="9">POP3 / IMAP</text>
+                    </svg>
+                    <figcaption>SMTP pushes in both hops; POP3 or IMAP pulls from the mailbox.</figcaption>
+                  </figure>
+                  <div class="table-scroll">
+                    <table class="table--compact">
+                      <thead><tr><th scope="col">Feature</th><th scope="col">POP3</th><th scope="col">IMAP</th></tr></thead>
+                      <tbody>
+                        <tr><td>Model</td><td>Download and delete</td><td>Keep on server</td></tr>
+                        <tr><td>Folders</td><td>Not supported</td><td>Server-side folders</td></tr>
+                        <tr><td>Multi-device</td><td>Poor — mail on one device</td><td>Excellent — synced</td></tr>
+                        <tr><td>Port</td><td>110 (995 with TLS)</td><td>143 (993 with TLS)</td></tr>
+                        <tr><td>Offline</td><td>Yes — once downloaded</td><td>Needs connection for full access</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="mb-0">
+                    <a href="subjects/networking.html#s2">Full solution with protocol-level detail →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q4 — OS: Banker's algorithm -->
+              <article class="qa" id="pp25-q4" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">4</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      A system has five processes P0–P4 and three resource types
+                      A (10), B (5), C (7). Using the <strong>banker's algorithm</strong>:
+                      <span class="q-part">(a) Compute the Need matrix and Available vector.</span>
+                      <span class="q-part">(b) Show the system is in a safe state and give a safe sequence.</span>
+                      <span class="q-part">(c) Can a request of (1, 0, 2) from P1 be granted?</span>
+                      <span class="q-part">(d) Can a request of (3, 3, 0) from P4 be granted?</span>
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Operating System</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <div class="given">
+                    <span class="given__title">Given</span>
+                    <ul>
+                      <li>Total: A = 10, B = 5, C = 7</li>
+                      <li>Allocation — P0 (0,1,0) · P1 (2,0,0) · P2 (3,0,2) · P3 (2,1,1) · P4 (0,0,2)</li>
+                      <li>Max — P0 (7,5,3) · P1 (3,2,2) · P2 (9,0,2) · P3 (2,2,2) · P4 (4,3,3)</li>
+                    </ul>
+                  </div>
+                  <ol class="steps">
+                    <li>
+                      <p><strong>(a) Need = Max − Allocation:</strong></p>
+                      <div class="table-scroll">
+                        <table class="table--compact table--center">
+                          <thead><tr><th scope="col">Process</th><th scope="col">Need A</th><th scope="col">Need B</th><th scope="col">Need C</th></tr></thead>
+                          <tbody>
+                            <tr><td>P0</td><td class="num">7</td><td class="num">4</td><td class="num">3</td></tr>
+                            <tr><td>P1</td><td class="num">1</td><td class="num">2</td><td class="num">2</td></tr>
+                            <tr><td>P2</td><td class="num">6</td><td class="num">0</td><td class="num">0</td></tr>
+                            <tr><td>P3</td><td class="num">0</td><td class="num">1</td><td class="num">1</td></tr>
+                            <tr><td>P4</td><td class="num">4</td><td class="num">3</td><td class="num">1</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p><strong>Available</strong> = Total − ΣAllocation = (10,5,7) − (7,2,5) = <strong>(3, 3, 2)</strong></p>
+                    </li>
+                    <li>
+                      <p><strong>(b) Safe sequence:</strong> P1 → P3 → P4 → P2 → P0</p>
+                      <p>At each step, the process's Need ≤ Available, so it can finish
+                      and release its resources.</p>
+                    </li>
+                    <li>
+                      <p><strong>(c) P1 requests (1, 0, 2):</strong> Request ≤ Need (1,2,2) ✓ and
+                      Request ≤ Available (3,3,2) ✓. Pretend allocation: Available becomes (2,3,0).
+                      Run safety check — safe sequence exists (P1 → P3 → P4 → P0 → P2).
+                      <strong>Grant immediately.</strong></p>
+                    </li>
+                    <li>
+                      <p><strong>(d) P4 requests (3, 3, 0):</strong> Request ≤ Need (4,3,1) ✓ but
+                      Request &gt; Available (3,3,2)? Check: (3,3,0) ≤ (3,3,2) ✓.
+                      Pretend allocation: Available becomes (0,0,2). No process can finish — <strong>deny.</strong></p>
+                    </li>
+                  </ol>
+                  <p class="mb-0">
+                    <a href="subjects/operating-system.html#s1">Full solution with Work-table trace →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q5 — Database: Normalization -->
+              <article class="qa" id="pp25-q5" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">5</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      Normalize the following relation to <strong>3NF</strong>:
+                      <span class="q-part mono">Order(OrderID, CustomerName, CustomerCity, ProductID, ProductName, Qty, Price)</span>
+                      <span class="q-part">FDs: OrderID → CustomerName, CustomerCity; ProductID → ProductName, Price; {OrderID, ProductID} → Qty.</span>
+                      <span class="q-part">Identify candidate keys and show step-by-step decomposition.</span>
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Database</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <ol class="steps">
+                    <li>
+                      <p><strong>Candidate key:</strong> {OrderID, ProductID} — the only
+                      minimal set whose closure contains all attributes.</p>
+                    </li>
+                    <li>
+                      <p><strong>1NF:</strong> Already satisfied — all values are atomic,
+                      no repeating groups.</p>
+                    </li>
+                    <li>
+                      <p><strong>2NF check — partial dependencies:</strong></p>
+                      <ul>
+                        <li>OrderID → CustomerName, CustomerCity — partial (depends on
+                        part of the composite key).</li>
+                        <li>ProductID → ProductName, Price — partial.</li>
+                      </ul>
+                      <p>Remove these into separate relations:</p>
+                      <ul>
+                        <li><strong>Customer</strong>(OrderID, CustomerName, CustomerCity)</li>
+                        <li><strong>Product</strong>(ProductID, ProductName, Price)</li>
+                        <li><strong>OrderItem</strong>(OrderID, ProductID, Qty)</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p><strong>3NF check — transitive dependencies:</strong> None remain
+                      in any of the three relations. Each non-key attribute depends
+                      directly on the primary key.</p>
+                      <p><strong>Final decomposition is in 3NF.</strong></p>
+                    </li>
+                  </ol>
+                  <div class="insight">
+                    The original table had update anomalies: changing a customer's city
+                    required updating every row with that OrderID. After decomposition,
+                    the city lives in exactly one row.
+                  </div>
+                  <p class="mb-0">
+                    <a href="subjects/database.html#s3">Full solution with dependency diagram →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q6 — Discrete Math: Truth table -->
+              <article class="qa" id="pp25-q6" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">6</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      Show that <strong>p → (q → p)</strong> is a tautology using
+                      a truth table.
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Discrete Math</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <p>
+                    Recall: <strong>A → B</strong> is false only when A is true and B is
+                    false. We build the table for all combinations of p and q:
+                  </p>
+                  <div class="table-scroll">
+                    <table class="table--compact table--center table--strong">
+                      <thead>
+                        <tr>
+                          <th scope="col">p</th>
+                          <th scope="col">q</th>
+                          <th scope="col">q → p</th>
+                          <th scope="col">p → (q → p)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>T</td><td>T</td><td>T</td><td class="cell-hit">T</td></tr>
+                        <tr><td>T</td><td>F</td><td>T</td><td class="cell-hit">T</td></tr>
+                        <tr><td>F</td><td>T</td><td>F</td><td class="cell-hit">T</td></tr>
+                        <tr><td>F</td><td>F</td><td>T</td><td class="cell-hit">T</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p>
+                    The final column is <strong>T</strong> in every row.
+                    <strong>Therefore p → (q → p) is a tautology.</strong>
+                  </p>
+                  <div class="insight">
+                    Intuition: "if p is true, then no matter what q is, p is still true."
+                    The only danger is row 3 (p = F), but F → anything is vacuously true.
+                  </div>
+                  <p class="mb-0">
+                    <a href="subjects/discrete-math.html#s1">Full solution on the Discrete Math page →</a>
+                  </p>
+                </div></div></div>
+              </article>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               PAPER 2: Combined Officer (IT) — 04/10/2024
+               ================================================================ -->
+          <section class="section" id="paper-2024" aria-labelledby="paper-2024-h">
+            <div class="section__head">
+              <h2 id="paper-2024-h">Combined Bank Officer (IT) — 04/10/2024</h2>
+              <span class="section__rule"></span>
+            </div>
+
+            <p>
+              This paper also serves AD (ICT) preparation — the Combined
+              Officer (IT) exam draws from the same syllabus at a comparable
+              difficulty. Questions below are from the solution booklet.
+            </p>
+
+            <div class="qlist">
+
+              <!-- Q1 — Networking: Flow control vs congestion control -->
+              <article class="qa" id="pp24-q1" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">1</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      Distinguish between <strong>flow control</strong> and
+                      <strong>congestion control</strong> in TCP. Explain the
+                      mechanism used for each and why both are necessary.
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Networking</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <div class="table-scroll">
+                    <table class="table--compact table--strong">
+                      <thead>
+                        <tr>
+                          <th scope="col">Aspect</th>
+                          <th scope="col">Flow control</th>
+                          <th scope="col">Congestion control</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>Protects</td><td>Receiver from being overwhelmed</td><td>Network from collapse</td></tr>
+                        <tr><td>Window</td><td>rwnd (receiver window)</td><td>cwnd (congestion window)</td></tr>
+                        <tr><td>Signal</td><td>Receiver advertises rwnd in ACK</td><td>Packet loss / timeout / ECN</td></tr>
+                        <tr><td>Mechanism</td><td>Sliding window over rwnd</td><td>Slow start → AIMD</td></tr>
+                        <tr><td>Scope</td><td>End-to-end (sender–receiver)</td><td>Sender–network</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p>
+                    The effective window is <strong>min(rwnd, cwnd)</strong> — both
+                    limits apply simultaneously. Without flow control, a fast sender
+                    overruns a slow receiver's buffer. Without congestion control, many
+                    senders flood intermediate routers until packets are dropped and
+                    retransmitted, causing congestion collapse.
+                  </p>
+                  <p class="mb-0">
+                    <a href="subjects/networking.html#s3">Full solution with AIMD trace →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q2 — OS: Single-process deadlock -->
+              <article class="qa" id="pp24-q2" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">2</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      Is it possible for a system with only <strong>one
+                      process</strong> to be deadlocked? Justify your answer
+                      against the four necessary conditions for deadlock, and
+                      give a concrete example.
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Operating System</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <p>
+                    <strong>Yes — a single process can deadlock itself.</strong> The
+                    four Coffman conditions can all hold with one process:
+                  </p>
+                  <ol class="steps">
+                    <li><p><strong>Mutual exclusion:</strong> the resource is non-sharable (e.g. a non-reentrant lock).</p></li>
+                    <li><p><strong>Hold and wait:</strong> the process holds the lock and requests the same lock again.</p></li>
+                    <li><p><strong>No preemption:</strong> the OS cannot forcibly reclaim the lock.</p></li>
+                    <li><p><strong>Circular wait:</strong> the resource allocation graph has a self-loop — the process waits for a resource it already holds.</p></li>
+                  </ol>
+                  <p>
+                    <strong>Example:</strong> a process acquires a non-recursive mutex, then
+                    calls a function that attempts to acquire the same mutex. It blocks
+                    waiting for itself — a deadlock of one.
+                  </p>
+                  <p class="mb-0">
+                    <a href="subjects/operating-system.html#s2">Full solution with RAG diagram →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q3 — Telecom: DAC resolution -->
+              <article class="qa" id="pp24-q3" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">3</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      A <strong>12-bit DAC</strong> has a reference voltage of
+                      <strong>3.3 V</strong>. Find the resolution and the output
+                      voltage for digital input <strong>1010 0000 0000</strong>.
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Telecommunication</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <div class="given">
+                    <span class="given__title">Given</span>
+                    <ul>
+                      <li>n = 12 bits, V<sub>ref</sub> = 3.3 V</li>
+                      <li>D = 1010 0000 0000<sub>2</sub> = 2560<sub>10</sub></li>
+                    </ul>
+                  </div>
+                  <ol class="steps">
+                    <li>
+                      <p><strong>Resolution</strong> (smallest voltage step):</p>
+                      <span class="formula formula--tight">Resolution = V_ref / (2ⁿ − 1) = 3.3 / (4096 − 1) = 3.3 / 4095 ≈ 0.000806 V ≈ 0.806 mV</span>
+                    </li>
+                    <li>
+                      <p><strong>Output voltage:</strong></p>
+                      <span class="formula formula--tight">V_out = D × Resolution = 2560 × 0.000806 = 2.063 V</span>
+                    </li>
+                  </ol>
+                  <p><strong>Final answer: Resolution ≈ 0.806 mV; V<sub>out</sub> ≈ 2.063 V.</strong></p>
+                  <p class="mb-0">
+                    <a href="subjects/telecommunication.html#s1">Full solution with DAC architecture →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q4 — Computer Architecture: Cache bits -->
+              <article class="qa" id="pp24-q4" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">4</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      A cache has <strong>32 KB</strong> size, <strong>64-byte</strong>
+                      blocks, <strong>32-bit</strong> addresses, and is
+                      <strong>4-way set associative</strong>. Find the number of tag,
+                      index and offset bits, and the total bits required for the cache.
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Computer Architecture</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <div class="given">
+                    <span class="given__title">Given</span>
+                    <ul>
+                      <li>Cache size = 32 KB = 32,768 bytes</li>
+                      <li>Block size = 64 bytes</li>
+                      <li>Address = 32 bits</li>
+                      <li>Associativity = 4-way</li>
+                    </ul>
+                  </div>
+                  <ol class="steps">
+                    <li>
+                      <p><strong>Number of blocks:</strong></p>
+                      <span class="formula formula--tight">Blocks = 32,768 / 64 = 512</span>
+                    </li>
+                    <li>
+                      <p><strong>Number of sets:</strong></p>
+                      <span class="formula formula--tight">Sets = 512 / 4 = 128</span>
+                    </li>
+                    <li>
+                      <p><strong>Offset bits:</strong> log₂(64) = <strong>6 bits</strong></p>
+                    </li>
+                    <li>
+                      <p><strong>Index bits:</strong> log₂(128) = <strong>7 bits</strong></p>
+                    </li>
+                    <li>
+                      <p><strong>Tag bits:</strong> 32 − 7 − 6 = <strong>19 bits</strong></p>
+                    </li>
+                    <li>
+                      <p><strong>Total bits per block:</strong> valid (1) + tag (19) + data (64 × 8 = 512) = 532 bits</p>
+                    </li>
+                    <li>
+                      <p><strong>Total cache bits:</strong></p>
+                      <span class="formula formula--tight">Total = 512 blocks × 532 bits = 272,384 bits = 34,048 bytes ≈ 33.25 KB</span>
+                    </li>
+                  </ol>
+                  <p><strong>Final answer: 6 offset, 7 index, 19 tag bits; total ≈ 272,384 bits (33.25 KB).</strong></p>
+                  <p class="mb-0">
+                    <a href="subjects/computer-architecture.html#s6">Full solution with bit-field diagram →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q5 — Discrete Math: Set theory -->
+              <article class="qa" id="pp24-q5" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">5</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      Given |X ∪ Y| = 50, |X ∩ Y| = 10, |Y − X| = 15.
+                      Find |X|, |Y| and |X − Y|.
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Discrete Math</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <ol class="steps">
+                    <li>
+                      <p><strong>Find |Y|:</strong> Y − X contains elements in Y but not in X, and X ∩ Y is the overlap.</p>
+                      <span class="formula formula--tight">|Y| = |Y − X| + |X ∩ Y| = 15 + 10 = 25</span>
+                    </li>
+                    <li>
+                      <p><strong>Find |X|:</strong> Using inclusion-exclusion:</p>
+                      <span class="formula formula--tight">|X ∪ Y| = |X| + |Y| − |X ∩ Y|
+50 = |X| + 25 − 10
+|X| = 35</span>
+                    </li>
+                    <li>
+                      <p><strong>Find |X − Y|:</strong></p>
+                      <span class="formula formula--tight">|X − Y| = |X| − |X ∩ Y| = 35 − 10 = 25</span>
+                    </li>
+                  </ol>
+                  <p><strong>Final answer: |X| = 35, |Y| = 25, |X − Y| = 25.</strong></p>
+                  <p class="mb-0">
+                    <a href="subjects/discrete-math.html#s2">Full solution on the Discrete Math page →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q6 — Discrete Math: Dice probability -->
+              <article class="qa" id="pp24-q6" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">6</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      Two dice are rolled. What is the probability the
+                      <strong>sum is 7</strong>?
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Discrete Math</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <ol class="steps">
+                    <li>
+                      <p><strong>Total outcomes:</strong> 6 × 6 = 36</p>
+                    </li>
+                    <li>
+                      <p><strong>Favourable outcomes</strong> (pairs summing to 7):</p>
+                      <p class="mono">(1,6) (2,5) (3,4) (4,3) (5,2) (6,1) → <strong>6 pairs</strong></p>
+                    </li>
+                    <li>
+                      <p><strong>Probability:</strong></p>
+                      <span class="formula formula--tight">P(sum = 7) = 6 / 36 = 1/6 ≈ 0.1667</span>
+                    </li>
+                  </ol>
+                  <p><strong>Final answer: P(sum = 7) = 1/6.</strong></p>
+                  <div class="insight">
+                    7 has the most favourable outcomes of any sum. Sums of 2 and 12 each have
+                    only 1 outcome; 7 has 6. This is why 7 is the most probable result when
+                    rolling two fair dice.
+                  </div>
+                  <p class="mb-0">
+                    <a href="subjects/discrete-math.html#s5">Full solution on the Discrete Math page →</a>
+                  </p>
+                </div></div></div>
+              </article>
+
+              <!-- Q7 — SE: Use case diagram -->
+              <article class="qa" id="pp24-q7" data-open="false">
+                <button class="qa__q" type="button">
+                  <span class="qa__num">7</span>
+                  <span class="qa__body-q">
+                    <span class="qa__text">
+                      Draw a <strong>use-case diagram</strong> for an
+                      <strong>online purchase system</strong> showing actors,
+                      use cases, and &laquo;include&raquo; / &laquo;extend&raquo;
+                      relationships.
+                    </span>
+                    <span class="qa__tags">
+                      <span class="chip chip--past">Software Engineering</span>
+                    </span>
+                  </span>
+                  <span class="qa__chev" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+                <div class="qa__a"><div class="qa__a-inner"><div class="qa__a-pad">
+                  <p><strong>Actors:</strong> Customer, Payment Gateway (external system), Admin.</p>
+                  <p><strong>Use cases:</strong></p>
+                  <ul>
+                    <li>Browse Products</li>
+                    <li>Add to Cart</li>
+                    <li>Place Order &laquo;include&raquo; Verify Payment (always verified)</li>
+                    <li>Place Order &laquo;extend&raquo; Apply Coupon (optional, at extension point)</li>
+                    <li>Track Order</li>
+                    <li>Manage Inventory (Admin only)</li>
+                  </ul>
+
+                  <figure class="figure">
+                    <svg role="img" aria-label="Use case diagram for online purchase system" viewBox="0 0 400 220" style="max-width:400px">
+                      <rect x="100" y="5" width="230" height="210" rx="8" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+                      <text x="215" y="22" class="dg-label" text-anchor="middle" font-size="10" font-weight="600">Online Purchase System</text>
+
+                      <!-- Customer stick figure -->
+                      <circle cx="40" cy="50" r="8" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+                      <line x1="40" y1="58" x2="40" y2="80" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="28" y1="68" x2="52" y2="68" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="40" y1="80" x2="30" y2="95" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="40" y1="80" x2="50" y2="95" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <text x="40" y="108" class="dg-label" text-anchor="middle" font-size="9">Customer</text>
+
+                      <!-- Admin stick figure -->
+                      <circle cx="40" cy="160" r="8" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+                      <line x1="40" y1="168" x2="40" y2="185" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="28" y1="176" x2="52" y2="176" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="40" y1="185" x2="30" y2="198" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <line x1="40" y1="185" x2="50" y2="198" class="dg-stroke-ink" stroke-width="1.2"/>
+                      <text x="40" y="212" class="dg-label" text-anchor="middle" font-size="9">Admin</text>
+
+                      <!-- Payment Gateway -->
+                      <rect x="350" y="90" width="48" height="30" rx="4" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                      <text x="374" y="108" class="dg-label" text-anchor="middle" font-size="7">Payment</text>
+                      <text x="374" y="116" class="dg-label" text-anchor="middle" font-size="7">Gateway</text>
+
+                      <!-- Use case ellipses -->
+                      <ellipse cx="170" cy="42" rx="55" ry="14" fill="var(--cream-300)" stroke="var(--ink)" stroke-width="1"/>
+                      <text x="170" y="46" class="dg-label" text-anchor="middle" font-size="8">Browse Products</text>
+
+                      <ellipse cx="170" cy="78" rx="45" ry="14" fill="var(--cream-300)" stroke="var(--ink)" stroke-width="1"/>
+                      <text x="170" y="82" class="dg-label" text-anchor="middle" font-size="8">Add to Cart</text>
+
+                      <ellipse cx="185" cy="114" rx="48" ry="14" fill="var(--cream-300)" stroke="var(--ink)" stroke-width="1"/>
+                      <text x="185" y="118" class="dg-label" text-anchor="middle" font-size="8">Place Order</text>
+
+                      <ellipse cx="285" cy="78" rx="45" ry="14" fill="var(--cream-300)" stroke="var(--ink)" stroke-width="1"/>
+                      <text x="285" y="82" class="dg-label" text-anchor="middle" font-size="8">Verify Payment</text>
+
+                      <ellipse cx="285" cy="140" rx="42" ry="14" fill="var(--cream-300)" stroke="var(--ink)" stroke-width="1"/>
+                      <text x="285" y="144" class="dg-label" text-anchor="middle" font-size="8">Apply Coupon</text>
+
+                      <ellipse cx="185" cy="150" rx="42" ry="14" fill="var(--cream-300)" stroke="var(--ink)" stroke-width="1"/>
+                      <text x="185" y="154" class="dg-label" text-anchor="middle" font-size="8">Track Order</text>
+
+                      <ellipse cx="215" cy="190" rx="55" ry="14" fill="var(--cream-300)" stroke="var(--ink)" stroke-width="1"/>
+                      <text x="215" y="194" class="dg-label" text-anchor="middle" font-size="8">Manage Inventory</text>
+
+                      <!-- Actor–use case lines -->
+                      <line x1="58" y1="58" x2="118" y2="42" class="dg-stroke-ink" stroke-width="1"/>
+                      <line x1="58" y1="68" x2="128" y2="78" class="dg-stroke-ink" stroke-width="1"/>
+                      <line x1="58" y1="78" x2="140" y2="108" class="dg-stroke-ink" stroke-width="1"/>
+                      <line x1="58" y1="78" x2="145" y2="148" class="dg-stroke-ink" stroke-width="1"/>
+                      <line x1="58" y1="170" x2="162" y2="190" class="dg-stroke-ink" stroke-width="1"/>
+                      <line x1="330" y1="85" x2="350" y2="98" class="dg-stroke-ink" stroke-width="1"/>
+
+                      <!-- Include dashed -->
+                      <line x1="228" y1="108" x2="245" y2="86" class="dg-stroke-dash" stroke-width="1" stroke-dasharray="4,3"/>
+                      <text x="248" y="98" class="dg-label" font-size="7" font-style="italic">«include»</text>
+
+                      <!-- Extend dashed -->
+                      <line x1="228" y1="120" x2="248" y2="134" class="dg-stroke-dash" stroke-width="1" stroke-dasharray="4,3"/>
+                      <text x="248" y="128" class="dg-label" font-size="7" font-style="italic">«extend»</text>
+                    </svg>
+                    <figcaption>Place Order always includes Verify Payment; Apply Coupon extends it optionally.</figcaption>
+                  </figure>
+
+                  <div class="insight">
+                    <strong>&laquo;include&raquo;</strong> = mandatory sub-flow (always runs).
+                    <strong>&laquo;extend&raquo;</strong> = optional behaviour (runs only at
+                    the extension point, under a condition). A common exam trap is swapping
+                    the two arrows.
+                  </div>
+                  <p class="mb-0">
+                    <a href="subjects/software-engineering.html#s3">Full solution on the Software Engineering page →</a>
+                  </p>
+                </div></div></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section" id="blocked" aria-labelledby="blocked-h">
+            <div class="section__head">
+              <h2 id="blocked-h">Additional papers</h2>
+              <span class="section__rule"></span>
+            </div>
+            <div class="callout reveal">
+              <span class="callout__title">Question PDFs pending</span>
+              <p class="mb-0">
+                The raw question papers (<code>previous it question.pdf</code>
+                and its splits) could not be rendered due to a disk-space
+                constraint on the PDF engine. When space is freed, additional
+                papers and their questions will be folded into this page. The
+                site's subject pages are already comprehensive — the past papers
+                here are an exam-rehearsal overlay, not additional content.
+              </p>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>
+          <a href="index.html">← Back to all subjects</a>
+        </p>
+        <p class="small">
+          Bangladesh Bank Assistant Director (ICT) written preparation. Static
+          site — no tracking, no network calls beyond optional web fonts.
+        </p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path
+          d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <script src="js/search-index.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

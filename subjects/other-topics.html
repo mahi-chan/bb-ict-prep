@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="other-topics"
+    data-subject-name="Other Topics">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Other Topics — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice on web technology (HTML/CSS/JS, HTTP, REST), data centres, digital logic, Bangladesh ICT policy, and miscellaneous repeats." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+            <div class="header__spacer"></div>
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics" aria-current="page"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 15</span><span aria-hidden="true">·</span><span>Phase 3</span>
+                </p>
+                <h1>Other Topics</h1>
+                <p class="page-head__lede">
+                    This catch-all subject covers web technology (HTML/CSS/JS,
+                    HTTP, REST APIs), data-centre design, digital logic gates, and
+                    Bangladesh ICT policy — topics that cross subject boundaries
+                    and appear as standalone questions in multiple papers.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- NOTES -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">5 topics</span>
+                </div>
+
+                <ul class="topics">
+                    <li><a href="#n-web"><span class="topics__num">01</span>Web technology</a></li>
+                    <li><a href="#n-http"><span class="topics__num">02</span>HTTP, REST and APIs</a></li>
+                    <li><a href="#n-dc"><span class="topics__num">03</span>Data centre</a></li>
+                    <li><a href="#n-logic"><span class="topics__num">04</span>Digital logic</a></li>
+                    <li><a href="#n-bdpolicy"><span class="topics__num">05</span>Bangladesh ICT policy</a></li>
+                </ul>
+
+                <!-- 1 -->
+                <div class="subsection" id="n-web">
+                    <h3>1. Web technology</h3>
+
+                    <p>The web stack rests on three layers:</p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Layer</th><th scope="col">Language</th><th scope="col">Role</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Structure</td><td>HTML</td><td>Semantic content and document structure</td></tr>
+                                <tr><td>Presentation</td><td>CSS</td><td>Visual styling, layout, responsive design</td></tr>
+                                <tr><td>Behaviour</td><td>JavaScript</td><td>Interactivity, DOM manipulation, async calls</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>HTML5 semantic elements:</strong> <code>&lt;header&gt;</code>,
+                        <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+                        <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>,
+                        <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>.</p>
+
+                    <p><strong>CSS layout models:</strong> Flexbox (1D — row or column),
+                        CSS Grid (2D — rows and columns). Media queries enable responsive
+                        design: <code>@media (max-width: 768px) { }</code>.</p>
+
+                    <p><strong>JavaScript key concepts:</strong> event-driven, single-threaded
+                        with event loop, async via callbacks/promises/async-await, DOM API,
+                        fetch API for HTTP requests.</p>
+
+                    <p><strong>Client-side vs server-side rendering:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">CSR (SPA)</th><th scope="col">SSR</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Browser renders using JS (React, Vue)</td><td>Server generates full HTML</td></tr>
+                                <tr><td>Faster navigation after initial load</td><td>Faster first paint, better SEO</td></tr>
+                                <tr><td>Heavier initial download</td><td>More server load per request</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">HTML5 semantic page structure</span>
+<pre><code>&lt;header&gt;
+  &lt;nav&gt;Site navigation&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Section heading&lt;/h2&gt;
+      &lt;p&gt;Content...&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/article&gt;
+  &lt;aside&gt;Sidebar content&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Copyright info&lt;/footer&gt;</code></pre>
+                    </div>
+
+                    <div class="insight">
+                        The exam typically asks "compare HTML, CSS and JavaScript" or
+                        "what is responsive web design" — keep answers structured around
+                        the three-layer model.
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="subsection" id="n-http">
+                    <h3>2. HTTP, REST and APIs</h3>
+
+                    <p><strong>HTTP methods:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Method</th><th scope="col">CRUD</th><th scope="col">Idempotent</th><th scope="col">Body</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>GET</td><td>Read</td><td>Yes</td><td>No</td></tr>
+                                <tr><td>POST</td><td>Create</td><td>No</td><td>Yes</td></tr>
+                                <tr><td>PUT</td><td>Update (full)</td><td>Yes</td><td>Yes</td></tr>
+                                <tr><td>PATCH</td><td>Update (partial)</td><td>No</td><td>Yes</td></tr>
+                                <tr><td>DELETE</td><td>Delete</td><td>Yes</td><td>Optional</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>HTTP status codes:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead><tr><th>Range</th><th>Meaning</th><th>Key codes</th></tr></thead>
+                            <tbody>
+                                <tr><td>1xx</td><td>Informational</td><td>100 Continue</td></tr>
+                                <tr><td>2xx</td><td>Success</td><td>200 OK, 201 Created, 204 No Content</td></tr>
+                                <tr><td>3xx</td><td>Redirection</td><td>301 Moved Permanently, 304 Not Modified</td></tr>
+                                <tr><td>4xx</td><td>Client error</td><td>400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found</td></tr>
+                                <tr><td>5xx</td><td>Server error</td><td>500 Internal Server Error, 503 Service Unavailable</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>REST principles:</strong> stateless, client-server, uniform
+                        interface (resource-based URLs), cacheable, layered system. Example:
+                        <code>GET /api/accounts/123</code> returns account 123.</p>
+
+                    <p><strong>SOAP vs REST:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead><tr><th scope="col">SOAP</th><th scope="col">REST</th></tr></thead>
+                            <tbody>
+                                <tr><td>Protocol (strict standards)</td><td>Architectural style (guidelines)</td></tr>
+                                <tr><td>XML only</td><td>JSON, XML, or any format</td></tr>
+                                <tr><td>WSDL for service description</td><td>OpenAPI / Swagger</td></tr>
+                                <tr><td>Built-in security (WS-Security)</td><td>Uses HTTPS + OAuth</td></tr>
+                                <tr><td>Heavier, more overhead</td><td>Lightweight, faster</td></tr>
+                                <tr><td>Common in banking / enterprise</td><td>Dominant in modern web APIs</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="HTTP request-response flow: client sends request with method, URL, headers, body; server returns status code, headers, body" viewBox="0 0 400 130" style="max-width:400px">
+                            <rect x="10" y="25" width="80" height="80" rx="6" fill="#ffefb3" stroke="#013e37" stroke-width="1.5"/>
+                            <text x="50" y="60" fill="#013e37" text-anchor="middle" font-size="11" font-weight="600">Client</text>
+                            <text x="50" y="78" fill="#013e37" text-anchor="middle" font-size="9">(browser)</text>
+                            <rect x="310" y="25" width="80" height="80" rx="6" fill="#ffefb3" stroke="#013e37" stroke-width="1.5"/>
+                            <text x="350" y="60" fill="#013e37" text-anchor="middle" font-size="11" font-weight="600">Server</text>
+                            <text x="350" y="78" fill="#013e37" text-anchor="middle" font-size="9">(API)</text>
+                            <line x1="90" y1="48" x2="310" y2="48" stroke="#013e37" stroke-width="1.5" marker-end="url(#ot-arrow)"/>
+                            <text x="200" y="42" fill="#013e37" text-anchor="middle" font-size="9" font-weight="500">GET /api/accounts/123</text>
+                            <text x="200" y="30" fill="#013e37" text-anchor="middle" font-size="8">Request: Method + URL + Headers</text>
+                            <line x1="310" y1="85" x2="90" y2="85" stroke="#013e37" stroke-width="1.5" marker-end="url(#ot-arrow)"/>
+                            <text x="200" y="80" fill="#013e37" text-anchor="middle" font-size="9" font-weight="500">200 OK + JSON body</text>
+                            <text x="200" y="100" fill="#013e37" text-anchor="middle" font-size="8">Response: Status + Headers + Body</text>
+                            <defs><marker id="ot-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#013e37"/></marker></defs>
+                        </svg>
+                        <figcaption>HTTP request-response cycle — stateless, one response per request.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        REST is dominant in modern systems, but many banks still use
+                        SOAP for core integrations because of its built-in security
+                        features (WS-Security) and strict contracts (WSDL).
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="subsection" id="n-dc">
+                    <h3>3. Data centre</h3>
+
+                    <p>
+                        A <strong>data centre</strong> houses servers, storage and
+                        networking equipment. Key considerations:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Component</th><th scope="col">Purpose</th><th scope="col">Key metric</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>UPS</td><td>Battery backup during power failure</td><td>Runtime in minutes</td></tr>
+                                <tr><td>Generator</td><td>Extended backup beyond UPS</td><td>Fuel capacity / hours</td></tr>
+                                <tr><td>HVAC/CRAC</td><td>Cooling — maintain 18–27°C</td><td>PUE (Power Usage Effectiveness)</td></tr>
+                                <tr><td>Fire suppression</td><td>Gas-based (FM-200, Novec) — no water</td><td>Detection time</td></tr>
+                                <tr><td>Physical security</td><td>Biometrics, mantraps, CCTV</td><td>Access control layers</td></tr>
+                                <tr><td>Raised floor</td><td>Cable management, under-floor cooling</td><td>Floor height</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row">PUE = Total facility power / IT equipment power</div>
+                        <div class="calc__row calc__row--note">Ideal PUE = 1.0; average ≈ 1.58; Google achieves ≈ 1.10</div>
+                    </div>
+
+                    <p><strong>Tier classification (Uptime Institute):</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead><tr><th>Tier</th><th>Uptime</th><th>Redundancy</th><th>Downtime/year</th></tr></thead>
+                            <tbody>
+                                <tr><td>I</td><td>99.671%</td><td>None</td><td>28.8 hrs</td></tr>
+                                <tr><td>II</td><td>99.741%</td><td>Partial (N+1)</td><td>22 hrs</td></tr>
+                                <tr><td>III</td><td>99.982%</td><td>Concurrently maintainable</td><td>1.6 hrs</td></tr>
+                                <tr><td>IV</td><td>99.995%</td><td>Fault tolerant (2N)</td><td>26 min</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Disaster Recovery (DR):</strong> RPO (Recovery Point Objective
+                        — max acceptable data loss) and RTO (Recovery Time Objective — max
+                        acceptable downtime). Hot site (immediate), warm site (hours),
+                        cold site (days).</p>
+
+                    <div class="insight">
+                        Bangladesh Bank requires Tier III or above for core banking data
+                        centres with a geographically separate DR site. The PUE and tier
+                        classifications are frequently asked in exams.
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="subsection" id="n-logic">
+                    <h3>4. Digital logic</h3>
+
+                    <p>
+                        Digital logic uses binary (0/1) signals processed through
+                        <strong>logic gates</strong>. The seven fundamental gates:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Gate</th><th scope="col">Symbol</th><th scope="col">Expression</th><th scope="col">Output = 1 when</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>AND</td><td>A·B</td><td>Y = A AND B</td><td>Both inputs = 1</td></tr>
+                                <tr><td>OR</td><td>A+B</td><td>Y = A OR B</td><td>At least one input = 1</td></tr>
+                                <tr><td>NOT</td><td>A′</td><td>Y = NOT A</td><td>Input = 0</td></tr>
+                                <tr><td>NAND</td><td>(A·B)′</td><td>Y = NOT(A AND B)</td><td>Not both 1 (universal gate)</td></tr>
+                                <tr><td>NOR</td><td>(A+B)′</td><td>Y = NOT(A OR B)</td><td>Both inputs = 0 (universal gate)</td></tr>
+                                <tr><td>XOR</td><td>A⊕B</td><td>Y = A XOR B</td><td>Inputs differ</td></tr>
+                                <tr><td>XNOR</td><td>(A⊕B)′</td><td>Y = A XNOR B</td><td>Inputs same</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Universal gates:</strong> NAND and NOR can each implement
+                        any logic function alone. Any AND, OR, NOT can be built from
+                        NAND gates only (or NOR gates only).
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="NAND gate implementing NOT: tie both inputs together" viewBox="0 0 200 80" style="max-width:200px">
+                            <text x="10" y="45" class="dg-label" font-size="10">A</text>
+                            <line x1="30" y1="40" x2="60" y2="40" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="30" y1="40" x2="30" y2="55" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="30" y1="55" x2="60" y2="55" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <rect x="60" y="30" width="50" height="35" rx="4" class="dg-node"/>
+                            <text x="85" y="52" class="dg-text-on-ink" text-anchor="middle" font-size="9">NAND</text>
+                            <circle cx="116" cy="47" r="4" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+                            <line x1="120" y1="47" x2="160" y2="47" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <text x="165" y="51" class="dg-label" font-size="10">A′</text>
+                        </svg>
+                        <figcaption>NOT from NAND — connect both inputs of a NAND gate together.</figcaption>
+                    </figure>
+
+                    <p><strong>Combinational circuits:</strong> half adder (XOR + AND),
+                        full adder, multiplexer, decoder, encoder. <strong>Sequential
+                        circuits:</strong> flip-flops, registers, counters — these have
+                        memory and are covered in more detail under Telecommunication.</p>
+
+                    <div class="insight">
+                        NAND is called "universal" because you can build any digital
+                        circuit using only NAND gates. This is why NAND flash memory
+                        is named after the gate — the cells use NAND gate structures.
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="subsection" id="n-bdpolicy">
+                    <h3>5. Bangladesh ICT policy</h3>
+
+                    <p>
+                        Key policies and initiatives relevant to the exam:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Policy / Initiative</th><th scope="col">Year</th><th scope="col">Key point</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>National ICT Policy</td><td>2009 (updated 2015, 2018)</td><td>Vision: Digital Bangladesh by 2021; Smart Bangladesh by 2041</td></tr>
+                                <tr><td>ICT Act</td><td>2006 (amended 2009, 2013)</td><td>Legal recognition of e-commerce, digital signatures, cyber offences</td></tr>
+                                <tr><td>Digital Security Act</td><td>2018</td><td>Cyber crime definitions, digital forensics, national CERT</td></tr>
+                                <tr><td>Right to Information Act</td><td>2009</td><td>Citizens' right to access government information</td></tr>
+                                <tr><td>a2i (Access to Information)</td><td>2007</td><td>E-governance programme under PMO</td></tr>
+                                <tr><td>Hi-Tech Park Authority</td><td>2010</td><td>IT/ITES industry zones across the country</td></tr>
+                                <tr><td>National Data Centre</td><td>2019</td><td>Tier III national data centre at Kaliakair</td></tr>
+                                <tr><td>Bangladesh National Digital Architecture (BNDA)</td><td>2019</td><td>Interoperability framework for government systems</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>e-Government services:</strong> Eksheba (one-stop service
+                        portal), e-Nothi (electronic file management), e-GP (government
+                        procurement), e-Mutation (land records), national portal
+                        bangladesh.gov.bd.</p>
+
+                    <p><strong>Bangladesh Bank digital initiatives:</strong> BACH
+                        (Bangladesh Automated Clearing House), BEFTN (Bangladesh
+                        Electronic Funds Transfer Network), RTGS (Real Time Gross
+                        Settlement), NPS (National Payment Switch), MFS (Mobile
+                        Financial Services — bKash, Nagad, Rocket).</p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Smart Bangladesh 2041 four pillars: Smart Citizen, Smart Economy, Smart Government, Smart Society" viewBox="0 0 340 140" style="max-width:340px">
+                            <rect x="95" y="5" width="150" height="28" rx="5" fill="#013e37" stroke="#013e37" stroke-width="1.5"/>
+                            <text x="170" y="23" fill="#ffefb3" text-anchor="middle" font-size="10" font-weight="600">Smart Bangladesh 2041</text>
+                            <line x1="170" y1="33" x2="42" y2="55" stroke="#013e37" stroke-width="1.2"/>
+                            <line x1="170" y1="33" x2="127" y2="55" stroke="#013e37" stroke-width="1.2"/>
+                            <line x1="170" y1="33" x2="212" y2="55" stroke="#013e37" stroke-width="1.2"/>
+                            <line x1="170" y1="33" x2="297" y2="55" stroke="#013e37" stroke-width="1.2"/>
+                            <rect x="5" y="55" width="75" height="40" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="42" y="72" fill="#013e37" text-anchor="middle" font-size="9" font-weight="600">Smart</text>
+                            <text x="42" y="84" fill="#013e37" text-anchor="middle" font-size="9" font-weight="600">Citizen</text>
+                            <rect x="90" y="55" width="75" height="40" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="127" y="72" fill="#013e37" text-anchor="middle" font-size="9" font-weight="600">Smart</text>
+                            <text x="127" y="84" fill="#013e37" text-anchor="middle" font-size="9" font-weight="600">Economy</text>
+                            <rect x="175" y="55" width="75" height="40" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="212" y="72" fill="#013e37" text-anchor="middle" font-size="8" font-weight="600">Smart</text>
+                            <text x="212" y="84" fill="#013e37" text-anchor="middle" font-size="8" font-weight="600">Government</text>
+                            <rect x="260" y="55" width="75" height="40" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="297" y="72" fill="#013e37" text-anchor="middle" font-size="9" font-weight="600">Smart</text>
+                            <text x="297" y="84" fill="#013e37" text-anchor="middle" font-size="9" font-weight="600">Society</text>
+                            <text x="42" y="110" fill="#013e37" text-anchor="middle" font-size="7">Digital literacy</text>
+                            <text x="42" y="120" fill="#013e37" text-anchor="middle" font-size="7">e-learning</text>
+                            <text x="127" y="110" fill="#013e37" text-anchor="middle" font-size="7">Cashless, fintech</text>
+                            <text x="127" y="120" fill="#013e37" text-anchor="middle" font-size="7">e-commerce</text>
+                            <text x="212" y="110" fill="#013e37" text-anchor="middle" font-size="7">e-governance</text>
+                            <text x="212" y="120" fill="#013e37" text-anchor="middle" font-size="7">BNDA</text>
+                            <text x="297" y="110" fill="#013e37" text-anchor="middle" font-size="7">Smart cities</text>
+                            <text x="297" y="120" fill="#013e37" text-anchor="middle" font-size="7">digital health</text>
+                        </svg>
+                        <figcaption>The four pillars of Smart Bangladesh Vision 2041, building on Digital Bangladesh 2021.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        "Digital Bangladesh" (Vision 2021) and "Smart Bangladesh"
+                        (Vision 2041) are the two most-cited policy framings. Know
+                        the four pillars of Smart Bangladesh: Smart Citizen, Smart
+                        Economy, Smart Government, Smart Society.
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- SOLVED -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved past questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">Compare HTML, CSS and JavaScript — what role does each play in web development?</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th>Technology</th><th>Role</th><th>Analogy</th><th>Example</th></tr></thead>
+                                <tbody>
+                                    <tr><td>HTML</td><td>Structure / content</td><td>Skeleton</td><td><code>&lt;h1&gt;Title&lt;/h1&gt;</code></td></tr>
+                                    <tr><td>CSS</td><td>Presentation / styling</td><td>Skin and clothes</td><td><code>h1 { color: blue; }</code></td></tr>
+                                    <tr><td>JavaScript</td><td>Behaviour / interactivity</td><td>Muscles</td><td><code>btn.addEventListener('click', fn)</code></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The separation of concerns — structure, presentation, behaviour — is a core web design principle. HTML5 added semantic elements; CSS3 added Flexbox/Grid; ES6+ modernised JavaScript with classes, modules and async/await.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">What is REST? List the HTTP methods used in a RESTful API.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <p><strong>REST</strong> (Representational State Transfer) is an architectural style for web APIs with these constraints: stateless, client-server, cacheable, uniform interface, layered system.</p>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th>Method</th><th>Operation</th><th>Example</th><th>Idempotent?</th></tr></thead>
+                                <tbody>
+                                    <tr><td>GET</td><td>Read</td><td>GET /users/5</td><td>Yes</td></tr>
+                                    <tr><td>POST</td><td>Create</td><td>POST /users (body: {name, email})</td><td>No</td></tr>
+                                    <tr><td>PUT</td><td>Replace</td><td>PUT /users/5 (full object)</td><td>Yes</td></tr>
+                                    <tr><td>PATCH</td><td>Partial update</td><td>PATCH /users/5 (partial fields)</td><td>No</td></tr>
+                                    <tr><td>DELETE</td><td>Remove</td><td>DELETE /users/5</td><td>Yes</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">What is a data centre tier classification? Compare Tier III and Tier IV.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Feature</th><th scope="col">Tier III</th><th scope="col">Tier IV</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Uptime</th><td>99.982%</td><td>99.995%</td></tr>
+                                    <tr><th scope="row">Downtime/year</th><td>1.6 hours</td><td>26 minutes</td></tr>
+                                    <tr><th scope="row">Redundancy</th><td>N+1 (concurrently maintainable)</td><td>2N (fault tolerant)</td></tr>
+                                    <tr><th scope="row">Maintenance</th><td>Can maintain without shutdown</td><td>Survives any single component failure</td></tr>
+                                    <tr><th scope="row">Power paths</th><td>Multiple, one active</td><td>Multiple active simultaneously</td></tr>
+                                    <tr><th scope="row">Cost</th><td>High</td><td>Very high (~2× Tier III)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Bangladesh's National Data Centre at Kaliakair is Tier III. Major banks typically require Tier III for production and Tier II for DR sites.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">Why are NAND and NOR called universal gates? Show how to implement AND using NAND gates only.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <p>A gate is <strong>universal</strong> if any Boolean function can be implemented using only that gate. NAND and NOR each satisfy this because each can implement NOT, AND and OR:</p>
+                        <p><strong>AND using NAND gates:</strong></p>
+                        <div class="calc">
+                            <div class="calc__row">Step 1: NAND(A, B) = (AB)′</div>
+                            <div class="calc__row">Step 2: NOT the result: NAND((AB)′, (AB)′) = ((AB)′)′ = AB</div>
+                            <div class="calc__row calc__row--result">AND = two NAND gates (one NAND followed by NAND-as-NOT)</div>
+                        </div>
+                        <p><strong>OR using NAND:</strong> NAND(NAND(A,A), NAND(B,B)) = NAND(A′, B′) = (A′B′)′ = A+B (De Morgan).</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">What is Digital Bangladesh? List the four pillars of Smart Bangladesh (Vision 2041).</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <p><strong>Digital Bangladesh</strong> (Vision 2021, launched 2008) aimed to transform governance, economy and society through ICT. Key achievements: e-governance portals, mobile financial services (bKash/Nagad reaching 180M+ accounts), fiber optic connectivity to all upazilas, national ID digitisation.</p>
+                        <p><strong>Smart Bangladesh (Vision 2041)</strong> extends this with four pillars:</p>
+                        <ol>
+                            <li><strong>Smart Citizen:</strong> digitally literate, tech-savvy population</li>
+                            <li><strong>Smart Economy:</strong> cashless transactions, fintech, e-commerce, knowledge-based economy</li>
+                            <li><strong>Smart Government:</strong> paperless governance, AI-driven decision making, interoperable systems (BNDA)</li>
+                            <li><strong>Smart Society:</strong> universal digital access, smart cities, digital healthcare and education</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">Compare SOAP and REST web services.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Aspect</th><th scope="col">SOAP</th><th scope="col">REST</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Type</th><td>Protocol (strict spec)</td><td>Architectural style</td></tr>
+                                    <tr><th scope="row">Data format</th><td>XML only</td><td>JSON, XML, others</td></tr>
+                                    <tr><th scope="row">Transport</th><td>HTTP, SMTP, JMS</td><td>HTTP</td></tr>
+                                    <tr><th scope="row">Contract</th><td>WSDL (rigid)</td><td>OpenAPI (flexible)</td></tr>
+                                    <tr><th scope="row">State</th><td>Can be stateful</td><td>Stateless</td></tr>
+                                    <tr><th scope="row">Security</th><td>WS-Security (built-in)</td><td>HTTPS + OAuth/JWT</td></tr>
+                                    <tr><th scope="row">Performance</th><td>Heavier (XML overhead)</td><td>Lighter (JSON, less overhead)</td></tr>
+                                    <tr><th scope="row">Banking use</th><td>Core banking, SWIFT</td><td>Mobile banking APIs, fintech</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">What are HTTP status codes? Explain the five categories with examples.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th>Category</th><th>Meaning</th><th>Common codes</th></tr></thead>
+                                <tbody>
+                                    <tr><td>1xx</td><td>Informational</td><td>100 Continue, 101 Switching Protocols</td></tr>
+                                    <tr><td>2xx</td><td>Success</td><td>200 OK, 201 Created, 204 No Content</td></tr>
+                                    <tr><td>3xx</td><td>Redirection</td><td>301 Permanent Redirect, 302 Found, 304 Not Modified</td></tr>
+                                    <tr><td>4xx</td><td>Client Error</td><td>400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests</td></tr>
+                                    <tr><td>5xx</td><td>Server Error</td><td>500 Internal Error, 502 Bad Gateway, 503 Service Unavailable</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Key distinctions:</strong> 401 = not authenticated (who are you?), 403 = not authorised (you're logged in but don't have permission), 404 = resource doesn't exist.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">What is PUE? A data centre uses 500 kW total and 350 kW for IT. Calculate PUE and comment.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">PUE = Total power / IT power = 500/350 = <strong>1.43</strong></div>
+                        </div>
+                        <p>A PUE of 1.43 means for every 1 kW used by IT, 0.43 kW is used for cooling, lighting, etc. This is <strong>good</strong> (below the industry average of ~1.58) but not exceptional (Google achieves ~1.10).</p>
+                        <p><strong>Improvement strategies:</strong> hot/cold aisle containment, free cooling (using outside air), raising server inlet temperature, virtualization to reduce total servers.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">Explain the Bangladesh ICT Act 2006. What are its key provisions?</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <p>The <strong>ICT Act 2006</strong> (amended 2009, 2013) is Bangladesh's primary legislation for electronic transactions and cyber offences.</p>
+                        <p><strong>Key provisions:</strong></p>
+                        <ul>
+                            <li>Legal recognition of electronic records and digital signatures</li>
+                            <li>Establishment of a Certification Authority (CA) for digital signatures</li>
+                            <li>E-governance — government can conduct official business electronically</li>
+                            <li>Cyber crime definitions: hacking, identity theft, phishing, cyber terrorism</li>
+                            <li>Penalties for publishing offensive/defamatory content online</li>
+                            <li>Controller of Certifying Authorities (CCA) as regulatory body</li>
+                        </ul>
+                        <p><strong>Note:</strong> The Digital Security Act 2018 later superseded many of the cyber crime provisions with updated definitions and a dedicated Digital Security Agency.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">Design a half adder and a full adder using logic gates. Show truth tables.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <p><strong>Half adder</strong> — adds two 1-bit numbers:</p>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th>A</th><th>B</th><th>Sum</th><th>Carry</th></tr></thead>
+                                <tbody>
+                                    <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                    <tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                                    <tr><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+                                    <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row">Sum = A ⊕ B (XOR), Carry = A · B (AND)</div>
+                        </div>
+                        <p><strong>Full adder</strong> — adds two bits plus a carry-in:</p>
+                        <div class="calc">
+                            <div class="calc__row">Sum = A ⊕ B ⊕ C<sub>in</sub></div>
+                            <div class="calc__row">C<sub>out</sub> = AB + C<sub>in</sub>(A ⊕ B)</div>
+                            <div class="calc__row calc__row--note">A full adder = two half adders + one OR gate</div>
+                        </div>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- PRACTICE -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">Explain responsive web design. What are media queries and how are they used?</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p><strong>Responsive design</strong> makes a website adapt to different screen sizes (desktop, tablet, phone) using fluid layouts, flexible images and CSS media queries.</p>
+                        <p><strong>Media query:</strong> a CSS rule that applies styles conditionally:</p>
+                        <pre><code>@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .main { width: 100%; }
+}</code></pre>
+                        <p><strong>Techniques:</strong> viewport meta tag, percentage widths, Flexbox/Grid, min/max-width, rem/em units, mobile-first approach (start with small screen, add complexity for larger).</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">Explain RPO and RTO in disaster recovery. A bank has RPO=1hr and RTO=4hrs — what does this mean?</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p><strong>RPO = 1 hour:</strong> the bank can tolerate losing at most 1 hour of data. Backups/replication must happen at least every hour.</p>
+                        <p><strong>RTO = 4 hours:</strong> the bank must restore services within 4 hours of a disaster. The DR site must be able to take over within that window.</p>
+                        <p><strong>Implications:</strong> requires at least a warm DR site (hot site for RTO &lt; 1hr), synchronous or near-synchronous data replication, tested failover procedures, and automated monitoring to detect failures quickly.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">Implement OR and NOT using only NOR gates.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p><strong>NOT using NOR:</strong></p>
+                        <div class="calc">
+                            <div class="calc__row">NOR(A, A) = (A+A)′ = A′ → <strong>NOT = NOR with both inputs tied</strong></div>
+                        </div>
+                        <p><strong>OR using NOR:</strong></p>
+                        <div class="calc">
+                            <div class="calc__row">Step 1: NOR(A, B) = (A+B)′</div>
+                            <div class="calc__row">Step 2: NOT the result: NOR((A+B)′, (A+B)′) = ((A+B)′)′ = A+B</div>
+                            <div class="calc__row calc__row--result">OR = two NOR gates (NOR followed by NOR-as-NOT)</div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">What is the difference between 401 Unauthorized and 403 Forbidden HTTP status codes?</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Code</th><th scope="col">Meaning</th><th scope="col">Action</th></tr></thead>
+                                <tbody>
+                                    <tr><td>401 Unauthorized</td><td>Not authenticated — identity unknown</td><td>Re-authenticate (login, provide API key)</td></tr>
+                                    <tr><td>403 Forbidden</td><td>Authenticated but not authorised — identity known, permission denied</td><td>Request elevated privileges or different credentials</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Example:</strong> A teller logs in (passes 401 check) but tries to access the admin dashboard (gets 403 because their role doesn't have permission).</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">What is BNDA (Bangladesh National Digital Architecture)? Why is it important?</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p><strong>BNDA</strong> is a government-mandated interoperability framework ensuring that all government digital systems can exchange data seamlessly.</p>
+                        <p><strong>Key components:</strong></p>
+                        <ul>
+                            <li><strong>National Enterprise Architecture:</strong> standardised technology choices</li>
+                            <li><strong>Interoperability framework:</strong> APIs, data formats and protocols for system integration</li>
+                            <li><strong>Shared digital platforms:</strong> common services (identity, payment, notification) that all systems can use</li>
+                            <li><strong>Data standards:</strong> uniform data definitions across government</li>
+                        </ul>
+                        <p><strong>Importance:</strong> prevents siloed systems, reduces duplication, enables citizen-centric "once-only" data provision, and supports the Smart Bangladesh vision.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">Compare JSON and XML as data interchange formats.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Feature</th><th scope="col">JSON</th><th scope="col">XML</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Syntax</th><td>Key-value pairs, arrays</td><td>Tags with opening/closing</td></tr>
+                                    <tr><th scope="row">Readability</th><td>Compact, easy to read</td><td>Verbose, more markup</td></tr>
+                                    <tr><th scope="row">Parsing</th><td>Native in JavaScript</td><td>Requires XML parser</td></tr>
+                                    <tr><th scope="row">Schema</th><td>JSON Schema (optional)</td><td>DTD, XSD (mature)</td></tr>
+                                    <tr><th scope="row">Data types</th><td>String, number, boolean, null, array, object</td><td>All text (types via schema)</td></tr>
+                                    <tr><th scope="row">Size</th><td>Smaller</td><td>Larger (closing tags)</td></tr>
+                                    <tr><th scope="row">Dominant in</th><td>REST APIs, web/mobile</td><td>SOAP, enterprise, config files</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">What are cookies and sessions? How do they maintain state in HTTP?</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p>HTTP is stateless — each request is independent. Cookies and sessions add state:</p>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Feature</th><th scope="col">Cookie</th><th scope="col">Session</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Storage</th><td>Client (browser)</td><td>Server (memory/DB)</td></tr>
+                                    <tr><th scope="row">Size limit</th><td>~4 KB per cookie</td><td>Server memory (larger)</td></tr>
+                                    <tr><th scope="row">Security</th><td>Visible to client; can be stolen (XSS)</td><td>Only session ID sent to client</td></tr>
+                                    <tr><th scope="row">Lifetime</th><td>Set by Expires/Max-Age</td><td>Until timeout or logout</td></tr>
+                                    <tr><th scope="row">Use case</th><td>Remember preferences, tracking</td><td>Authentication state, cart</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>How they work together:</strong> server creates a session and sends a session ID as a cookie. Each subsequent request includes the cookie, letting the server identify the user.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">What is the Digital Security Act 2018 of Bangladesh? List its key provisions.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p>The <strong>Digital Security Act (DSA) 2018</strong> replaced parts of the ICT Act 2006 and established a comprehensive legal framework for cyber security in Bangladesh.</p>
+                        <p><strong>Key provisions:</strong></p>
+                        <ul>
+                            <li>Establishment of the Digital Security Agency under the ICT Division</li>
+                            <li>Creation of a national Computer Emergency Response Team (CERT)</li>
+                            <li>Critical Information Infrastructure (CII) designation and protection</li>
+                            <li>Offences: hacking, identity theft, cyber terrorism, defamation, spreading religious hatred online</li>
+                            <li>Digital forensics lab and investigation procedures</li>
+                            <li>Penalties ranging from fines to imprisonment (up to 14 years for terrorism-related offences)</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">Design a 4-to-1 multiplexer using logic gates. Show the truth table and Boolean expression.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p>A 4-to-1 MUX has 4 data inputs (I₀–I₃), 2 select lines (S₁, S₀) and 1 output Y.</p>
+                        <div class="calc">
+                            <div class="calc__row">Y = S₁′S₀′I₀ + S₁′S₀I₁ + S₁S₀′I₂ + S₁S₀I₃</div>
+                        </div>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th>S₁</th><th>S₀</th><th>Output Y</th></tr></thead>
+                                <tbody>
+                                    <tr><td>0</td><td>0</td><td>I₀</td></tr>
+                                    <tr><td>0</td><td>1</td><td>I₁</td></tr>
+                                    <tr><td>1</td><td>0</td><td>I₂</td></tr>
+                                    <tr><td>1</td><td>1</td><td>I₃</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Implementation:</strong> 4 AND gates (one per data input, each gated by the appropriate select combination), fed into a 4-input OR gate. Plus 2 NOT gates for the inverted select lines.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">What is server virtualisation? Explain hypervisor types and their advantages.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p><strong>Server virtualisation</strong> runs multiple virtual machines (VMs) on a single physical server, each with its own OS and applications.</p>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Type</th><th scope="col">Also called</th><th scope="col">Runs on</th><th scope="col">Examples</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Type 1 (bare-metal)</td><td>Native</td><td>Directly on hardware</td><td>VMware ESXi, Hyper-V, KVM</td></tr>
+                                    <tr><td>Type 2 (hosted)</td><td>Hosted</td><td>On top of host OS</td><td>VirtualBox, VMware Workstation</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Advantages:</strong> server consolidation (higher utilisation, fewer physical servers), isolation between workloads, easier DR (snapshot/migrate VMs), rapid provisioning, reduced power and cooling costs.</p>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="security.html">
+                        <span class="pager__dir">Previous</span>
+                        <span class="pager__name">Security</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="banking-ict.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">Banking ICT</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>Bangladesh Bank Assistant Director (ICT) written preparation. Subject 15 of 18 — Other Topics.</p>
+            <p class="small">Coverage checklist: <code>SYLLABUS.md</code> §15.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

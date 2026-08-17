@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="c-programming"
+    data-subject-name="C Programming">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>C Programming — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice questions on C data types, operators, pointers, arrays, strings, dynamic memory, structures, file handling and output prediction." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+
+            <div class="header__spacer"></div>
+
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming" aria-current="page"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 02</span><span aria-hidden="true">·</span><span>Phase 2</span>
+                </p>
+                <h1>C Programming</h1>
+                <p class="page-head__lede">
+                    The exam tests C through <strong>output prediction</strong>,
+                    <strong>pointer tracing</strong> and <strong>short programs</strong>.
+                    Every question rewards knowing exactly what C does at each step —
+                    ambiguity means the examiner will exploit it.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
+             NOTES
+             ================================================================ -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">13 topics</span>
+                </div>
+
+                <p class="intro">
+                    C is a small language — the entire grammar fits on two pages — but
+                    it gives you no safety net. Every topic below is demonstrated on
+                    running code so that the rules are visible, not just stated.
+                </p>
+
+                <ul class="topics">
+                    <li><a href="#n-structure"><span class="topics__num">01</span>Program structure and compilation</a></li>
+                    <li><a href="#n-types"><span class="topics__num">02</span>Data types, sizeof and qualifiers</a></li>
+                    <li><a href="#n-operators"><span class="topics__num">03</span>Operators and precedence</a></li>
+                    <li><a href="#n-control"><span class="topics__num">04</span>Control flow and loop tracing</a></li>
+                    <li><a href="#n-functions"><span class="topics__num">05</span>Functions, recursion and storage classes</a></li>
+                    <li><a href="#n-arrays"><span class="topics__num">06</span>Arrays</a></li>
+                    <li><a href="#n-strings"><span class="topics__num">07</span>Strings and string.h</a></li>
+                    <li><a href="#n-pointers"><span class="topics__num">08</span>Pointers and pointer arithmetic</a></li>
+                    <li><a href="#n-dynamic"><span class="topics__num">09</span>Dynamic memory allocation</a></li>
+                    <li><a href="#n-structs"><span class="topics__num">10</span>Structures and unions</a></li>
+                    <li><a href="#n-files"><span class="topics__num">11</span>File handling</a></li>
+                    <li><a href="#n-preprocessor"><span class="topics__num">12</span>Preprocessor</a></li>
+                    <li><a href="#n-output"><span class="topics__num">13</span>Output prediction patterns</a></li>
+                </ul>
+
+                <!-- 1 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-structure">
+                    <h3>1. Program structure and compilation</h3>
+
+                    <p>
+                        Every C program is a collection of <strong>functions</strong>, one
+                        of which must be <code>main</code>. The compiler never sees comments
+                        or macros — the preprocessor strips them before compilation begins.
+                        Understanding the pipeline explains most "why does this error
+                        happen?" questions.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">hello.c — the minimal complete program</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Hello, world!\n");
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>Hello, world!</code></div>
+
+                    <p>
+                        The file passes through four stages before it becomes an
+                        executable:
+                    </p>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 620 70" width="620" role="img"
+                            aria-label="C compilation pipeline: preprocess, compile, assemble, link">
+                            <rect class="dg-node" x="0" y="20" width="110" height="32" rx="4" />
+                            <text class="dg-text" x="55" y="36">hello.c</text>
+                            <defs><marker id="arr-pipe" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <line class="dg-stroke-ink" x1="110" y1="36" x2="140" y2="36" marker-end="url(#arr-pipe)" />
+                            <rect class="dg-node-solid" x="140" y="10" width="90" height="20" rx="3" />
+                            <text class="dg-text-on-ink" x="185" y="20" font-size="11">Preprocess</text>
+                            <text class="dg-label" x="185" y="48">#include, #define</text>
+                            <line class="dg-stroke-ink" x1="230" y1="20" x2="260" y2="20" marker-end="url(#arr-pipe)" />
+                            <rect class="dg-node-solid" x="260" y="10" width="80" height="20" rx="3" />
+                            <text class="dg-text-on-ink" x="300" y="20" font-size="11">Compile</text>
+                            <text class="dg-label" x="300" y="48">→ assembly</text>
+                            <line class="dg-stroke-ink" x1="340" y1="20" x2="370" y2="20" marker-end="url(#arr-pipe)" />
+                            <rect class="dg-node-solid" x="370" y="10" width="90" height="20" rx="3" />
+                            <text class="dg-text-on-ink" x="415" y="20" font-size="11">Assemble</text>
+                            <text class="dg-label" x="415" y="48">→ .o (object)</text>
+                            <line class="dg-stroke-ink" x1="460" y1="20" x2="490" y2="20" marker-end="url(#arr-pipe)" />
+                            <rect class="dg-node-solid" x="490" y="10" width="60" height="20" rx="3" />
+                            <text class="dg-text-on-ink" x="520" y="20" font-size="11">Link</text>
+                            <text class="dg-label" x="520" y="48">+ libc → a.out</text>
+                        </svg>
+                        <figcaption>An <code>#include</code> error is a preprocessor error; an "undefined reference" is a linker error — knowing the stage tells you where to fix.</figcaption>
+                    </figure>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Tokens</span><span class="calc__math">Keywords (32 in C89, 37 in C99), identifiers, constants, string literals, operators, punctuators.</span></div>
+                        <div class="calc__row"><span class="calc__label">Header files</span><span class="calc__math"><code>&lt;stdio.h&gt;</code> I/O · <code>&lt;stdlib.h&gt;</code> malloc/atoi · <code>&lt;string.h&gt;</code> string ops · <code>&lt;math.h&gt;</code> math · <code>&lt;ctype.h&gt;</code> char tests.</span></div>
+                        <div class="calc__row"><span class="calc__label">Escape sequences</span><span class="calc__math"><code>\n</code> newline · <code>\t</code> tab · <code>\0</code> null · <code>\\</code> backslash · <code>\"</code> double quote · <code>\a</code> bell.</span></div>
+                    </div>
+                </div>
+
+                <!-- 2 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-types">
+                    <h3>2. Data types, sizeof and qualifiers <span class="flag"></span></h3>
+
+                    <p>
+                        C has four basic type families: <code>char</code> (1 byte),
+                        <code>int</code> (typically 4 bytes), <code>float</code> (4 bytes)
+                        and <code>double</code> (8 bytes). The <code>sizeof</code> operator
+                        returns the size in bytes — it is evaluated at compile time, not
+                        runtime, and is the most frequently tested operator in exam output
+                        questions.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">sizeof demonstration</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("char:   %zu\n", sizeof(char));
+    printf("short:  %zu\n", sizeof(short));
+    printf("int:    %zu\n", sizeof(int));
+    printf("long:   %zu\n", sizeof(long));
+    printf("float:  %zu\n", sizeof(float));
+    printf("double: %zu\n", sizeof(double));
+    printf("int*:   %zu\n", sizeof(int *));
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>char:   1
+short:  2
+int:    4
+long:   4  (8 on 64-bit Linux)
+float:  4
+double: 8
+int*:   4  (8 on 64-bit)</code></div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Size (typical)</th>
+                                    <th scope="col">Range (signed)</th>
+                                    <th scope="col">Format</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">char</th><td>1</td><td>−128 to 127</td><td>%c, %d</td></tr>
+                                <tr><th scope="row">short</th><td>2</td><td>−32,768 to 32,767</td><td>%hd</td></tr>
+                                <tr><th scope="row">int</th><td>4</td><td>−2³¹ to 2³¹−1</td><td>%d</td></tr>
+                                <tr><th scope="row">long</th><td>4 or 8</td><td>−2³¹ to 2³¹−1 (or 2⁶³)</td><td>%ld</td></tr>
+                                <tr><th scope="row">long long</th><td>8</td><td>−2⁶³ to 2⁶³−1</td><td>%lld</td></tr>
+                                <tr><th scope="row">float</th><td>4</td><td>≈ ±3.4 × 10³⁸ (7 digits)</td><td>%f</td></tr>
+                                <tr><th scope="row">double</th><td>8</td><td>≈ ±1.7 × 10³⁰⁸ (15 digits)</td><td>%lf</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">unsigned</span><span class="calc__math">Drops the sign bit. <code>unsigned char</code>: 0–255. <code>unsigned int</code>: 0 to 2³²−1 = 4,294,967,295.</span></div>
+                        <div class="calc__row"><span class="calc__label">typedef</span><span class="calc__math"><code>typedef unsigned long ulong;</code> creates an alias — no new type, just readability.</span></div>
+                        <div class="calc__row"><span class="calc__label">enum</span><span class="calc__math"><code>enum color { RED, GREEN=5, BLUE };</code> → RED=0, GREEN=5, BLUE=6. Each name is an <code>int</code> constant.</span></div>
+                    </div>
+
+                    <div class="callout callout--trap">
+                        <span class="callout__title">Integer promotion trap</span>
+                        <p class="mb-0">
+                            In <code>char c = 200; printf("%d", c);</code> the output is
+                            <strong>−56</strong> on most systems. <code>char</code> is signed
+                            by default; 200 overflows to −56 in 2's complement (200 − 256).
+                            Use <code>unsigned char</code> to store values above 127.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-operators">
+                    <h3>3. Operators and precedence <span class="flag"></span></h3>
+
+                    <p>
+                        C has 45 operators grouped into 15 precedence levels. The exam
+                        doesn't ask you to memorise the table — it gives you an
+                        expression and asks for the output. Knowing four rules handles
+                        almost every question: <em>postfix binds tightest</em>,
+                        <em>unary beats binary</em>, <em>multiply before add</em>, and
+                        <em>assignment is right-to-left</em>.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Pre- vs post-increment — the classic trap</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a = 5;
+    int b = a++;   /* b gets 5 (old value), then a becomes 6 */
+    int c = ++a;   /* a becomes 7 first, then c gets 7       */
+    printf("a=%d b=%d c=%d\n", a, b, c);
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>a=7 b=5 c=7</code></div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Operators most likely to appear in exam expressions</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Precedence</th>
+                                    <th scope="col">Operators</th>
+                                    <th scope="col">Associativity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">1 (highest)</th><td><code>() [] -> .</code></td><td>Left</td></tr>
+                                <tr><th scope="row">2</th><td><code>++ -- ! ~ (type) * & sizeof</code> (unary)</td><td>Right</td></tr>
+                                <tr><th scope="row">3–4</th><td><code>* / %</code> then <code>+ -</code></td><td>Left</td></tr>
+                                <tr><th scope="row">5–6</th><td><code>&lt;&lt; &gt;&gt;</code> then <code>&lt; &lt;= &gt; &gt;=</code></td><td>Left</td></tr>
+                                <tr><th scope="row">7–8</th><td><code>== !=</code> then <code>&amp;</code></td><td>Left</td></tr>
+                                <tr><th scope="row">9–11</th><td><code>^</code> then <code>|</code> then <code>&amp;&amp;</code></td><td>Left</td></tr>
+                                <tr><th scope="row">12</th><td><code>||</code></td><td>Left</td></tr>
+                                <tr><th scope="row">13</th><td><code>?:</code> (ternary)</td><td>Right</td></tr>
+                                <tr><th scope="row">14</th><td><code>= += -= *= /= %= &amp;= ^= |= &lt;&lt;= &gt;&gt;=</code></td><td>Right</td></tr>
+                                <tr><th scope="row">15 (lowest)</th><td><code>,</code> (comma)</td><td>Left</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4>Bitwise operators</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">Bitwise operations on 12 (1100) and 10 (1010)</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a = 12, b = 10;
+    printf("a & b  = %d\n", a & b);   /* 1000 = 8  */
+    printf("a | b  = %d\n", a | b);   /* 1110 = 14 */
+    printf("a ^ b  = %d\n", a ^ b);   /* 0110 = 6  */
+    printf("~a     = %d\n", ~a);      /* ...0011 = -13 (2's comp) */
+    printf("a << 2 = %d\n", a << 2);  /* 110000 = 48 (×4) */
+    printf("a >> 1 = %d\n", a >> 1);  /* 0110 = 6 (÷2)   */
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>a & b  = 8
+a | b  = 14
+a ^ b  = 6
+~a     = -13
+a << 2 = 48
+a >> 1 = 6</code></div>
+
+                    <div class="insight">
+                        <div><strong>Short-circuit evaluation.</strong> In <code>a &amp;&amp; b</code>, if <code>a</code> is 0 then <code>b</code> is never evaluated. In <code>a || b</code>, if <code>a</code> is non-zero then <code>b</code> is skipped. This is tested with side effects: <code>int x = 0; if (x &amp;&amp; ++x) {} printf("%d", x);</code> prints <strong>0</strong> because <code>++x</code> never runs.</div>
+                    </div>
+                </div>
+
+                <!-- 4 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-control">
+                    <h3>4. Control flow and loop tracing <span class="flag"></span></h3>
+
+                    <p>
+                        The exam gives you a loop (or nested loops) and asks "what is the
+                        output?" The only reliable method is to trace — walk the variables
+                        through each iteration. Below, one set of nested loops is traced
+                        completely so the pattern is clear.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Pattern printing — a standard exam question</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    for (int i = 1; i <= 4; i++) {
+        for (int j = 1; j <= i; j++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>*
+**
+***
+****</code></div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Trace — i and j at each iteration</caption>
+                            <thead>
+                                <tr><th scope="col">i</th><th scope="col">j runs</th><th scope="col">Stars printed</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>1</td><td>*</td></tr>
+                                <tr><td>2</td><td>1, 2</td><td>**</td></tr>
+                                <tr><td>3</td><td>1, 2, 3</td><td>***</td></tr>
+                                <tr><td>4</td><td>1, 2, 3, 4</td><td>****</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4>break, continue and switch</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">switch with fallthrough — the other classic trap</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x = 2;
+    switch (x) {
+        case 1: printf("one ");
+        case 2: printf("two ");
+        case 3: printf("three ");
+                break;
+        default: printf("other");
+    }
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>two three </code></div>
+
+                    <div class="insight">
+                        <div><strong>Fallthrough is the default.</strong> Without <code>break</code>, execution falls through every subsequent case. The exam exploits this regularly — especially by placing cases without <code>break</code> before a <code>break</code> two cases later. The output is always longer than expected.</div>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">do-while</span><span class="calc__math">Body executes <strong>at least once</strong>. <code>do { ... } while (condition);</code> — the semicolon after the closing parenthesis is required.</span></div>
+                        <div class="calc__row"><span class="calc__label">goto</span><span class="calc__math">Unconditional jump. Rarely appears in exams except as "what does goto do?" answer: transfers control to a labelled statement within the same function.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Comma in for</span><span class="calc__math"><code>for (i=0, j=10; i&lt;j; i++, j--)</code> — the comma operator evaluates left to right and returns the right value. Used to update two variables in a for-loop.</span></div>
+                    </div>
+                </div>
+
+                <!-- 5 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-functions">
+                    <h3>5. Functions, recursion and storage classes <span class="flag"></span></h3>
+
+                    <p>
+                        C passes arguments <strong>by value</strong> — the function gets a
+                        copy. To modify the caller's variable, you pass a pointer (call by
+                        reference, simulated). This distinction is the single most tested
+                        function concept.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Call by value vs call by reference</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+void byValue(int x)    { x = 99; }
+void byRef(int *p)     { *p = 99; }
+
+int main(void) {
+    int a = 10, b = 10;
+    byValue(a);
+    byRef(&amp;b);
+    printf("a=%d b=%d\n", a, b);
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>a=10 b=99</code></div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">byValue</span><span class="calc__math"><code>x</code> is a copy of <code>a</code>. Changing <code>x</code> does not affect <code>a</code>.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">byRef</span><span class="calc__math"><code>p</code> holds the address of <code>b</code>. <code>*p = 99</code> writes directly to <code>b</code>'s memory.</span></div>
+                    </div>
+
+                    <h4>Recursion</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">Factorial — the standard recursion example</span>
+<pre><code>int factorial(int n) {
+    if (n <= 1) return 1;       /* base case */
+    return n * factorial(n - 1); /* recursive case */
+}
+/* factorial(5) = 5 × 4 × 3 × 2 × 1 = 120 */</code></pre>
+                    </div>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 500 160" width="500" role="img"
+                            aria-label="Call stack for factorial(4): each frame shows n and the pending multiply">
+                            <defs><marker id="arr-stack" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <rect class="dg-node" x="0" y="10" width="90" height="30" rx="4" />
+                            <text class="dg-text" x="45" y="25" font-size="11">fact(4)</text>
+                            <text class="dg-label" x="45" y="55">4 × ?</text>
+                            <line class="dg-stroke-ink" x1="90" y1="25" x2="120" y2="25" marker-end="url(#arr-stack)" />
+                            <rect class="dg-node" x="120" y="10" width="90" height="30" rx="4" />
+                            <text class="dg-text" x="165" y="25" font-size="11">fact(3)</text>
+                            <text class="dg-label" x="165" y="55">3 × ?</text>
+                            <line class="dg-stroke-ink" x1="210" y1="25" x2="240" y2="25" marker-end="url(#arr-stack)" />
+                            <rect class="dg-node" x="240" y="10" width="90" height="30" rx="4" />
+                            <text class="dg-text" x="285" y="25" font-size="11">fact(2)</text>
+                            <text class="dg-label" x="285" y="55">2 × ?</text>
+                            <line class="dg-stroke-ink" x1="330" y1="25" x2="360" y2="25" marker-end="url(#arr-stack)" />
+                            <rect class="dg-node-solid" x="360" y="10" width="90" height="30" rx="4" />
+                            <text class="dg-text-on-ink" x="405" y="25" font-size="11">fact(1)=1</text>
+                            <!-- return path -->
+                            <line class="dg-stroke-dash" x1="405" y1="45" x2="405" y2="80" />
+                            <text class="dg-label" x="405" y="95">returns 1</text>
+                            <line class="dg-stroke-dash" x1="285" y1="58" x2="285" y2="100" />
+                            <text class="dg-label" x="285" y="115">2×1 = 2</text>
+                            <line class="dg-stroke-dash" x1="165" y1="58" x2="165" y2="120" />
+                            <text class="dg-label" x="165" y="135">3×2 = 6</text>
+                            <line class="dg-stroke-dash" x1="45" y1="58" x2="45" y2="140" />
+                            <text class="dg-label" x="45" y="155">4×6 = 24</text>
+                        </svg>
+                        <figcaption>Each call waits for the next to return. The stack grows left-to-right; values unwind right-to-left.</figcaption>
+                    </figure>
+
+                    <h4>Storage classes</h4>
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Class</th>
+                                    <th scope="col">Scope</th>
+                                    <th scope="col">Lifetime</th>
+                                    <th scope="col">Default init</th>
+                                    <th scope="col">Where stored</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">auto</th><td>Block</td><td>Block</td><td>Garbage</td><td>Stack</td></tr>
+                                <tr><th scope="row">register</th><td>Block</td><td>Block</td><td>Garbage</td><td>CPU register (hint)</td></tr>
+                                <tr><th scope="row">static (local)</th><td>Block</td><td>Program</td><td>0</td><td>Data segment</td></tr>
+                                <tr><th scope="row">static (global)</th><td>File</td><td>Program</td><td>0</td><td>Data segment</td></tr>
+                                <tr><th scope="row">extern</th><td>Global</td><td>Program</td><td>0</td><td>Data segment</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">static local — the exam's favourite storage-class trick</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+void count(void) {
+    static int n = 0;  /* initialised only once */
+    n++;
+    printf("%d ", n);
+}
+
+int main(void) {
+    count(); count(); count();
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>1 2 3 </code></div>
+
+                    <div class="insight">
+                        <div><strong>Why <code>static</code> prints 1 2 3, not 1 1 1.</strong> A <code>static</code> local variable keeps its value between calls — the <code>= 0</code> initialisation runs only on the first call. Without <code>static</code>, <code>n</code> would be re-created on the stack each call and always start at 0.</div>
+                    </div>
+                </div>
+
+                <!-- 6 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-arrays">
+                    <h3>6. Arrays</h3>
+
+                    <p>
+                        An array is a contiguous block of same-type elements. The name of
+                        an array decays to a pointer to its first element in most
+                        contexts — this is the <em>array–pointer duality</em> that makes C
+                        arrays behave like pointers in function calls.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">1D array — declaration, initialisation, access</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[5] = {10, 20, 30, 40, 50};
+    printf("a[0]=%d  a[4]=%d\n", a[0], a[4]);
+    printf("*(a+2) = %d\n", *(a + 2));  /* pointer arithmetic */
+    printf("sizeof(a) = %zu\n", sizeof(a));     /* 20 bytes (5×4) */
+    printf("elements  = %zu\n", sizeof(a)/sizeof(a[0])); /* 5 */
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>a[0]=10  a[4]=50
+*(a+2) = 30
+sizeof(a) = 20
+elements  = 5</code></div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Equivalence</span><span class="calc__math"><code>a[i]</code> ≡ <code>*(a + i)</code> ≡ <code>*(i + a)</code> ≡ <code>i[a]</code>. Yes, <code>2[a]</code> is legal C and equals <code>a[2]</code>.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">No bounds check</span><span class="calc__math">C does <strong>not</strong> check array bounds. Accessing <code>a[5]</code> in a 5-element array reads whatever happens to be in memory — undefined behaviour.</span></div>
+                    </div>
+
+                    <h4>2D arrays</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">2D array — row-major layout</span>
+<pre><code>int m[2][3] = { {1,2,3}, {4,5,6} };
+/* Memory layout (row-major): 1 2 3 4 5 6 */
+/* m[1][2] = *(*(m+1)+2) = 6             */</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Address of m[i][j]</span><span class="calc__math">Base + (i × cols + j) × sizeof(element)</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Passing to function</span><span class="calc__math"><code>void f(int a[][3], int rows)</code> — the first dimension can be omitted but subsequent dimensions are required so the compiler knows the row stride.</span></div>
+                    </div>
+                </div>
+
+                <!-- 7 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-strings">
+                    <h3>7. Strings and string.h <span class="flag"></span></h3>
+
+                    <p>
+                        C has no string type. A "string" is a <code>char</code> array
+                        terminated by <code>'\0'</code> (the null character, ASCII 0).
+                        Every string function relies on this sentinel — if it is missing,
+                        the function reads past the array and the behaviour is undefined.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">String declaration — three ways, one trap</span>
+<pre><code>char s1[] = "Hello";         /* array of 6 chars: H e l l o \0 */
+char s2[] = {'H','i','\0'}; /* same idea, manual              */
+char *s3  = "World";        /* pointer to string literal       */
+
+s1[0] = 'J';  /* OK — s1 is a mutable array */
+/* s3[0] = 'X'; — UNDEFINED: literals are read-only */</code></pre>
+                    </div>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 440 80" width="440" role="img"
+                            aria-label="Memory layout of char s1[] = Hello showing six bytes including null terminator">
+                            <text class="dg-label-start" x="5" y="20">s1:</text>
+                            <rect class="dg-node" x="50" y="5" width="40" height="30" rx="2" /><text class="dg-text" x="70" y="20">'H'</text>
+                            <rect class="dg-node" x="92" y="5" width="40" height="30" rx="2" /><text class="dg-text" x="112" y="20">'e'</text>
+                            <rect class="dg-node" x="134" y="5" width="40" height="30" rx="2" /><text class="dg-text" x="154" y="20">'l'</text>
+                            <rect class="dg-node" x="176" y="5" width="40" height="30" rx="2" /><text class="dg-text" x="196" y="20">'l'</text>
+                            <rect class="dg-node" x="218" y="5" width="40" height="30" rx="2" /><text class="dg-text" x="238" y="20">'o'</text>
+                            <rect class="dg-node-solid" x="260" y="5" width="40" height="30" rx="2" /><text class="dg-text-on-ink" x="280" y="20">'\0'</text>
+                            <text class="dg-label" x="70" y="55">[0]</text>
+                            <text class="dg-label" x="112" y="55">[1]</text>
+                            <text class="dg-label" x="154" y="55">[2]</text>
+                            <text class="dg-label" x="196" y="55">[3]</text>
+                            <text class="dg-label" x="238" y="55">[4]</text>
+                            <text class="dg-label" x="280" y="55">[5]</text>
+                            <text class="dg-label" x="340" y="20">sizeof = 6</text>
+                            <text class="dg-label" x="340" y="40">strlen = 5</text>
+                        </svg>
+                        <figcaption><code>sizeof</code> includes the null terminator; <code>strlen</code> does not. This off-by-one is the most common string bug on exams.</figcaption>
+                    </figure>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Essential string.h functions</caption>
+                            <thead>
+                                <tr><th scope="col">Function</th><th scope="col">Does</th><th scope="col">Returns</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row"><code>strlen(s)</code></th><td>Counts chars before <code>'\0'</code></td><td>Length (size_t)</td></tr>
+                                <tr><th scope="row"><code>strcpy(d, s)</code></th><td>Copies s into d (including <code>'\0'</code>)</td><td>d</td></tr>
+                                <tr><th scope="row"><code>strcat(d, s)</code></th><td>Appends s to end of d</td><td>d</td></tr>
+                                <tr><th scope="row"><code>strcmp(a, b)</code></th><td>Lexicographic compare</td><td>&lt;0, 0, or &gt;0</td></tr>
+                                <tr><th scope="row"><code>strstr(h, n)</code></th><td>Find substring n in h</td><td>Pointer or NULL</td></tr>
+                                <tr><th scope="row"><code>strtok(s, d)</code></th><td>Split s by delimiters d</td><td>Next token or NULL</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Manual strlen — what the exam may ask you to write</span>
+<pre><code>int my_strlen(const char *s) {
+    int len = 0;
+    while (s[len] != '\0')
+        len++;
+    return len;
+}</code></pre>
+                    </div>
+
+                    <div class="insight">
+                        <div><strong><code>strcmp</code> returns 0 for equal.</strong> A common mistake: <code>if (strcmp(a, b))</code> means "if they are <em>different</em>", because 0 is false in C. To test equality, write <code>if (strcmp(a, b) == 0)</code>.</div>
+                    </div>
+                </div>
+
+                <!-- 8 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-pointers">
+                    <h3>8. Pointers and pointer arithmetic <span class="flag"></span></h3>
+
+                    <p>
+                        A pointer is a variable that stores a memory address. The two
+                        fundamental operations are <code>&amp;</code> (address-of: gives
+                        the address of a variable) and <code>*</code> (dereference: gives
+                        the value at the address). Every pointer question on the exam
+                        reduces to tracking which address each pointer holds and what
+                        value lives there.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Pointer basics — trace every address</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x = 42;
+    int *p = &amp;x;      /* p points to x     */
+    int **q = &amp;p;     /* q points to p     */
+
+    printf("x  = %d\n", x);       /* 42   */
+    printf("*p = %d\n", *p);      /* 42   */
+    printf("**q = %d\n", **q);    /* 42   */
+
+    *p = 100;
+    printf("x  = %d\n", x);       /* 100  */
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>x  = 42
+*p = 42
+**q = 42
+x  = 100</code></div>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 460 80" width="460" role="img"
+                            aria-label="Pointer chain: q points to p, p points to x, x holds 42">
+                            <defs><marker id="arr-ptr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <rect class="dg-node" x="0" y="20" width="100" height="35" rx="4" />
+                            <text class="dg-text" x="50" y="33" font-size="11">q</text>
+                            <text class="dg-label" x="50" y="48" font-size="10">addr of p</text>
+                            <line class="dg-stroke-ink" x1="100" y1="37" x2="145" y2="37" marker-end="url(#arr-ptr)" />
+                            <rect class="dg-node" x="150" y="20" width="100" height="35" rx="4" />
+                            <text class="dg-text" x="200" y="33" font-size="11">p</text>
+                            <text class="dg-label" x="200" y="48" font-size="10">addr of x</text>
+                            <line class="dg-stroke-ink" x1="250" y1="37" x2="295" y2="37" marker-end="url(#arr-ptr)" />
+                            <rect class="dg-node-solid" x="300" y="20" width="100" height="35" rx="4" />
+                            <text class="dg-text-on-ink" x="350" y="33" font-size="11">x = 42</text>
+                        </svg>
+                        <figcaption><code>**q</code> dereferences twice: q → p → x → 42.</figcaption>
+                    </figure>
+
+                    <h4>Pointer arithmetic</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">Pointer arithmetic steps by the pointed-to type's size</span>
+<pre><code>int a[] = {10, 20, 30, 40, 50};
+int *p = a;       /* p points to a[0] */
+printf("%d\n", *(p + 3));  /* 40 — jumps 3×sizeof(int) = 12 bytes */
+p++;
+printf("%d\n", *p);  /* 20 — p now points to a[1] */</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">NULL pointer</span><span class="calc__math"><code>int *p = NULL;</code> — convention for "points to nothing." Dereferencing NULL is undefined (usually a crash).</span></div>
+                        <div class="calc__row"><span class="calc__label">void pointer</span><span class="calc__math"><code>void *p</code> can hold any address but cannot be dereferenced directly — must cast first: <code>*(int *)p</code>.</span></div>
+                        <div class="calc__row"><span class="calc__label">Dangling pointer</span><span class="calc__math">Points to memory that has been freed or is out of scope. Reading it is undefined behaviour.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Wild pointer</span><span class="calc__math">Uninitialized pointer — holds whatever garbage was in memory. Always initialise to <code>NULL</code> or a valid address.</span></div>
+                    </div>
+
+                    <h4>const with pointers</h4>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label"><code>const int *p</code></span><span class="calc__math">Pointer to const int. Can change <code>p</code>, cannot change <code>*p</code>. "Read the data, don't modify it."</span></div>
+                        <div class="calc__row"><span class="calc__label"><code>int *const p</code></span><span class="calc__math">Const pointer to int. Cannot change <code>p</code>, can change <code>*p</code>. "Stay at this address."</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label"><code>const int *const p</code></span><span class="calc__math">Both locked. Cannot change either the pointer or the value.</span></div>
+                    </div>
+                </div>
+
+                <!-- 9 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-dynamic">
+                    <h3>9. Dynamic memory allocation <span class="flag"></span></h3>
+
+                    <p>
+                        Stack memory is automatic but limited in size and lifetime. The
+                        <strong>heap</strong> gives you memory that persists until you
+                        explicitly free it — at the cost of managing it yourself. Four
+                        functions in <code>&lt;stdlib.h&gt;</code> control heap memory.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Function</th><th scope="col">What it does</th><th scope="col">Init?</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row"><code>malloc(n)</code></th><td>Allocates <em>n</em> bytes</td><td>No (garbage)</td></tr>
+                                <tr><th scope="row"><code>calloc(count, size)</code></th><td>Allocates count × size bytes</td><td>Yes (all zeros)</td></tr>
+                                <tr><th scope="row"><code>realloc(ptr, n)</code></th><td>Resizes existing block to <em>n</em> bytes</td><td>Old data kept</td></tr>
+                                <tr><th scope="row"><code>free(ptr)</code></th><td>Returns the block to the heap</td><td>—</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Dynamic array — allocate, use, free</span>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(void) {
+    int n = 5;
+    int *arr = (int *)malloc(n * sizeof(int));
+    if (arr == NULL) { printf("Out of memory\n"); return 1; }
+
+    for (int i = 0; i &lt; n; i++)
+        arr[i] = (i + 1) * 10;
+
+    for (int i = 0; i &lt; n; i++)
+        printf("%d ", arr[i]);
+
+    free(arr);
+    arr = NULL;   /* prevent dangling pointer */
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>10 20 30 40 50 </code></div>
+
+                    <div class="callout callout--trap">
+                        <span class="callout__title">Memory leak</span>
+                        <p class="mb-0">
+                            If you <code>malloc</code> and never <code>free</code>, the
+                            memory stays allocated until the program exits. In long-running
+                            programs (servers, daemons) this grows without bound. Rule:
+                            <strong>every <code>malloc</code> needs exactly one matching
+                            <code>free</code></strong>. Double-free is equally dangerous — it
+                            corrupts the heap manager.
+                        </p>
+                    </div>
+
+                    <h4>Dynamic 2D array</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">Allocating a 3×4 matrix on the heap</span>
+<pre><code>int rows = 3, cols = 4;
+int **mat = (int **)malloc(rows * sizeof(int *));
+for (int i = 0; i &lt; rows; i++)
+    mat[i] = (int *)malloc(cols * sizeof(int));
+
+mat[1][2] = 99;  /* works like a normal 2D array */
+
+/* free in reverse order */
+for (int i = 0; i &lt; rows; i++)
+    free(mat[i]);
+free(mat);</code></pre>
+                    </div>
+                </div>
+
+                <!-- 10 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-structs">
+                    <h3>10. Structures and unions <span class="flag"></span></h3>
+
+                    <p>
+                        A <code>struct</code> groups related data under one name. Each
+                        member occupies its own memory. A <code>union</code> overlays all
+                        members on the <em>same</em> memory — its size equals the largest
+                        member. The exam asks you to compare them and to predict
+                        <code>sizeof</code>.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">struct — define, declare, access</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+struct Student {
+    int id;
+    char name[20];
+    float gpa;
+};
+
+int main(void) {
+    struct Student s = {101, "Rahim", 3.85};
+    printf("ID: %d, Name: %s, GPA: %.2f\n", s.id, s.name, s.gpa);
+
+    struct Student *p = &amp;s;
+    printf("Via pointer: %s\n", p->name);  /* arrow operator */
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>ID: 101, Name: Rahim, GPA: 3.85
+Via pointer: Rahim</code></div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>struct vs union</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">struct</th><th scope="col">union</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Memory</th><td>Sum of all members (+ padding)</td><td>Size of largest member</td></tr>
+                                <tr><th scope="row">Access</th><td>All members simultaneously</td><td>Only one member at a time</td></tr>
+                                <tr><th scope="row">Use case</th><td>Group related data (student record)</td><td>Save space when only one variant is active (tagged union)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">sizeof struct vs union — the exam question</span>
+<pre><code>struct S { int a; char b; double c; };
+union  U { int a; char b; double c; };
+
+printf("struct: %zu\n", sizeof(struct S));  /* 16 (with padding) */
+printf("union:  %zu\n", sizeof(union U));   /* 8  (size of double) */</code></pre>
+                    </div>
+
+                    <div class="insight">
+                        <div><strong>Padding and alignment.</strong> Most compilers align members to their natural boundary: a 4-byte <code>int</code> starts at an address divisible by 4. In <code>struct S</code> above, there are 3 bytes of padding after <code>b</code> (char) to align <code>c</code> (double) at an 8-byte boundary. This is why <code>sizeof(struct S)</code> is 16, not 13.</div>
+                    </div>
+
+                    <h4>Self-referential structures</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">Linked list node — the foundation of dynamic data structures in C</span>
+<pre><code>struct Node {
+    int data;
+    struct Node *next;  /* pointer to same type */
+};
+/* sizeof(struct Node) = sizeof(int) + sizeof(pointer) = 4 + 4/8 */</code></pre>
+                    </div>
+                </div>
+
+                <!-- 11 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-files">
+                    <h3>11. File handling</h3>
+
+                    <p>
+                        C accesses files through a <code>FILE *</code> pointer returned by
+                        <code>fopen</code>. The mode string controls read, write, append
+                        and text vs binary. Every file opened must be closed — an unclosed
+                        file may lose buffered data.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>fopen modes</caption>
+                            <thead>
+                                <tr><th scope="col">Mode</th><th scope="col">Action</th><th scope="col">File must exist?</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">"r"</th><td>Read</td><td>Yes</td></tr>
+                                <tr><th scope="row">"w"</th><td>Write (truncates)</td><td>No (creates)</td></tr>
+                                <tr><th scope="row">"a"</th><td>Append</td><td>No (creates)</td></tr>
+                                <tr><th scope="row">"r+"</th><td>Read + write</td><td>Yes</td></tr>
+                                <tr><th scope="row">"w+"</th><td>Read + write (truncates)</td><td>No (creates)</td></tr>
+                                <tr><th scope="row">"a+"</th><td>Read + append</td><td>No (creates)</td></tr>
+                                <tr><th scope="row">"rb", "wb"</th><td>Same as above, binary mode</td><td>Same</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Write to a file and read it back</span>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    FILE *fp = fopen("data.txt", "w");
+    if (fp == NULL) { perror("fopen"); return 1; }
+    fprintf(fp, "Name: Karim\nScore: 85\n");
+    fclose(fp);
+
+    fp = fopen("data.txt", "r");
+    char line[100];
+    while (fgets(line, sizeof(line), fp) != NULL)
+        printf("%s", line);
+    fclose(fp);
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>Name: Karim
+Score: 85</code></div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">fseek</span><span class="calc__math"><code>fseek(fp, offset, SEEK_SET/SEEK_CUR/SEEK_END)</code> — moves the file-position indicator. Used for random access.</span></div>
+                        <div class="calc__row"><span class="calc__label">ftell</span><span class="calc__math">Returns the current position. <code>fseek(fp, 0, SEEK_END); long size = ftell(fp);</code> gives the file size.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">rewind</span><span class="calc__math"><code>rewind(fp)</code> ≡ <code>fseek(fp, 0, SEEK_SET)</code> — moves back to the start.</span></div>
+                    </div>
+                </div>
+
+                <!-- 12 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-preprocessor">
+                    <h3>12. Preprocessor</h3>
+
+                    <p>
+                        The preprocessor runs <em>before</em> the compiler — it does text
+                        substitution, not type checking. This is why macro bugs are so
+                        subtle: the compiler sees the expanded text, not your intent.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">The classic macro pitfall</span>
+<pre><code>#define SQUARE(x) x * x
+
+int a = SQUARE(3 + 1);
+/* Expands to: 3 + 1 * 3 + 1 = 3 + 3 + 1 = 7, NOT 16! */
+
+#define SQUARE_SAFE(x) ((x) * (x))
+int b = SQUARE_SAFE(3 + 1);
+/* Expands to: ((3 + 1) * (3 + 1)) = 16 ✓ */</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Object-like</span><span class="calc__math"><code>#define PI 3.14159</code> — simple constant replacement. No parentheses needed.</span></div>
+                        <div class="calc__row"><span class="calc__label">Function-like</span><span class="calc__math"><code>#define MAX(a,b) ((a)>(b)?(a):(b))</code> — always parenthesise every parameter and the whole expression.</span></div>
+                        <div class="calc__row"><span class="calc__label">#include</span><span class="calc__math"><code>&lt;header&gt;</code> searches system paths. <code>"header"</code> searches the current directory first.</span></div>
+                        <div class="calc__row"><span class="calc__label">Conditional</span><span class="calc__math"><code>#ifdef DEBUG ... #endif</code> — includes the code only if <code>DEBUG</code> is defined. Used for debug builds.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">#pragma</span><span class="calc__math">Compiler-specific directive. <code>#pragma once</code> prevents double inclusion (non-standard but widely supported).</span></div>
+                    </div>
+
+                    <div class="insight">
+                        <div><strong>Macros have no type safety.</strong> <code>SQUARE("hello")</code> compiles without error — the preprocessor doesn't know types. For type-safe alternatives, use <code>inline</code> functions (C99).</div>
+                    </div>
+                </div>
+
+                <!-- 13 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-output">
+                    <h3>13. Output prediction patterns <span class="flag"></span></h3>
+
+                    <p>
+                        "What is the output?" is the most common C exam question format.
+                        Every question uses one of a small number of traps. Knowing the
+                        traps turns guessing into a systematic trace.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Trap 1: post-increment in printf</span>
+<pre><code>int a = 5;
+printf("%d %d %d", a++, a++, a++);
+/* Undefined behaviour! Argument evaluation order is
+   unspecified. Common outputs: "7 6 5" or "5 6 7".
+   Correct exam answer: "undefined behaviour." */</code></pre>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Trap 2: sizeof an array parameter</span>
+<pre><code>void f(int arr[]) {
+    printf("%zu\n", sizeof(arr));  /* prints 4 or 8 (pointer size!) */
+}
+
+int main(void) {
+    int a[10];
+    printf("%zu\n", sizeof(a));    /* prints 40 (10 × 4 bytes) */
+    f(a);
+    return 0;
+}</code></pre>
+                    </div>
+                    <div class="output"><code>40
+4</code></div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Trap 3: string vs character</span>
+<pre><code>char c = '5';
+printf("%d\n", c);       /* 53 — the ASCII value of '5'    */
+printf("%d\n", c - '0'); /* 5  — digit extraction trick    */
+printf("%d\n", '0');     /* 48 — ASCII value of '0'        */</code></pre>
+                    </div>
+                    <div class="output"><code>53
+5
+48</code></div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>The full trap catalogue</caption>
+                            <thead>
+                                <tr><th scope="col">Trap</th><th scope="col">What goes wrong</th><th scope="col">Rule to apply</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Post/pre in same expr</th><td>Undefined evaluation order</td><td>Never modify and read a variable in the same statement</td></tr>
+                                <tr><th scope="row">sizeof array param</th><td>Array decays to pointer</td><td>In a function, <code>sizeof(arr)</code> = pointer size</td></tr>
+                                <tr><th scope="row">char arithmetic</th><td>Char is an integer</td><td><code>'A'</code>=65, <code>'a'</code>=97, <code>'0'</code>=48</td></tr>
+                                <tr><th scope="row">Switch fallthrough</th><td>Missing break</td><td>Execution continues to the next case</td></tr>
+                                <tr><th scope="row">static local</th><td>Retains value</td><td>Initialised only once, persists across calls</td></tr>
+                                <tr><th scope="row">String literal modify</th><td>Undefined (crash)</td><td>Literals are in read-only memory</td></tr>
+                                <tr><th scope="row">= vs ==</th><td>Assignment instead of comparison</td><td><code>if (x = 5)</code> assigns 5, always true</td></tr>
+                                <tr><th scope="row">Dangling pointer</th><td>Returns address of local</td><td>Local variables die when the function returns</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="insight">
+                        <div><strong>The tracing method.</strong> For any output question: (1) draw a box for each variable, (2) walk the code line by line updating the boxes, (3) write what <code>printf</code> emits at each call. If you trace and the answer doesn't match the options, check for undefined behaviour — the correct answer is "undefined."</div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================================================================
+             SOLVED PAST QUESTIONS
+             ================================================================ -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <p class="intro">
+                    Work each question on paper first, then open the solution and compare
+                    your <em>steps</em>, not just your final answer.
+                </p>
+
+                <div class="expand-controls">
+                    <button type="button" class="btn btn--sm btn--ghost" data-expand-all="#solved">Expand all</button>
+                    <button type="button" class="btn btn--sm btn--ghost" data-collapse-all="#solved">Collapse all</button>
+                </div>
+
+                <!-- S1 -->
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">What is the output of the following program?</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x = 10, y = 20;
+    x = x + y;   /* x=30 */
+    y = x - y;   /* y=10 */
+    x = x - y;   /* x=20 */
+    printf("x=%d y=%d\n", x, y);
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Step 1</span><span class="calc__math">x = 10 + 20 = 30</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 2</span><span class="calc__math">y = 30 − 20 = 10</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 3</span><span class="calc__math">x = 30 − 10 = 20</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Output</span><span class="calc__math"><strong>x=20 y=10</strong> — the values are swapped without a temp variable.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S2 -->
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">Write the sizes of <code>int</code>, <code>char</code>, <code>float</code>, <code>double</code> and <code>int*</code> on a 32-bit system. Then state the size of an array <code>int a[10]</code>.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">int</span><span class="calc__math">4 bytes</span></div>
+                            <div class="calc__row"><span class="calc__label">char</span><span class="calc__math">1 byte</span></div>
+                            <div class="calc__row"><span class="calc__label">float</span><span class="calc__math">4 bytes</span></div>
+                            <div class="calc__row"><span class="calc__label">double</span><span class="calc__math">8 bytes</span></div>
+                            <div class="calc__row"><span class="calc__label">int*</span><span class="calc__math">4 bytes (all pointers on 32-bit = 4)</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">int a[10]</span><span class="calc__math">10 × 4 = <strong>40 bytes</strong></span></div>
+                        </div>
+                        <p><strong>Key rule:</strong> <code>sizeof(array)</code> = number of elements × <code>sizeof(element)</code>. But inside a function parameter, the array decays to a pointer, so <code>sizeof</code> returns 4 (or 8 on 64-bit).</p>
+                    </div>
+                </details>
+
+                <!-- S3 -->
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">Differentiate between call by value and call by reference in C with an example.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">Call by value</th><th scope="col">Call by reference (via pointer)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Passed</th><td>Copy of the variable</td><td>Address of the variable</td></tr>
+                                    <tr><th scope="row">Original changed?</th><td>No</td><td>Yes</td></tr>
+                                    <tr><th scope="row">Parameter type</th><td><code>int x</code></td><td><code>int *x</code></td></tr>
+                                    <tr><th scope="row">Call syntax</th><td><code>f(a)</code></td><td><code>f(&amp;a)</code></td></tr>
+                                    <tr><th scope="row">Use case</th><td>Safe default; pure functions</td><td>When function must modify caller's data (swap)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code-block">
+                            <span class="code-block__label">Swap — the canonical call-by-reference example</span>
+<pre><code>void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+/* swap(&amp;x, &amp;y) modifies x and y in the caller */</code></pre>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S4 -->
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">What is the output?</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    char str[] = "Bangladesh";
+    char *p = str;
+    printf("%c\n", *p);        /* line 1 */
+    printf("%c\n", *(p + 4));  /* line 2 */
+    printf("%s\n", p + 5);     /* line 3 */
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Memory</span><span class="calc__math">B a n g l a d e s h \0 (indices 0–10)</span></div>
+                            <div class="calc__row"><span class="calc__label">Line 1</span><span class="calc__math"><code>*p</code> = str[0] = <strong>'B'</strong></span></div>
+                            <div class="calc__row"><span class="calc__label">Line 2</span><span class="calc__math"><code>*(p+4)</code> = str[4] = <strong>'l'</strong></span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Line 3</span><span class="calc__math"><code>p+5</code> points to str[5]. <code>%s</code> prints from there: <strong>"adesh"</strong></span></div>
+                        </div>
+                        <div class="output"><code>B
+l
+adesh</code></div>
+                    </div>
+                </details>
+
+                <!-- S5 -->
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">Write a C program to check if a string is a palindrome.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int isPalindrome(const char *s) {
+    int left = 0, right = strlen(s) - 1;
+    while (left &lt; right) {
+        if (s[left] != s[right])
+            return 0;  /* not a palindrome */
+        left++;
+        right--;
+    }
+    return 1;
+}
+
+int main(void) {
+    char s1[] = "madam";
+    char s2[] = "hello";
+    printf("%s: %s\n", s1, isPalindrome(s1) ? "YES" : "NO");
+    printf("%s: %s\n", s2, isPalindrome(s2) ? "YES" : "NO");
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="output"><code>madam: YES
+hello: NO</code></div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Trace "madam"</span><span class="calc__math">left=0,right=4: m==m ✓ → left=1,right=3: a==a ✓ → left=2,right=2: loop ends → palindrome.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Trace "hello"</span><span class="calc__math">left=0,right=4: h≠o → return 0 immediately → not a palindrome.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S6 -->
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">Compare <code>malloc</code>, <code>calloc</code>, <code>realloc</code> and <code>free</code>.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr><th scope="col">Function</th><th scope="col">Syntax</th><th scope="col">Init</th><th scope="col">Typical use</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">malloc</th><td><code>malloc(n * sizeof(int))</code></td><td>Garbage</td><td>General heap allocation</td></tr>
+                                    <tr><th scope="row">calloc</th><td><code>calloc(n, sizeof(int))</code></td><td>All zeros</td><td>Arrays where zero-init matters</td></tr>
+                                    <tr><th scope="row">realloc</th><td><code>realloc(ptr, new_size)</code></td><td>Old data kept, new portion undefined</td><td>Grow or shrink an existing block</td></tr>
+                                    <tr><th scope="row">free</th><td><code>free(ptr)</code></td><td>—</td><td>Return memory to the heap</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Key difference:</strong> <code>malloc(n * size)</code> and <code>calloc(n, size)</code> allocate the same amount of memory. The difference is that <code>calloc</code> zeroes out every byte and takes two arguments (count and size), while <code>malloc</code> takes one (total bytes) and leaves the memory uninitialised.</p>
+                    </div>
+                </details>
+
+                <!-- S7 -->
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">What is the output?</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+void fun(void) {
+    static int count = 0;
+    count++;
+    printf("%d ", count);
+}
+
+int main(void) {
+    fun(); fun(); fun();
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Call 1</span><span class="calc__math">count initialised to 0 (only once), incremented to 1. Prints <strong>1</strong>.</span></div>
+                            <div class="calc__row"><span class="calc__label">Call 2</span><span class="calc__math">count retains value 1, incremented to 2. Prints <strong>2</strong>.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Call 3</span><span class="calc__math">count retains value 2, incremented to 3. Prints <strong>3</strong>.</span></div>
+                        </div>
+                        <div class="output"><code>1 2 3 </code></div>
+                        <p><strong>Without <code>static</code>:</strong> the output would be <code>1 1 1</code> because <code>count</code> would be re-initialised to 0 on every call.</p>
+                    </div>
+                </details>
+
+                <!-- S8 -->
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">Compare structure and union in C. What is the size of each?</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>struct S { char a; int b; char c; };
+union  U { char a; int b; char c; };</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">struct S</span><span class="calc__math">char(1) + 3 padding + int(4) + char(1) + 3 padding = <strong>12 bytes</strong></span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">union U</span><span class="calc__math">Size of largest member = int = <strong>4 bytes</strong></span></div>
+                        </div>
+                        <p><strong>Why struct is 12, not 6:</strong> The compiler inserts 3 bytes of padding after the first <code>char</code> to align <code>int b</code> at a 4-byte boundary, and 3 bytes after <code>char c</code> to make the total struct size a multiple of 4 (for array alignment).</p>
+                    </div>
+                </details>
+
+                <!-- S9 -->
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">Write a C program to find the factorial of a number using recursion.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+long long factorial(int n) {
+    if (n &lt;= 1) return 1;
+    return (long long)n * factorial(n - 1);
+}
+
+int main(void) {
+    int num = 10;
+    printf("%d! = %lld\n", num, factorial(num));
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="output"><code>10! = 3628800</code></div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Base case</span><span class="calc__math">n ≤ 1 → return 1. Without this, the recursion never stops (stack overflow).</span></div>
+                            <div class="calc__row"><span class="calc__label">Recursive case</span><span class="calc__math">n × factorial(n−1). Each call creates a stack frame with its own <code>n</code>.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Why long long?</span><span class="calc__math">13! = 6,227,020,800 — exceeds <code>int</code> range (2³¹ − 1 ≈ 2.1 billion). Using <code>long long</code> handles up to 20!.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S10 -->
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">What is the output?</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[] = {1, 2, 3, 4, 5};
+    int *p = a;
+    int *q = a + 4;
+    printf("%d\n", *p + *q);
+    printf("%td\n", q - p);
+    printf("%d\n", *(p + 2));
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Setup</span><span class="calc__math">p → a[0]=1, q → a[4]=5</span></div>
+                            <div class="calc__row"><span class="calc__label">*p + *q</span><span class="calc__math">1 + 5 = <strong>6</strong></span></div>
+                            <div class="calc__row"><span class="calc__label">q − p</span><span class="calc__math">Pointer subtraction gives the number of elements between them: <strong>4</strong> (not 16 bytes).</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">*(p + 2)</span><span class="calc__math">p + 2 → a[2] = <strong>3</strong></span></div>
+                        </div>
+                        <div class="output"><code>6
+4
+3</code></div>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- ================================================================
+             PRACTICE QUESTIONS
+             ================================================================ -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <p class="intro">
+                    Original questions written in the same style and difficulty as the
+                    real papers. Every one has a full worked solution.
+                </p>
+
+                <div class="expand-controls">
+                    <button type="button" class="btn btn--sm btn--ghost" data-expand-all="#practice">Expand all</button>
+                    <button type="button" class="btn btn--sm btn--ghost" data-collapse-all="#practice">Collapse all</button>
+                </div>
+
+                <!-- P1 -->
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">What is the output?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a = 5, b = 3;
+    int c = a &amp; b;
+    int d = a | b;
+    int e = a ^ b;
+    printf("%d %d %d\n", c, d, e);
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Binary</span><span class="calc__math">a = 0101, b = 0011</span></div>
+                            <div class="calc__row"><span class="calc__label">a &amp; b</span><span class="calc__math">0101 AND 0011 = 0001 = <strong>1</strong></span></div>
+                            <div class="calc__row"><span class="calc__label">a | b</span><span class="calc__math">0101 OR 0011 = 0111 = <strong>7</strong></span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">a ^ b</span><span class="calc__math">0101 XOR 0011 = 0110 = <strong>6</strong></span></div>
+                        </div>
+                        <div class="output"><code>1 7 6</code></div>
+                    </div>
+                </details>
+
+                <!-- P2 -->
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">Write a C function to reverse a string in place.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void reverse(char *s) {
+    int left = 0, right = strlen(s) - 1;
+    while (left &lt; right) {
+        char temp = s[left];
+        s[left]  = s[right];
+        s[right] = temp;
+        left++;
+        right--;
+    }
+}
+
+int main(void) {
+    char str[] = "Bangladesh";
+    reverse(str);
+    printf("%s\n", str);
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="output"><code>hsedalgnaB</code></div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Trace</span><span class="calc__math">Swap s[0]↔s[9]: h...B → hsedalg...B → each pair swaps inward until left ≥ right.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Complexity</span><span class="calc__math">O(n/2) = O(n) time, O(1) space — no extra array needed.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P3 -->
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">What is the output?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+#define DOUBLE(x) (x + x)
+
+int main(void) {
+    int a = 3;
+    printf("%d\n", DOUBLE(a));
+    printf("%d\n", DOUBLE(a + 1));
+    printf("%d\n", DOUBLE(++a));
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Line 1</span><span class="calc__math">DOUBLE(3) → (3 + 3) = <strong>6</strong></span></div>
+                            <div class="calc__row"><span class="calc__label">Line 2</span><span class="calc__math">DOUBLE(3 + 1) → (3 + 1 + 3 + 1) = <strong>8</strong>. Note: this works here because <code>+</code> is left-associative and same precedence — but if the macro used <code>*</code> it would fail.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Line 3</span><span class="calc__math">DOUBLE(++a) → (++a + ++a). <strong>Undefined behaviour</strong> — <code>a</code> is modified twice without a sequence point. Common outputs: 8, 9, or 10.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P4 -->
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">Write a C program to count the number of vowels and consonants in a string.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+int main(void) {
+    char str[] = "Bangladesh Bank";
+    int vowels = 0, consonants = 0;
+
+    for (int i = 0; str[i]; i++) {
+        char c = tolower(str[i]);
+        if (c >= 'a' &amp;&amp; c &lt;= 'z') {
+            if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u')
+                vowels++;
+            else
+                consonants++;
+        }
+    }
+    printf("Vowels: %d, Consonants: %d\n", vowels, consonants);
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="output"><code>Vowels: 4, Consonants: 9</code></div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Vowels</span><span class="calc__math">a, a, e, a → 4</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Consonants</span><span class="calc__math">B, n, g, l, d, s, h, B, n, k → 9 (space is skipped by the alpha check).</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P5 -->
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">What is the output?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int arr[] = {10, 20, 30, 40};
+    int *p = arr;
+    printf("%d\n", *p++);    /* line 1 */
+    printf("%d\n", *p);      /* line 2 */
+    printf("%d\n", *++p);    /* line 3 */
+    printf("%d\n", ++*p);    /* line 4 */
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Line 1</span><span class="calc__math"><code>*p++</code>: postfix ++ binds to <code>p</code>, not to <code>*p</code>. Read *p (10), <em>then</em> advance p. Output: <strong>10</strong>. p now → arr[1].</span></div>
+                            <div class="calc__row"><span class="calc__label">Line 2</span><span class="calc__math">p → arr[1]. *p = <strong>20</strong>.</span></div>
+                            <div class="calc__row"><span class="calc__label">Line 3</span><span class="calc__math"><code>*++p</code>: first advance p → arr[2], then read *p. Output: <strong>30</strong>.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Line 4</span><span class="calc__math"><code>++*p</code>: dereference p (30), then increment the value: 31. Output: <strong>31</strong>. arr[2] is now 31.</span></div>
+                        </div>
+                        <div class="output"><code>10
+20
+30
+31</code></div>
+                    </div>
+                </details>
+
+                <!-- P6 -->
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">Explain the four storage classes in C with examples.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr><th scope="col">Storage class</th><th scope="col">Keyword</th><th scope="col">Scope</th><th scope="col">Lifetime</th><th scope="col">Default value</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Automatic</th><td><code>auto</code></td><td>Local (block)</td><td>Until block exits</td><td>Garbage</td></tr>
+                                    <tr><th scope="row">Register</th><td><code>register</code></td><td>Local (block)</td><td>Until block exits</td><td>Garbage</td></tr>
+                                    <tr><th scope="row">Static</th><td><code>static</code></td><td>Local (block) or file</td><td>Entire program</td><td>0</td></tr>
+                                    <tr><th scope="row">External</th><td><code>extern</code></td><td>Global (all files)</td><td>Entire program</td><td>0</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">auto</span><span class="calc__math">The default for local variables. <code>auto int x;</code> is redundant — all locals are auto.</span></div>
+                            <div class="calc__row"><span class="calc__label">register</span><span class="calc__math">Requests storage in a CPU register for speed. Cannot take its address (<code>&amp;x</code> is illegal). Compiler may ignore the hint.</span></div>
+                            <div class="calc__row"><span class="calc__label">static</span><span class="calc__math">Local static: retains value between calls. Global static: limits visibility to the current file (internal linkage).</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">extern</span><span class="calc__math">Declares a variable defined in another file. No memory allocated — just says "it exists elsewhere."</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P7 -->
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">Write a C program to find the GCD of two numbers using recursion.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+int gcd(int a, int b) {
+    if (b == 0) return a;
+    return gcd(b, a % b);
+}
+
+int main(void) {
+    int a = 48, b = 18;
+    printf("GCD(%d, %d) = %d\n", a, b, gcd(a, b));
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="output"><code>GCD(48, 18) = 6</code></div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Trace</span><span class="calc__math">gcd(48,18) → gcd(18,12) → gcd(12,6) → gcd(6,0) → return <strong>6</strong>.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Algorithm</span><span class="calc__math">Euclid's algorithm: replace the larger number by the remainder until one becomes 0. The other is the GCD.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P8 -->
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">What is the output?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(void) {
+    char a[] = "Hello";
+    char b[] = "Hello";
+    if (a == b)
+        printf("Equal\n");
+    else
+        printf("Not equal\n");
+
+    if (strcmp(a, b) == 0)
+        printf("Content equal\n");
+    else
+        printf("Content not equal\n");
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">a == b</span><span class="calc__math">Compares <strong>addresses</strong>, not contents. <code>a</code> and <code>b</code> are separate arrays at different addresses. Output: <strong>Not equal</strong>.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">strcmp</span><span class="calc__math">Compares <strong>contents</strong> character by character. Both are "Hello". Output: <strong>Content equal</strong>.</span></div>
+                        </div>
+                        <div class="output"><code>Not equal
+Content equal</code></div>
+                    </div>
+                </details>
+
+                <!-- P9 -->
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">Write a C program to copy the contents of one file to another.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    FILE *src = fopen("input.txt", "r");
+    FILE *dst = fopen("output.txt", "w");
+
+    if (src == NULL || dst == NULL) {
+        perror("Error opening file");
+        return 1;
+    }
+
+    int ch;
+    while ((ch = fgetc(src)) != EOF)
+        fputc(ch, dst);
+
+    fclose(src);
+    fclose(dst);
+    printf("File copied successfully.\n");
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">fgetc</span><span class="calc__math">Reads one character at a time. Returns <code>int</code> (not <code>char</code>) so that EOF (−1) can be distinguished from valid characters.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Why int ch?</span><span class="calc__math">If <code>ch</code> were <code>unsigned char</code>, EOF (−1) would be stored as 255 — the loop would never end. This is a classic bug.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P10 -->
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">What is the output?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int x = 1;
+    if (x = 0)
+        printf("True\n");
+    else
+        printf("False\n");
+    printf("x = %d\n", x);
+    return 0;
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">x = 0</span><span class="calc__math">This is <strong>assignment</strong>, not comparison. <code>x</code> is set to 0. The expression evaluates to 0 (the assigned value).</span></div>
+                            <div class="calc__row"><span class="calc__label">if (0)</span><span class="calc__math">0 is false in C. The <code>else</code> branch executes.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Output</span><span class="calc__math"><strong>False</strong> then <strong>x = 0</strong>. If <code>==</code> had been used, it would print "False" and "x = 1".</span></div>
+                        </div>
+                        <div class="output"><code>False
+x = 0</code></div>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="computer-fundamentals.html">
+                        <span class="pager__dir">Previous</span>
+                        <span class="pager__name">Computer Fundamentals</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="data-structures.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">Data Structures</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>
+                Bangladesh Bank Assistant Director (ICT) written preparation. Subject 02
+                of 18 — C Programming.
+            </p>
+            <p class="small">
+                Coverage checklist: <code>SYLLABUS.md</code> §2.
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

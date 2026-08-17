@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="telecommunication"
+    data-subject-name="Telecommunication">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Telecommunication — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice on ADC/DAC, Nyquist and Shannon theorems, modulation, multiplexing, combinational and sequential logic, optical fibre and cellular networks." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+
+            <div class="header__spacer"></div>
+
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication" aria-current="page"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 09</span><span aria-hidden="true">·</span><span>Phase 3</span>
+                </p>
+                <h1>Telecommunication</h1>
+                <p class="page-head__lede">
+                    This subject straddles two worlds — signal processing (ADC, DAC,
+                    modulation, channel capacity) and digital logic (MUX, flip-flops,
+                    counters). The exam likes calculation questions: Nyquist bit rate,
+                    Shannon capacity, DAC resolution, PCM bit rate, and MUX-based
+                    Boolean function implementation are all standard repeats.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
+             NOTES
+             ================================================================ -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 topics</span>
+                </div>
+
+                <p class="intro">
+                    The subject mixes analog signal theory with digital circuit design.
+                    Every <strong>⚑</strong> topic below appears as a worked calculation —
+                    Nyquist sampling, Shannon capacity, DAC resolution, PCM bit rate,
+                    modulation bandwidth, MUX function implementation, flip-flop
+                    excitation tables, and counter design are the ones the exam keeps
+                    returning to.
+                </p>
+
+                <ul class="topics">
+                    <li><a href="#n-signals"><span class="topics__num">01</span>Signals and spectra</a></li>
+                    <li><a href="#n-adc"><span class="topics__num">02</span>Analog-to-digital conversion</a></li>
+                    <li><a href="#n-dac"><span class="topics__num">03</span>Digital-to-analog conversion</a></li>
+                    <li><a href="#n-modulation"><span class="topics__num">04</span>Modulation</a></li>
+                    <li><a href="#n-capacity"><span class="topics__num">05</span>Channel capacity</a></li>
+                    <li><a href="#n-mux"><span class="topics__num">06</span>Multiplexing</a></li>
+                    <li><a href="#n-combinational"><span class="topics__num">07</span>Combinational logic</a></li>
+                    <li><a href="#n-sequential"><span class="topics__num">08</span>Sequential logic</a></li>
+                    <li><a href="#n-fibre"><span class="topics__num">09</span>Optical fibre</a></li>
+                    <li><a href="#n-wireless"><span class="topics__num">10</span>Wireless and carrier networks</a></li>
+                </ul>
+
+                <!-- 1 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-signals">
+                    <h3>1. Signals and spectra</h3>
+
+                    <p>
+                        Every piece of information — voice, video, sensor data — must
+                        ride on a signal to travel from source to destination. A signal
+                        is simply a pattern of voltage, current or electromagnetic
+                        energy that changes over time. Understanding the two families
+                        of signals is the starting point for the rest of this subject.
+                    </p>
+
+                    <p>
+                        An <strong>analog signal</strong> varies continuously — it can
+                        take any value within a range. A sine wave is the simplest
+                        example, described by three parameters:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">s(t) = A sin(2πft + φ)</div>
+                        <div class="calc__row calc__row--note">A = amplitude (peak voltage), f = frequency (Hz), φ = phase (radians)</div>
+                    </div>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Sine wave showing one complete cycle with amplitude A and period T marked" viewBox="0 0 440 160" style="max-width:440px">
+                            <defs><marker id="sig-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="var(--ink-500)" /></marker></defs>
+                            <line x1="30" y1="80" x2="420" y2="80" class="dg-stroke-mid" stroke-width="1" />
+                            <line x1="30" y1="10" x2="30" y2="150" class="dg-stroke-mid" stroke-width="1" />
+                            <path d="M30,80 Q100,10 170,80 Q240,150 310,80 Q380,10 420,60" fill="none" stroke="var(--ink)" stroke-width="2" />
+                            <line x1="170" y1="80" x2="170" y2="14" class="dg-stroke-dash" stroke-width="1" />
+                            <text x="90" y="30" class="dg-label" font-size="11">A</text>
+                            <text x="150" y="100" class="dg-label" font-size="11">T = 1/f</text>
+                            <text x="415" y="75" class="dg-label" font-size="10">t</text>
+                        </svg>
+                        <figcaption>One cycle of a sine wave — the period T is the inverse of frequency.</figcaption>
+                    </figure>
+
+                    <p>
+                        A <strong>digital signal</strong> takes only a finite set of
+                        discrete values — typically two levels (0 and 1). It changes
+                        abruptly between levels. Digital signals are more noise-resistant
+                        because the receiver only needs to distinguish between two levels,
+                        not an infinite continuum.
+                    </p>
+
+                    <p>
+                        <strong>Bandwidth</strong> is the range of frequencies a signal
+                        occupies: BW = f<sub>max</sub> − f<sub>min</sub>. A voice channel
+                        occupies roughly 300–3400 Hz, giving a bandwidth of 3100 Hz.
+                        A composite signal is the sum of multiple sine waves at different
+                        frequencies — Fourier analysis decomposes any periodic signal
+                        into its sinusoidal components.
+                    </p>
+
+                    <div class="insight">
+                        The <strong>time domain</strong> shows amplitude vs time; the
+                        <strong>frequency domain</strong> shows amplitude vs frequency.
+                        They are two views of the same signal — Fourier transforms
+                        convert between them. A perfect square wave needs infinitely
+                        many harmonics; bandwidth-limiting it rounds the edges.
+                    </div>
+                </div>
+
+                <!-- 2 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-adc">
+                    <h3>2. Analog-to-digital conversion</h3>
+
+                    <p>
+                        To transmit analog data (voice, temperature) over a digital
+                        system, we convert it into bits. The standard process is
+                        <strong>Pulse Code Modulation (PCM)</strong>, which has three
+                        steps: sampling, quantization and encoding.
+                    </p>
+
+                    <p>
+                        <strong>Step 1 — Sampling.</strong> Take snapshots of the analog
+                        signal at regular intervals. The <strong>Nyquist theorem</strong>
+                        states that the sampling rate must be at least twice the highest
+                        frequency in the signal to reconstruct it perfectly:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">f<sub>s</sub> ≥ 2 × f<sub>max</sub></div>
+                        <div class="calc__row calc__row--note">f<sub>s</sub> = sampling rate, f<sub>max</sub> = highest frequency component</div>
+                    </div>
+
+                    <p>
+                        For telephone voice (f<sub>max</sub> = 4000 Hz), the sampling
+                        rate is 2 × 4000 = <strong>8000 samples/s</strong>.
+                    </p>
+
+                    <p>
+                        <strong>Step 2 — Quantization.</strong> Each sample's amplitude is
+                        rounded to the nearest of L discrete levels. With n bits per
+                        sample, L = 2<sup>n</sup>. The difference between the true
+                        amplitude and the quantized value is <strong>quantization
+                        noise</strong>.
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">SQNR (dB) = 6.02n + 1.76</div>
+                        <div class="calc__row calc__row--note">Each extra bit improves SNR by ~6 dB</div>
+                    </div>
+
+                    <p>
+                        <strong>Step 3 — Encoding.</strong> Convert each quantized level
+                        to an n-bit binary code. The output bit rate is:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">Bit rate = f<sub>s</sub> × n</div>
+                        <div class="calc__row">= 8000 × 8 = 64,000 bps = <strong>64 kbps</strong></div>
+                        <div class="calc__row calc__row--note">This is the standard telephone PCM rate</div>
+                    </div>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="PCM process: analog wave sampled at regular intervals, each sample quantized to nearest level, then encoded as binary" viewBox="0 0 480 180" style="max-width:480px">
+                            <defs><marker id="adc-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="var(--ink-500)" /></marker></defs>
+                            <rect x="10" y="10" width="130" height="160" rx="6" class="dg-node" />
+                            <text x="75" y="90" class="dg-label" text-anchor="middle" font-size="12">Sampling</text>
+                            <text x="75" y="108" class="dg-label" text-anchor="middle" font-size="10">f<tspan font-size="8" dy="2">s</tspan><tspan dy="-2"> ≥ 2f</tspan><tspan font-size="8" dy="2">max</tspan></text>
+                            <line x1="145" y1="90" x2="170" y2="90" class="dg-stroke-ink" stroke-width="1.5" marker-end="url(#adc-arrow)" />
+                            <rect x="175" y="10" width="130" height="160" rx="6" class="dg-node" />
+                            <text x="240" y="90" class="dg-label" text-anchor="middle" font-size="12">Quantization</text>
+                            <text x="240" y="108" class="dg-label" text-anchor="middle" font-size="10">L = 2<tspan font-size="8" dy="-4">n</tspan><tspan dy="4"> levels</tspan></text>
+                            <line x1="310" y1="90" x2="335" y2="90" class="dg-stroke-ink" stroke-width="1.5" marker-end="url(#adc-arrow)" />
+                            <rect x="340" y="10" width="130" height="160" rx="6" class="dg-node" />
+                            <text x="405" y="90" class="dg-label" text-anchor="middle" font-size="12">Encoding</text>
+                            <text x="405" y="108" class="dg-label" text-anchor="middle" font-size="10">n bits/sample</text>
+                        </svg>
+                        <figcaption>The three-stage PCM pipeline — each stage feeds the next.</figcaption>
+                    </figure>
+
+                    <p>
+                        <strong>Delta modulation</strong> is a simpler alternative: instead
+                        of encoding the full amplitude, it encodes only the change from
+                        the previous sample — 1 if the signal went up, 0 if it went down.
+                        It uses only 1 bit per sample but suffers from slope overload
+                        (signal changes faster than the step size) and granular noise
+                        (signal is flat but the output oscillates). Adaptive delta
+                        modulation varies the step size to reduce both.
+                    </p>
+
+                    <div class="insight">
+                        The Nyquist rate is a hard lower bound — sampling below it causes
+                        <strong>aliasing</strong>, where high frequencies masquerade as
+                        low ones, and no amount of processing can recover the original.
+                        In practice, an anti-aliasing filter removes frequencies above
+                        f<sub>max</sub> before sampling.
+                    </div>
+                </div>
+
+                <!-- 3 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-dac">
+                    <h3>3. Digital-to-analog conversion</h3>
+
+                    <p>
+                        A DAC converts a binary number into a proportional analog
+                        voltage. The key specification is <strong>resolution</strong> —
+                        the smallest voltage step the DAC can produce.
+                    </p>
+
+                    <p>
+                        Take a concrete example: a 12-bit DAC with a reference voltage
+                        of 3.3 V (this exact question appeared on 04/10/2024).
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">Resolution = V<sub>ref</sub> / (2<sup>n</sup> − 1)</div>
+                        <div class="calc__row">= 3.3 / (2<sup>12</sup> − 1)</div>
+                        <div class="calc__row">= 3.3 / 4095</div>
+                        <div class="calc__row calc__row--result">= <strong>0.000806 V ≈ 0.806 mV</strong></div>
+                    </div>
+
+                    <p>
+                        The output for any digital input D (0 to 2<sup>n</sup> − 1) is:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">V<sub>out</sub> = D × Resolution = D × V<sub>ref</sub> / (2<sup>n</sup> − 1)</div>
+                    </div>
+
+                    <p>
+                        Two common DAC architectures:
+                    </p>
+
+                    <p>
+                        <strong>Weighted-resistor DAC</strong> uses resistors in powers
+                        of 2 (R, 2R, 4R, 8R…). Each bit switches its resistor into the
+                        summing network. Simple but impractical for high resolution
+                        because the resistor ratio gets extreme — a 12-bit DAC needs
+                        R to 2048R, and matching such different resistors precisely is
+                        difficult.
+                    </p>
+
+                    <p>
+                        <strong>R-2R ladder DAC</strong> uses only two resistor values:
+                        R and 2R. The ladder network naturally produces binary-weighted
+                        currents through voltage division. This is the practical choice
+                        because manufacturing two matched values is far easier than
+                        matching a range.
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="R-2R ladder DAC for 4 bits showing the ladder network" viewBox="0 0 400 150" style="max-width:400px">
+                            <text x="10" y="30" class="dg-label" font-size="10">b3 (MSB)</text>
+                            <text x="10" y="60" class="dg-label" font-size="10">b2</text>
+                            <text x="10" y="90" class="dg-label" font-size="10">b1</text>
+                            <text x="10" y="120" class="dg-label" font-size="10">b0 (LSB)</text>
+                            <line x1="75" y1="27" x2="120" y2="27" class="dg-stroke-ink" stroke-width="1.5" />
+                            <line x1="75" y1="57" x2="120" y2="57" class="dg-stroke-ink" stroke-width="1.5" />
+                            <line x1="75" y1="87" x2="120" y2="87" class="dg-stroke-ink" stroke-width="1.5" />
+                            <line x1="75" y1="117" x2="120" y2="117" class="dg-stroke-ink" stroke-width="1.5" />
+                            <text x="95" y="23" class="dg-label" font-size="9">2R</text>
+                            <text x="95" y="53" class="dg-label" font-size="9">2R</text>
+                            <text x="95" y="83" class="dg-label" font-size="9">2R</text>
+                            <text x="95" y="113" class="dg-label" font-size="9">2R</text>
+                            <line x1="120" y1="27" x2="120" y2="117" class="dg-stroke-ink" stroke-width="1.5" />
+                            <text x="130" y="50" class="dg-label" font-size="9">R</text>
+                            <text x="130" y="80" class="dg-label" font-size="9">R</text>
+                            <text x="130" y="110" class="dg-label" font-size="9">R</text>
+                            <line x1="120" y1="27" x2="200" y2="27" class="dg-stroke-ink" stroke-width="1.5" />
+                            <text x="200" y="20" class="dg-label" font-size="11">→ V<tspan font-size="8" dy="2">out</tspan></text>
+                        </svg>
+                        <figcaption>R-2R ladder — only two resistor values needed regardless of bit count.</figcaption>
+                    </figure>
+
+                    <p>
+                        <strong>Settling time</strong> is how long the DAC output takes
+                        to reach its final value within a specified tolerance after a
+                        digital input change. Faster settling time allows higher
+                        conversion rates.
+                    </p>
+
+                    <div class="insight">
+                        The formula uses (2<sup>n</sup> − 1) in the denominator, not
+                        2<sup>n</sup>. The reason: the maximum digital input
+                        (all 1s = 2<sup>n</sup> − 1) should produce exactly V<sub>ref</sub>,
+                        so there are 2<sup>n</sup> − 1 steps between 0 and V<sub>ref</sub>.
+                    </div>
+                </div>
+
+                <!-- 4 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-modulation">
+                    <h3>4. Modulation</h3>
+
+                    <p>
+                        Modulation maps data onto a carrier wave so it can travel
+                        over a channel. The carrier is a high-frequency sine wave
+                        s(t) = A sin(2πft + φ), and modulation changes one of its
+                        three parameters — amplitude, frequency or phase — according
+                        to the data.
+                    </p>
+
+                    <p><strong>Analog modulation</strong> — the modulating signal is analog:</p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Type</th><th scope="col">What varies</th><th scope="col">Bandwidth</th><th scope="col">Notes</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>AM</td><td>Amplitude</td><td>2B (B = message BW)</td><td>Simple but noise-sensitive; used in AM radio</td></tr>
+                                <tr><td>FM</td><td>Frequency</td><td>2(Δf + B)</td><td>Better noise immunity; Δf = peak frequency deviation</td></tr>
+                                <tr><td>PM</td><td>Phase</td><td>2(Δφ × f<sub>m</sub> + B)</td><td>Similar to FM; carrier phase tracks signal amplitude</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Digital modulation</strong> — the modulating signal is digital bits:</p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Scheme</th><th scope="col">What varies</th><th scope="col">Bits/symbol</th><th scope="col">BW needed</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>ASK</td><td>Amplitude (on/off)</td><td>1</td><td>B = baud rate</td></tr>
+                                <tr><td>FSK</td><td>Two frequencies</td><td>1</td><td>B = baud + (f<sub>2</sub> − f<sub>1</sub>)</td></tr>
+                                <tr><td>BPSK</td><td>Phase (0° or 180°)</td><td>1</td><td>B = baud rate</td></tr>
+                                <tr><td>QPSK</td><td>Phase (4 states)</td><td>2</td><td>B = baud rate</td></tr>
+                                <tr><td>8-PSK</td><td>Phase (8 states)</td><td>3</td><td>B = baud rate</td></tr>
+                                <tr><td>16-QAM</td><td>Amplitude + phase</td><td>4</td><td>B = baud rate</td></tr>
+                                <tr><td>64-QAM</td><td>Amplitude + phase</td><td>6</td><td>B = baud rate</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        The relationship between bit rate and baud rate:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">Bit rate = Baud rate × log<sub>2</sub>(L)</div>
+                        <div class="calc__row calc__row--note">L = number of signal levels (constellation points)</div>
+                    </div>
+
+                    <p>
+                        Take 16-QAM at 10,000 baud: bit rate = 10,000 × log<sub>2</sub>(16)
+                        = 10,000 × 4 = <strong>40,000 bps</strong>. The constellation
+                        diagram for 16-QAM is a 4×4 grid where each point encodes 4 bits.
+                        Higher-order QAM packs more bits per symbol but requires a
+                        better SNR — the points are closer together and noise can cause
+                        the receiver to decode the wrong point.
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="QPSK constellation diagram showing four points at 45°, 135°, 225°, 315°" viewBox="0 0 220 220" style="max-width:220px">
+                            <line x1="110" y1="10" x2="110" y2="210" class="dg-stroke-mid" stroke-width="1" />
+                            <line x1="10" y1="110" x2="210" y2="110" class="dg-stroke-mid" stroke-width="1" />
+                            <circle cx="160" cy="60" r="8" class="dg-node-solid" /><text x="175" y="55" class="dg-label" font-size="10">00</text>
+                            <circle cx="60" cy="60" r="8" class="dg-node-solid" /><text x="35" y="55" class="dg-label" font-size="10">01</text>
+                            <circle cx="60" cy="160" r="8" class="dg-node-solid" /><text x="35" y="175" class="dg-label" font-size="10">11</text>
+                            <circle cx="160" cy="160" r="8" class="dg-node-solid" /><text x="175" y="175" class="dg-label" font-size="10">10</text>
+                            <text x="200" y="105" class="dg-label" font-size="10">I</text>
+                            <text x="115" y="20" class="dg-label" font-size="10">Q</text>
+                        </svg>
+                        <figcaption>QPSK — four equally spaced points, each carrying 2 bits.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        Baud rate is symbols per second; bit rate is bits per second.
+                        They are equal only when each symbol carries exactly 1 bit
+                        (ASK, FSK, BPSK). For QPSK onwards, bit rate > baud rate.
+                    </div>
+                </div>
+
+                <!-- 5 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-capacity">
+                    <h3>5. Channel capacity</h3>
+
+                    <p>
+                        Two theorems set the speed limit for any communication channel.
+                        They answer the same question — how many bits per second can
+                        we push through? — but under different assumptions.
+                    </p>
+
+                    <p>
+                        <strong>Nyquist bit rate</strong> (noiseless channel):
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">C = 2B log<sub>2</sub>(L)</div>
+                        <div class="calc__row calc__row--note">B = bandwidth (Hz), L = number of signal levels</div>
+                    </div>
+
+                    <p>
+                        Take a 3-kHz voice channel with 4 signal levels:
+                        C = 2 × 3000 × log<sub>2</sub>(4) = 2 × 3000 × 2 = <strong>12,000 bps</strong>.
+                    </p>
+
+                    <p>
+                        <strong>Shannon capacity</strong> (noisy channel):
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">C = B log<sub>2</sub>(1 + SNR)</div>
+                        <div class="calc__row calc__row--note">SNR = signal-to-noise ratio (linear, not dB)</div>
+                    </div>
+
+                    <p>
+                        If the same 3-kHz channel has SNR = 30 dB, first convert to
+                        linear: SNR<sub>linear</sub> = 10<sup>30/10</sup> = 1000. Then
+                        C = 3000 × log<sub>2</sub>(1001) ≈ 3000 × 9.97 = <strong>29,901 bps</strong>.
+                    </p>
+
+                    <p>
+                        Shannon's limit is an absolute upper bound — no coding scheme
+                        can exceed it. In practice, the two theorems are used together:
+                        Nyquist tells you how many levels to use, and Shannon tells you
+                        the maximum bit rate regardless of levels. If Nyquist gives a
+                        higher number than Shannon, the noise makes that many levels
+                        impractical.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">Nyquist</th><th scope="col">Shannon</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Assumes</td><td>Noiseless channel</td><td>Noisy channel (Gaussian noise)</td></tr>
+                                <tr><td>Variables</td><td>Bandwidth, signal levels</td><td>Bandwidth, SNR</td></tr>
+                                <tr><td>Result</td><td>Maximum baud rate × bits/symbol</td><td>Absolute upper bound on bit rate</td></tr>
+                                <tr><td>Use</td><td>Choose signal levels</td><td>Check if those levels are achievable</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="insight">
+                        A common exam pattern: "given BW and SNR, find how many signal
+                        levels are needed." Use Shannon to find the max bit rate, then
+                        Nyquist to solve for L: L = 2<sup>C/(2B)</sup>. If L comes out
+                        fractional, round down — you cannot use half a level.
+                    </div>
+                </div>
+
+                <!-- 6 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-mux">
+                    <h3>6. Multiplexing</h3>
+
+                    <p>
+                        Multiplexing combines multiple signals onto a single channel
+                        to share its capacity. There are three fundamental approaches.
+                    </p>
+
+                    <p>
+                        <strong>FDM (Frequency Division Multiplexing)</strong> gives each
+                        signal its own frequency band within the channel. Guard bands
+                        separate adjacent signals to prevent interference. Used in analog
+                        TV, FM radio and ADSL. A channel of bandwidth B carrying N
+                        signals each of bandwidth b with guard band g needs:
+                        B ≥ N × b + (N − 1) × g.
+                    </p>
+
+                    <p>
+                        <strong>TDM (Time Division Multiplexing)</strong> gives each
+                        signal its own time slot in a repeating frame. Two variants:
+                    </p>
+
+                    <ul>
+                        <li><strong>Synchronous TDM</strong> — fixed slots allocated
+                        whether or not a source has data. The T1 frame carries 24 channels
+                        × 8 bits + 1 framing bit = 193 bits at 8000 frames/s = 1.544 Mbps.</li>
+                        <li><strong>Statistical TDM</strong> — slots allocated only to
+                        active sources. More efficient, but needs address fields in each
+                        slot to identify the source.</li>
+                    </ul>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="TDM frame with 4 time slots, each slot labelled A B C D" viewBox="0 0 400 80" style="max-width:400px">
+                            <rect x="20" y="20" width="80" height="40" class="dg-node" /><text x="60" y="45" class="dg-label" text-anchor="middle" font-size="12">A</text>
+                            <rect x="105" y="20" width="80" height="40" class="dg-node" /><text x="145" y="45" class="dg-label" text-anchor="middle" font-size="12">B</text>
+                            <rect x="190" y="20" width="80" height="40" class="dg-node" /><text x="230" y="45" class="dg-label" text-anchor="middle" font-size="12">C</text>
+                            <rect x="275" y="20" width="80" height="40" class="dg-node" /><text x="315" y="45" class="dg-label" text-anchor="middle" font-size="12">D</text>
+                            <text x="200" y="75" class="dg-label" text-anchor="middle" font-size="10">← one frame →</text>
+                        </svg>
+                        <figcaption>Synchronous TDM — four sources share the channel in fixed rotation.</figcaption>
+                    </figure>
+
+                    <p>
+                        <strong>WDM (Wavelength Division Multiplexing)</strong> is FDM
+                        applied to optical fibre — each signal uses a different wavelength
+                        (colour) of light. DWDM (Dense WDM) can carry 80+ channels on
+                        a single fibre.
+                    </p>
+
+                    <p>
+                        <strong>CDMA (Code Division Multiple Access)</strong> lets all
+                        sources transmit simultaneously on the same frequency. Each
+                        source is assigned a unique chip code (a sequence of +1 and −1).
+                        Codes are orthogonal: the dot product of any two different codes
+                        is zero, so the receiver can extract its signal by multiplying
+                        the composite and summing.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Scheme</th><th scope="col">Divides</th><th scope="col">Guard</th><th scope="col">Used in</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>FDMA</td><td>Frequency</td><td>Guard bands</td><td>1G (AMPS), FM radio</td></tr>
+                                <tr><td>TDMA</td><td>Time</td><td>Guard time</td><td>2G (GSM)</td></tr>
+                                <tr><td>CDMA</td><td>Code</td><td>Orthogonal codes</td><td>3G (WCDMA, CDMA2000)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="insight">
+                        OFDM (Orthogonal Frequency Division Multiplexing) is the
+                        dominant scheme in 4G and Wi-Fi. It splits a wide channel into
+                        many narrow subcarriers, each carrying a low-rate stream. The
+                        subcarriers overlap but are orthogonal, so there are no guard
+                        bands — spectral efficiency is much higher than plain FDM.
+                    </div>
+                </div>
+
+                <!-- 7 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-combinational">
+                    <h3>7. Combinational logic</h3>
+
+                    <p>
+                        A combinational circuit's output depends only on its current
+                        inputs — it has no memory. The building blocks are multiplexers,
+                        decoders, encoders and adders.
+                    </p>
+
+                    <p>
+                        <strong>Multiplexer (MUX)</strong> — a 2<sup>n</sup>:1 MUX has
+                        2<sup>n</sup> data inputs, n select lines and 1 output. It
+                        routes the selected input to the output. The key exam use is
+                        implementing Boolean functions with a MUX.
+                    </p>
+
+                    <p>
+                        <strong>Example: implement F(A, B, C) = Σm(1, 2, 4, 7) with an
+                        8:1 MUX.</strong> Connect A, B, C to the select lines S<sub>2</sub>,
+                        S<sub>1</sub>, S<sub>0</sub>. For each minterm in the function,
+                        connect that data input to 1; for every other, connect to 0:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th>Input</th><th>ABC</th><th>Minterm</th><th>In F?</th><th>D<sub>i</sub></th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>D<sub>0</sub></td><td>000</td><td>m<sub>0</sub></td><td>No</td><td>0</td></tr>
+                                <tr><td>D<sub>1</sub></td><td>001</td><td>m<sub>1</sub></td><td>Yes</td><td class="cell-hit">1</td></tr>
+                                <tr><td>D<sub>2</sub></td><td>010</td><td>m<sub>2</sub></td><td>Yes</td><td class="cell-hit">1</td></tr>
+                                <tr><td>D<sub>3</sub></td><td>011</td><td>m<sub>3</sub></td><td>No</td><td>0</td></tr>
+                                <tr><td>D<sub>4</sub></td><td>100</td><td>m<sub>4</sub></td><td>Yes</td><td class="cell-hit">1</td></tr>
+                                <tr><td>D<sub>5</sub></td><td>101</td><td>m<sub>5</sub></td><td>No</td><td>0</td></tr>
+                                <tr><td>D<sub>6</sub></td><td>110</td><td>m<sub>6</sub></td><td>No</td><td>0</td></tr>
+                                <tr><td>D<sub>7</sub></td><td>111</td><td>m<sub>7</sub></td><td>Yes</td><td class="cell-hit">1</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Implementing with a smaller MUX:</strong> to implement
+                        a 3-variable function with a 4:1 MUX (one fewer select line),
+                        connect A and B to S<sub>1</sub>, S<sub>0</sub>. Group minterms
+                        by AB: for each group, the data input is expressed in terms of C:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th>AB</th><th>C=0</th><th>C=1</th><th>D<sub>i</sub></th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>00</td><td>m<sub>0</sub>=0</td><td>m<sub>1</sub>=1</td><td>C</td></tr>
+                                <tr><td>01</td><td>m<sub>2</sub>=1</td><td>m<sub>3</sub>=0</td><td>C̄</td></tr>
+                                <tr><td>10</td><td>m<sub>4</sub>=1</td><td>m<sub>5</sub>=0</td><td>C̄</td></tr>
+                                <tr><td>11</td><td>m<sub>6</sub>=0</td><td>m<sub>7</sub>=1</td><td>C</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Decoders and encoders.</strong> An n-to-2<sup>n</sup>
+                        decoder activates exactly one of 2<sup>n</sup> outputs based on
+                        the n-bit input. A priority encoder does the reverse — it takes
+                        2<sup>n</sup> inputs and outputs the binary code of the
+                        highest-priority active input plus a valid bit.
+                    </p>
+
+                    <p>
+                        <strong>Adders.</strong> A half adder adds two bits producing
+                        Sum = A ⊕ B and Carry = A · B. A full adder adds three bits
+                        (A, B, C<sub>in</sub>) producing Sum = A ⊕ B ⊕ C<sub>in</sub>
+                        and C<sub>out</sub> = AB + BC<sub>in</sub> + AC<sub>in</sub>.
+                        A ripple-carry adder chains n full adders — simple but slow
+                        because each carry depends on the previous stage. A
+                        carry-lookahead adder computes all carries in parallel using
+                        generate (G = AB) and propagate (P = A ⊕ B) signals.
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Full adder block diagram with A, B, Cin inputs and Sum, Cout outputs" viewBox="0 0 260 140" style="max-width:260px">
+                            <rect x="80" y="20" width="100" height="100" rx="6" class="dg-node" />
+                            <text x="130" y="75" class="dg-label" text-anchor="middle" font-size="13">Full Adder</text>
+                            <text x="60" y="45" class="dg-label" text-anchor="end" font-size="11">A</text>
+                            <line x1="65" y1="42" x2="80" y2="42" class="dg-stroke-ink" stroke-width="1.5" />
+                            <text x="60" y="75" class="dg-label" text-anchor="end" font-size="11">B</text>
+                            <line x1="65" y1="72" x2="80" y2="72" class="dg-stroke-ink" stroke-width="1.5" />
+                            <text x="60" y="105" class="dg-label" text-anchor="end" font-size="11">C<tspan font-size="8" dy="2">in</tspan></text>
+                            <line x1="65" y1="100" x2="80" y2="100" class="dg-stroke-ink" stroke-width="1.5" />
+                            <text x="200" y="50" class="dg-label" font-size="11">Sum</text>
+                            <line x1="180" y1="47" x2="195" y2="47" class="dg-stroke-ink" stroke-width="1.5" />
+                            <text x="200" y="90" class="dg-label" font-size="11">C<tspan font-size="8" dy="2">out</tspan></text>
+                            <line x1="180" y1="87" x2="195" y2="87" class="dg-stroke-ink" stroke-width="1.5" />
+                        </svg>
+                        <figcaption>A full adder — three inputs, two outputs. Chain n of these for an n-bit ripple-carry adder.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        A decoder with an enable input can implement any Boolean function:
+                        connect the enable to 1, the variables to the inputs, and OR the
+                        decoder outputs corresponding to the minterms. A 3-to-8 decoder
+                        plus one OR gate implements any 3-variable function.
+                    </div>
+                </div>
+
+                <!-- 8 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-sequential">
+                    <h3>8. Sequential logic</h3>
+
+                    <p>
+                        A sequential circuit's output depends on current inputs <em>and</em>
+                        stored state — it has memory. The basic storage element is the
+                        flip-flop.
+                    </p>
+
+                    <p>
+                        <strong>Latches vs flip-flops.</strong> A latch is level-triggered
+                        (transparent while the enable is high). A flip-flop is
+                        edge-triggered (captures data only on the rising or falling clock
+                        edge). Flip-flops are preferred in synchronous design because
+                        they eliminate timing hazards from racing conditions.
+                    </p>
+
+                    <p>
+                        The four standard flip-flops — each with its characteristic table
+                        and excitation table (the exam frequently asks for both):
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Type</th><th scope="col">Inputs</th><th scope="col">Characteristic</th><th scope="col">Excitation (Q→Q<sup>+</sup>)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">SR</th>
+                                    <td>S, R</td>
+                                    <td>S=0,R=0→Q; S=0,R=1→0; S=1,R=0→1; S=1,R=1→invalid</td>
+                                    <td>0→0: S=0,R=×; 0→1: S=1,R=0; 1→0: S=0,R=1; 1→1: S=×,R=0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">D</th>
+                                    <td>D</td>
+                                    <td>Q<sup>+</sup> = D</td>
+                                    <td>0→0: D=0; 0→1: D=1; 1→0: D=0; 1→1: D=1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">JK</th>
+                                    <td>J, K</td>
+                                    <td>J=0,K=0→Q; J=0,K=1→0; J=1,K=0→1; J=1,K=1→Q̄ (toggle)</td>
+                                    <td>0→0: J=0,K=×; 0→1: J=1,K=×; 1→0: J=×,K=1; 1→1: J=×,K=0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">T</th>
+                                    <td>T</td>
+                                    <td>T=0→Q; T=1→Q̄ (toggle)</td>
+                                    <td>0→0: T=0; 0→1: T=1; 1→0: T=1; 1→1: T=0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>The race-around condition</strong> occurs in JK flip-flops
+                        when J=K=1: if the latch is level-triggered, the output toggles
+                        continuously while the clock is high. The <strong>master-slave</strong>
+                        design fixes this — the master latch captures on clock-high, the
+                        slave transfers on clock-low, so only one toggle occurs per cycle.
+                    </p>
+
+                    <p>
+                        <strong>Registers</strong> are groups of flip-flops sharing a
+                        clock. Four shift types: SISO (serial in, serial out), SIPO,
+                        PISO, PIPO. A universal shift register can do all four.
+                    </p>
+
+                    <p>
+                        <strong>Counters.</strong> An asynchronous (ripple) counter chains
+                        T flip-flops where each output clocks the next — simple but the
+                        propagation delay accumulates. A synchronous counter uses a common
+                        clock — all flip-flops toggle simultaneously, so it is faster
+                        and glitch-free. Types: up, down, up/down, mod-N (counts 0 to
+                        N−1 and resets), ring (one-hot circular), Johnson (twisted ring).
+                    </p>
+
+                    <p>
+                        <strong>Designing a synchronous counter</strong> — mod-6 counter
+                        (counts 0→1→2→3→4→5→0) using JK flip-flops:
+                    </p>
+
+                    <ol class="walk">
+                        <li><span class="walk__what">Determine the number of flip-flops</span>
+                            <p>Need to count 6 states (0–5). Minimum flip-flops = ⌈log<sub>2</sub>(6)⌉ = 3. Call them Q<sub>2</sub>Q<sub>1</sub>Q<sub>0</sub>.</p>
+                        </li>
+                        <li><span class="walk__what">Write the state table</span>
+                            <div class="table-scroll">
+                                <table class="table--compact">
+                                    <thead>
+                                        <tr><th>Present</th><th>Q<sub>2</sub>Q<sub>1</sub>Q<sub>0</sub></th><th>Next</th><th>Q<sub>2</sub><sup>+</sup>Q<sub>1</sub><sup>+</sup>Q<sub>0</sub><sup>+</sup></th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>0</td><td>000</td><td>1</td><td>001</td></tr>
+                                        <tr><td>1</td><td>001</td><td>2</td><td>010</td></tr>
+                                        <tr><td>2</td><td>010</td><td>3</td><td>011</td></tr>
+                                        <tr><td>3</td><td>011</td><td>4</td><td>100</td></tr>
+                                        <tr><td>4</td><td>100</td><td>5</td><td>101</td></tr>
+                                        <tr><td>5</td><td>101</td><td>0</td><td>000</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                        <li><span class="walk__what">Use excitation table to find J, K for each flip-flop</span>
+                            <p>For each transition Q→Q<sup>+</sup>, look up the required JK inputs. States 6 and 7 (110, 111) are don't-cares.</p>
+                        </li>
+                        <li class="walk--final"><span class="walk__what">Simplify using K-maps and draw the circuit</span>
+                            <p>Each J and K input is a function of Q<sub>2</sub>, Q<sub>1</sub>, Q<sub>0</sub>. K-maps give the minimal expressions.</p>
+                        </li>
+                    </ol>
+
+                    <p>
+                        <strong>Mealy vs Moore machines.</strong> A Moore machine's output
+                        depends only on the current state — outputs are labelled on
+                        state circles. A Mealy machine's output depends on the current
+                        state and input — outputs are labelled on transition arrows.
+                        Moore machines typically need more states but are easier to
+                        design; Mealy machines respond one clock cycle faster.
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="D flip-flop state diagram: two states Q=0 and Q=1 with transitions labelled by D input" viewBox="0 0 280 120" style="max-width:280px">
+                            <defs><marker id="dff-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#013e37"/></marker></defs>
+                            <circle cx="70" cy="60" r="30" fill="#ffefb3" stroke="#013e37" stroke-width="1.5"/>
+                            <text x="70" y="57" fill="#013e37" text-anchor="middle" font-size="12" font-weight="600">Q=0</text>
+                            <text x="70" y="70" fill="#013e37" text-anchor="middle" font-size="9">Reset</text>
+                            <circle cx="210" cy="60" r="30" fill="#013e37" stroke="#013e37" stroke-width="1.5"/>
+                            <text x="210" y="57" fill="#ffefb3" text-anchor="middle" font-size="12" font-weight="600">Q=1</text>
+                            <text x="210" y="70" fill="#ffefb3" text-anchor="middle" font-size="9">Set</text>
+                            <path d="M100,50 L180,50" fill="none" stroke="#013e37" stroke-width="1.3" marker-end="url(#dff-arrow)"/>
+                            <text x="140" y="45" fill="#013e37" text-anchor="middle" font-size="10">D=1</text>
+                            <path d="M180,70 L100,70" fill="none" stroke="#013e37" stroke-width="1.3" marker-end="url(#dff-arrow)"/>
+                            <text x="140" y="84" fill="#013e37" text-anchor="middle" font-size="10">D=0</text>
+                            <path d="M52,37 A25,25 0 1,1 37,52" fill="none" stroke="#013e37" stroke-width="1.2" marker-end="url(#dff-arrow)"/>
+                            <text x="25" y="20" fill="#013e37" font-size="9">D=0</text>
+                            <path d="M228,37 A25,25 0 1,0 243,52" fill="none" stroke="#013e37" stroke-width="1.2" marker-end="url(#dff-arrow)"/>
+                            <text x="237" y="20" fill="#013e37" font-size="9">D=1</text>
+                        </svg>
+                        <figcaption>D flip-flop state diagram -- next state Q<sup>+</sup> always equals D, regardless of current state.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        The excitation table is the reverse of the characteristic table:
+                        given the transition you want (Q→Q<sup>+</sup>), it tells you
+                        what inputs to apply. This reversal is the entire method for
+                        designing sequential circuits from state tables.
+                    </div>
+                </div>
+
+                <!-- 9 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-fibre">
+                    <h3>9. Optical fibre</h3>
+
+                    <p>
+                        Optical fibre transmits data as pulses of light through a
+                        glass or plastic strand. The principle is <strong>total internal
+                        reflection</strong> — light hitting the core-cladding boundary
+                        at an angle greater than the critical angle bounces back into
+                        the core instead of escaping.
+                    </p>
+
+                    <p>
+                        The fibre has three layers: the <strong>core</strong> (carries
+                        light, higher refractive index), the <strong>cladding</strong>
+                        (lower refractive index, reflects light back), and the
+                        <strong>buffer coating</strong> (mechanical protection).
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Cross-section of optical fibre showing core, cladding and buffer" viewBox="0 0 300 120" style="max-width:300px">
+                            <circle cx="150" cy="60" r="50" fill="var(--cream-300)" stroke="var(--ink)" stroke-width="1.5" />
+                            <circle cx="150" cy="60" r="35" fill="var(--cream-600)" stroke="var(--ink)" stroke-width="1" />
+                            <circle cx="150" cy="60" r="15" fill="var(--ink-500)" stroke="var(--ink)" stroke-width="1" />
+                            <text x="150" y="64" class="dg-label" text-anchor="middle" font-size="9" fill="var(--cream)">Core</text>
+                            <text x="150" y="100" class="dg-label" text-anchor="middle" font-size="9">Cladding</text>
+                            <text x="245" y="55" class="dg-label" font-size="9">Buffer</text>
+                            <line x1="200" y1="57" x2="240" y2="55" class="dg-stroke-mid" stroke-width="1" />
+                        </svg>
+                        <figcaption>Cross-section — light travels through the high-index core.</figcaption>
+                    </figure>
+
+                    <p>Two fibre types:</p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">Single-mode</th><th scope="col">Multimode</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Core diameter</td><td>8–10 µm</td><td>50–62.5 µm</td></tr>
+                                <tr><td>Light source</td><td>Laser</td><td>LED</td></tr>
+                                <tr><td>Modes</td><td>One (axial ray only)</td><td>Many (rays at different angles)</td></tr>
+                                <tr><td>Dispersion</td><td>Very low</td><td>Higher (modal dispersion)</td></tr>
+                                <tr><td>Distance</td><td>Up to 100+ km</td><td>Up to ~2 km</td></tr>
+                                <tr><td>Cost</td><td>Higher</td><td>Lower</td></tr>
+                                <tr><td>Use</td><td>Long-haul, undersea cables</td><td>LAN, data centres</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        Multimode fibre comes in two index profiles:
+                        <strong>step-index</strong> (sharp boundary between core and
+                        cladding — causes more modal dispersion) and
+                        <strong>graded-index</strong> (refractive index gradually
+                        decreases from the centre — rays taking longer paths travel
+                        through lower-index material and thus travel faster, reducing
+                        dispersion).
+                    </p>
+
+                    <p>
+                        <strong>Advantages over copper:</strong> immunity to EMI, much
+                        higher bandwidth, lower attenuation, lighter, smaller, secure
+                        (difficult to tap without detection), no electrical hazard.
+                        Disadvantages: fragile, difficult to splice, more expensive
+                        termination equipment.
+                    </p>
+
+                    <div class="insight">
+                        Modal dispersion is why multimode fibre has shorter range: rays
+                        entering at different angles take different path lengths and
+                        arrive at different times, smearing the pulse. Single-mode fibre
+                        eliminates this by making the core so narrow that only the
+                        axial ray fits.
+                    </div>
+                </div>
+
+                <!-- 10 ----------------------------------------------------------- -->
+                <div class="subsection" id="n-wireless">
+                    <h3>10. Wireless and carrier networks</h3>
+
+                    <p>
+                        <strong>Satellite communication</strong> uses a transponder in
+                        orbit that receives an uplink signal, amplifies it, shifts
+                        its frequency and retransmits it as the downlink. Three orbit
+                        classes:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Orbit</th><th scope="col">Altitude</th><th scope="col">Latency</th><th scope="col">Coverage</th><th scope="col">Example</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>GEO</td><td>35,786 km</td><td>~540 ms round-trip</td><td>1/3 of Earth per satellite</td><td>VSAT, DTH TV</td></tr>
+                                <tr><td>MEO</td><td>2,000–35,786 km</td><td>~100 ms</td><td>Regional</td><td>GPS, GLONASS</td></tr>
+                                <tr><td>LEO</td><td>160–2,000 km</td><td>~20–40 ms</td><td>Small footprint, needs constellation</td><td>Starlink, Iridium</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Cellular networks</strong> divide a coverage area into
+                        <strong>cells</strong>, each served by a base station. Adjacent
+                        cells use different frequencies to avoid interference; the
+                        pattern repeats in a <strong>cluster</strong>. Smaller cells
+                        mean more capacity (frequency reuse) but more handoffs.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Gen</th><th scope="col">Period</th><th scope="col">Technology</th><th scope="col">Data rate</th><th scope="col">Key feature</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1G</td><td>1980s</td><td>FDMA, analog (AMPS)</td><td>Voice only</td><td>First mobile telephony</td></tr>
+                                <tr><td>2G</td><td>1990s</td><td>TDMA/CDMA, digital (GSM)</td><td>~14.4 kbps</td><td>SMS, digital voice</td></tr>
+                                <tr><td>3G</td><td>2000s</td><td>WCDMA, CDMA2000</td><td>2–42 Mbps</td><td>Mobile internet, video calls</td></tr>
+                                <tr><td>4G</td><td>2010s</td><td>OFDMA (LTE, LTE-A)</td><td>100 Mbps–1 Gbps</td><td>All-IP, streaming</td></tr>
+                                <tr><td>5G</td><td>2020s</td><td>OFDMA, mmWave, MIMO</td><td>1–20 Gbps</td><td>Ultra-low latency, IoT, network slicing</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>GSM architecture</strong> has three subsystems: the
+                        Mobile Station (MS = phone + SIM), the Base Station Subsystem
+                        (BTS + BSC), and the Network Subsystem (MSC, VLR, HLR, AuC, EIR).
+                        CDMA architecture replaces BSC/BTS with a Base Station Controller
+                        and uses soft handoff (connected to multiple base stations
+                        simultaneously during handover).
+                    </p>
+
+                    <p>
+                        <strong>Legacy carrier networks:</strong> PSTN (circuit-switched
+                        voice), ISDN (digital voice and data over copper), DSL family
+                        (ADSL: asymmetric, faster download; VDSL: very high rate),
+                        cable modem (HFC — hybrid fibre-coaxial), SONET/SDH (synchronous
+                        optical transport, ring topology for resilience).
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">Frequency reuse factor N (cluster size) = i<sup>2</sup> + ij + j<sup>2</sup></div>
+                        <div class="calc__row">Example: i=2, j=1 → N = 4 + 2 + 1 = <strong>7</strong></div>
+                        <div class="calc__row">If system has 490 duplex channels and N = 7:</div>
+                        <div class="calc__row">Channels per cell = 490 / 7 = <strong>70 channels/cell</strong></div>
+                        <div class="calc__row calc__row--note">Smaller N → more channels per cell but higher co-channel interference</div>
+                    </div>
+
+                    <div class="insight">
+                        Each cellular generation roughly maps to a multiple-access
+                        technology: 1G = FDMA, 2G = TDMA, 3G = CDMA, 4G/5G = OFDMA.
+                        This is the single-line summary the exam expects.
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================================================================
+             SOLVED QUESTIONS
+             ================================================================ -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved past questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <!-- S1 -->
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">A 12-bit DAC has a reference voltage of 3.3 V. Find the resolution and the output voltage for digital input 1010 0000 0000.</span>
+                        <span class="chip chip--past">BB AD ICT, 04/10/2024 — adapted</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="given">
+                            <p><strong>Given:</strong> n = 12 bits, V<sub>ref</sub> = 3.3 V, D = 1010 0000 0000<sub>2</sub></p>
+                        </div>
+                        <ol class="walk">
+                            <li><span class="walk__what">Convert digital input to decimal</span>
+                                <div class="calc">
+                                    <div class="calc__row">D = 1×2<sup>11</sup> + 0 + 1×2<sup>9</sup> + 0 + … = 2048 + 512 = <strong>2560</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Calculate resolution</span>
+                                <div class="calc">
+                                    <div class="calc__row">Resolution = V<sub>ref</sub> / (2<sup>n</sup> − 1) = 3.3 / (4096 − 1) = 3.3 / 4095</div>
+                                    <div class="calc__row calc__row--result">= <strong>0.000806 V ≈ 0.806 mV</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Calculate output voltage</span>
+                                <div class="calc">
+                                    <div class="calc__row">V<sub>out</sub> = D × Resolution = 2560 × 0.000806</div>
+                                    <div class="calc__row calc__row--result">= <strong>2.064 V</strong></div>
+                                </div>
+                            </li>
+                        </ol>
+                        <p><strong>Final answer:</strong> Resolution = 0.806 mV; V<sub>out</sub> for input 1010 0000 0000 = <strong>2.064 V</strong>.</p>
+                    </div>
+                </details>
+
+                <!-- S2 -->
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">A voice channel has bandwidth 4 kHz and SNR = 30 dB. Find the channel capacity using Shannon's theorem, then determine the minimum number of signal levels needed using Nyquist.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="given">
+                            <p><strong>Given:</strong> B = 4000 Hz, SNR = 30 dB</p>
+                        </div>
+                        <ol class="walk">
+                            <li><span class="walk__what">Convert SNR from dB to linear</span>
+                                <div class="calc">
+                                    <div class="calc__row">SNR<sub>linear</sub> = 10<sup>SNR<sub>dB</sub>/10</sup> = 10<sup>30/10</sup> = 10<sup>3</sup> = <strong>1000</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Apply Shannon's theorem</span>
+                                <div class="calc">
+                                    <div class="calc__row">C = B × log<sub>2</sub>(1 + SNR) = 4000 × log<sub>2</sub>(1001)</div>
+                                    <div class="calc__row">= 4000 × 9.97</div>
+                                    <div class="calc__row calc__row--result">≈ <strong>39,860 bps</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Use Nyquist to find signal levels</span>
+                                <div class="calc">
+                                    <div class="calc__row">C = 2B × log<sub>2</sub>(L)</div>
+                                    <div class="calc__row">39,860 = 2 × 4000 × log<sub>2</sub>(L)</div>
+                                    <div class="calc__row">log<sub>2</sub>(L) = 39,860 / 8000 = 4.98</div>
+                                    <div class="calc__row">L = 2<sup>4.98</sup> ≈ 31.6</div>
+                                    <div class="calc__row calc__row--result">Round down: L = <strong>32 signal levels</strong> (5 bits/symbol)</div>
+                                </div>
+                            </li>
+                        </ol>
+                        <p><strong>Final answer:</strong> Shannon capacity ≈ 39,860 bps. Minimum signal levels = 32 (which gives exactly 2 × 4000 × 5 = 40,000 bps — just above the Shannon limit, so 32 is achievable).</p>
+                    </div>
+                </details>
+
+                <!-- S3 -->
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">Calculate the PCM bit rate for CD-quality audio (44.1 kHz sampling, 16 bits per sample, stereo).</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="given">
+                            <p><strong>Given:</strong> f<sub>s</sub> = 44,100 Hz, n = 16 bits/sample, channels = 2 (stereo)</p>
+                        </div>
+                        <ol class="walk">
+                            <li><span class="walk__what">Calculate per-channel bit rate</span>
+                                <div class="calc">
+                                    <div class="calc__row">Bit rate per channel = f<sub>s</sub> × n = 44,100 × 16 = 705,600 bps</div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Calculate stereo bit rate</span>
+                                <div class="calc">
+                                    <div class="calc__row">Total bit rate = 705,600 × 2 = 1,411,200 bps</div>
+                                    <div class="calc__row calc__row--result">= <strong>1.4112 Mbps</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Storage for 1 minute</span>
+                                <div class="calc">
+                                    <div class="calc__row">= 1,411,200 × 60 / 8 = 10,584,000 bytes ≈ <strong>10.09 MB/min</strong></div>
+                                </div>
+                            </li>
+                        </ol>
+                        <p><strong>Final answer:</strong> CD-quality audio requires <strong>1.4112 Mbps</strong>, or about 10.09 MB per minute uncompressed.</p>
+                    </div>
+                </details>
+
+                <!-- S4 -->
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">Compare CDMA, TDMA and FDMA in terms of how they share the channel.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">FDMA</th><th scope="col">TDMA</th><th scope="col">CDMA</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Division</th><td>Frequency bands</td><td>Time slots</td><td>Unique codes</td></tr>
+                                    <tr><th scope="row">Sharing</th><td>Each user gets a band</td><td>Each user gets a slot</td><td>All users share all frequencies at all times</td></tr>
+                                    <tr><th scope="row">Guard</th><td>Guard band (frequency)</td><td>Guard time (between slots)</td><td>Orthogonal codes</td></tr>
+                                    <tr><th scope="row">Bandwidth efficiency</th><td>Low (guard bands wasted)</td><td>Medium</td><td>High (no guards)</td></tr>
+                                    <tr><th scope="row">Interference</th><td>Adjacent channel</td><td>Timing errors</td><td>Near-far problem</td></tr>
+                                    <tr><th scope="row">Handoff</th><td>Hard</td><td>Hard</td><td>Soft (connected to multiple BSs)</td></tr>
+                                    <tr><th scope="row">Cellular gen</th><td>1G (AMPS)</td><td>2G (GSM)</td><td>3G (WCDMA, CDMA2000)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Key distinction:</strong> FDMA and TDMA are orthogonal in one dimension (frequency or time); CDMA is orthogonal in the code domain, allowing all users to transmit simultaneously over the full bandwidth.</p>
+                    </div>
+                </details>
+
+                <!-- S5 -->
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">Design a combinational circuit using an 8:1 MUX to implement F(A,B,C) = Σm(0, 2, 3, 5, 7).</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Connect variables to select lines</span>
+                                <p>For an 8:1 MUX: S<sub>2</sub>=A, S<sub>1</sub>=B, S<sub>0</sub>=C.</p>
+                            </li>
+                            <li><span class="walk__what">Set data inputs from the minterm list</span>
+                                <div class="table-scroll">
+                                    <table class="table--compact">
+                                        <thead><tr><th>Input</th><th>ABC</th><th>m<sub>i</sub></th><th>In F?</th><th>D<sub>i</sub></th></tr></thead>
+                                        <tbody>
+                                            <tr><td>D<sub>0</sub></td><td>000</td><td>m<sub>0</sub></td><td>Yes</td><td class="cell-hit">1</td></tr>
+                                            <tr><td>D<sub>1</sub></td><td>001</td><td>m<sub>1</sub></td><td>No</td><td>0</td></tr>
+                                            <tr><td>D<sub>2</sub></td><td>010</td><td>m<sub>2</sub></td><td>Yes</td><td class="cell-hit">1</td></tr>
+                                            <tr><td>D<sub>3</sub></td><td>011</td><td>m<sub>3</sub></td><td>Yes</td><td class="cell-hit">1</td></tr>
+                                            <tr><td>D<sub>4</sub></td><td>100</td><td>m<sub>4</sub></td><td>No</td><td>0</td></tr>
+                                            <tr><td>D<sub>5</sub></td><td>101</td><td>m<sub>5</sub></td><td>Yes</td><td class="cell-hit">1</td></tr>
+                                            <tr><td>D<sub>6</sub></td><td>110</td><td>m<sub>6</sub></td><td>No</td><td>0</td></tr>
+                                            <tr><td>D<sub>7</sub></td><td>111</td><td>m<sub>7</sub></td><td>Yes</td><td class="cell-hit">1</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Alternative: 4:1 MUX (smaller)</span>
+                                <p>S<sub>1</sub>=A, S<sub>0</sub>=B. Group by AB:</p>
+                                <div class="table-scroll">
+                                    <table class="table--compact">
+                                        <thead><tr><th>AB</th><th>C=0</th><th>C=1</th><th>D<sub>i</sub></th></tr></thead>
+                                        <tbody>
+                                            <tr><td>00</td><td>m<sub>0</sub>=1</td><td>m<sub>1</sub>=0</td><td>C̄</td></tr>
+                                            <tr><td>01</td><td>m<sub>2</sub>=1</td><td>m<sub>3</sub>=1</td><td>1</td></tr>
+                                            <tr><td>10</td><td>m<sub>4</sub>=0</td><td>m<sub>5</sub>=1</td><td>C</td></tr>
+                                            <tr><td>11</td><td>m<sub>6</sub>=0</td><td>m<sub>7</sub>=1</td><td>C</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>Connect D<sub>0</sub>=C̄, D<sub>1</sub>=1, D<sub>2</sub>=C, D<sub>3</sub>=C.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S6 -->
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">Give the characteristic table and excitation table for a JK flip-flop. Why does the master-slave design solve the race-around problem?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Characteristic table</strong> (given J, K → find Q<sup>+</sup>):</p>
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead><tr><th>J</th><th>K</th><th>Q<sup>+</sup></th><th>Operation</th></tr></thead>
+                                <tbody>
+                                    <tr><td>0</td><td>0</td><td>Q</td><td>No change</td></tr>
+                                    <tr><td>0</td><td>1</td><td>0</td><td>Reset</td></tr>
+                                    <tr><td>1</td><td>0</td><td>1</td><td>Set</td></tr>
+                                    <tr><td>1</td><td>1</td><td>Q̄</td><td class="cell-hit">Toggle</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Excitation table</strong> (given Q→Q<sup>+</sup> → find J, K needed):</p>
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead><tr><th>Q</th><th>Q<sup>+</sup></th><th>J</th><th>K</th></tr></thead>
+                                <tbody>
+                                    <tr><td>0</td><td>0</td><td>0</td><td>×</td></tr>
+                                    <tr><td>0</td><td>1</td><td>1</td><td>×</td></tr>
+                                    <tr><td>1</td><td>0</td><td>×</td><td>1</td></tr>
+                                    <tr><td>1</td><td>1</td><td>×</td><td>0</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Race-around problem:</strong> When J=K=1 and clock is HIGH, a level-triggered JK latch toggles continuously — the output feeds back and triggers another toggle within the same clock pulse. The master-slave solution uses two latches: the master captures J, K on clock-HIGH (with Q isolated), then the slave transfers on clock-LOW. Since the master is isolated when the slave updates, only one toggle occurs per cycle.</p>
+                    </div>
+                </details>
+
+                <!-- S7 -->
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">Compare single-mode and multimode optical fibres. When would you choose each?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">Single-mode</th><th scope="col">Multimode</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Core diameter</th><td>8–10 µm</td><td>50–62.5 µm</td></tr>
+                                    <tr><th scope="row">Light source</th><td>Laser diode</td><td>LED or VCSEL</td></tr>
+                                    <tr><th scope="row">Propagation modes</th><td>One (axial ray)</td><td>Many (rays at multiple angles)</td></tr>
+                                    <tr><th scope="row">Modal dispersion</th><td>None</td><td>Present — limits bandwidth and distance</td></tr>
+                                    <tr><th scope="row">Bandwidth</th><td>Very high (~100 Gbps)</td><td>Lower (~10 Gbps over short runs)</td></tr>
+                                    <tr><th scope="row">Maximum distance</th><td>100+ km</td><td>~550 m (OM4 at 10G) to ~2 km</td></tr>
+                                    <tr><th scope="row">Cost</th><td>More expensive (laser source)</td><td>Less expensive (LED source, easier alignment)</td></tr>
+                                    <tr><th scope="row">Typical use</th><td>WAN, undersea cables, telecom backbone</td><td>LAN, data centre interconnects</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Choice rule:</strong> Use single-mode for long distances or high bandwidth requirements; use multimode for short intra-building runs where cost matters.</p>
+                    </div>
+                </details>
+
+                <!-- S8 -->
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">A T1 line carries 24 voice channels using synchronous TDM. Calculate the frame size, frame rate and total bit rate.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="given">
+                            <p><strong>Given:</strong> 24 channels, 8 bits/sample/channel, 8000 frames/s (from Nyquist: voice bandwidth 4 kHz → f<sub>s</sub> = 8000 Hz)</p>
+                        </div>
+                        <ol class="walk">
+                            <li><span class="walk__what">Frame size</span>
+                                <div class="calc">
+                                    <div class="calc__row">Data bits = 24 × 8 = 192 bits</div>
+                                    <div class="calc__row">+ 1 framing bit for synchronization</div>
+                                    <div class="calc__row calc__row--result">Frame size = <strong>193 bits</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Total bit rate</span>
+                                <div class="calc">
+                                    <div class="calc__row">Bit rate = 193 × 8000 = <strong>1,544,000 bps = 1.544 Mbps</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Duration of one frame</span>
+                                <div class="calc">
+                                    <div class="calc__row">Frame duration = 1 / 8000 = <strong>125 µs</strong></div>
+                                </div>
+                            </li>
+                        </ol>
+                        <p><strong>Final answer:</strong> Frame = 193 bits, sent at 8000 frames/s, giving <strong>1.544 Mbps</strong>. Each frame lasts 125 µs.</p>
+                    </div>
+                </details>
+
+                <!-- S9 -->
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">Design a mod-4 synchronous up-counter using T flip-flops. Draw the state table and find the T inputs.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>A mod-4 counter counts 0→1→2→3→0. It needs 2 flip-flops: Q<sub>1</sub>Q<sub>0</sub>.</p>
+                        <ol class="walk">
+                            <li><span class="walk__what">State table with T excitations</span>
+                                <p>For a T flip-flop: if Q changes, T=1; if Q stays, T=0.</p>
+                                <div class="table-scroll">
+                                    <table class="table--compact">
+                                        <thead><tr><th>Present Q<sub>1</sub>Q<sub>0</sub></th><th>Next Q<sub>1</sub><sup>+</sup>Q<sub>0</sub><sup>+</sup></th><th>T<sub>1</sub></th><th>T<sub>0</sub></th></tr></thead>
+                                        <tbody>
+                                            <tr><td>00</td><td>01</td><td>0</td><td class="cell-hit">1</td></tr>
+                                            <tr><td>01</td><td>10</td><td class="cell-hit">1</td><td class="cell-hit">1</td></tr>
+                                            <tr><td>10</td><td>11</td><td>0</td><td class="cell-hit">1</td></tr>
+                                            <tr><td>11</td><td>00</td><td class="cell-hit">1</td><td class="cell-hit">1</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Derive T inputs</span>
+                                <div class="calc">
+                                    <div class="calc__row">T<sub>0</sub> = <strong>1</strong> (always toggles — it is the LSB)</div>
+                                    <div class="calc__row">T<sub>1</sub> = <strong>Q<sub>0</sub></strong> (toggles only when Q<sub>0</sub> = 1)</div>
+                                </div>
+                                <p>This is the standard binary counter pattern: each bit toggles when all lower bits are 1.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S10 -->
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">Compare Mealy and Moore machines. Give a brief example of each.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">Moore</th><th scope="col">Mealy</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Output depends on</th><td>Current state only</td><td>Current state + current input</td></tr>
+                                    <tr><th scope="row">Output label on</th><td>State (circle)</td><td>Transition (arrow)</td></tr>
+                                    <tr><th scope="row">Output changes</th><td>Only with state change (on clock edge)</td><td>Immediately with input change</td></tr>
+                                    <tr><th scope="row">Number of states</th><td>Typically more</td><td>Typically fewer</td></tr>
+                                    <tr><th scope="row">Output glitches</th><td>Glitch-free (synchronous)</td><td>Possible (depends on input timing)</td></tr>
+                                    <tr><th scope="row">Response speed</th><td>One clock cycle delayed</td><td>Responds within same clock cycle</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Moore example:</strong> a sequence detector for "11" that outputs 1 when the last two inputs were both 1. States: S0 (no 1 seen), S1 (one 1 seen), S2 (two 1s seen, output=1).</p>
+                        <p><strong>Mealy example:</strong> the same detector needs only two states: S0 and S1. In S1, if input=1, output=1 (labelled on the transition).</p>
+                        <p><strong>Equivalence:</strong> every Moore machine has an equivalent Mealy machine with ≤ the same number of states, and vice versa (though Mealy→Moore may add states).</p>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- ================================================================
+             PRACTICE QUESTIONS
+             ================================================================ -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <!-- P1 -->
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">A telephone channel has bandwidth 3.1 kHz and SNR = 36 dB. Find the Shannon capacity and the maximum number of signal levels Nyquist allows.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="given">
+                            <p><strong>Given:</strong> B = 3100 Hz, SNR = 36 dB</p>
+                        </div>
+                        <ol class="walk">
+                            <li><span class="walk__what">Convert SNR</span>
+                                <div class="calc">
+                                    <div class="calc__row">SNR<sub>linear</sub> = 10<sup>36/10</sup> = 10<sup>3.6</sup> ≈ 3981</div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Shannon capacity</span>
+                                <div class="calc">
+                                    <div class="calc__row">C = 3100 × log<sub>2</sub>(3982) = 3100 × 11.96</div>
+                                    <div class="calc__row calc__row--result">≈ <strong>37,076 bps</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Signal levels from Nyquist</span>
+                                <div class="calc">
+                                    <div class="calc__row">37,076 = 2 × 3100 × log<sub>2</sub>(L)</div>
+                                    <div class="calc__row">log<sub>2</sub>(L) = 37,076 / 6200 ≈ 5.98</div>
+                                    <div class="calc__row">L = 2<sup>5.98</sup> ≈ 63.1 → round down to <strong>L = 64</strong> (6 bits/symbol)</div>
+                                    <div class="calc__row calc__row--note">Check: 2 × 3100 × 6 = 37,200 ≥ 37,076 ✓ (just over the limit, so 64 is the practical maximum)</div>
+                                </div>
+                            </li>
+                        </ol>
+                        <p><strong>Final answer:</strong> Shannon capacity ≈ 37,076 bps; maximum signal levels = 64.</p>
+                    </div>
+                </details>
+
+                <!-- P2 -->
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">An 8-bit DAC has V<sub>ref</sub> = 5 V. Find the resolution and the output voltages for inputs 0000 0001, 1000 0000 and 1111 1111.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Resolution</span>
+                                <div class="calc">
+                                    <div class="calc__row">= 5 / (2<sup>8</sup> − 1) = 5 / 255 = <strong>0.01961 V ≈ 19.61 mV</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Output voltages</span>
+                                <div class="calc">
+                                    <div class="calc__row">D = 1 → V<sub>out</sub> = 1 × 0.01961 = <strong>0.01961 V</strong> (1 LSB)</div>
+                                    <div class="calc__row">D = 128 → V<sub>out</sub> = 128 × 0.01961 = <strong>2.510 V</strong> (midscale)</div>
+                                    <div class="calc__row">D = 255 → V<sub>out</sub> = 255 × 0.01961 = <strong>5.000 V</strong> (full scale)</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P3 -->
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">16-QAM is used at 9600 baud. Find the bit rate. If the channel bandwidth is 4800 Hz, verify using Nyquist.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Bit rate</span>
+                                <div class="calc">
+                                    <div class="calc__row">Bit rate = Baud × log<sub>2</sub>(L) = 9600 × log<sub>2</sub>(16) = 9600 × 4</div>
+                                    <div class="calc__row calc__row--result">= <strong>38,400 bps</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Nyquist verification</span>
+                                <div class="calc">
+                                    <div class="calc__row">Maximum baud rate = 2B = 2 × 4800 = 9600 baud ✓</div>
+                                    <div class="calc__row calc__row--note">The system is operating at the Nyquist limit — no room for excess bandwidth.</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P4 -->
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">Calculate the Nyquist sampling rate and PCM bit rate for a signal with components from 300 Hz to 3400 Hz using 8-bit quantization.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Sampling rate (Nyquist)</span>
+                                <div class="calc">
+                                    <div class="calc__row">f<sub>s</sub> ≥ 2 × f<sub>max</sub> = 2 × 3400 = <strong>6800 Hz</strong></div>
+                                    <div class="calc__row calc__row--note">In practice, telephone systems use 8000 Hz (sampling above 4000 Hz to allow for filter roll-off).</div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">PCM bit rate (using practical f<sub>s</sub> = 8000)</span>
+                                <div class="calc">
+                                    <div class="calc__row">= 8000 × 8 = <strong>64,000 bps = 64 kbps</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Quantization levels and SQNR</span>
+                                <div class="calc">
+                                    <div class="calc__row">Levels = 2<sup>8</sup> = 256</div>
+                                    <div class="calc__row">SQNR = 6.02 × 8 + 1.76 = <strong>49.92 dB</strong></div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P5 -->
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">Design a half adder and a full adder. Show the truth tables and Boolean expressions.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Half adder</strong> (2 inputs: A, B):</p>
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead><tr><th>A</th><th>B</th><th>Sum</th><th>Carry</th></tr></thead>
+                                <tbody>
+                                    <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                    <tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                                    <tr><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+                                    <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row">Sum = A ⊕ B (XOR)</div>
+                            <div class="calc__row">Carry = A · B (AND)</div>
+                        </div>
+                        <p><strong>Full adder</strong> (3 inputs: A, B, C<sub>in</sub>):</p>
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead><tr><th>A</th><th>B</th><th>C<sub>in</sub></th><th>Sum</th><th>C<sub>out</sub></th></tr></thead>
+                                <tbody>
+                                    <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                    <tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                                    <tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+                                    <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                                    <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                                    <tr><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+                                    <tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+                                    <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row">Sum = A ⊕ B ⊕ C<sub>in</sub></div>
+                            <div class="calc__row">C<sub>out</sub> = AB + BC<sub>in</sub> + AC<sub>in</sub> = AB + C<sub>in</sub>(A ⊕ B)</div>
+                        </div>
+                        <p>A full adder can be built from two half adders and an OR gate.</p>
+                    </div>
+                </details>
+
+                <!-- P6 -->
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">Compare step-index and graded-index multimode fibres. Why does graded-index have less dispersion?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead><tr><th scope="col">Feature</th><th scope="col">Step-index</th><th scope="col">Graded-index</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Refractive index profile</td><td>Sharp boundary: constant n<sub>1</sub> in core, constant n<sub>2</sub> in cladding</td><td>Gradual: n decreases parabolically from centre to edge</td></tr>
+                                    <tr><td>Ray paths</td><td>Zigzag (total internal reflection)</td><td>Curved (gradual bending due to changing n)</td></tr>
+                                    <tr><td>Modal dispersion</td><td>High — rays at steeper angles travel longer paths</td><td>Low — steeper rays travel through lower-n material, so they go faster</td></tr>
+                                    <tr><td>Bandwidth</td><td>Lower</td><td>Higher</td></tr>
+                                    <tr><td>Distance</td><td>Shorter</td><td>Longer</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Why less dispersion:</strong> In graded-index fibre, rays taking longer geometric paths travel through regions of lower refractive index, where light speed is higher (v = c/n). The speed increase compensates for the longer distance, so all modes arrive at nearly the same time. In step-index, all rays travel at the same speed (same n in the core), so the longer paths genuinely take longer.</p>
+                    </div>
+                </details>
+
+                <!-- P7 -->
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">Implement F(A,B,C) = Σm(1,3,5,6) using a 4:1 MUX with A and B as select lines.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Group minterms by AB</span>
+                                <div class="table-scroll">
+                                    <table class="table--compact">
+                                        <thead><tr><th>AB</th><th>C=0 (m)</th><th>C=1 (m)</th><th>D<sub>i</sub></th></tr></thead>
+                                        <tbody>
+                                            <tr><td>00</td><td>m<sub>0</sub>=0</td><td>m<sub>1</sub>=1</td><td>C</td></tr>
+                                            <tr><td>01</td><td>m<sub>2</sub>=0</td><td>m<sub>3</sub>=1</td><td>C</td></tr>
+                                            <tr><td>10</td><td>m<sub>4</sub>=0</td><td>m<sub>5</sub>=1</td><td>C</td></tr>
+                                            <tr><td>11</td><td>m<sub>6</sub>=1</td><td>m<sub>7</sub>=0</td><td>C̄</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Connections</span>
+                                <p>S<sub>1</sub>=A, S<sub>0</sub>=B. Connect D<sub>0</sub>=C, D<sub>1</sub>=C, D<sub>2</sub>=C, D<sub>3</sub>=C̄.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P8 -->
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">Compare 1G through 5G cellular networks in terms of technology and data rates.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Generation</th><th scope="col">Decade</th><th scope="col">Multiple access</th><th scope="col">Switching</th><th scope="col">Peak data rate</th><th scope="col">Key innovation</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>1G</td><td>1980s</td><td>FDMA</td><td>Circuit</td><td>Voice only (analog)</td><td>First mobile telephony</td></tr>
+                                    <tr><td>2G</td><td>1990s</td><td>TDMA (GSM) / CDMA (IS-95)</td><td>Circuit + packet (GPRS)</td><td>14.4–64 kbps</td><td>Digital voice, SMS</td></tr>
+                                    <tr><td>3G</td><td>2000s</td><td>WCDMA / CDMA2000</td><td>Packet</td><td>2–42 Mbps (HSPA+)</td><td>Mobile internet, video</td></tr>
+                                    <tr><td>4G</td><td>2010s</td><td>OFDMA (LTE)</td><td>All-IP</td><td>100 Mbps – 1 Gbps</td><td>Streaming, VoLTE</td></tr>
+                                    <tr><td>5G</td><td>2020s</td><td>OFDMA + mmWave</td><td>All-IP</td><td>1–20 Gbps</td><td>URLLC, mMTC, network slicing</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Key evolution pattern:</strong> analog→digital (1G→2G), circuit→packet (2G→3G), narrowband→broadband (3G→4G), broadband→ultra-broadband+IoT (4G→5G). Each generation's multiple-access scheme also evolved: FDMA → TDMA → CDMA → OFDMA.</p>
+                    </div>
+                </details>
+
+                <!-- P9 -->
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">What is the difference between a ring counter and a Johnson (twisted ring) counter? Show the state sequence for 4 bits.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Ring counter:</strong> a shift register where the output of the last flip-flop feeds back to the first. Only one bit is 1 at a time (one-hot encoding). For 4 bits: 1000 → 0100 → 0010 → 0001 → 1000. States = <strong>N = 4</strong>.</p>
+                        <p><strong>Johnson counter:</strong> the complement of the last output feeds back. For 4 bits:</p>
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead><tr><th>Step</th><th>Q<sub>3</sub>Q<sub>2</sub>Q<sub>1</sub>Q<sub>0</sub></th></tr></thead>
+                                <tbody>
+                                    <tr><td>0</td><td>0000</td></tr>
+                                    <tr><td>1</td><td>1000</td></tr>
+                                    <tr><td>2</td><td>1100</td></tr>
+                                    <tr><td>3</td><td>1110</td></tr>
+                                    <tr><td>4</td><td>1111</td></tr>
+                                    <tr><td>5</td><td>0111</td></tr>
+                                    <tr><td>6</td><td>0011</td></tr>
+                                    <tr><td>7</td><td>0001</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>States = <strong>2N = 8</strong> (twice the number of flip-flops).</p>
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead><tr><th scope="col">Feature</th><th scope="col">Ring</th><th scope="col">Johnson</th></tr></thead>
+                                <tbody>
+                                    <tr><td>States</td><td>N</td><td>2N</td></tr>
+                                    <tr><td>Feedback</td><td>Q<sub>last</sub> → D<sub>0</sub></td><td>Q̄<sub>last</sub> → D<sub>0</sub></td></tr>
+                                    <tr><td>Decoding</td><td>No gates needed (one-hot)</td><td>Each state decoded by one 2-input AND</td></tr>
+                                    <tr><td>Self-starting</td><td>Needs initialization</td><td>Needs initialization</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P10 -->
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">Explain delta modulation and its two noise types. How does adaptive delta modulation improve on it?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Delta modulation (DM)</strong> encodes the difference between consecutive samples instead of the absolute value. The output is 1 bit per sample: 1 if the signal increased, 0 if it decreased. The receiver reconstructs by stepping up or down by a fixed step size δ.</p>
+                        <p><strong>Two noise types:</strong></p>
+                        <ul>
+                            <li><strong>Slope overload noise</strong> — when the signal changes faster than δ per sample period. The staircase output cannot keep up, causing distortion. Occurs with high-frequency or steep signals.</li>
+                            <li><strong>Granular noise</strong> — when the signal is relatively flat. The output oscillates around the true value, toggling ±δ even though the signal isn't changing. Occurs with low-frequency or quiet signals.</li>
+                        </ul>
+                        <p><strong>The dilemma:</strong> increasing δ reduces slope overload but increases granular noise; decreasing δ does the reverse.</p>
+                        <p><strong>Adaptive delta modulation (ADM)</strong> solves this by varying the step size dynamically. When consecutive outputs are the same (all 1s or all 0s — indicating slope overload), the step size increases. When they alternate (1010 — indicating granular noise), the step size decreases. This adapts to both steep and flat regions of the signal.</p>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="computer-architecture.html">
+                        <span class="pager__dir">Previous</span>
+                        <span class="pager__name">Computer Architecture</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="circuit-analysis.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">Circuit Analysis</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>
+                Bangladesh Bank Assistant Director (ICT) written preparation. Subject 09
+                of 18 — Telecommunication.
+            </p>
+            <p class="small">
+                Coverage checklist: <code>SYLLABUS.md</code> §9.
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

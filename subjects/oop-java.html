@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="oop-java"
+    data-subject-name="OOP (Java)">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OOP (Java) — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice questions on OOP concepts, Java platform, inheritance, polymorphism, exception handling, collections, multithreading and output prediction." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+
+            <div class="header__spacer"></div>
+
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java" aria-current="page"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 06</span><span aria-hidden="true">·</span><span>Phase 2</span>
+                </p>
+                <h1>OOP (Java)</h1>
+                <p class="page-head__lede">
+                    The exam tests object-oriented programming through Java —
+                    <strong>overloading vs overriding</strong>,
+                    <strong>exception handling</strong> and
+                    <strong>output prediction</strong> are repeat questions.
+                    The .NET comparison is asked almost every paper.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
+             NOTES
+             ================================================================ -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">13 topics</span>
+                </div>
+
+                <p class="intro">
+                    Every concept is demonstrated with compilable Java code. A single
+                    <code>Animal</code> → <code>Dog</code> class hierarchy recurs
+                    throughout so inheritance, polymorphism and exceptions are visible
+                    on the same objects.
+                </p>
+
+                <ul class="topics">
+                    <li><a href="#n-concepts"><span class="topics__num">01</span>OOP concepts</a></li>
+                    <li><a href="#n-platform"><span class="topics__num">02</span>Java platform — JDK, JRE, JVM</a></li>
+                    <li><a href="#n-access"><span class="topics__num">03</span>Access modifiers and keywords</a></li>
+                    <li><a href="#n-constructors"><span class="topics__num">04</span>Constructors</a></li>
+                    <li><a href="#n-inheritance"><span class="topics__num">05</span>Inheritance</a></li>
+                    <li><a href="#n-polymorphism"><span class="topics__num">06</span>Polymorphism</a></li>
+                    <li><a href="#n-abstraction"><span class="topics__num">07</span>Abstract classes and interfaces</a></li>
+                    <li><a href="#n-exceptions"><span class="topics__num">08</span>Exception handling</a></li>
+                    <li><a href="#n-strings"><span class="topics__num">09</span>Strings</a></li>
+                    <li><a href="#n-collections"><span class="topics__num">10</span>Collections framework</a></li>
+                    <li><a href="#n-threads"><span class="topics__num">11</span>Multithreading</a></li>
+                    <li><a href="#n-packaging"><span class="topics__num">12</span>JAR, WAR, EAR and .NET</a></li>
+                    <li><a href="#n-output"><span class="topics__num">13</span>Output prediction patterns</a></li>
+                </ul>
+
+                <!-- 1 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-concepts">
+                    <h3>1. OOP concepts</h3>
+
+                    <p>
+                        Object-oriented programming models the world as <strong>objects</strong> —
+                        bundles of state (fields) and behaviour (methods). Four pillars
+                        support it: encapsulation, abstraction, inheritance and
+                        polymorphism. The exam contrasts OOP with procedural programming.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">A class and an object — the foundation</span>
+<pre><code>class Animal {
+    String name;     // state
+    int age;
+
+    void speak() {   // behaviour
+        System.out.println(name + " makes a sound");
+    }
+}
+
+// Creating an object
+Animal a = new Animal();
+a.name = "Tommy";
+a.speak();   // Tommy makes a sound</code></pre>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>OOP vs procedural</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">Procedural (C)</th><th scope="col">OOP (Java)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Unit</th><td>Function</td><td>Object (data + methods)</td></tr>
+                                <tr><th scope="row">Data access</th><td>Global or passed to functions</td><td>Encapsulated inside objects</td></tr>
+                                <tr><th scope="row">Reuse</th><td>Function libraries</td><td>Inheritance + composition</td></tr>
+                                <tr><th scope="row">Extensibility</th><td>Modify existing code</td><td>Add subclasses without modifying</td></tr>
+                                <tr><th scope="row">Example</th><td>C, Pascal, Fortran</td><td>Java, C++, Python, C#</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Encapsulation</span><span class="calc__math">Bundle data + methods; hide internals via <code>private</code>. Expose via getters/setters.</span></div>
+                        <div class="calc__row"><span class="calc__label">Abstraction</span><span class="calc__math">Show only essential features, hide implementation. Achieved via abstract classes and interfaces.</span></div>
+                        <div class="calc__row"><span class="calc__label">Inheritance</span><span class="calc__math">Child class reuses parent class code. <code>extends</code> for classes, <code>implements</code> for interfaces.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Polymorphism</span><span class="calc__math">"Many forms." Same method name, different behaviour. Compile-time (overloading) or runtime (overriding).</span></div>
+                    </div>
+                </div>
+
+                <!-- 2 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-platform">
+                    <h3>2. Java platform — JDK, JRE, JVM <span class="flag"></span></h3>
+
+                    <p>
+                        Java's "write once, run anywhere" depends on compiling to
+                        <strong>bytecode</strong> (not native machine code) that runs on a
+                        virtual machine. The exam asks you to distinguish the three
+                        layers: JDK, JRE and JVM.
+                    </p>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 420 130" width="420" role="img"
+                            aria-label="JDK contains JRE, which contains JVM. JDK adds compiler and tools.">
+                            <rect class="dg-node" x="10" y="5" width="400" height="120" rx="6" />
+                            <text class="dg-label-start" x="20" y="22">JDK (Java Development Kit)</text>
+                            <text class="dg-label" x="280" y="22">javac, jar, javadoc, debugger</text>
+                            <rect class="dg-node" x="30" y="30" width="360" height="85" rx="5" />
+                            <text class="dg-label-start" x="40" y="47">JRE (Java Runtime Environment)</text>
+                            <text class="dg-label" x="280" y="47">class libraries, rt.jar</text>
+                            <rect class="dg-node-solid" x="50" y="55" width="320" height="50" rx="4" />
+                            <text class="dg-text-on-ink" x="210" y="75">JVM (Java Virtual Machine)</text>
+                            <text class="dg-text-on-ink" x="210" y="93" font-size="10">Class Loader → Bytecode Verifier → Interpreter/JIT → GC</text>
+                        </svg>
+                        <figcaption>To <em>run</em> Java programs you need JRE. To <em>develop</em> them you need JDK (which includes JRE).</figcaption>
+                    </figure>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Bytecode</span><span class="calc__math"><code>.java</code> → <code>javac</code> → <code>.class</code> (bytecode). Bytecode is platform-independent; the JVM is platform-specific.</span></div>
+                        <div class="calc__row"><span class="calc__label">JIT compiler</span><span class="calc__math">Just-In-Time: the JVM compiles frequently-used bytecode to native code at runtime for speed.</span></div>
+                        <div class="calc__row"><span class="calc__label">main signature</span><span class="calc__math"><code>public static void main(String[] args)</code> — public (JVM calls it), static (no object needed), void (returns nothing), String[] (command-line arguments).</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Primitive types</span><span class="calc__math">byte(1), short(2), int(4), long(8), float(4), double(8), char(2), boolean. Everything else is a reference type (object on the heap).</span></div>
+                    </div>
+                </div>
+
+                <!-- 3 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-access">
+                    <h3>3. Access modifiers and keywords <span class="flag"></span></h3>
+
+                    <p>
+                        Java has four access levels that control who can see a class
+                        member. The exam asks for the visibility matrix and frequently
+                        tests <code>static</code> and <code>final</code>.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>Access modifier visibility</caption>
+                            <thead>
+                                <tr><th scope="col">Modifier</th><th scope="col">Same class</th><th scope="col">Same package</th><th scope="col">Subclass (other pkg)</th><th scope="col">Everywhere</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">private</th><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+                                <tr><th scope="row">(default)</th><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+                                <tr><th scope="row">protected</th><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+                                <tr><th scope="row">public</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">static — belongs to the class, not the object</span>
+<pre><code>class Counter {
+    static int count = 0;  // shared across all objects
+    Counter() { count++; }
+}
+
+new Counter();
+new Counter();
+System.out.println(Counter.count);  // 2</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">static variable</span><span class="calc__math">One copy shared by all objects. Accessed via <code>ClassName.var</code>.</span></div>
+                        <div class="calc__row"><span class="calc__label">static method</span><span class="calc__math">Can be called without an object. Cannot access <code>this</code> or instance variables.</span></div>
+                        <div class="calc__row"><span class="calc__label">final variable</span><span class="calc__math">Constant — cannot be reassigned. <code>final int MAX = 100;</code></span></div>
+                        <div class="calc__row"><span class="calc__label">final method</span><span class="calc__math">Cannot be overridden by a subclass.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">final class</span><span class="calc__math">Cannot be extended. <code>String</code> is final — you cannot subclass it.</span></div>
+                    </div>
+                </div>
+
+                <!-- 4 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-constructors">
+                    <h3>4. Constructors</h3>
+
+                    <p>
+                        A constructor initialises a new object. It has the same name as the
+                        class and no return type. If you write no constructor, Java
+                        provides a default no-arg one.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Default, parameterised and constructor chaining</span>
+<pre><code>class Animal {
+    String name;
+    int age;
+
+    Animal() { this("Unknown", 0); }          // default → chains
+    Animal(String name, int age) {            // parameterised
+        this.name = name;
+        this.age = age;
+    }
+}
+
+Animal a1 = new Animal();               // Unknown, 0
+Animal a2 = new Animal("Tommy", 3);     // Tommy, 3</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">this()</span><span class="calc__math">Calls another constructor in the same class. Must be the first statement.</span></div>
+                        <div class="calc__row"><span class="calc__label">super()</span><span class="calc__math">Calls the parent class constructor. Also must be first. If omitted, Java inserts <code>super()</code> (no-arg) implicitly.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Constructor vs method</span><span class="calc__math">Constructor: no return type, same name as class, called once at creation. Method: has a return type, any name, called any number of times.</span></div>
+                    </div>
+                </div>
+
+                <!-- 5 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-inheritance">
+                    <h3>5. Inheritance <span class="flag"></span></h3>
+
+                    <p>
+                        Inheritance lets a child class (<code>Dog</code>) reuse code from a
+                        parent class (<code>Animal</code>). The child gets all non-private
+                        fields and methods of the parent, plus it can add new ones or
+                        override existing ones.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Single inheritance — Dog extends Animal</span>
+<pre><code>class Animal {
+    String name;
+    Animal(String name) { this.name = name; }
+    void speak() { System.out.println(name + " makes a sound"); }
+}
+
+class Dog extends Animal {
+    String breed;
+    Dog(String name, String breed) {
+        super(name);          // must call parent constructor
+        this.breed = breed;
+    }
+    @Override
+    void speak() { System.out.println(name + " barks"); }
+}
+
+Animal a = new Dog("Rex", "Labrador");
+a.speak();  // Rex barks  (runtime polymorphism!)</code></pre>
+                    </div>
+                    <div class="output"><code>Rex barks</code></div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Types of inheritance in Java</caption>
+                            <thead>
+                                <tr><th scope="col">Type</th><th scope="col">Allowed?</th><th scope="col">How</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Single</th><td>Yes</td><td><code>class B extends A</code></td></tr>
+                                <tr><th scope="row">Multilevel</th><td>Yes</td><td><code>C extends B extends A</code></td></tr>
+                                <tr><th scope="row">Hierarchical</th><td>Yes</td><td><code>B extends A</code>, <code>C extends A</code></td></tr>
+                                <tr><th scope="row">Multiple (classes)</th><td>No</td><td>Ambiguity problem (diamond problem)</td></tr>
+                                <tr><th scope="row">Multiple (interfaces)</th><td>Yes</td><td><code>class X implements I1, I2</code></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="insight">
+                        <div><strong>Why Java forbids multiple class inheritance.</strong> If class C extends both A and B, and both define <code>display()</code>, which one does C inherit? This is the <em>diamond problem</em>. Java avoids it by allowing multiple inheritance only through interfaces, where default methods have explicit conflict resolution.</div>
+                    </div>
+                </div>
+
+                <!-- 6 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-polymorphism">
+                    <h3>6. Polymorphism <span class="flag"></span></h3>
+
+                    <p>
+                        Polymorphism means "many forms." The same method call behaves
+                        differently depending on the context. The exam's repeat question
+                        is: <em>compare overloading and overriding</em>.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Overloading (compile-time) — same name, different parameters</span>
+<pre><code>class MathUtil {
+    int add(int a, int b)          { return a + b; }
+    double add(double a, double b) { return a + b; }
+    int add(int a, int b, int c)   { return a + b + c; }
+}
+
+MathUtil m = new MathUtil();
+System.out.println(m.add(2, 3));       // 5 (int version)
+System.out.println(m.add(2.5, 3.5));   // 6.0 (double version)
+System.out.println(m.add(1, 2, 3));    // 6 (three-arg version)</code></pre>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Overriding (runtime) — same signature, child redefines</span>
+<pre><code>class Animal {
+    void speak() { System.out.println("Some sound"); }
+}
+class Dog extends Animal {
+    @Override
+    void speak() { System.out.println("Bark"); }
+}
+
+Animal a = new Dog();  // reference type: Animal, object type: Dog
+a.speak();             // Bark — decided at RUNTIME</code></pre>
+                    </div>
+                    <div class="output"><code>Bark</code></div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>Overloading vs overriding — the repeat comparison</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">Overloading</th><th scope="col">Overriding</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Binding</th><td>Compile-time (static)</td><td>Runtime (dynamic)</td></tr>
+                                <tr><th scope="row">Classes</th><td>Same class</td><td>Parent + child class</td></tr>
+                                <tr><th scope="row">Method name</th><td>Same</td><td>Same</td></tr>
+                                <tr><th scope="row">Parameters</th><td>Must differ (number, type or order)</td><td>Must be identical</td></tr>
+                                <tr><th scope="row">Return type</th><td>Can differ</td><td>Same or covariant (subclass)</td></tr>
+                                <tr><th scope="row">Access</th><td>No restriction</td><td>Cannot be more restrictive</td></tr>
+                                <tr><th scope="row">static?</th><td>Can overload static methods</td><td>Cannot override static methods (hiding, not overriding)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 7 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-abstraction">
+                    <h3>7. Abstract classes and interfaces <span class="flag"></span></h3>
+
+                    <p>
+                        Both abstract classes and interfaces define contracts — method
+                        signatures that implementing classes must fill in. The exam asks
+                        you to compare them and to know when to use which.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Abstract class — partial implementation</span>
+<pre><code>abstract class Shape {
+    String color;
+    Shape(String color) { this.color = color; }
+    abstract double area();     // no body — child must implement
+    void display() {
+        System.out.println(color + " shape, area=" + area());
+    }
+}
+
+class Circle extends Shape {
+    double r;
+    Circle(String color, double r) { super(color); this.r = r; }
+    @Override
+    double area() { return Math.PI * r * r; }
+}
+
+new Circle("Red", 5).display();  // Red shape, area=78.539...</code></pre>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Interface — pure contract (pre-Java 8)</span>
+<pre><code>interface Drawable {
+    void draw();   // implicitly public abstract
+}
+
+class Circle extends Shape implements Drawable {
+    // ... must implement both area() AND draw()
+    @Override
+    public void draw() { System.out.println("Drawing circle"); }
+}</code></pre>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>Abstract class vs interface</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">Abstract class</th><th scope="col">Interface</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Methods</th><td>Abstract + concrete</td><td>Abstract (+ default/static since Java 8)</td></tr>
+                                <tr><th scope="row">Fields</th><td>Any (instance + static)</td><td>Only <code>public static final</code> constants</td></tr>
+                                <tr><th scope="row">Constructor</th><td>Yes</td><td>No</td></tr>
+                                <tr><th scope="row">Multiple</th><td>Can extend only one</td><td>Can implement many</td></tr>
+                                <tr><th scope="row">Access</th><td>Any modifier</td><td>Implicitly public</td></tr>
+                                <tr><th scope="row">When to use</th><td>IS-A with shared code</td><td>CAN-DO capability</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 8 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-exceptions">
+                    <h3>8. Exception handling <span class="flag"></span></h3>
+
+                    <p>
+                        An exception is an event that disrupts normal program flow. Java
+                        forces you to handle checked exceptions at compile time, while
+                        unchecked exceptions (runtime errors like
+                        <code>NullPointerException</code>) are optional to catch. The exam
+                        tests both the mechanism and the <code>throw</code> vs
+                        <code>throws</code> distinction.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">try-catch-finally — the core mechanism</span>
+<pre><code>try {
+    int result = 10 / 0;          // throws ArithmeticException
+    System.out.println(result);   // never reached
+} catch (ArithmeticException e) {
+    System.out.println("Error: " + e.getMessage());
+} finally {
+    System.out.println("Always runs");
+}</code></pre>
+                    </div>
+                    <div class="output"><code>Error: / by zero
+Always runs</code></div>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 460 130" width="460" role="img"
+                            aria-label="Exception hierarchy: Throwable → Error and Exception → RuntimeException">
+                            <defs><marker id="arr-ex" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <rect class="dg-node-solid" x="150" y="5" width="110" height="25" rx="4" />
+                            <text class="dg-text-on-ink" x="205" y="18" font-size="11">Throwable</text>
+                            <line class="dg-stroke-ink" x1="175" y1="30" x2="80" y2="50" marker-end="url(#arr-ex)" />
+                            <line class="dg-stroke-ink" x1="235" y1="30" x2="310" y2="50" marker-end="url(#arr-ex)" />
+                            <rect class="dg-node" x="30" y="50" width="100" height="25" rx="4" />
+                            <text class="dg-text" x="80" y="63" font-size="11">Error</text>
+                            <text class="dg-label" x="80" y="90">StackOverflow</text>
+                            <text class="dg-label" x="80" y="105">OutOfMemory</text>
+                            <text class="dg-label" x="80" y="120">(don't catch these)</text>
+                            <rect class="dg-node" x="260" y="50" width="100" height="25" rx="4" />
+                            <text class="dg-text" x="310" y="63" font-size="11">Exception</text>
+                            <text class="dg-label" x="260" y="90">checked: IOException</text>
+                            <text class="dg-label" x="260" y="105">checked: SQLException</text>
+                            <line class="dg-stroke-ink" x1="360" y1="62" x2="390" y2="62" marker-end="url(#arr-ex)" />
+                            <rect class="dg-node" x="390" y="50" width="65" height="25" rx="4" />
+                            <text class="dg-text" x="422" y="63" font-size="9">Runtime</text>
+                            <text class="dg-label" x="422" y="90">NullPointer</text>
+                            <text class="dg-label" x="422" y="105">ArrayIndexOOB</text>
+                            <text class="dg-label" x="422" y="120">(unchecked)</text>
+                        </svg>
+                        <figcaption>Checked exceptions must be caught or declared. Unchecked (RuntimeException) need not be — but can be.</figcaption>
+                    </figure>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>throw vs throws</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">throw</th><th scope="col">throws</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Purpose</th><td>Actually throw an exception</td><td>Declare that a method <em>may</em> throw</td></tr>
+                                <tr><th scope="row">Location</th><td>Inside method body</td><td>In method signature</td></tr>
+                                <tr><th scope="row">Count</th><td>One exception at a time</td><td>Multiple: <code>throws A, B</code></td></tr>
+                                <tr><th scope="row">Example</th><td><code>throw new IOException("fail")</code></td><td><code>void read() throws IOException</code></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">finally</span><span class="calc__math">Always executes — even after a <code>return</code> inside try or catch. Used for cleanup (closing files, connections).</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">try-with-resources</span><span class="calc__math"><code>try (BufferedReader br = new BufferedReader(...))</code> — auto-closes the resource. The class must implement <code>AutoCloseable</code>.</span></div>
+                    </div>
+                </div>
+
+                <!-- 9 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-strings">
+                    <h3>9. Strings <span class="flag"></span></h3>
+
+                    <p>
+                        Java <code>String</code> objects are <strong>immutable</strong> —
+                        once created, their content cannot change. Every operation that
+                        appears to modify a string actually creates a new object. This is
+                        the key to understanding <code>==</code> vs <code>.equals()</code>
+                        and the string pool.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Immutability and the string pool</span>
+<pre><code>String s1 = "Hello";       // goes to string pool
+String s2 = "Hello";       // reuses same pool object
+String s3 = new String("Hello");  // new object on heap
+
+System.out.println(s1 == s2);       // true  (same pool ref)
+System.out.println(s1 == s3);       // false (different objects)
+System.out.println(s1.equals(s3));  // true  (same content)</code></pre>
+                    </div>
+                    <div class="output"><code>true
+false
+true</code></div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>String vs StringBuffer vs StringBuilder</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">String</th><th scope="col">StringBuffer</th><th scope="col">StringBuilder</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Mutability</th><td>Immutable</td><td>Mutable</td><td>Mutable</td></tr>
+                                <tr><th scope="row">Thread-safe</th><td>Yes (immutable)</td><td>Yes (synchronized)</td><td>No</td></tr>
+                                <tr><th scope="row">Performance</th><td>Slow for concatenation</td><td>Slower than SB</td><td>Fastest</td></tr>
+                                <tr><th scope="row">Use case</th><td>Few modifications</td><td>Multi-threaded + modification</td><td>Single-threaded + modification</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="insight">
+                        <div><strong>Why immutability matters for the exam.</strong> <code>s1.concat(" World")</code> does NOT change <code>s1</code> — it returns a new String. If you don't assign the result, the concatenation is lost: <code>s1.concat("!"); System.out.println(s1);</code> still prints <code>"Hello"</code>.</div>
+                    </div>
+                </div>
+
+                <!-- 10 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-collections">
+                    <h3>10. Collections framework <span class="flag"></span></h3>
+
+                    <p>
+                        The Collections framework is Java's standard library for dynamic
+                        data structures. It replaces arrays when you need resizing,
+                        ordering, uniqueness or key-value mapping. The exam asks for
+                        hierarchy knowledge and comparison tables.
+                    </p>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 500 130" width="500" role="img"
+                            aria-label="Collections hierarchy: Collection splits into List, Set, Queue; Map is separate">
+                            <defs><marker id="arr-col" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <rect class="dg-node-solid" x="140" y="5" width="100" height="22" rx="3" />
+                            <text class="dg-text-on-ink" x="190" y="17" font-size="10">Iterable</text>
+                            <line class="dg-stroke-ink" x1="190" y1="27" x2="190" y2="35" marker-end="url(#arr-col)" />
+                            <rect class="dg-node-solid" x="140" y="35" width="100" height="22" rx="3" />
+                            <text class="dg-text-on-ink" x="190" y="47" font-size="10">Collection</text>
+                            <line class="dg-stroke-ink" x1="155" y1="57" x2="60" y2="70" marker-end="url(#arr-col)" />
+                            <line class="dg-stroke-ink" x1="190" y1="57" x2="190" y2="70" marker-end="url(#arr-col)" />
+                            <line class="dg-stroke-ink" x1="225" y1="57" x2="310" y2="70" marker-end="url(#arr-col)" />
+                            <rect class="dg-node" x="20" y="70" width="80" height="22" rx="3" />
+                            <text class="dg-text" x="60" y="82" font-size="10">List</text>
+                            <text class="dg-label" x="60" y="105" font-size="9">ArrayList</text>
+                            <text class="dg-label" x="60" y="118" font-size="9">LinkedList</text>
+                            <rect class="dg-node" x="150" y="70" width="80" height="22" rx="3" />
+                            <text class="dg-text" x="190" y="82" font-size="10">Set</text>
+                            <text class="dg-label" x="190" y="105" font-size="9">HashSet</text>
+                            <text class="dg-label" x="190" y="118" font-size="9">TreeSet</text>
+                            <rect class="dg-node" x="275" y="70" width="80" height="22" rx="3" />
+                            <text class="dg-text" x="315" y="82" font-size="10">Queue</text>
+                            <text class="dg-label" x="315" y="105" font-size="9">PriorityQueue</text>
+                            <text class="dg-label" x="315" y="118" font-size="9">LinkedList</text>
+                            <!-- Map (separate) -->
+                            <rect class="dg-node-solid" x="400" y="35" width="80" height="22" rx="3" />
+                            <text class="dg-text-on-ink" x="440" y="47" font-size="10">Map</text>
+                            <text class="dg-label" x="440" y="75" font-size="9">HashMap</text>
+                            <text class="dg-label" x="440" y="88" font-size="9">TreeMap</text>
+                            <text class="dg-label" x="440" y="101" font-size="9">Hashtable</text>
+                        </svg>
+                        <figcaption>Map does NOT extend Collection — it's a separate interface. All others branch from Collection.</figcaption>
+                    </figure>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>ArrayList vs LinkedList — the standard comparison</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">ArrayList</th><th scope="col">LinkedList</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Backed by</th><td>Dynamic array</td><td>Doubly linked list</td></tr>
+                                <tr><th scope="row">Get by index</th><td>O(1)</td><td>O(n)</td></tr>
+                                <tr><th scope="row">Add/remove at ends</th><td>O(1) amortised / O(n)</td><td>O(1)</td></tr>
+                                <tr><th scope="row">Memory</th><td>Less (contiguous)</td><td>More (node pointers)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">HashMap</span><span class="calc__math">Key→value. Allows one null key. O(1) average get/put. Not thread-safe.</span></div>
+                        <div class="calc__row"><span class="calc__label">Hashtable</span><span class="calc__math">Like HashMap but synchronized (thread-safe) and no null keys/values. Legacy class.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">ConcurrentHashMap</span><span class="calc__math">Thread-safe without locking the entire map (segment-level locking). Preferred over Hashtable.</span></div>
+                    </div>
+                </div>
+
+                <!-- 11 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-threads">
+                    <h3>11. Multithreading</h3>
+
+                    <p>
+                        A <strong>thread</strong> is the smallest unit of execution. Java
+                        supports multithreading natively — you can create threads by
+                        extending <code>Thread</code> or implementing
+                        <code>Runnable</code>. The exam focuses on the lifecycle and on
+                        <code>sleep</code> vs <code>wait</code>.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Two ways to create a thread</span>
+<pre><code>// Way 1: extend Thread
+class MyThread extends Thread {
+    public void run() { System.out.println("Thread running"); }
+}
+new MyThread().start();
+
+// Way 2: implement Runnable (preferred — allows extending another class)
+class MyTask implements Runnable {
+    public void run() { System.out.println("Task running"); }
+}
+new Thread(new MyTask()).start();</code></pre>
+                    </div>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 500 70" width="500" role="img"
+                            aria-label="Thread lifecycle: New, Runnable, Running, Blocked/Waiting, Terminated">
+                            <defs><marker id="arr-th" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <rect class="dg-node" x="0" y="15" width="60" height="25" rx="4" />
+                            <text class="dg-text" x="30" y="28" font-size="10">New</text>
+                            <line class="dg-stroke-ink" x1="60" y1="27" x2="85" y2="27" marker-end="url(#arr-th)" />
+                            <text class="dg-label" x="72" y="13">start()</text>
+                            <rect class="dg-node" x="90" y="15" width="80" height="25" rx="4" />
+                            <text class="dg-text" x="130" y="28" font-size="10">Runnable</text>
+                            <line class="dg-stroke-ink" x1="170" y1="27" x2="195" y2="27" marker-end="url(#arr-th)" />
+                            <text class="dg-label" x="182" y="13">scheduler</text>
+                            <rect class="dg-node-solid" x="200" y="15" width="80" height="25" rx="4" />
+                            <text class="dg-text-on-ink" x="240" y="28" font-size="10">Running</text>
+                            <line class="dg-stroke-ink" x1="280" y1="27" x2="310" y2="27" marker-end="url(#arr-th)" />
+                            <rect class="dg-node" x="315" y="15" width="80" height="25" rx="4" />
+                            <text class="dg-text" x="355" y="28" font-size="10">Terminated</text>
+                            <line class="dg-stroke-dash" x1="240" y1="40" x2="240" y2="60" />
+                            <text class="dg-label" x="240" y="65">wait() / sleep() → Blocked/Waiting</text>
+                        </svg>
+                        <figcaption><code>start()</code> moves thread to Runnable. The scheduler picks it for Running. <code>run()</code> ending → Terminated.</figcaption>
+                    </figure>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>sleep() vs wait()</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">sleep()</th><th scope="col">wait()</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Class</th><td>Thread</td><td>Object</td></tr>
+                                <tr><th scope="row">Lock</th><td>Does NOT release</td><td>Releases the lock</td></tr>
+                                <tr><th scope="row">Wake-up</th><td>After timeout</td><td>By notify()/notifyAll()</td></tr>
+                                <tr><th scope="row">Called from</th><td>Anywhere</td><td>Inside synchronized block</td></tr>
+                                <tr><th scope="row">Purpose</th><td>Pause for a duration</td><td>Inter-thread communication</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 12 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-packaging">
+                    <h3>12. JAR, WAR, EAR and .NET <span class="flag"></span></h3>
+
+                    <p>
+                        The exam directly asks: "compare JAR, WAR and EAR" and "compare
+                        Java and .NET." Both are short-answer repeat questions.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>Java packaging</caption>
+                            <thead>
+                                <tr><th scope="col">Format</th><th scope="col">Full form</th><th scope="col">Contains</th><th scope="col">Use</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">JAR</th><td>Java Archive</td><td>.class files, resources, MANIFEST.MF</td><td>Libraries, desktop apps</td></tr>
+                                <tr><th scope="row">WAR</th><td>Web Application Archive</td><td>JSP, servlets, web.xml, static files</td><td>Web apps (deploy to Tomcat)</td></tr>
+                                <tr><th scope="row">EAR</th><td>Enterprise Application Archive</td><td>JARs + WARs + EJB modules</td><td>Enterprise apps (deploy to app server)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>Java vs .NET — the repeat comparison</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">Java</th><th scope="col">.NET</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Developer</th><td>Sun (now Oracle)</td><td>Microsoft</td></tr>
+                                <tr><th scope="row">VM</th><td>JVM</td><td>CLR (Common Language Runtime)</td></tr>
+                                <tr><th scope="row">Intermediate code</th><td>Bytecode</td><td>MSIL / CIL</td></tr>
+                                <tr><th scope="row">Languages</th><td>Java</td><td>C#, VB.NET, F#, etc.</td></tr>
+                                <tr><th scope="row">Platform</th><td>Cross-platform</td><td>.NET Core is cross-platform; .NET Framework is Windows-only</td></tr>
+                                <tr><th scope="row">Memory</th><td>Automatic GC</td><td>Automatic GC</td></tr>
+                                <tr><th scope="row">Type system</th><td>Primitives + objects</td><td>CTS — unified type system</td></tr>
+                                <tr><th scope="row">Deployment</th><td>JAR/WAR</td><td>Assemblies (.dll, .exe)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">CLR</span><span class="calc__math">Common Language Runtime — .NET's equivalent of JVM. Manages memory, security, exception handling.</span></div>
+                        <div class="calc__row"><span class="calc__label">CTS</span><span class="calc__math">Common Type System — all .NET languages share the same type system. A C# <code>int</code> and VB.NET <code>Integer</code> are the same type.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">CLS</span><span class="calc__math">Common Language Specification — rules a type must follow to be usable from any .NET language.</span></div>
+                    </div>
+                </div>
+
+                <!-- 13 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-output">
+                    <h3>13. Output prediction patterns <span class="flag"></span></h3>
+
+                    <p>
+                        Java output questions test the same small set of traps. Knowing
+                        the traps means you can trace mechanically instead of guessing.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Trap 1: String == vs equals</span>
+<pre><code>String a = "Java";
+String b = "Java";
+String c = new String("Java");
+System.out.println(a == b);       // true  (same pool object)
+System.out.println(a == c);       // false (different objects)
+System.out.println(a.equals(c));  // true  (same content)</code></pre>
+                    </div>
+                    <div class="output"><code>true
+false
+true</code></div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Trap 2: finally always runs</span>
+<pre><code>static int test() {
+    try { return 1; }
+    finally { return 2; }    // overrides the try's return!
+}
+System.out.println(test());  // 2</code></pre>
+                    </div>
+                    <div class="output"><code>2</code></div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Trap 3: method overriding with parent reference</span>
+<pre><code>class A {
+    void show() { System.out.println("A"); }
+}
+class B extends A {
+    void show() { System.out.println("B"); }
+}
+
+A obj = new B();    // reference: A, object: B
+obj.show();         // B — runtime polymorphism</code></pre>
+                    </div>
+                    <div class="output"><code>B</code></div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Full trap catalogue for Java output questions</caption>
+                            <thead>
+                                <tr><th scope="col">Trap</th><th scope="col">Rule to apply</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">== on strings</th><td>Compares references, not content. Use <code>.equals()</code>.</td></tr>
+                                <tr><th scope="row">finally return</th><td>finally's return overrides try/catch returns.</td></tr>
+                                <tr><th scope="row">Dynamic dispatch</th><td>Method is chosen by the actual object type, not the reference type.</td></tr>
+                                <tr><th scope="row">Static binding</th><td>Overloaded methods are resolved at compile time based on reference type.</td></tr>
+                                <tr><th scope="row">String immutability</th><td><code>s.concat("x")</code> returns new String; <code>s</code> is unchanged if not reassigned.</td></tr>
+                                <tr><th scope="row">Auto-boxing</th><td><code>Integer a=127; Integer b=127; a==b</code> is true (cached). <code>a=128; b=128; a==b</code> is false.</td></tr>
+                                <tr><th scope="row">Init order</th><td>Static blocks → instance blocks → constructor. Parent before child.</td></tr>
+                                <tr><th scope="row">Exception flow</th><td>After catch, execution continues from after the try-catch block, not from the throw point.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================================================================
+             SOLVED PAST QUESTIONS
+             ================================================================ -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <p class="intro">
+                    Work each question on paper first, then compare your reasoning.
+                </p>
+
+                <div class="expand-controls">
+                    <button type="button" class="btn btn--sm btn--ghost" data-expand-all="#solved">Expand all</button>
+                    <button type="button" class="btn btn--sm btn--ghost" data-collapse-all="#solved">Collapse all</button>
+                </div>
+
+                <!-- S1 -->
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">Compare method overloading and method overriding with examples.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">Overloading</th><th scope="col">Overriding</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Binding</th><td>Compile-time</td><td>Runtime</td></tr>
+                                    <tr><th scope="row">Where</th><td>Same class</td><td>Parent + child class</td></tr>
+                                    <tr><th scope="row">Parameters</th><td>Must differ</td><td>Must be same</td></tr>
+                                    <tr><th scope="row">Return type</th><td>Can differ</td><td>Same or covariant</td></tr>
+                                    <tr><th scope="row">Access modifier</th><td>No restriction</td><td>Cannot be more restrictive</td></tr>
+                                    <tr><th scope="row">Static?</th><td>Yes</td><td>No (static methods are hidden, not overridden)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code-block">
+<pre><code>// Overloading — same class, different params
+class Calculator {
+    int add(int a, int b) { return a + b; }
+    double add(double a, double b) { return a + b; }
+}
+
+// Overriding — child redefines parent method
+class Animal { void sound() { System.out.println("..."); } }
+class Cat extends Animal {
+    @Override void sound() { System.out.println("Meow"); }
+}</code></pre>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S2 -->
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">Explain the four pillars of OOP.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Encapsulation</span><span class="calc__math">Wrapping data and methods into a single unit (class). Fields are <code>private</code>; access is through public getters/setters. Protects internal state from outside interference.</span></div>
+                            <div class="calc__row"><span class="calc__label">Abstraction</span><span class="calc__math">Hiding implementation details, exposing only the interface. A <code>List</code> reference hides whether the implementation is ArrayList or LinkedList.</span></div>
+                            <div class="calc__row"><span class="calc__label">Inheritance</span><span class="calc__math">A child class inherits fields and methods from a parent class. Promotes code reuse. <code>class Dog extends Animal</code>.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Polymorphism</span><span class="calc__math">Same interface, different behaviour. <code>Animal a = new Dog(); a.speak();</code> calls Dog's speak() — the correct method is chosen at runtime.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S3 -->
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">Compare <code>throw</code> and <code>throws</code> in Java.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">throw</th><th scope="col">throws</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Purpose</th><td>Explicitly throw one exception object</td><td>Declare that a method may throw exceptions</td></tr>
+                                    <tr><th scope="row">Location</th><td>Inside method body</td><td>Method signature</td></tr>
+                                    <tr><th scope="row">Followed by</th><td>An exception object: <code>throw new IOException()</code></td><td>Exception class names: <code>throws IOException, SQLException</code></td></tr>
+                                    <tr><th scope="row">Multiple?</th><td>One at a time</td><td>Multiple, comma-separated</td></tr>
+                                    <tr><th scope="row">Checked handling</th><td>Must be inside try-catch or method must use throws</td><td>Shifts handling responsibility to the caller</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code-block">
+<pre><code>// throw — actually create and throw an exception
+void setAge(int age) {
+    if (age &lt; 0) throw new IllegalArgumentException("Negative age");
+    this.age = age;
+}
+
+// throws — declare what the method might throw
+void readFile(String path) throws IOException {
+    FileReader fr = new FileReader(path);  // may throw IOException
+}</code></pre>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S4 -->
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">Compare JDK, JRE and JVM.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Component</th><th scope="col">Full form</th><th scope="col">Contains</th><th scope="col">Purpose</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">JVM</th><td>Java Virtual Machine</td><td>Class loader, verifier, interpreter, JIT, GC</td><td>Executes bytecode</td></tr>
+                                    <tr><th scope="row">JRE</th><td>Java Runtime Environment</td><td>JVM + class libraries (rt.jar, etc.)</td><td>Run Java programs</td></tr>
+                                    <tr><th scope="row">JDK</th><td>Java Development Kit</td><td>JRE + compiler (javac) + tools (jar, javadoc, debugger)</td><td>Develop + run Java programs</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Relationship:</strong> JDK ⊃ JRE ⊃ JVM. End-users need only JRE; developers need JDK.</p>
+                    </div>
+                </details>
+
+                <!-- S5 -->
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">Compare JAR, WAR and EAR files.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Format</th><th scope="col">Full form</th><th scope="col">Contains</th><th scope="col">Deploy to</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">JAR</th><td>Java Archive</td><td>.class files, META-INF/MANIFEST.MF, resources</td><td>JVM directly or as a library</td></tr>
+                                    <tr><th scope="row">WAR</th><td>Web Application Archive</td><td>JSP, Servlets, web.xml, HTML/CSS/JS, JARs in WEB-INF/lib</td><td>Web container (Tomcat, Jetty)</td></tr>
+                                    <tr><th scope="row">EAR</th><td>Enterprise Application Archive</td><td>JARs (EJB) + WARs + RAR modules, application.xml</td><td>Application server (WildFly, WebLogic)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>All three are ZIP files with a different extension and a specific directory structure.</p>
+                    </div>
+                </details>
+
+                <!-- S6 -->
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">What is the output?</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>class A {
+    int x = 10;
+    void show() { System.out.println("A: " + x); }
+}
+class B extends A {
+    int x = 20;
+    void show() { System.out.println("B: " + x); }
+}
+
+A obj = new B();
+System.out.println(obj.x);   // line 1
+obj.show();                   // line 2</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Line 1</span><span class="calc__math">Fields are bound at compile time by reference type. <code>obj.x</code> uses A's x = <strong>10</strong>.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Line 2</span><span class="calc__math">Methods are bound at runtime by object type. <code>obj.show()</code> calls B's show → <strong>B: 20</strong>.</span></div>
+                        </div>
+                        <div class="output"><code>10
+B: 20</code></div>
+                        <p><strong>Key rule:</strong> Field access uses the reference type (compile-time). Method calls use the object type (runtime). This asymmetry is the most tested Java output trap.</p>
+                    </div>
+                </details>
+
+                <!-- S7 -->
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">Compare abstract class and interface in Java.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">Abstract class</th><th scope="col">Interface</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Methods</th><td>Abstract + concrete</td><td>Abstract (+ default/static since Java 8)</td></tr>
+                                    <tr><th scope="row">Variables</th><td>Any (instance, static, final, non-final)</td><td>Only <code>public static final</code></td></tr>
+                                    <tr><th scope="row">Constructor</th><td>Yes</td><td>No</td></tr>
+                                    <tr><th scope="row">Multiple</th><td>Single inheritance only</td><td>Multiple interfaces allowed</td></tr>
+                                    <tr><th scope="row">Access</th><td>Any modifier</td><td>All methods implicitly public</td></tr>
+                                    <tr><th scope="row">Keyword</th><td><code>extends</code></td><td><code>implements</code></td></tr>
+                                    <tr><th scope="row">When</th><td>IS-A relationship with shared code</td><td>CAN-DO capability contract</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S8 -->
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">Compare Java and .NET platforms.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">Java</th><th scope="col">.NET</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Developer</th><td>Oracle (Sun)</td><td>Microsoft</td></tr>
+                                    <tr><th scope="row">Runtime</th><td>JVM</td><td>CLR</td></tr>
+                                    <tr><th scope="row">Intermediate code</th><td>Bytecode (.class)</td><td>MSIL/CIL (.dll/.exe)</td></tr>
+                                    <tr><th scope="row">Language</th><td>Java only</td><td>C#, VB.NET, F# — multi-language</td></tr>
+                                    <tr><th scope="row">Platform</th><td>Cross-platform (JVM exists for all OS)</td><td>.NET Core: cross-platform; .NET Framework: Windows only</td></tr>
+                                    <tr><th scope="row">Open source?</th><td>OpenJDK: yes</td><td>.NET Core: yes; Framework: no</td></tr>
+                                    <tr><th scope="row">Type system</th><td>Primitive + reference types</td><td>CTS — unified across languages</td></tr>
+                                    <tr><th scope="row">Memory</th><td>GC, no manual free</td><td>GC, IDisposable pattern</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S9 -->
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">Explain exception handling in Java with a code example.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>public class Demo {
+    public static void main(String[] args) {
+        try {
+            int[] arr = {1, 2, 3};
+            System.out.println(arr[5]);   // ArrayIndexOutOfBoundsException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Index error: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("General error");
+        } finally {
+            System.out.println("Cleanup done");
+        }
+        System.out.println("Program continues");
+    }
+}</code></pre>
+                        </div>
+                        <div class="output"><code>Index error: Index 5 out of bounds for length 3
+Cleanup done
+Program continues</code></div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">try</span><span class="calc__math">Wraps code that might throw. Execution jumps to catch on exception.</span></div>
+                            <div class="calc__row"><span class="calc__label">catch</span><span class="calc__math">Handles specific exceptions. Order matters — most specific first. The general <code>Exception</code> catch here is a fallback.</span></div>
+                            <div class="calc__row"><span class="calc__label">finally</span><span class="calc__math">Always executes — whether exception occurred or not. Used for resource cleanup.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">After catch</span><span class="calc__math">Execution continues normally after the try-catch-finally block. The program does NOT terminate.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S10 -->
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">Compare <code>String</code>, <code>StringBuffer</code> and <code>StringBuilder</code>.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">String</th><th scope="col">StringBuffer</th><th scope="col">StringBuilder</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Mutability</th><td>Immutable</td><td>Mutable</td><td>Mutable</td></tr>
+                                    <tr><th scope="row">Thread safety</th><td>Yes (immutable = inherently safe)</td><td>Yes (synchronized methods)</td><td>No (not synchronized)</td></tr>
+                                    <tr><th scope="row">Performance</th><td>Slowest for repeated modification</td><td>Moderate (synchronization overhead)</td><td>Fastest (no synchronization)</td></tr>
+                                    <tr><th scope="row">Storage</th><td>String pool (literals) or heap (<code>new</code>)</td><td>Heap</td><td>Heap</td></tr>
+                                    <tr><th scope="row">Use when</th><td>Content won't change</td><td>Multi-threaded + changes</td><td>Single-threaded + changes</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code-block">
+<pre><code>String s = "Hello";
+s.concat(" World");    // NEW object created; s is unchanged!
+System.out.println(s); // Hello
+
+StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World");   // MODIFIES the same object
+System.out.println(sb); // Hello World</code></pre>
+                        </div>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- ================================================================
+             PRACTICE QUESTIONS
+             ================================================================ -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <p class="intro">
+                    Original questions. Full worked solutions inside.
+                </p>
+
+                <div class="expand-controls">
+                    <button type="button" class="btn btn--sm btn--ghost" data-expand-all="#practice">Expand all</button>
+                    <button type="button" class="btn btn--sm btn--ghost" data-collapse-all="#practice">Collapse all</button>
+                </div>
+
+                <!-- P1 -->
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">What is the output?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>class Parent {
+    Parent() { System.out.println("Parent constructor"); }
+    { System.out.println("Parent instance block"); }
+    static { System.out.println("Parent static block"); }
+}
+class Child extends Parent {
+    Child() { System.out.println("Child constructor"); }
+    { System.out.println("Child instance block"); }
+    static { System.out.println("Child static block"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        new Child();
+    }
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Order</span><span class="calc__math">Static blocks (parent → child) → Instance blocks + constructor (parent → child).</span></div>
+                        </div>
+                        <div class="output"><code>Parent static block
+Child static block
+Parent instance block
+Parent constructor
+Child instance block
+Child constructor</code></div>
+                        <p><strong>Rule:</strong> Static blocks run once when the class is loaded (parent first). Instance blocks run before the constructor, every time an object is created.</p>
+                    </div>
+                </details>
+
+                <!-- P2 -->
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">Why does Java not support multiple inheritance through classes? How do interfaces solve the problem?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+                            <span class="code-block__label">The diamond problem</span>
+<pre><code>// Hypothetical — Java does NOT allow this
+class A { void show() { ... } }
+class B extends A { void show() { ... } }
+class C extends A { void show() { ... } }
+class D extends B, C { }  // WHICH show() does D inherit?</code></pre>
+                        </div>
+                        <p>The ambiguity is the diamond problem: D inherits two conflicting <code>show()</code> implementations.</p>
+                        <div class="code-block">
+                            <span class="code-block__label">Interfaces solve it — explicit conflict resolution</span>
+<pre><code>interface I1 { default void show() { System.out.println("I1"); } }
+interface I2 { default void show() { System.out.println("I2"); } }
+
+class D implements I1, I2 {
+    // Compiler forces you to resolve the conflict:
+    @Override
+    public void show() {
+        I1.super.show();  // explicitly choose I1's version
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P3 -->
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">What is the output?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>public class Test {
+    public static void main(String[] args) {
+        try {
+            System.out.println("try");
+            int x = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("catch");
+        } finally {
+            System.out.println("finally");
+        }
+        System.out.println("end");
+    }
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Step 1</span><span class="calc__math">"try" is printed. Then 10/0 throws ArithmeticException.</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 2</span><span class="calc__math">catch block runs → prints "catch".</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 3</span><span class="calc__math">finally always runs → prints "finally".</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Step 4</span><span class="calc__math">Execution continues after try-catch-finally → prints "end".</span></div>
+                        </div>
+                        <div class="output"><code>try
+catch
+finally
+end</code></div>
+                    </div>
+                </details>
+
+                <!-- P4 -->
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">Compare HashMap and Hashtable in Java.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">HashMap</th><th scope="col">Hashtable</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Thread safety</th><td>Not synchronized</td><td>Synchronized (thread-safe)</td></tr>
+                                    <tr><th scope="row">Null keys/values</th><td>Allows one null key, many null values</td><td>No nulls at all (throws NPE)</td></tr>
+                                    <tr><th scope="row">Performance</th><td>Faster (no sync overhead)</td><td>Slower</td></tr>
+                                    <tr><th scope="row">Iterator</th><td>Fail-fast</td><td>Enumerator (not fail-fast)</td></tr>
+                                    <tr><th scope="row">Introduced</th><td>Java 1.2 (Collections framework)</td><td>Java 1.0 (legacy)</td></tr>
+                                    <tr><th scope="row">Preferred?</th><td>Yes — use ConcurrentHashMap if thread safety needed</td><td>Legacy — avoid in new code</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P5 -->
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">Compare <code>sleep()</code> and <code>wait()</code> in Java.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">sleep()</th><th scope="col">wait()</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Defined in</th><td>Thread class</td><td>Object class</td></tr>
+                                    <tr><th scope="row">Releases lock?</th><td>No — holds the lock while sleeping</td><td>Yes — releases the lock</td></tr>
+                                    <tr><th scope="row">Wakes up by</th><td>Timeout expiry</td><td>notify() or notifyAll()</td></tr>
+                                    <tr><th scope="row">Must be in synchronized?</th><td>No</td><td>Yes — throws IllegalMonitorStateException otherwise</td></tr>
+                                    <tr><th scope="row">Purpose</th><td>Pause execution for a fixed time</td><td>Inter-thread communication — wait for a condition</td></tr>
+                                    <tr><th scope="row">Static?</th><td>Yes — <code>Thread.sleep(1000)</code></td><td>No — called on an object: <code>obj.wait()</code></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P6 -->
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">What is the output?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>class Animal {
+    String name = "Animal";
+    void sound() { System.out.println("Generic sound"); }
+}
+class Dog extends Animal {
+    String name = "Dog";
+    void sound() { System.out.println("Bark"); }
+}
+
+Animal a = new Dog();
+System.out.println(a.name);
+a.sound();</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">a.name</span><span class="calc__math">Field access → compile-time binding → reference type (Animal) → <strong>"Animal"</strong>.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">a.sound()</span><span class="calc__math">Method call → runtime binding → object type (Dog) → <strong>"Bark"</strong>.</span></div>
+                        </div>
+                        <div class="output"><code>Animal
+Bark</code></div>
+                    </div>
+                </details>
+
+                <!-- P7 -->
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">Explain the <code>final</code> keyword in Java — for variables, methods and classes.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>// final variable — constant
+final int MAX = 100;
+// MAX = 200;  — compile error
+
+// final method — cannot be overridden
+class Parent {
+    final void show() { System.out.println("Parent"); }
+}
+class Child extends Parent {
+    // void show() { }  — compile error: cannot override final
+}
+
+// final class — cannot be extended
+final class Utility { }
+// class SubUtil extends Utility { }  — compile error</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">final variable</span><span class="calc__math">Value cannot be changed after initialization. For reference types, the reference is fixed but the object's fields can still change.</span></div>
+                            <div class="calc__row"><span class="calc__label">final method</span><span class="calc__math">Prevents subclass from overriding. Used when the implementation must not be changed (e.g., security-critical logic).</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">final class</span><span class="calc__math">Cannot be subclassed. <code>String</code>, <code>Integer</code>, <code>Math</code> are all final classes.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P8 -->
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">What is the difference between <code>==</code> and <code>.equals()</code> in Java?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr><th scope="col">Operator</th><th scope="col">Compares</th><th scope="col">For primitives</th><th scope="col">For objects</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row"><code>==</code></th><td>Memory address</td><td>Values (works correctly)</td><td>References (same object?)</td></tr>
+                                    <tr><th scope="row"><code>.equals()</code></th><td>Content</td><td>N/A (primitives can't call methods)</td><td>Content (if overridden)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code-block">
+<pre><code>Integer a = 128;
+Integer b = 128;
+System.out.println(a == b);       // false (outside cache range -128 to 127)
+System.out.println(a.equals(b));  // true  (same value)
+
+Integer c = 127;
+Integer d = 127;
+System.out.println(c == d);       // true  (cached by JVM: -128 to 127)</code></pre>
+                        </div>
+                        <div class="insight">
+                            <div><strong>The Integer cache trap.</strong> Java caches Integer objects for values −128 to 127. Within this range, <code>==</code> returns true because both references point to the same cached object. Outside this range, new objects are created, so <code>==</code> returns false.</div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P9 -->
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">Compare ArrayList and LinkedList in Java.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">ArrayList</th><th scope="col">LinkedList</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Internal structure</th><td>Dynamic array</td><td>Doubly linked list</td></tr>
+                                    <tr><th scope="row">Random access (get)</th><td>O(1) — direct index</td><td>O(n) — traversal</td></tr>
+                                    <tr><th scope="row">Insert/delete (middle)</th><td>O(n) — shift elements</td><td>O(1) — relink nodes (if at the node)</td></tr>
+                                    <tr><th scope="row">Memory</th><td>Less (contiguous array)</td><td>More (prev/next pointers per node)</td></tr>
+                                    <tr><th scope="row">Implements</th><td>List</td><td>List, Deque, Queue</td></tr>
+                                    <tr><th scope="row">Best for</th><td>Frequent reads, rare inserts</td><td>Frequent inserts/deletes</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P10 -->
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">What is the output?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>public class Test {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = s1;
+        s1 = s1 + " World";
+
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s1 == s2);
+    }
+}</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">s1 = "Hello"</span><span class="calc__math">s1 points to "Hello" in the string pool.</span></div>
+                            <div class="calc__row"><span class="calc__label">s2 = s1</span><span class="calc__math">s2 also points to the same "Hello" object.</span></div>
+                            <div class="calc__row"><span class="calc__label">s1 + " World"</span><span class="calc__math">Creates a NEW String "Hello World" (on the heap, not in pool). s1 now points to this new object. s2 still points to "Hello".</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">s1 == s2</span><span class="calc__math">Different objects → <strong>false</strong>.</span></div>
+                        </div>
+                        <div class="output"><code>Hello World
+Hello
+false</code></div>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="database.html">
+                        <span class="pager__dir">Previous</span>
+                        <span class="pager__name">Database</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="networking.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">Networking</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>
+                Bangladesh Bank Assistant Director (ICT) written preparation. Subject 06
+                of 18 — OOP (Java).
+            </p>
+            <p class="small">
+                Coverage checklist: <code>SYLLABUS.md</code> §6.
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

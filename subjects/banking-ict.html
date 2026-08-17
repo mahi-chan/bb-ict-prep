@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="banking-ict"
+    data-subject-name="Banking ICT">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Banking ICT — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice on core banking systems, payment infrastructure (BACH, BEFTN, RTGS, NPS), MFS, cards, digital banking, BCP/DR and fintech." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav" aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+            </button>
+            <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">BB</span><span class="brand__text"><span class="brand__title">AD (ICT) Written Prep</span><span class="brand__sub">Bangladesh Bank</span></span></a>
+            <div class="search"><label class="visually-hidden" for="site-search">Search the site</label><div class="search__field"><svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" /><path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg><input id="site-search" class="search__input" type="search" placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" /><span class="search__kbd" aria-hidden="true">/</span></div><ul class="search__results" id="search-results" role="listbox" aria-label="Search results" data-open="false"></ul></div>
+            <div class="header__spacer"></div>
+            <div class="header__progress"><span>Revised <strong data-progress-count>0 / 18</strong></span><span class="meter" role="presentation"><span class="meter__fill" data-progress-fill data-value="0"></span></span></div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict" aria-current="page"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow"><span>Subject 16</span><span aria-hidden="true">·</span><span>Phase 3</span></p>
+                <h1>Banking ICT</h1>
+                <p class="page-head__lede">
+                    This subject is the most directly relevant to the job. Core
+                    banking systems, BACH/BEFTN/RTGS, card switching/EMV, mobile
+                    financial services, internet banking, BCP/DR and compliance
+                    form the bulk of the questions — all specific to Bangladesh's
+                    banking infrastructure.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false"><span data-mark-label>Mark as revised</span></button>
+                </div>
+            </div>
+
+            <!-- NOTES -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head"><h2 id="notes-h">Notes</h2><span class="section__rule"></span><span class="section__count">8 topics</span></div>
+
+                <ul class="topics">
+                    <li><a href="#n-cbs"><span class="topics__num">01</span>Core banking systems</a></li>
+                    <li><a href="#n-payment"><span class="topics__num">02</span>Payment systems (BACH, BEFTN, RTGS)</a></li>
+                    <li><a href="#n-cards"><span class="topics__num">03</span>Cards and switching</a></li>
+                    <li><a href="#n-mfs"><span class="topics__num">04</span>Mobile financial services</a></li>
+                    <li><a href="#n-digital"><span class="topics__num">05</span>Digital and internet banking</a></li>
+                    <li><a href="#n-security"><span class="topics__num">06</span>Banking security and compliance</a></li>
+                    <li><a href="#n-bcp"><span class="topics__num">07</span>Business continuity</a></li>
+                    <li><a href="#n-fintech"><span class="topics__num">08</span>Emerging finance and fintech</a></li>
+                </ul>
+
+                <!-- 1 -->
+                <div class="subsection" id="n-cbs">
+                    <h3>1. Core banking systems</h3>
+                    <p>A <strong>Core Banking Solution (CBS)</strong> is the centralised software that processes daily banking transactions — deposits, withdrawals, loans, interest — in real time across all branches.</p>
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead><tr><th scope="col">Feature</th><th scope="col">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td>Centralised database</td><td>All branches share a single ledger — any branch, any transaction</td></tr>
+                                <tr><td>Real-time processing</td><td>Balance updated immediately after transaction</td></tr>
+                                <tr><td>Modules</td><td>Deposits, loans, trade finance, treasury, GL</td></tr>
+                                <tr><td>Integration</td><td>Connects to ATM switch, internet banking, BACH, BEFTN, RTGS</td></tr>
+                                <tr><td>Vendors in BD</td><td>Flexcube (Oracle), Temenos T24, Finacle (Infosys), Ababil (local)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figure class="figure">
+                        <svg role="img" aria-label="Core banking architecture: branches, ATM, internet banking all connect to central CBS" viewBox="0 0 340 150" style="max-width:340px">
+                            <rect x="120" y="50" width="100" height="50" rx="6" class="dg-node"/>
+                            <text x="170" y="78" class="dg-text-on-ink" text-anchor="middle" font-size="10">Core Banking</text>
+                            <rect x="10" y="10" width="70" height="28" rx="4" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="45" y="28" class="dg-label" text-anchor="middle" font-size="8">Branch 1</text>
+                            <rect x="10" y="50" width="70" height="28" rx="4" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="45" y="68" class="dg-label" text-anchor="middle" font-size="8">Branch 2</text>
+                            <rect x="10" y="90" width="70" height="28" rx="4" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="45" y="108" class="dg-label" text-anchor="middle" font-size="8">Branch N</text>
+                            <rect x="260" y="10" width="70" height="28" rx="4" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="295" y="28" class="dg-label" text-anchor="middle" font-size="8">ATM Switch</text>
+                            <rect x="260" y="50" width="70" height="28" rx="4" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="295" y="68" class="dg-label" text-anchor="middle" font-size="8">Internet Bank</text>
+                            <rect x="260" y="90" width="70" height="28" rx="4" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="295" y="108" class="dg-label" text-anchor="middle" font-size="8">BACH/BEFTN</text>
+                            <line x1="82" y1="24" x2="118" y2="60" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="82" y1="64" x2="118" y2="70" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="82" y1="104" x2="118" y2="85" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="222" y1="60" x2="258" y2="24" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="222" y1="70" x2="258" y2="64" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="222" y1="85" x2="258" y2="104" class="dg-stroke-ink" stroke-width="1"/>
+                        </svg>
+                        <figcaption>Core banking as the hub — all channels connect to the centralised system.</figcaption>
+                    </figure>
+                    <div class="insight">CBS replaced the old branch-level ledger system. Before CBS, a customer could only transact at their "home branch". After CBS, any-branch banking is possible because the database is centralised.</div>
+                </div>
+
+                <!-- 2 -->
+                <div class="subsection" id="n-payment">
+                    <h3>2. Payment systems (BACH, BEFTN, RTGS)</h3>
+                    <p>Bangladesh Bank operates three electronic payment systems:</p>
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead><tr><th scope="col">System</th><th scope="col">Full form</th><th scope="col">Settlement</th><th scope="col">Use case</th></tr></thead>
+                            <tbody>
+                                <tr><td>BACH</td><td>Bangladesh Automated Clearing House</td><td>End-of-day net settlement</td><td>Cheque clearing (images, not physical)</td></tr>
+                                <tr><td>BEFTN</td><td>Bangladesh Electronic Funds Transfer Network</td><td>Same-day batch settlement</td><td>Salary disbursement, vendor payments, small transfers</td></tr>
+                                <tr><td>RTGS</td><td>Real Time Gross Settlement</td><td>Real-time, transaction-by-transaction</td><td>High-value transfers (≥ BDT 1 lakh), interbank</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="calc">
+                        <div class="calc__row">BACH = net settlement (offsets debits and credits, settles the difference)</div>
+                        <div class="calc__row">RTGS = gross settlement (each transaction settled individually, immediately)</div>
+                        <div class="calc__row calc__row--note">RTGS eliminates settlement risk but requires more liquidity</div>
+                    </div>
+                    <p><strong>NPS (National Payment Switch Bangladesh):</strong> interoperability platform connecting all banks, MFS providers, and payment systems. Enables interoperable transactions — e.g. bKash-to-bank, one bank's ATM to another's card.</p>
+                    <p><strong>SWIFT</strong> (Society for Worldwide Interbank Financial Telecommunication): used for international transfers. Messages (MT103 for customer transfers, MT202 for bank-to-bank). The 2016 Bangladesh Bank heist exploited SWIFT message forgery.</p>
+                    <div class="insight">BACH processes cheques via images (truncation) — the physical cheque doesn't travel between banks. This sped up clearing from days to same-day or next-day.</div>
+                </div>
+
+                <!-- 3 -->
+                <div class="subsection" id="n-cards">
+                    <h3>3. Cards and switching</h3>
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead><tr><th scope="col">Card type</th><th scope="col">Funding</th><th scope="col">Feature</th></tr></thead>
+                            <tbody>
+                                <tr><td>Debit card</td><td>Linked to bank account (spend what you have)</td><td>ATM withdrawal, POS purchase</td></tr>
+                                <tr><td>Credit card</td><td>Credit line from issuer (spend now, pay later)</td><td>Interest-free period, rewards</td></tr>
+                                <tr><td>Prepaid card</td><td>Pre-loaded with funds</td><td>No bank account needed; gift cards</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>EMV chip cards</strong> replaced magnetic stripe to reduce fraud. The chip generates a unique transaction code each time → cannot be cloned like mag stripe. BB mandated EMV migration for all banks.</p>
+                    <p><strong>Card transaction flow:</strong></p>
+                    <ol class="walk">
+                        <li><span class="walk__what">Cardholder presents card at POS/ATM</span></li>
+                        <li><span class="walk__what">Acquirer (merchant's bank) routes request through card network (Visa/Mastercard/NPS)</span></li>
+                        <li><span class="walk__what">Issuer (cardholder's bank) authorises or declines</span></li>
+                        <li class="walk--final"><span class="walk__what">Settlement: funds move from issuer to acquirer (via clearing network)</span></li>
+                    </ol>
+                    <p><strong>ATM switch:</strong> connects all ATMs in the country. In Bangladesh, NPS acts as the national ATM switch, enabling interbank ATM transactions.</p>
+                    <figure class="figure">
+                        <svg role="img" aria-label="Four-party card transaction model: Cardholder to POS to Acquirer to Card Network to Issuer" viewBox="0 0 460 90" style="max-width:460px">
+                            <defs><marker id="arr-cards" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#013e37"/></marker></defs>
+                            <rect x="2" y="20" width="70" height="36" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="37" y="42" fill="#013e37" text-anchor="middle" font-size="8" font-weight="600">Cardholder</text>
+                            <line x1="74" y1="38" x2="94" y2="38" stroke="#013e37" stroke-width="1" marker-end="url(#arr-cards)"/>
+                            <rect x="97" y="20" width="70" height="36" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="132" y="42" fill="#013e37" text-anchor="middle" font-size="8" font-weight="600">POS / ATM</text>
+                            <line x1="169" y1="38" x2="189" y2="38" stroke="#013e37" stroke-width="1" marker-end="url(#arr-cards)"/>
+                            <rect x="192" y="15" width="76" height="46" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="230" y="35" fill="#013e37" text-anchor="middle" font-size="8" font-weight="600">Acquirer</text>
+                            <text x="230" y="47" fill="#013e37" text-anchor="middle" font-size="7">(merchant bank)</text>
+                            <line x1="270" y1="38" x2="290" y2="38" stroke="#013e37" stroke-width="1" marker-end="url(#arr-cards)"/>
+                            <rect x="293" y="15" width="76" height="46" rx="5" class="dg-node-solid"/>
+                            <text x="331" y="34" class="dg-text-on-ink" font-size="8" font-weight="600">Card Network</text>
+                            <text x="331" y="47" class="dg-text-on-ink" font-size="7">(Visa/MC/NPS)</text>
+                            <line x1="371" y1="38" x2="391" y2="38" stroke="#013e37" stroke-width="1" marker-end="url(#arr-cards)"/>
+                            <rect x="394" y="15" width="62" height="46" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="425" y="35" fill="#013e37" text-anchor="middle" font-size="8" font-weight="600">Issuer</text>
+                            <text x="425" y="47" fill="#013e37" text-anchor="middle" font-size="7">(card bank)</text>
+                            <text x="230" y="80" fill="#013e37" text-anchor="middle" font-size="7" font-style="italic">← settlement funds flow: issuer → acquirer (minus interchange fee)</text>
+                        </svg>
+                        <figcaption>Four-party model — authorisation request flows left to right; settlement funds flow right to left.</figcaption>
+                    </figure>
+                    <div class="insight">The four-party model: cardholder → issuer → card network → acquirer → merchant. Interchange fee flows from acquirer to issuer. Understanding this flow is essential for banking ICT questions.</div>
+                </div>
+
+                <!-- 4 -->
+                <div class="subsection" id="n-mfs">
+                    <h3>4. Mobile financial services</h3>
+                    <p><strong>MFS</strong> enables financial transactions via mobile phone, targeting the unbanked population. Bangladesh is a global leader in MFS adoption.</p>
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead><tr><th scope="col">Provider</th><th scope="col">Operator</th><th scope="col">Launch</th><th scope="col">Model</th></tr></thead>
+                            <tbody>
+                                <tr><td>bKash</td><td>Brac Bank subsidiary</td><td>2011</td><td>Bank-led MFS</td></tr>
+                                <tr><td>Nagad</td><td>Bangladesh Post Office (digital)</td><td>2019</td><td>Government-backed</td></tr>
+                                <tr><td>Rocket</td><td>Dutch-Bangla Bank</td><td>2011</td><td>Bank-led</td></tr>
+                                <tr><td>Upay</td><td>UCB</td><td>2019</td><td>Bank-led</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>MFS services:</strong> cash-in/cash-out (via agents), P2P transfer, merchant payment, salary disbursement, utility bill payment, government disbursements (social safety net).</p>
+                    <p><strong>Technology:</strong> USSD (*247#) for feature phones, apps for smartphones. KYC via NID (National ID). BB regulates MFS through the Payment and Settlement Systems Division.</p>
+                    <p><strong>Key statistics:</strong> 180M+ registered accounts, 1.5M+ agents, daily transaction volume exceeding BDT 3,000 crore.</p>
+                    <div class="calc">
+                        <div class="calc__row">Cash-out charge (bKash) = 1.85% of withdrawal amount</div>
+                        <div class="calc__row">Example: BDT 10,000 cash-out → charge = 10,000 × 0.0185 = BDT 185</div>
+                        <div class="calc__row">Agent commission ≈ 1.0% = BDT 100 | Provider revenue ≈ 0.85% = BDT 85</div>
+                        <div class="calc__row calc__row--note">An agent handling 50 cash-outs/day earns ~BDT 5,000/day — this unit economics sustains the 1.5M-agent network</div>
+                    </div>
+                    <div class="insight">MFS transformed financial inclusion in Bangladesh — over 50% of adults now have access to financial services via mobile. The agent network is the backbone — agents are essentially human ATMs in every village.</div>
+                </div>
+
+                <!-- 5 -->
+                <div class="subsection" id="n-digital">
+                    <h3>5. Digital and internet banking</h3>
+                    <p><strong>Internet banking</strong> lets customers access banking services via web browser. <strong>Mobile banking</strong> via dedicated apps. Both require:</p>
+                    <ul>
+                        <li>Multi-factor authentication (password + OTP)</li>
+                        <li>SSL/TLS encryption for all data in transit</li>
+                        <li>Transaction limits and velocity checks</li>
+                        <li>Session timeout and secure logout</li>
+                    </ul>
+                    <p><strong>Open Banking</strong> (emerging concept): banks expose APIs to authorised third parties, enabling fintech apps to access customer data (with consent) and initiate payments. Regulated by PSD2 in Europe; Bangladesh is developing its framework.</p>
+                    <p><strong>QR code payments:</strong> Bangla QR (interoperable QR standard mandated by BB) enables merchant payments via any bank/MFS app scanning a single QR code.</p>
+                    <figure class="figure">
+                        <svg role="img" aria-label="Internet banking three-tier architecture: presentation, application, and data layers" viewBox="0 0 360 155" style="max-width:360px">
+                            <rect x="20" y="5" width="320" height="35" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="180" y="19" fill="#013e37" text-anchor="middle" font-size="9" font-weight="600">Presentation Layer</text>
+                            <text x="180" y="33" fill="#013e37" text-anchor="middle" font-size="7">Browser | Mobile App | USSD</text>
+                            <line x1="180" y1="40" x2="180" y2="55" stroke="#013e37" stroke-width="1"/>
+                            <text x="345" y="23" fill="#013e37" text-anchor="end" font-size="7" font-style="italic">public</text>
+                            <rect x="20" y="55" width="320" height="40" rx="5" class="dg-node-solid"/>
+                            <text x="180" y="71" class="dg-text-on-ink" font-size="9" font-weight="600">Application Layer (DMZ)</text>
+                            <text x="180" y="86" class="dg-text-on-ink" font-size="7">Web Server | API Gateway | OTP | Fraud Engine</text>
+                            <line x1="180" y1="95" x2="180" y2="110" stroke="#013e37" stroke-width="1"/>
+                            <text x="345" y="78" fill="#ffefb3" text-anchor="end" font-size="7" font-style="italic">DMZ</text>
+                            <rect x="20" y="110" width="320" height="35" rx="5" fill="#ffefb3" stroke="#013e37" stroke-width="1.2"/>
+                            <text x="180" y="124" fill="#013e37" text-anchor="middle" font-size="9" font-weight="600">Data Layer</text>
+                            <text x="180" y="138" fill="#013e37" text-anchor="middle" font-size="7">Core Banking System | Customer DB | HSM</text>
+                            <text x="345" y="128" fill="#013e37" text-anchor="end" font-size="7" font-style="italic">internal</text>
+                        </svg>
+                        <figcaption>Internet banking three-tier architecture — the application layer in the DMZ isolates the public-facing front end from core banking.</figcaption>
+                    </figure>
+                    <div class="insight">BB's guidelines require banks to implement real-time fraud monitoring for internet banking, including IP geolocation checks, device fingerprinting and unusual transaction pattern detection.</div>
+                </div>
+
+                <!-- 6 -->
+                <div class="subsection" id="n-security">
+                    <h3>6. Banking security and compliance</h3>
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead><tr><th scope="col">Framework/Standard</th><th scope="col">Scope</th></tr></thead>
+                            <tbody>
+                                <tr><td>PCI-DSS</td><td>Payment card data security — required for all card processors</td></tr>
+                                <tr><td>ISO 27001</td><td>Information Security Management System (ISMS)</td></tr>
+                                <tr><td>BB ICT Guidelines</td><td>Bangladesh Bank's ICT security guidelines for banks</td></tr>
+                                <tr><td>SWIFT CSP</td><td>SWIFT Customer Security Programme — mandatory controls</td></tr>
+                                <tr><td>Basel III</td><td>Operational risk framework (includes IT risk)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>BB ICT Guidelines</strong> mandate: CISO appointment, annual VAPT (vulnerability assessment and penetration testing), SOC (Security Operations Centre), cyber incident reporting within 24 hours, data classification, and access control policies.</p>
+                    <p><strong>Anti-Money Laundering (AML)</strong> technology: transaction monitoring systems flag suspicious patterns (large cash deposits, rapid fund movements, structuring). KYC/eKYC for customer onboarding.</p>
+                    <figure class="figure">
+                        <svg role="img" aria-label="BB ICT Security Guideline: eight control domains around a central governance core" viewBox="0 0 340 200" style="max-width:340px">
+                            <rect x="110" y="75" width="120" height="50" rx="6" class="dg-node-solid"/>
+                            <text x="170" y="96" class="dg-text-on-ink" font-size="9" font-weight="600">ICT Governance</text>
+                            <text x="170" y="110" class="dg-text-on-ink" font-size="7">CISO + Board oversight</text>
+                            <rect x="5" y="5" width="95" height="28" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="52" y="23" fill="#013e37" text-anchor="middle" font-size="7">Access Control</text>
+                            <rect x="122" y="5" width="95" height="28" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="170" y="23" fill="#013e37" text-anchor="middle" font-size="7">Network Security</text>
+                            <rect x="240" y="5" width="95" height="28" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="287" y="23" fill="#013e37" text-anchor="middle" font-size="7">Data Classification</text>
+                            <rect x="5" y="86" width="85" height="28" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="47" y="104" fill="#013e37" text-anchor="middle" font-size="7">VAPT (annual)</text>
+                            <rect x="250" y="86" width="85" height="28" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="292" y="104" fill="#013e37" text-anchor="middle" font-size="7">SOC (24 × 7)</text>
+                            <rect x="5" y="167" width="95" height="28" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="52" y="185" fill="#013e37" text-anchor="middle" font-size="7">Incident Response</text>
+                            <rect x="122" y="167" width="95" height="28" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="170" y="185" fill="#013e37" text-anchor="middle" font-size="7">BCP / DR</text>
+                            <rect x="240" y="167" width="95" height="28" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="287" y="185" fill="#013e37" text-anchor="middle" font-size="7">Staff Training</text>
+                            <line x1="52" y1="33" x2="130" y2="75" stroke="#013e37" stroke-width="0.8"/>
+                            <line x1="170" y1="33" x2="170" y2="75" stroke="#013e37" stroke-width="0.8"/>
+                            <line x1="287" y1="33" x2="210" y2="75" stroke="#013e37" stroke-width="0.8"/>
+                            <line x1="90" y1="100" x2="110" y2="100" stroke="#013e37" stroke-width="0.8"/>
+                            <line x1="250" y1="100" x2="230" y2="100" stroke="#013e37" stroke-width="0.8"/>
+                            <line x1="52" y1="167" x2="130" y2="125" stroke="#013e37" stroke-width="0.8"/>
+                            <line x1="170" y1="167" x2="170" y2="125" stroke="#013e37" stroke-width="0.8"/>
+                            <line x1="287" y1="167" x2="210" y2="125" stroke="#013e37" stroke-width="0.8"/>
+                        </svg>
+                        <figcaption>BB ICT Security Guideline — eight control domains radiate from a central governance function headed by the CISO.</figcaption>
+                    </figure>
+                    <div class="insight">The 2016 Bangladesh Bank SWIFT heist ($81M stolen from reserves at NY Fed) was a watershed moment. It led to mandatory SWIFT CSP compliance, enhanced network segmentation, and dedicated cybersecurity teams at all banks.</div>
+                </div>
+
+                <!-- 7 -->
+                <div class="subsection" id="n-bcp">
+                    <h3>7. Business continuity</h3>
+                    <p><strong>BCP (Business Continuity Plan)</strong> ensures critical banking operations continue during and after a disaster. <strong>DR (Disaster Recovery)</strong> focuses specifically on IT systems recovery.</p>
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead><tr><th scope="col">DR site type</th><th scope="col">Ready state</th><th scope="col">RTO</th><th scope="col">Cost</th></tr></thead>
+                            <tbody>
+                                <tr><td>Hot site</td><td>Fully operational, real-time data sync</td><td>Minutes to hours</td><td>Highest</td></tr>
+                                <tr><td>Warm site</td><td>Equipment ready, periodic data backup</td><td>Hours to 1 day</td><td>Medium</td></tr>
+                                <tr><td>Cold site</td><td>Space only, no equipment pre-installed</td><td>Days to weeks</td><td>Lowest</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>BB requirement:</strong> all scheduled banks must have a geographically separate DR site (minimum 30 km from primary), annual DR drills, and documented BCP reviewed yearly.</p>
+                    <div class="calc">
+                        <div class="calc__row">RPO (Recovery Point Objective) = max tolerable data loss</div>
+                        <div class="calc__row">RTO (Recovery Time Objective) = max tolerable downtime</div>
+                        <div class="calc__row calc__row--note">For core banking: typical RPO = 0 (zero data loss), RTO = 4 hours</div>
+                    </div>
+                    <div class="insight">BB mandates annual DR drills where banks actually fail over to the DR site and process transactions for a minimum period. This ensures the DR site works in practice, not just on paper.</div>
+                </div>
+
+                <!-- 8 -->
+                <div class="subsection" id="n-fintech">
+                    <h3>8. Emerging finance and fintech</h3>
+                    <p><strong>Fintech</strong> categories relevant to Bangladesh banking:</p>
+                    <ul>
+                        <li><strong>Payment tech:</strong> QR payments, contactless (NFC), wallets</li>
+                        <li><strong>Lending tech:</strong> digital lending, credit scoring via alternative data</li>
+                        <li><strong>Regtech:</strong> AML/KYC automation, regulatory reporting</li>
+                        <li><strong>Insurtech:</strong> digital insurance distribution</li>
+                        <li><strong>Wealthtech:</strong> robo-advisory, digital investment platforms</li>
+                    </ul>
+                    <p><strong>BB Regulatory Sandbox:</strong> allows fintech companies to test innovative products in a controlled environment with regulatory oversight before full launch.</p>
+                    <p><strong>CBDC (Central Bank Digital Currency):</strong> BB is studying the feasibility of a digital taka. Unlike cryptocurrency, CBDC is government-issued legal tender in digital form.</p>
+                    <figure class="figure">
+                        <svg role="img" aria-label="Two-tier CBDC model: Bangladesh Bank issues digital taka to commercial banks, which distribute to the public" viewBox="0 0 380 125" style="max-width:380px">
+                            <defs><marker id="arr-cbdc" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#013e37"/></marker></defs>
+                            <rect x="110" y="2" width="140" height="38" rx="6" class="dg-node-solid"/>
+                            <text x="180" y="17" class="dg-text-on-ink" font-size="9" font-weight="600">Bangladesh Bank</text>
+                            <text x="180" y="31" class="dg-text-on-ink" font-size="7">issues digital taka (CBDC)</text>
+                            <text x="370" y="23" fill="#013e37" text-anchor="end" font-size="7" font-style="italic">Tier 1</text>
+                            <line x1="135" y1="40" x2="65" y2="60" stroke="#013e37" stroke-width="1" marker-end="url(#arr-cbdc)"/>
+                            <line x1="180" y1="40" x2="180" y2="60" stroke="#013e37" stroke-width="1" marker-end="url(#arr-cbdc)"/>
+                            <line x1="225" y1="40" x2="295" y2="60" stroke="#013e37" stroke-width="1" marker-end="url(#arr-cbdc)"/>
+                            <rect x="10" y="62" width="110" height="30" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="65" y="81" fill="#013e37" text-anchor="middle" font-size="7">Commercial Bank A</text>
+                            <rect x="125" y="62" width="110" height="30" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="180" y="81" fill="#013e37" text-anchor="middle" font-size="7">Commercial Bank B</text>
+                            <rect x="240" y="62" width="110" height="30" rx="4" fill="#ffefb3" stroke="#013e37" stroke-width="1"/>
+                            <text x="295" y="81" fill="#013e37" text-anchor="middle" font-size="7">MFS Provider</text>
+                            <text x="370" y="80" fill="#013e37" text-anchor="end" font-size="7" font-style="italic">Tier 2</text>
+                            <line x1="65" y1="92" x2="65" y2="107" stroke="#013e37" stroke-width="0.8" marker-end="url(#arr-cbdc)"/>
+                            <line x1="180" y1="92" x2="180" y2="107" stroke="#013e37" stroke-width="0.8" marker-end="url(#arr-cbdc)"/>
+                            <line x1="295" y1="92" x2="295" y2="107" stroke="#013e37" stroke-width="0.8" marker-end="url(#arr-cbdc)"/>
+                            <text x="180" y="120" fill="#013e37" text-anchor="middle" font-size="7">Public (wallets, accounts, offline-capable devices)</text>
+                        </svg>
+                        <figcaption>Two-tier CBDC model — BB issues digital taka wholesale to banks/MFS providers, who distribute it retail to the public.</figcaption>
+                    </figure>
+                    <div class="insight">The BB exam increasingly asks about fintech and its regulation. Key distinction: fintech <em>supplements</em> traditional banking (BB's position), it doesn't replace the regulated banking system. All fintech services touching payments must go through a licensed bank or MFS provider.</div>
+                </div>
+            </section>
+
+            <!-- SOLVED -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head"><h2 id="solved-h">Solved past questions</h2><span class="section__rule"></span><span class="section__count">10 questions</span></div>
+
+                <details class="question" id="s1"><summary class="question__summary"><span class="question__num">S1</span><span class="question__text">What is core banking? How does it differ from traditional branch-based banking?</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <div class="table-scroll"><table class="table--compact table--strong"><thead><tr><th scope="col">Feature</th><th scope="col">Traditional</th><th scope="col">Core Banking</th></tr></thead><tbody>
+                        <tr><th scope="row">Database</th><td>Per-branch ledger</td><td>Centralised, single database</td></tr>
+                        <tr><th scope="row">Access</th><td>Home branch only</td><td>Any branch, any channel</td></tr>
+                        <tr><th scope="row">Processing</th><td>Batch (end of day)</td><td>Real-time</td></tr>
+                        <tr><th scope="row">Integration</th><td>Manual reconciliation</td><td>Automated via APIs</td></tr>
+                        <tr><th scope="row">Channels</th><td>Counter only</td><td>ATM, internet, mobile, POS</td></tr>
+                    </tbody></table></div>
+                </div></details>
+
+                <details class="question" id="s2"><summary class="question__summary"><span class="question__num">S2</span><span class="question__text">Compare BACH, BEFTN and RTGS payment systems of Bangladesh.</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <div class="table-scroll"><table class="table--compact table--strong"><thead><tr><th scope="col">Feature</th><th scope="col">BACH</th><th scope="col">BEFTN</th><th scope="col">RTGS</th></tr></thead><tbody>
+                        <tr><th scope="row">Instruments</th><td>Cheques (images)</td><td>Credit transfers</td><td>Large-value transfers</td></tr>
+                        <tr><th scope="row">Settlement</th><td>Net, end-of-day</td><td>Net, same-day batches</td><td>Gross, real-time</td></tr>
+                        <tr><th scope="row">Min amount</th><td>Any cheque amount</td><td>No minimum</td><td>BDT 1 lakh</td></tr>
+                        <tr><th scope="row">Speed</th><td>T+0 or T+1</td><td>Same day (multiple batches)</td><td>Immediate (within minutes)</td></tr>
+                        <tr><th scope="row">Settlement risk</th><td>Low (netting)</td><td>Low (netting)</td><td>Zero (gross settlement)</td></tr>
+                        <tr><th scope="row">Operator</th><td colspan="3">Bangladesh Bank</td></tr>
+                    </tbody></table></div>
+                </div></details>
+
+                <details class="question" id="s3"><summary class="question__summary"><span class="question__num">S3</span><span class="question__text">What is MFS? Explain its role in financial inclusion in Bangladesh.</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <p><strong>MFS (Mobile Financial Services)</strong> provides banking services via mobile phones through a network of human agents.</p>
+                    <p><strong>Financial inclusion impact:</strong></p>
+                    <ul>
+                        <li>180M+ registered accounts — more than bank accounts in the country</li>
+                        <li>1.5M+ agents reach every union/village — human ATMs where banks don't have branches</li>
+                        <li>Government social safety net payments (old age allowance, widow allowance) disbursed via MFS</li>
+                        <li>Garment worker salary disbursement — safer than cash</li>
+                        <li>During COVID-19, MFS was critical for emergency cash transfers</li>
+                    </ul>
+                    <p><strong>Regulatory framework:</strong> BB licenses MFS providers; must be bank-led (subsidiary or department); KYC via NID; transaction limits: daily BDT 25,000, monthly BDT 200,000.</p>
+                </div></details>
+
+                <details class="question" id="s4"><summary class="question__summary"><span class="question__num">S4</span><span class="question__text">What is EMV? Why is it more secure than magnetic stripe cards?</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <p><strong>EMV</strong> (Europay, Mastercard, Visa) is the global standard for chip-based payment cards.</p>
+                    <div class="table-scroll"><table class="table--compact table--strong"><thead><tr><th scope="col">Feature</th><th scope="col">Mag stripe</th><th scope="col">EMV chip</th></tr></thead><tbody>
+                        <tr><th scope="row">Data</th><td>Static — same data every swipe</td><td>Dynamic — unique cryptogram per transaction</td></tr>
+                        <tr><th scope="row">Cloning</th><td>Easy (skimmer copies data)</td><td>Extremely difficult (cryptographic keys)</td></tr>
+                        <tr><th scope="row">Authentication</th><td>Signature (easily forged)</td><td>PIN (chip + PIN)</td></tr>
+                        <tr><th scope="row">Fraud liability</th><td>Issuer bears</td><td>Shifts to non-EMV party</td></tr>
+                    </tbody></table></div>
+                    <p>BB mandated full EMV migration for all banks. Contactless (NFC) builds on EMV with tap-to-pay convenience.</p>
+                </div></details>
+
+                <details class="question" id="s5"><summary class="question__summary"><span class="question__num">S5</span><span class="question__text">Explain BCP and DR for a bank. What are RPO and RTO?</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <p><strong>BCP</strong> covers all aspects of business continuity: people, processes, technology, facilities. <strong>DR</strong> is the IT component of BCP.</p>
+                    <div class="calc">
+                        <div class="calc__row">RPO = max data loss tolerance (e.g. 0 for real-time replication)</div>
+                        <div class="calc__row">RTO = max downtime tolerance (e.g. 4 hours for core banking)</div>
+                    </div>
+                    <p><strong>BB requirements:</strong></p>
+                    <ul>
+                        <li>Geographically separate DR site (≥ 30 km from primary)</li>
+                        <li>Annual DR drill with actual failover</li>
+                        <li>Documented BCP reviewed yearly by board</li>
+                        <li>Backup strategy: real-time replication for critical systems, daily for others</li>
+                    </ul>
+                </div></details>
+
+                <details class="question" id="s6"><summary class="question__summary"><span class="question__num">S6</span><span class="question__text">What is NPS (National Payment Switch Bangladesh)? Why is it important?</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <p><strong>NPS</strong> is Bangladesh's national interoperability platform connecting all banks, MFS providers and payment service providers.</p>
+                    <p><strong>Functions:</strong></p>
+                    <ul>
+                        <li>Interbank ATM routing — use any bank's ATM with any bank's card</li>
+                        <li>Interoperable MFS — transfer between bKash, Nagad, bank accounts</li>
+                        <li>Interoperable QR payments (Bangla QR)</li>
+                        <li>Domestic card switching — alternative to Visa/Mastercard for domestic transactions</li>
+                    </ul>
+                    <p><strong>Benefit:</strong> reduces dependence on international payment networks for domestic transactions, lowers costs and supports financial inclusion.</p>
+                </div></details>
+
+                <details class="question" id="s7"><summary class="question__summary"><span class="question__num">S7</span><span class="question__text">What security measures should internet banking implement?</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <ul>
+                        <li><strong>Authentication:</strong> MFA (password + OTP), biometric for mobile</li>
+                        <li><strong>Encryption:</strong> TLS 1.2+ for data in transit, AES-256 for data at rest</li>
+                        <li><strong>Session management:</strong> timeout after inactivity, secure cookies (HttpOnly, Secure, SameSite)</li>
+                        <li><strong>Transaction security:</strong> per-transaction OTP for fund transfers, daily/per-transaction limits</li>
+                        <li><strong>Fraud detection:</strong> IP geolocation, device fingerprinting, velocity checks, behavioural analytics</li>
+                        <li><strong>Input validation:</strong> prevent SQL injection, XSS via parameterised queries and output encoding</li>
+                        <li><strong>Monitoring:</strong> real-time transaction monitoring, SIEM, 24/7 SOC</li>
+                        <li><strong>Compliance:</strong> annual VAPT, PCI-DSS if handling cards, BB ICT guidelines</li>
+                    </ul>
+                </div></details>
+
+                <details class="question" id="s8"><summary class="question__summary"><span class="question__num">S8</span><span class="question__text">Explain the card transaction flow from swipe to settlement.</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <ol class="walk">
+                        <li><span class="walk__what">Authorisation</span><p>Cardholder taps/inserts card at POS → POS sends transaction to acquirer (merchant's bank) → acquirer routes through card network (Visa/MC/NPS) → issuer (cardholder's bank) checks balance/credit, approves or declines → response flows back to POS.</p></li>
+                        <li><span class="walk__what">Clearing</span><p>At end of day, acquirer sends batch of approved transactions to card network. Network calculates interchange fees and net amounts per bank.</p></li>
+                        <li class="walk--final"><span class="walk__what">Settlement</span><p>Card network instructs BB (via settlement bank) to transfer funds: issuer pays acquirer (minus interchange fee). Acquirer credits merchant account (minus merchant discount rate).</p></li>
+                    </ol>
+                </div></details>
+
+                <details class="question" id="s9"><summary class="question__summary"><span class="question__num">S9</span><span class="question__text">What is SWIFT? Describe the 2016 Bangladesh Bank heist and lessons learned.</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <p><strong>SWIFT</strong> is a secure messaging network used by 11,000+ financial institutions globally for international fund transfers.</p>
+                    <p><strong>2016 Heist:</strong></p>
+                    <ul>
+                        <li>Attackers compromised BB's SWIFT terminal via malware (likely spear phishing entry)</li>
+                        <li>Sent 35 fraudulent transfer requests totalling $951M to New York Fed</li>
+                        <li>5 requests ($101M) were processed; $20M recovered; $81M successfully stolen (routed to Philippines)</li>
+                        <li>A typo ("fandation" instead of "foundation") flagged one transfer, and a bank holiday stopped others</li>
+                    </ul>
+                    <p><strong>Lessons:</strong> network segmentation (SWIFT terminal on isolated network), mandatory SWIFT CSP compliance, multi-person authorisation for large transfers, real-time monitoring, and enhanced cyber hygiene.</p>
+                </div></details>
+
+                <details class="question" id="s10"><summary class="question__summary"><span class="question__num">S10</span><span class="question__text">What is PCI-DSS? List its 12 requirements.</span><span class="chip">standard repeat</span></summary><div class="question__body">
+                    <p><strong>PCI-DSS</strong> (Payment Card Industry Data Security Standard) applies to all entities that store, process or transmit cardholder data.</p>
+                    <p><strong>12 requirements (grouped into 6 goals):</strong></p>
+                    <ol>
+                        <li>Install and maintain a firewall</li>
+                        <li>Don't use vendor-supplied default passwords</li>
+                        <li>Protect stored cardholder data</li>
+                        <li>Encrypt transmission of cardholder data over public networks</li>
+                        <li>Use and regularly update anti-virus</li>
+                        <li>Develop and maintain secure systems and applications</li>
+                        <li>Restrict access on a need-to-know basis</li>
+                        <li>Assign unique ID to each person with access</li>
+                        <li>Restrict physical access to cardholder data</li>
+                        <li>Track and monitor all access to network and cardholder data</li>
+                        <li>Regularly test security systems and processes</li>
+                        <li>Maintain a policy that addresses information security</li>
+                    </ol>
+                </div></details>
+            </section>
+
+            <!-- PRACTICE -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head"><h2 id="practice-h">Practice questions</h2><span class="section__rule"></span><span class="section__count">10 questions</span></div>
+
+                <details class="question" id="p1"><summary class="question__summary"><span class="question__num">P1</span><span class="question__text">Explain net settlement vs gross settlement. Which is used by BACH and which by RTGS?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <p><strong>Net settlement (BACH/BEFTN):</strong> accumulates all debits and credits between banks throughout the day, then settles the net difference. Bank A owes Bank B ₹100, Bank B owes Bank A ₹70 → only ₹30 moves. Less liquidity needed.</p>
+                    <p><strong>Gross settlement (RTGS):</strong> each transaction settled individually and immediately. No netting — full amount moves each time. Zero settlement risk because there's no accumulation of obligations.</p>
+                    <p><strong>Trade-off:</strong> net settlement is liquidity-efficient but carries risk (if one bank defaults before settlement, the net positions change). Gross settlement eliminates this risk but requires banks to maintain higher reserves.</p>
+                </div></details>
+
+                <details class="question" id="p2"><summary class="question__summary"><span class="question__num">P2</span><span class="question__text">What is Bangla QR? How does interoperable QR payment work?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <p><strong>Bangla QR</strong> is BB's standardised QR code for merchant payments. One QR code works with any bank or MFS app.</p>
+                    <p><strong>How it works:</strong></p>
+                    <ol class="walk">
+                        <li><span class="walk__what">Merchant displays Bangla QR at their counter</span></li>
+                        <li><span class="walk__what">Customer scans with their bank/MFS app, enters amount</span></li>
+                        <li><span class="walk__what">Request routes through NPS to merchant's bank</span></li>
+                        <li class="walk--final"><span class="walk__what">Funds transfer from customer's account to merchant's account (real-time or near real-time)</span></li>
+                    </ol>
+                    <p><strong>Benefit:</strong> merchants need only one QR code instead of separate codes for each bank/MFS. This lowers the barrier for small merchants to accept digital payments.</p>
+                </div></details>
+
+                <details class="question" id="p3"><summary class="question__summary"><span class="question__num">P3</span><span class="question__text">What is CBDC? How does it differ from cryptocurrency and MFS?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <div class="table-scroll"><table class="table--compact table--strong"><thead><tr><th scope="col">Feature</th><th scope="col">CBDC</th><th scope="col">Cryptocurrency</th><th scope="col">MFS</th></tr></thead><tbody>
+                        <tr><th scope="row">Issuer</th><td>Central bank</td><td>Decentralised (no issuer)</td><td>Licensed provider (bank)</td></tr>
+                        <tr><th scope="row">Legal tender</th><td>Yes</td><td>No (in BD, banned)</td><td>Yes (represents BDT)</td></tr>
+                        <tr><th scope="row">Value stability</th><td>Stable (= fiat)</td><td>Volatile</td><td>Stable (= BDT)</td></tr>
+                        <tr><th scope="row">Technology</th><td>May or may not use blockchain</td><td>Blockchain-based</td><td>Traditional server-based</td></tr>
+                        <tr><th scope="row">Privacy</th><td>Controlled anonymity</td><td>Pseudonymous</td><td>Full KYC</td></tr>
+                        <tr><th scope="row">Offline capable</th><td>Potentially yes</td><td>No</td><td>USSD works without internet</td></tr>
+                    </tbody></table></div>
+                </div></details>
+
+                <details class="question" id="p4"><summary class="question__summary"><span class="question__num">P4</span><span class="question__text">What are the BB ICT Security Guidelines' key mandates for scheduled banks?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <ul>
+                        <li>Appoint a <strong>CISO</strong> (Chief Information Security Officer) at senior management level</li>
+                        <li>Establish a <strong>SOC</strong> (Security Operations Centre) for 24/7 monitoring</li>
+                        <li>Conduct annual <strong>VAPT</strong> by independent third party</li>
+                        <li>Implement <strong>data classification</strong> (public, internal, confidential, restricted)</li>
+                        <li>Report cyber incidents to BB within <strong>24 hours</strong></li>
+                        <li>Maintain <strong>access control</strong> with principle of least privilege and MFA for critical systems</li>
+                        <li>Ensure <strong>network segmentation</strong> (separate SWIFT, core banking, internet banking)</li>
+                        <li>Regular <strong>security awareness training</strong> for all staff</li>
+                        <li>Maintain <strong>BCP/DR</strong> with annual testing</li>
+                    </ul>
+                </div></details>
+
+                <details class="question" id="p5"><summary class="question__summary"><span class="question__num">P5</span><span class="question__text">What is Open Banking? What are its potential benefits and risks for Bangladesh?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <p><strong>Open Banking</strong> requires banks to share customer data (with consent) with authorised third-party providers via secure APIs.</p>
+                    <p><strong>Benefits:</strong> fosters competition and innovation, enables comparison services, allows fintech to build on bank infrastructure, improves customer experience.</p>
+                    <p><strong>Risks:</strong> data privacy concerns, API security vulnerabilities, customer consent management, systemic risk if critical APIs fail, and digital divide (excludes non-digital customers).</p>
+                    <p><strong>BD context:</strong> BNDA provides the architectural framework. BB is studying implementation with a phased approach, likely starting with read-only account information APIs before payment initiation.</p>
+                </div></details>
+
+                <details class="question" id="p6"><summary class="question__summary"><span class="question__num">P6</span><span class="question__text">Compare hot site, warm site and cold site for DR. Which should a bank use?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <div class="table-scroll"><table class="table--compact table--strong"><thead><tr><th scope="col">Type</th><th scope="col">Equipment</th><th scope="col">Data</th><th scope="col">RTO</th><th scope="col">Cost</th></tr></thead><tbody>
+                        <tr><td>Hot site</td><td>Fully operational</td><td>Real-time replication</td><td>Minutes–hours</td><td>Highest</td></tr>
+                        <tr><td>Warm site</td><td>Partially equipped</td><td>Periodic backup (hours)</td><td>Hours–1 day</td><td>Medium</td></tr>
+                        <tr><td>Cold site</td><td>Space/power only</td><td>Restore from backup</td><td>Days–weeks</td><td>Lowest</td></tr>
+                    </tbody></table></div>
+                    <p><strong>Banks should use:</strong> hot site for core banking and RTGS (zero downtime tolerance), warm site acceptable for non-critical systems. BB mandates that critical systems have RTO ≤ 4 hours, which practically requires a hot or near-hot site.</p>
+                </div></details>
+
+                <details class="question" id="p7"><summary class="question__summary"><span class="question__num">P7</span><span class="question__text">What is AML (Anti-Money Laundering) in the context of banking ICT? How does technology help?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <p><strong>AML</strong> refers to laws, regulations and technology that prevent criminals from disguising illegally obtained funds as legitimate income.</p>
+                    <p><strong>Technology's role:</strong></p>
+                    <ul>
+                        <li><strong>Transaction monitoring:</strong> automated systems flag unusual patterns (large cash deposits, rapid transfers, structuring below reporting thresholds)</li>
+                        <li><strong>KYC/eKYC:</strong> digital identity verification using NID, biometrics, video KYC</li>
+                        <li><strong>Sanctions screening:</strong> real-time checks against OFAC, UN, and local sanctions lists</li>
+                        <li><strong>Suspicious Activity Reports (SAR):</strong> automated generation and filing with BFIU (Bangladesh Financial Intelligence Unit)</li>
+                        <li><strong>Network analysis:</strong> identifying related accounts and shell company structures</li>
+                    </ul>
+                </div></details>
+
+                <details class="question" id="p8"><summary class="question__summary"><span class="question__num">P8</span><span class="question__text">What is the role of BFIU (Bangladesh Financial Intelligence Unit)?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <p><strong>BFIU</strong> is Bangladesh's national agency for combating money laundering and terrorist financing, operating under Bangladesh Bank.</p>
+                    <p><strong>Functions:</strong></p>
+                    <ul>
+                        <li>Receives and analyses suspicious transaction reports (STRs) and cash transaction reports (CTRs) from banks and financial institutions</li>
+                        <li>Shares intelligence with law enforcement agencies</li>
+                        <li>Issues AML/CFT guidelines and circulars</li>
+                        <li>Conducts compliance inspections of banks</li>
+                        <li>Represents Bangladesh in international AML bodies (APG, Egmont Group)</li>
+                    </ul>
+                    <p><strong>Reporting thresholds:</strong> CTR for cash transactions above BDT 10 lakh; STR for any suspicious activity regardless of amount.</p>
+                </div></details>
+
+                <details class="question" id="p9"><summary class="question__summary"><span class="question__num">P9</span><span class="question__text">What is agent banking? How does it differ from MFS?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <div class="table-scroll"><table class="table--compact table--strong"><thead><tr><th scope="col">Feature</th><th scope="col">Agent Banking</th><th scope="col">MFS</th></tr></thead><tbody>
+                        <tr><th scope="row">Account type</th><td>Full bank account</td><td>MFS wallet (limited)</td></tr>
+                        <tr><th scope="row">Services</th><td>Deposits, withdrawals, loans, remittance</td><td>P2P transfer, bill pay, cash-in/out</td></tr>
+                        <tr><th scope="row">Agent</th><td>Contracted by bank, uses POS/biometric device</td><td>Any registered agent, uses mobile</td></tr>
+                        <tr><th scope="row">KYC</th><td>Full bank KYC (biometric + NID)</td><td>Simplified KYC (NID + photo)</td></tr>
+                        <tr><th scope="row">Regulation</th><td>BB Agent Banking Guidelines 2017</td><td>BB MFS Guidelines</td></tr>
+                        <tr><th scope="row">Target</th><td>Unbanked in remote areas</td><td>Mass market (urban + rural)</td></tr>
+                    </tbody></table></div>
+                </div></details>
+
+                <details class="question" id="p10"><summary class="question__summary"><span class="question__num">P10</span><span class="question__text">What is the BB regulatory sandbox? Why is it important for fintech innovation?</span><span class="chip">practice</span></summary><div class="question__body">
+                    <p>A <strong>regulatory sandbox</strong> is a controlled environment where fintech companies can test innovative products with real customers under BB's supervision, with relaxed regulatory requirements for a limited period.</p>
+                    <p><strong>Why it matters:</strong></p>
+                    <ul>
+                        <li>Encourages innovation without compromising consumer protection</li>
+                        <li>BB learns about new technologies before writing permanent regulations</li>
+                        <li>Reduces time-to-market for beneficial fintech products</li>
+                        <li>Creates a level playing field — startups can test alongside established banks</li>
+                        <li>Failed experiments can be contained without systemic impact</li>
+                    </ul>
+                    <p><strong>Process:</strong> apply to BB → evaluation → sandbox entry (6–12 months) → monitoring → exit: full license or withdrawal.</p>
+                </div></details>
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="other-topics.html"><span class="pager__dir">Previous</span><span class="pager__name">Other Topics</span></a>
+                    <a class="pager__link pager__link--next" href="emerging-tech.html"><span class="pager__dir">Next subject</span><span class="pager__name">Emerging Tech</span></a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer"><div class="site-footer__inner"><p>Bangladesh Bank Assistant Director (ICT) written preparation. Subject 16 of 18 — Banking ICT.</p><p class="small">Coverage checklist: <code>SYLLABUS.md</code> §16.</p></div></footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

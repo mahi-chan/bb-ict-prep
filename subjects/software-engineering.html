@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="software-engineering"
+    data-subject-name="Software Engineering">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Software Engineering — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice on SDLC models, requirements, UML diagrams, design patterns, testing, estimation (COCOMO, FP) and project management." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+
+            <div class="header__spacer"></div>
+
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering" aria-current="page"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 13</span><span aria-hidden="true">·</span><span>Phase 3</span>
+                </p>
+                <h1>Software Engineering</h1>
+                <p class="page-head__lede">
+                    Process models, requirement types, UML diagrams, testing levels,
+                    COCOMO estimation and project scheduling are the bread-and-butter
+                    of this subject. Each topic is walked through with a concrete
+                    running example.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
+             NOTES
+             ================================================================ -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">9 topics</span>
+                </div>
+
+                <p class="intro">
+                    Software Engineering for this exam is theory-heavy but always asks
+                    for concrete comparisons (waterfall vs agile), diagram construction
+                    (draw a use-case diagram), or numerical estimation (COCOMO effort).
+                </p>
+
+                <ul class="topics">
+                    <li><a href="#n-process"><span class="topics__num">01</span>Process models</a></li>
+                    <li><a href="#n-requirements"><span class="topics__num">02</span>Requirements engineering</a></li>
+                    <li><a href="#n-design"><span class="topics__num">03</span>Analysis and design</a></li>
+                    <li><a href="#n-uml"><span class="topics__num">04</span>UML diagrams</a></li>
+                    <li><a href="#n-patterns"><span class="topics__num">05</span>Design patterns</a></li>
+                    <li><a href="#n-testing"><span class="topics__num">06</span>Software testing</a></li>
+                    <li><a href="#n-estimation"><span class="topics__num">07</span>Estimation techniques</a></li>
+                    <li><a href="#n-project"><span class="topics__num">08</span>Project management</a></li>
+                    <li><a href="#n-maintenance"><span class="topics__num">09</span>Maintenance and quality</a></li>
+                </ul>
+
+                <!-- 1 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-process">
+                    <h3>1. Process models</h3>
+
+                    <p>
+                        A <strong>software process model</strong> prescribes the order of
+                        phases from requirements through delivery. The exam compares
+                        models and asks which fits a given project scenario.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Model</th><th scope="col">Flow</th><th scope="col">Best for</th><th scope="col">Key weakness</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Waterfall</td><td>Linear, sequential</td><td>Stable, well-understood requirements</td><td>No backtracking; late testing</td></tr>
+                                <tr><td>V-Model</td><td>Waterfall + parallel test planning</td><td>Safety-critical systems</td><td>Still rigid; requirements must be stable</td></tr>
+                                <tr><td>Iterative</td><td>Repeated refinement cycles</td><td>Evolving requirements</td><td>Scope creep without discipline</td></tr>
+                                <tr><td>Spiral</td><td>Risk-driven, prototyping cycles</td><td>High-risk, large projects</td><td>Complex to manage; needs risk expertise</td></tr>
+                                <tr><td>Agile (Scrum)</td><td>Short sprints (2–4 weeks), daily standups</td><td>Fast delivery, changing requirements</td><td>Needs engaged customer; less documentation</td></tr>
+                                <tr><td>RAD</td><td>Prototyping + component reuse</td><td>Small-to-medium, tight deadlines</td><td>Needs modular design; doesn't scale</td></tr>
+                                <tr><td>Incremental</td><td>Deliver in increments, each adding features</td><td>Getting a core product out quickly</td><td>Needs good architectural planning upfront</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Waterfall model phases flowing downward: Requirements → Design → Implementation → Testing → Maintenance" viewBox="0 0 340 200" style="max-width:340px">
+                            <rect x="10" y="10" width="130" height="28" rx="4" class="dg-node"/>
+                            <text x="75" y="28" class="dg-text-on-ink" text-anchor="middle" font-size="10">Requirements</text>
+                            <rect x="50" y="50" width="130" height="28" rx="4" class="dg-node"/>
+                            <text x="115" y="68" class="dg-text-on-ink" text-anchor="middle" font-size="10">Design</text>
+                            <rect x="90" y="90" width="130" height="28" rx="4" class="dg-node"/>
+                            <text x="155" y="108" class="dg-text-on-ink" text-anchor="middle" font-size="10">Implementation</text>
+                            <rect x="130" y="130" width="130" height="28" rx="4" class="dg-node"/>
+                            <text x="195" y="148" class="dg-text-on-ink" text-anchor="middle" font-size="10">Testing</text>
+                            <rect x="170" y="170" width="130" height="28" rx="4" class="dg-node"/>
+                            <text x="235" y="188" class="dg-text-on-ink" text-anchor="middle" font-size="10">Maintenance</text>
+                            <line x1="75" y1="38" x2="115" y2="50" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="115" y1="78" x2="155" y2="90" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="155" y1="118" x2="195" y2="130" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="195" y1="158" x2="235" y2="170" class="dg-stroke-ink" stroke-width="1.2"/>
+                        </svg>
+                        <figcaption>Waterfall model — each phase completes before the next begins.</figcaption>
+                    </figure>
+
+                    <p><strong>Agile manifesto values</strong> (memorise for essay questions):</p>
+                    <ul>
+                        <li>Individuals and interactions over processes and tools</li>
+                        <li>Working software over comprehensive documentation</li>
+                        <li>Customer collaboration over contract negotiation</li>
+                        <li>Responding to change over following a plan</li>
+                    </ul>
+
+                    <div class="insight">
+                        The Spiral model is unique in being <em>risk-driven</em> — each
+                        iteration starts with risk analysis. If risk is low, the spiral
+                        may resemble waterfall; if high, it may produce more prototypes
+                        before committing to design.
+                    </div>
+                </div>
+
+                <!-- 2 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-requirements">
+                    <h3>2. Requirements engineering</h3>
+
+                    <p>
+                        <strong>Functional requirements</strong> describe what the system
+                        does (features, behaviours). <strong>Non-functional requirements</strong>
+                        describe how well it does it (performance, security, usability,
+                        reliability).
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">NFR category</th><th scope="col">Measurable metric</th><th scope="col">Example</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Performance</td><td>Response time, throughput</td><td>&lt; 2s page load under 1000 concurrent users</td></tr>
+                                <tr><td>Reliability</td><td>MTBF, uptime %</td><td>99.9% availability (8.76 hrs downtime/year)</td></tr>
+                                <tr><td>Security</td><td>Encryption standard, audit compliance</td><td>All data encrypted with AES-256</td></tr>
+                                <tr><td>Usability</td><td>Task completion rate, learnability</td><td>New user completes core task in &lt; 5 min</td></tr>
+                                <tr><td>Scalability</td><td>Load capacity</td><td>Support 10× current users without re-architecture</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Requirements engineering process:</strong></p>
+                    <ol class="walk">
+                        <li><span class="walk__what">Elicitation</span>
+                            <p>Gather requirements via interviews, questionnaires, observation, document analysis, prototyping.</p>
+                        </li>
+                        <li><span class="walk__what">Analysis</span>
+                            <p>Resolve conflicts, prioritise (MoSCoW: Must/Should/Could/Won't).</p>
+                        </li>
+                        <li><span class="walk__what">Specification</span>
+                            <p>Write the SRS (Software Requirements Specification) document.</p>
+                        </li>
+                        <li class="walk--final"><span class="walk__what">Validation</span>
+                            <p>Reviews, prototyping, test-case generation to confirm requirements are correct, complete and consistent.</p>
+                        </li>
+                    </ol>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Requirements engineering process: Elicitation, Analysis, Specification, Validation with feedback arrows" viewBox="0 0 380 70" style="max-width:380px">
+                            <defs><marker id="re-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#013e37"/></marker></defs>
+                            <rect x="5" y="15" width="80" height="35" rx="4" fill="#013e37" stroke="#013e37" stroke-width="1.5"/>
+                            <text x="45" y="36" fill="#ffefb3" text-anchor="middle" font-size="9">Elicitation</text>
+                            <rect x="100" y="15" width="80" height="35" rx="4" fill="#013e37" stroke="#013e37" stroke-width="1.5"/>
+                            <text x="140" y="36" fill="#ffefb3" text-anchor="middle" font-size="9">Analysis</text>
+                            <rect x="195" y="15" width="80" height="35" rx="4" fill="#013e37" stroke="#013e37" stroke-width="1.5"/>
+                            <text x="235" y="36" fill="#ffefb3" text-anchor="middle" font-size="9">Specification</text>
+                            <rect x="290" y="15" width="80" height="35" rx="4" fill="#013e37" stroke="#013e37" stroke-width="1.5"/>
+                            <text x="330" y="36" fill="#ffefb3" text-anchor="middle" font-size="9">Validation</text>
+                            <line x1="85" y1="27" x2="100" y2="27" stroke="#013e37" stroke-width="1.2" marker-end="url(#re-arrow)"/>
+                            <line x1="180" y1="27" x2="195" y2="27" stroke="#013e37" stroke-width="1.2" marker-end="url(#re-arrow)"/>
+                            <line x1="275" y1="27" x2="290" y2="27" stroke="#013e37" stroke-width="1.2" marker-end="url(#re-arrow)"/>
+                            <path d="M330,50 L330,60 L45,60 L45,50" fill="none" stroke="#013e37" stroke-width="1" stroke-dasharray="4 2" marker-end="url(#re-arrow)"/>
+                            <text x="187" y="58" fill="#013e37" text-anchor="middle" font-size="8">feedback and iteration</text>
+                        </svg>
+                        <figcaption>Requirements engineering is iterative -- validation often triggers re-elicitation.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        The cost of fixing a requirements error grows exponentially with
+                        project phase — 100× more expensive in maintenance than in
+                        requirements. This is why requirements engineering gets so much
+                        exam attention.
+                    </div>
+                </div>
+
+                <!-- 3 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-design">
+                    <h3>3. Analysis and design</h3>
+
+                    <p>
+                        <strong>Coupling</strong> measures inter-module dependency (low
+                        is better). <strong>Cohesion</strong> measures intra-module
+                        relatedness (high is better).
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Coupling (worst → best)</th><th scope="col">Cohesion (worst → best)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Content → Common → External → Control → Stamp → Data</td>
+                                    <td>Coincidental → Logical → Temporal → Procedural → Communicational → Sequential → Functional</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Architecture styles:</strong> layered (UI → business →
+                        data), client-server, pipe-and-filter, event-driven,
+                        microservices, MVC (Model-View-Controller).
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="MVC architecture: User→Controller→Model→View→User" viewBox="0 0 300 160" style="max-width:300px">
+                            <rect x="100" y="10" width="100" height="30" rx="4" class="dg-node"/>
+                            <text x="150" y="30" class="dg-text-on-ink" text-anchor="middle" font-size="10">Controller</text>
+                            <rect x="10" y="110" width="80" height="30" rx="4" class="dg-node"/>
+                            <text x="50" y="130" class="dg-text-on-ink" text-anchor="middle" font-size="10">Model</text>
+                            <rect x="210" y="110" width="80" height="30" rx="4" class="dg-node"/>
+                            <text x="250" y="130" class="dg-text-on-ink" text-anchor="middle" font-size="10">View</text>
+                            <line x1="120" y1="42" x2="60" y2="108" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <text x="70" y="72" class="dg-label" font-size="9">updates</text>
+                            <line x1="60" y1="108" x2="230" y2="108" class="dg-stroke-mid" stroke-width="1" stroke-dasharray="4 2"/>
+                            <text x="145" y="100" class="dg-label" font-size="9">notifies</text>
+                            <line x1="180" y1="42" x2="240" y2="108" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <text x="225" y="72" class="dg-label" font-size="9">selects view</text>
+                        </svg>
+                        <figcaption>MVC — Controller mediates between Model (data/logic) and View (UI).</figcaption>
+                    </figure>
+
+                    <p>
+                        <strong>SOLID principles</strong> (object-oriented design):
+                    </p>
+                    <ul>
+                        <li><strong>S</strong>ingle Responsibility — one class, one reason to change</li>
+                        <li><strong>O</strong>pen/Closed — open for extension, closed for modification</li>
+                        <li><strong>L</strong>iskov Substitution — subtypes must be substitutable for their base</li>
+                        <li><strong>I</strong>nterface Segregation — no client should depend on unused methods</li>
+                        <li><strong>D</strong>ependency Inversion — depend on abstractions, not concretions</li>
+                    </ul>
+
+                    <div class="insight">
+                        "Low coupling, high cohesion" is the single most-repeated
+                        principle in SE exams. If a question asks about "good design",
+                        this is usually the answer they want.
+                    </div>
+                </div>
+
+                <!-- 4 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-uml">
+                    <h3>4. UML diagrams</h3>
+
+                    <p>
+                        UML (Unified Modeling Language) has 14 diagram types, but the
+                        exam focuses on about 5. Here are the key structural and
+                        behavioural diagrams:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Diagram</th><th scope="col">Type</th><th scope="col">Shows</th><th scope="col">Key elements</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Use case</td><td>Behavioural</td><td>Actor–system interactions</td><td>Actors, use cases, include/extend</td></tr>
+                                <tr><td>Class</td><td>Structural</td><td>Classes, attributes, methods, relationships</td><td>Association, aggregation, composition, inheritance</td></tr>
+                                <tr><td>Sequence</td><td>Behavioural</td><td>Object interactions over time</td><td>Lifelines, messages, activation bars</td></tr>
+                                <tr><td>Activity</td><td>Behavioural</td><td>Workflow / process flow</td><td>Actions, decisions, fork/join, swimlanes</td></tr>
+                                <tr><td>State</td><td>Behavioural</td><td>Object lifecycle states</td><td>States, transitions, events, guards</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Class diagram relationships:</strong></p>
+
+                    <ul>
+                        <li><strong>Association</strong> (solid line): general "uses" relationship</li>
+                        <li><strong>Aggregation</strong> (hollow diamond): "has-a", part can exist independently</li>
+                        <li><strong>Composition</strong> (filled diamond): "owns-a", part destroyed with whole</li>
+                        <li><strong>Inheritance</strong> (hollow triangle arrow): "is-a", generalization</li>
+                        <li><strong>Dependency</strong> (dashed arrow): temporary "uses"</li>
+                    </ul>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Use case diagram for ATM: Customer actor with Withdraw, Deposit, Check Balance use cases" viewBox="0 0 320 170" style="max-width:320px">
+                            <rect x="100" y="5" width="200" height="160" rx="8" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+                            <text x="200" y="22" class="dg-label" text-anchor="middle" font-size="10" font-weight="600">ATM System</text>
+                            <line x1="40" y1="50" x2="40" y2="70" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <circle cx="40" cy="42" r="8" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+                            <line x1="40" y1="55" x2="25" y2="65" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="40" y1="55" x2="55" y2="65" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="40" y1="70" x2="28" y2="85" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="40" y1="70" x2="52" y2="85" class="dg-stroke-ink" stroke-width="1"/>
+                            <text x="40" y="98" class="dg-label" text-anchor="middle" font-size="9">Customer</text>
+                            <ellipse cx="200" cy="50" rx="65" ry="16" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="200" y="54" class="dg-label" text-anchor="middle" font-size="9">Withdraw Cash</text>
+                            <ellipse cx="200" cy="95" rx="65" ry="16" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="200" y="99" class="dg-label" text-anchor="middle" font-size="9">Deposit Funds</text>
+                            <ellipse cx="200" cy="140" rx="65" ry="16" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="200" y="144" class="dg-label" text-anchor="middle" font-size="9">Check Balance</text>
+                            <line x1="60" y1="55" x2="133" y2="48" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="60" y1="65" x2="133" y2="93" class="dg-stroke-ink" stroke-width="1"/>
+                            <line x1="55" y1="78" x2="133" y2="138" class="dg-stroke-ink" stroke-width="1"/>
+                        </svg>
+                        <figcaption>Use case diagram — Customer interacts with three ATM functions.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        <strong>&laquo;include&raquo;</strong> means the base use case
+                        <em>always</em> invokes the included one (mandatory).
+                        <strong>&laquo;extend&raquo;</strong> means it <em>sometimes</em>
+                        adds extra behaviour (optional, at extension points). A common
+                        exam question asks you to distinguish these.
+                    </div>
+                </div>
+
+                <!-- 5 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-patterns">
+                    <h3>5. Design patterns</h3>
+
+                    <p>
+                        The Gang of Four (GoF) catalogued 23 design patterns in three
+                        categories. The exam typically asks for pattern identification
+                        from a scenario.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Category</th><th scope="col">Pattern</th><th scope="col">Purpose</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td rowspan="3">Creational</td><td>Singleton</td><td>Exactly one instance (e.g. DB connection pool)</td></tr>
+                                <tr><td>Factory Method</td><td>Subclass decides which class to instantiate</td></tr>
+                                <tr><td>Abstract Factory</td><td>Family of related objects without specifying concrete classes</td></tr>
+                                <tr><td rowspan="3">Structural</td><td>Adapter</td><td>Convert one interface to another (wrapper)</td></tr>
+                                <tr><td>Decorator</td><td>Add responsibilities dynamically</td></tr>
+                                <tr><td>Facade</td><td>Simplified interface to a complex subsystem</td></tr>
+                                <tr><td rowspan="3">Behavioural</td><td>Observer</td><td>One-to-many notification (pub-sub)</td></tr>
+                                <tr><td>Strategy</td><td>Family of interchangeable algorithms</td></tr>
+                                <tr><td>Iterator</td><td>Sequential access without exposing internal structure</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Singleton pattern (Java) -- ensures one instance</span>
+<pre><code>public class ConfigManager {
+    private static ConfigManager instance = null;
+
+    private ConfigManager() { }  // private constructor
+
+    public static ConfigManager getInstance() {
+        if (instance == null) {
+            instance = new ConfigManager();
+        }
+        return instance;
+    }
+
+    public String getSetting(String key) { /* ... */ }
+}
+
+// Usage: ConfigManager.getInstance().getSetting("db.host");</code></pre>
+                    </div>
+
+                    <div class="insight">
+                        Singleton, Observer and Factory are the three patterns most asked
+                        about. Know the structure and a real-world example for each.
+                        Singleton: logger, config manager. Observer: event listeners, MVC.
+                        Factory: UI toolkit creating platform-specific widgets.
+                    </div>
+                </div>
+
+                <!-- 6 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-testing">
+                    <h3>6. Software testing</h3>
+
+                    <p><strong>Testing levels</strong> (from smallest to largest scope):</p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Level</th><th scope="col">Tests</th><th scope="col">Who</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Unit</td><td>Individual functions/methods</td><td>Developer</td></tr>
+                                <tr><td>Integration</td><td>Module interfaces and interactions</td><td>Developer/Tester</td></tr>
+                                <tr><td>System</td><td>Complete system against requirements</td><td>QA team</td></tr>
+                                <tr><td>Acceptance</td><td>User validates real-world scenarios</td><td>Customer/User</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>White-box</strong> (structural) testing: tests based on
+                        internal code structure. Techniques: statement coverage, branch
+                        coverage, path coverage, condition coverage.</p>
+
+                    <p><strong>Black-box</strong> (functional) testing: tests based on
+                        requirements without knowledge of internals. Techniques:
+                        equivalence partitioning, boundary value analysis, decision
+                        table testing.</p>
+
+                    <p><strong>Boundary value analysis example:</strong> for an input
+                        field accepting ages 18–65, test values: 17, 18, 19, 64, 65, 66.</p>
+
+                    <p><strong>Other testing types:</strong></p>
+                    <ul>
+                        <li><strong>Regression:</strong> re-running tests after changes to ensure nothing broke</li>
+                        <li><strong>Smoke:</strong> quick surface-level check that build is stable</li>
+                        <li><strong>Alpha:</strong> in-house testing by developers/testers</li>
+                        <li><strong>Beta:</strong> testing by a limited group of real users</li>
+                    </ul>
+
+                    <div class="calc">
+                        <div class="calc__row">Cyclomatic complexity = E − N + 2P</div>
+                        <div class="calc__row calc__row--note">E = edges, N = nodes, P = connected components in the control flow graph</div>
+                        <div class="calc__row calc__row--note">Gives the minimum number of independent paths to test</div>
+                    </div>
+
+                    <div class="insight">
+                        The V-model maps each development phase to a testing level:
+                        requirements ↔ acceptance, design ↔ system, detailed design ↔
+                        integration, coding ↔ unit. This pairing is a frequent exam
+                        question.
+                    </div>
+                </div>
+
+                <!-- 7 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-estimation">
+                    <h3>7. Estimation techniques</h3>
+
+                    <p>
+                        <strong>COCOMO (Constructive Cost Model)</strong> — Boehm's model
+                        for estimating effort from lines of code (KLOC):
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Mode</th><th scope="col">Effort (PM)</th><th scope="col">Time (months)</th><th scope="col">Project type</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Organic</td><td>2.4 × (KLOC)<sup>1.05</sup></td><td>2.5 × (Effort)<sup>0.38</sup></td><td>Small team, familiar domain</td></tr>
+                                <tr><td>Semi-detached</td><td>3.0 × (KLOC)<sup>1.12</sup></td><td>2.5 × (Effort)<sup>0.35</sup></td><td>Medium complexity</td></tr>
+                                <tr><td>Embedded</td><td>3.6 × (KLOC)<sup>1.20</sup></td><td>2.5 × (Effort)<sup>0.32</sup></td><td>Complex, tightly constrained</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Example:</strong> Estimate effort for a 32 KLOC organic project.</p>
+
+                    <div class="calc">
+                        <div class="calc__row">Effort = 2.4 × (32)<sup>1.05</sup></div>
+                        <div class="calc__row">32<sup>1.05</sup> ≈ 32 × 32<sup>0.05</sup> ≈ 32 × 1.189 ≈ 38.05</div>
+                        <div class="calc__row calc__row--result">Effort ≈ 2.4 × 38.05 ≈ <strong>91.3 person-months</strong></div>
+                        <div class="calc__row">Time = 2.5 × (91.3)<sup>0.38</sup> ≈ 2.5 × 6.52 ≈ <strong>16.3 months</strong></div>
+                        <div class="calc__row">Staff = 91.3/16.3 ≈ <strong>6 people</strong></div>
+                    </div>
+
+                    <p>
+                        <strong>Function Point Analysis (FPA)</strong> — estimates size
+                        based on functionality rather than code:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Function type</th><th scope="col">Low</th><th scope="col">Average</th><th scope="col">High</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>External Inputs (EI)</td><td>3</td><td>4</td><td>6</td></tr>
+                                <tr><td>External Outputs (EO)</td><td>4</td><td>5</td><td>7</td></tr>
+                                <tr><td>External Inquiries (EQ)</td><td>3</td><td>4</td><td>6</td></tr>
+                                <tr><td>Internal Logical Files (ILF)</td><td>7</td><td>10</td><td>15</td></tr>
+                                <tr><td>External Interface Files (EIF)</td><td>5</td><td>7</td><td>10</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row">UFP = Σ(count × weight) for each function type</div>
+                        <div class="calc__row">FP = UFP × [0.65 + 0.01 × Σ(F<sub>i</sub>)]</div>
+                        <div class="calc__row calc__row--note">F<sub>i</sub> = 14 general system characteristics, each rated 0–5</div>
+                    </div>
+
+                    <div class="insight">
+                        COCOMO uses lines of code (after-the-fact measure), while
+                        Function Points use functionality (before coding). FP is
+                        language-independent, making it better for early estimation.
+                    </div>
+                </div>
+
+                <!-- 8 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-project">
+                    <h3>8. Project management</h3>
+
+                    <p>
+                        <strong>CPM/PERT</strong> — scheduling techniques based on
+                        activity networks:
+                    </p>
+
+                    <ul>
+                        <li><strong>CPM</strong> (Critical Path Method): deterministic durations. The critical path is the longest path through the network — it determines project duration. Activities on it have zero slack.</li>
+                        <li><strong>PERT</strong>: probabilistic durations using three estimates:
+                            t<sub>e</sub> = (t<sub>o</sub> + 4t<sub>m</sub> + t<sub>p</sub>)/6</li>
+                    </ul>
+
+                    <p><strong>Example CPM calculation:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th>Activity</th><th>Duration</th><th>Depends on</th><th>ES</th><th>EF</th><th>LS</th><th>LF</th><th>Slack</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>A</td><td>3</td><td>—</td><td>0</td><td>3</td><td>0</td><td>3</td><td class="cell-hit">0</td></tr>
+                                <tr><td>B</td><td>4</td><td>A</td><td>3</td><td>7</td><td>3</td><td>7</td><td class="cell-hit">0</td></tr>
+                                <tr><td>C</td><td>2</td><td>A</td><td>3</td><td>5</td><td>5</td><td>7</td><td>2</td></tr>
+                                <tr><td>D</td><td>5</td><td>B,C</td><td>7</td><td>12</td><td>7</td><td>12</td><td class="cell-hit">0</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row">Critical path: A → B → D (duration = 3+4+5 = 12)</div>
+                        <div class="calc__row calc__row--note">Activity C has 2 days of slack — can be delayed without affecting project end</div>
+                    </div>
+
+                    <p>
+                        <strong>Gantt chart:</strong> bar chart showing activities on a
+                        timeline. Good for visualisation but doesn't show dependencies.
+                        PERT/CPM network diagrams show dependencies but are harder to read.
+                    </p>
+
+                    <div class="insight">
+                        The critical path is critical because any delay on it delays the
+                        whole project. Project managers focus resources on critical-path
+                        activities. Slack on non-critical activities shows how much
+                        schedule flexibility exists.
+                    </div>
+                </div>
+
+                <!-- 9 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-maintenance">
+                    <h3>9. Maintenance and quality</h3>
+
+                    <p>
+                        Software maintenance consumes 60–80% of total lifecycle cost.
+                        Four types:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Type</th><th scope="col">Purpose</th><th scope="col">% of effort</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Corrective</td><td>Fix bugs discovered after release</td><td>~20%</td></tr>
+                                <tr><td>Adaptive</td><td>Adapt to changes in environment (OS, hardware, regulations)</td><td>~25%</td></tr>
+                                <tr><td>Perfective</td><td>Improve performance, add features requested by users</td><td>~50%</td></tr>
+                                <tr><td>Preventive</td><td>Refactor to prevent future problems</td><td>~5%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Software quality metrics:</strong>
+                    </p>
+
+                    <ul>
+                        <li><strong>Defect density:</strong> defects per KLOC</li>
+                        <li><strong>MTBF:</strong> mean time between failures</li>
+                        <li><strong>Reliability:</strong> R(t) = e<sup>−λt</sup> where λ = 1/MTBF</li>
+                    </ul>
+
+                    <p>
+                        <strong>CMM/CMMI levels</strong> (Capability Maturity Model):
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Level</th><th scope="col">Name</th><th scope="col">Characteristic</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Initial</td><td>Ad hoc, unpredictable</td></tr>
+                                <tr><td>2</td><td>Managed</td><td>Basic project management</td></tr>
+                                <tr><td>3</td><td>Defined</td><td>Standard processes across organisation</td></tr>
+                                <tr><td>4</td><td>Quantitatively Managed</td><td>Metrics-driven process control</td></tr>
+                                <tr><td>5</td><td>Optimizing</td><td>Continuous process improvement</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row">Total lifecycle cost of a 50 KLOC banking system: ~100 person-months development</div>
+                        <div class="calc__row">Maintenance = 60–80% of lifecycle ≈ 0.7 × total ≈ 70% of cost</div>
+                        <div class="calc__row">Corrective (bugs): 20% × 70 = 14 person-months</div>
+                        <div class="calc__row">Adaptive (environment): 25% × 70 = 17.5 person-months</div>
+                        <div class="calc__row">Perfective (features): 50% × 70 = 35 person-months</div>
+                        <div class="calc__row">Preventive (refactor): 5% × 70 = 3.5 person-months</div>
+                        <div class="calc__row calc__row--note">Perfective dominates -- most maintenance effort goes to new features, not fixing bugs</div>
+                    </div>
+
+                    <div class="insight">
+                        Perfective maintenance (adding features, improving performance)
+                        accounts for roughly half of maintenance effort — not bug fixing
+                        as most people assume. This is a common exam trick question.
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================================================================
+             SOLVED QUESTIONS
+             ================================================================ -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved past questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <!-- S1 -->
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">Compare waterfall and agile (Scrum) development models. When would you prefer each?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Aspect</th><th scope="col">Waterfall</th><th scope="col">Agile (Scrum)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Approach</th><td>Linear, sequential</td><td>Iterative, incremental</td></tr>
+                                    <tr><th scope="row">Requirements</th><td>Fixed upfront</td><td>Evolving, refined each sprint</td></tr>
+                                    <tr><th scope="row">Customer involvement</th><td>Beginning and end</td><td>Continuous (sprint reviews)</td></tr>
+                                    <tr><th scope="row">Delivery</th><td>Single release at end</td><td>Working software each sprint</td></tr>
+                                    <tr><th scope="row">Documentation</th><td>Comprehensive</td><td>Just enough</td></tr>
+                                    <tr><th scope="row">Testing</th><td>After implementation</td><td>Continuous (TDD/CI)</td></tr>
+                                    <tr><th scope="row">Risk</th><td>High (late discovery)</td><td>Low (early feedback)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Prefer Waterfall:</strong> well-defined requirements, regulatory documentation needed, fixed contracts.<br>
+                        <strong>Prefer Agile:</strong> evolving requirements, need rapid delivery, customer available for feedback.</p>
+                    </div>
+                </details>
+
+                <!-- S2 -->
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">Differentiate between functional and non-functional requirements with examples for a banking application.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Functional requirements</strong> (what the system does):</p>
+                        <ul>
+                            <li>User shall be able to transfer funds between accounts</li>
+                            <li>System shall generate monthly account statements</li>
+                            <li>System shall validate OTP before completing transactions</li>
+                        </ul>
+                        <p><strong>Non-functional requirements</strong> (how well it performs):</p>
+                        <ul>
+                            <li><strong>Performance:</strong> Transaction response time &lt; 3 seconds</li>
+                            <li><strong>Security:</strong> All data encrypted in transit and at rest (AES-256)</li>
+                            <li><strong>Availability:</strong> 99.99% uptime (52.6 min downtime/year)</li>
+                            <li><strong>Scalability:</strong> Support 10,000 concurrent users</li>
+                            <li><strong>Usability:</strong> Comply with WCAG 2.1 AA accessibility</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- S3 -->
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">Draw a use-case diagram for an online library management system.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Actors:</strong> Member, Librarian, System (timer)</p>
+                        <p><strong>Use cases:</strong></p>
+                        <ul>
+                            <li><strong>Member:</strong> Search Book, Borrow Book, Return Book, View Account</li>
+                            <li><strong>Librarian:</strong> Add Book, Remove Book, Manage Members, Generate Reports</li>
+                            <li><strong>System:</strong> Send Overdue Notice (extends Borrow Book at extension point "overdue check")</li>
+                        </ul>
+                        <p><strong>Relationships:</strong></p>
+                        <ul>
+                            <li>Borrow Book &laquo;include&raquo; Verify Membership (always verified)</li>
+                            <li>Borrow Book &laquo;extend&raquo; Send Overdue Notice (only if overdue)</li>
+                            <li>Librarian inherits all Member use cases (generalisation)</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- S4 -->
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">Calculate effort using COCOMO for a semi-detached project of 50 KLOC.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Apply semi-detached coefficients</span>
+                                <div class="calc">
+                                    <div class="calc__row">Effort = 3.0 × (50)<sup>1.12</sup></div>
+                                    <div class="calc__row">50<sup>1.12</sup> ≈ 50 × 50<sup>0.12</sup> ≈ 50 × 1.592 ≈ 79.6</div>
+                                    <div class="calc__row calc__row--result">Effort ≈ 3.0 × 79.6 ≈ <strong>239 person-months</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Development time</span>
+                                <div class="calc">
+                                    <div class="calc__row">Time = 2.5 × (239)<sup>0.35</sup></div>
+                                    <div class="calc__row">239<sup>0.35</sup> ≈ 7.09</div>
+                                    <div class="calc__row calc__row--result">Time ≈ 2.5 × 7.09 ≈ <strong>17.7 months</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Team size</span>
+                                <div class="calc">
+                                    <div class="calc__row">Staff = Effort/Time = 239/17.7 ≈ <strong>14 people</strong></div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S5 -->
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">Explain the difference between black-box and white-box testing with examples.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Aspect</th><th scope="col">Black-box</th><th scope="col">White-box</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Also called</th><td>Functional / behavioural</td><td>Structural / glass-box</td></tr>
+                                    <tr><th scope="row">Based on</th><td>Requirements/specifications</td><td>Internal code structure</td></tr>
+                                    <tr><th scope="row">Code knowledge</th><td>Not needed</td><td>Required</td></tr>
+                                    <tr><th scope="row">Techniques</th><td>Equivalence partitioning, boundary value, decision table</td><td>Statement/branch/path coverage</td></tr>
+                                    <tr><th scope="row">Tester</th><td>Often QA / user</td><td>Developer</td></tr>
+                                    <tr><th scope="row">Level</th><td>System, acceptance</td><td>Unit, integration</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Example — login function:</strong></p>
+                        <ul>
+                            <li><strong>Black-box:</strong> test valid credentials (expect success), invalid password (expect error), SQL injection attempt (expect rejection)</li>
+                            <li><strong>White-box:</strong> ensure all branches in the authentication code are covered — the password hash comparison, the account-locked check, the 2FA path</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- S6 -->
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">Explain coupling and cohesion. Why is "low coupling, high cohesion" desirable?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Coupling</strong> = degree of interdependence between modules. High coupling means a change in one module forces changes in others → fragile, hard to maintain.</p>
+                        <p><strong>Cohesion</strong> = degree to which elements within a module belong together. High cohesion means a module does one thing well → easier to understand, test, reuse.</p>
+                        <p><strong>Why desirable:</strong></p>
+                        <ul>
+                            <li>Changes are localised — modifying one module doesn't cascade</li>
+                            <li>Modules can be tested independently</li>
+                            <li>Modules can be reused in other projects</li>
+                            <li>Teams can work on different modules in parallel</li>
+                        </ul>
+                        <p><strong>Example:</strong> A module that handles both PDF generation and email sending has low cohesion. Split into PDFGenerator and EmailSender → high cohesion, and they communicate through a defined interface → low coupling.</p>
+                    </div>
+                </details>
+
+                <!-- S7 -->
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">What is the Spiral model? What makes it different from other models?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>The Spiral model (Boehm, 1988) combines iterative development with systematic risk management. Each cycle through the spiral has four quadrants:</p>
+                        <ol class="walk">
+                            <li><span class="walk__what">Planning</span><p>Determine objectives, alternatives, constraints.</p></li>
+                            <li><span class="walk__what">Risk analysis</span><p>Identify and evaluate risks; build prototypes to mitigate.</p></li>
+                            <li><span class="walk__what">Engineering</span><p>Develop and verify the product.</p></li>
+                            <li class="walk--final"><span class="walk__what">Evaluation</span><p>Customer reviews; plan next iteration.</p></li>
+                        </ol>
+                        <p><strong>Unique features:</strong></p>
+                        <ul>
+                            <li>Risk-driven — each iteration starts with risk analysis</li>
+                            <li>Subsumes other models — low-risk spiral ≈ waterfall; high-risk ≈ prototyping</li>
+                            <li>Best for large, complex, high-risk projects</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- S8 -->
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">Find the critical path: A(3)→, B(4)→D(5), C(2)→D(5), A→B, A→C.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>Network: A→B→D, A→C→D</p>
+                        <div class="calc">
+                            <div class="calc__row">Path 1: A→B→D = 3+4+5 = <strong>12</strong></div>
+                            <div class="calc__row">Path 2: A→C→D = 3+2+5 = 10</div>
+                            <div class="calc__row calc__row--result">Critical path = A→B→D = <strong>12 days</strong></div>
+                            <div class="calc__row calc__row--note">Activity C has slack = 12−10 = 2 days</div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S9 -->
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">Describe the four types of software maintenance with examples.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Type</th><th scope="col">Purpose</th><th scope="col">Example</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Corrective</td><td>Fix defects</td><td>Fixing a calculation error in interest computation</td></tr>
+                                    <tr><td>Adaptive</td><td>Adapt to environment changes</td><td>Migrating from Windows Server 2016 to 2022</td></tr>
+                                    <tr><td>Perfective</td><td>Improve functionality/performance</td><td>Adding multi-currency support to a banking app</td></tr>
+                                    <tr><td>Preventive</td><td>Prevent future problems</td><td>Refactoring spaghetti code to reduce technical debt</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Perfective maintenance accounts for ~50% of all maintenance effort, corrective for ~20%.</p>
+                    </div>
+                </details>
+
+                <!-- S10 -->
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">Calculate cyclomatic complexity for a function with 12 edges, 9 nodes and 1 connected component in its control flow graph.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">V(G) = E − N + 2P = 12 − 9 + 2(1) = <strong>5</strong></div>
+                        </div>
+                        <p>This means there are <strong>5 independent paths</strong> through the code, and you need at least 5 test cases for complete path coverage.</p>
+                        <p><strong>McCabe's guideline:</strong> cyclomatic complexity &gt; 10 suggests the function is too complex and should be refactored.</p>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- ================================================================
+             PRACTICE QUESTIONS
+             ================================================================ -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <!-- P1 -->
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">A system has 5 external inputs (avg), 3 external outputs (avg), 2 inquiries (low), 4 ILFs (avg) and 1 EIF (low). Calculate the unadjusted function points.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">EI: 5 × 4 = 20</div>
+                            <div class="calc__row">EO: 3 × 5 = 15</div>
+                            <div class="calc__row">EQ: 2 × 3 = 6</div>
+                            <div class="calc__row">ILF: 4 × 10 = 40</div>
+                            <div class="calc__row">EIF: 1 × 5 = 5</div>
+                            <div class="calc__row calc__row--result">UFP = 20+15+6+40+5 = <strong>86 function points</strong></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P2 -->
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">What are the SOLID principles? Give an example of violating the Single Responsibility Principle.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ul>
+                            <li><strong>S — Single Responsibility:</strong> a class should have only one reason to change</li>
+                            <li><strong>O — Open/Closed:</strong> open for extension, closed for modification</li>
+                            <li><strong>L — Liskov Substitution:</strong> subtypes must be usable wherever their base type is expected</li>
+                            <li><strong>I — Interface Segregation:</strong> prefer many small interfaces to one large one</li>
+                            <li><strong>D — Dependency Inversion:</strong> high-level modules should not depend on low-level modules; both should depend on abstractions</li>
+                        </ul>
+                        <p><strong>SRP violation example:</strong> A <code>UserService</code> class that handles user registration, sends welcome emails, generates reports and manages authentication. It has four reasons to change. Fix: split into <code>UserRegistration</code>, <code>EmailService</code>, <code>ReportGenerator</code> and <code>AuthService</code>.</p>
+                    </div>
+                </details>
+
+                <!-- P3 -->
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">A project has activities: A(2), B(3, depends A), C(4, depends A), D(2, depends B), E(3, depends C,D). Find the critical path and project duration.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>Paths through the network:</p>
+                        <div class="calc">
+                            <div class="calc__row">A→B→D→E = 2+3+2+3 = 10</div>
+                            <div class="calc__row">A→C→E = 2+4+3 = 9</div>
+                            <div class="calc__row calc__row--result">Critical path = A→B→D→E = <strong>10 days</strong></div>
+                        </div>
+                        <p>Note: E depends on both C and D, so E cannot start until both are finished. On the critical path, D finishes at day 7, C finishes at day 6, so E starts at day 7.</p>
+                    </div>
+                </details>
+
+                <!-- P4 -->
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">Explain the Singleton design pattern. Write the pseudocode.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Intent:</strong> ensure a class has exactly one instance and provide a global point of access.</p>
+                        <p><strong>Structure:</strong></p>
+                        <pre><code>class Singleton {
+    private static instance = null;
+
+    private Singleton() { }  // private constructor
+
+    public static getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+}</code></pre>
+                        <p><strong>Use cases:</strong> database connection pool, logger, configuration manager, thread pool.</p>
+                        <p><strong>Thread-safety note:</strong> the lazy initialisation above is not thread-safe. Use synchronized/double-checked locking or eager initialisation for concurrent access.</p>
+                    </div>
+                </details>
+
+                <!-- P5 -->
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">Calculate COCOMO effort for an embedded project of 100 KLOC. How many people and how long?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">Effort = 3.6 × (100)<sup>1.20</sup></div>
+                            <div class="calc__row">100<sup>1.20</sup> = 100 × 100<sup>0.20</sup> = 100 × 2.512 = 251.2</div>
+                            <div class="calc__row calc__row--result">Effort ≈ 3.6 × 251.2 ≈ <strong>904 person-months</strong></div>
+                            <div class="calc__row">Time = 2.5 × (904)<sup>0.32</sup> ≈ 2.5 × 8.47 ≈ <strong>21.2 months</strong></div>
+                            <div class="calc__row">Staff = 904/21.2 ≈ <strong>43 people</strong></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P6 -->
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">What is boundary value analysis? Show the test values for a function that accepts quantity 1–99.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Boundary value analysis (BVA)</strong> tests at the edges of equivalence partitions, where defects cluster.</p>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th>Test value</th><th>Boundary type</th><th>Expected result</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>0</td><td>Just below lower</td><td>Invalid</td></tr>
+                                    <tr><td>1</td><td>Lower boundary</td><td>Valid</td></tr>
+                                    <tr><td>2</td><td>Just above lower</td><td>Valid</td></tr>
+                                    <tr><td>50</td><td>Nominal (mid-range)</td><td>Valid</td></tr>
+                                    <tr><td>98</td><td>Just below upper</td><td>Valid</td></tr>
+                                    <tr><td>99</td><td>Upper boundary</td><td>Valid</td></tr>
+                                    <tr><td>100</td><td>Just above upper</td><td>Invalid</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P7 -->
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">Compare aggregation and composition in UML with a real-world example.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Aspect</th><th scope="col">Aggregation</th><th scope="col">Composition</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Symbol</th><td>Hollow diamond</td><td>Filled diamond</td></tr>
+                                    <tr><th scope="row">Relationship</th><td>"has-a" (shared)</td><td>"owns-a" (exclusive)</td></tr>
+                                    <tr><th scope="row">Part lifecycle</th><td>Part can exist independently</td><td>Part destroyed with whole</td></tr>
+                                    <tr><th scope="row">Example</th><td>Department ◇ Professor</td><td>House ◆ Room</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Aggregation:</strong> A Department has Professors, but a Professor can exist without the Department (they can move to another).</p>
+                        <p><strong>Composition:</strong> A House has Rooms, but if the House is destroyed, the Rooms cease to exist.</p>
+                    </div>
+                </details>
+
+                <!-- P8 -->
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">Explain the five levels of CMMI with one key practice area per level.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th>Level</th><th>Name</th><th>Key practice</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>1</td><td>Initial</td><td>None — success depends on individual heroics</td></tr>
+                                    <tr><td>2</td><td>Managed</td><td>Project planning, requirements management</td></tr>
+                                    <tr><td>3</td><td>Defined</td><td>Organisation-wide standard processes</td></tr>
+                                    <tr><td>4</td><td>Quantitatively Managed</td><td>Statistical process control, quantitative objectives</td></tr>
+                                    <tr><td>5</td><td>Optimizing</td><td>Continuous process improvement, defect prevention</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Most large Bangladeshi IT companies target CMMI Level 3 or 5. The key insight: each level builds on all previous levels — you cannot skip directly to Level 5.</p>
+                    </div>
+                </details>
+
+                <!-- P9 -->
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">What is regression testing? Why is it important in agile?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>Regression testing</strong> re-executes previously passed test cases after code changes to ensure new modifications haven't broken existing functionality.</p>
+                        <p><strong>Importance in agile:</strong></p>
+                        <ul>
+                            <li>Frequent sprints mean frequent code changes → higher risk of regression</li>
+                            <li>Automated regression suites (CI/CD) catch regressions within minutes</li>
+                            <li>Without regression testing, each sprint could unknowingly break features from previous sprints</li>
+                            <li>Enables confident refactoring — developers can restructure code knowing tests will catch breakages</li>
+                        </ul>
+                        <p><strong>Types:</strong> full regression (re-run everything), selective regression (re-run tests related to changed modules), priority-based (re-run high-priority tests first).</p>
+                    </div>
+                </details>
+
+                <!-- P10 -->
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">Use PERT to estimate duration for an activity with optimistic=5, most likely=8, pessimistic=17 days. Also calculate the standard deviation.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">t<sub>e</sub> = (t<sub>o</sub> + 4t<sub>m</sub> + t<sub>p</sub>)/6 = (5 + 4×8 + 17)/6</div>
+                            <div class="calc__row">= (5 + 32 + 17)/6 = 54/6 = <strong>9 days</strong></div>
+                            <div class="calc__row">σ = (t<sub>p</sub> − t<sub>o</sub>)/6 = (17 − 5)/6 = 12/6 = <strong>2 days</strong></div>
+                            <div class="calc__row">Variance = σ² = 4</div>
+                            <div class="calc__row calc__row--note">95% confident the duration is within t<sub>e</sub> ± 2σ = 9 ± 4 = 5 to 13 days</div>
+                        </div>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="discrete-math.html">
+                        <span class="pager__dir">Previous</span>
+                        <span class="pager__name">Discrete Math</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="security.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">Security</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>
+                Bangladesh Bank Assistant Director (ICT) written preparation. Subject 13
+                of 18 — Software Engineering.
+            </p>
+            <p class="small">
+                Coverage checklist: <code>SYLLABUS.md</code> §13.
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

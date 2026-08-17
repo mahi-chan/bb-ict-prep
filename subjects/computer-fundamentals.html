@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="computer-fundamentals"
+    data-subject-name="Computer Fundamentals">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Computer Fundamentals — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice questions on computer generations, number systems, memory hierarchy, I/O devices, software categories and malware." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+
+            <div class="header__spacer"></div>
+
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals" aria-current="page"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 01</span><span aria-hidden="true">·</span><span>Phase 2</span>
+                </p>
+                <h1>Computer Fundamentals</h1>
+                <p class="page-head__lede">
+                    The broadest subject on the paper — number-system conversions, memory
+                    hierarchy ordering, storage-unit arithmetic, translator comparison tables
+                    and malware classification are all standard repeats.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
+             NOTES
+             ================================================================ -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">11 topics</span>
+                </div>
+
+                <p class="intro">
+                    This subject is wide but shallow — the exam rarely asks for depth,
+                    it asks for <strong>correct lists, correct orderings and correct
+                        conversions</strong>. The notes below teach each topic on a concrete
+                    example so the lists stick.
+                </p>
+
+                <ul class="topics">
+                    <li><a href="#n-generations"><span class="topics__num">01</span>Computer generations</a></li>
+                    <li><a href="#n-classification"><span class="topics__num">02</span>Classification</a></li>
+                    <li><a href="#n-number-systems"><span class="topics__num">03</span>Number systems and arithmetic</a>
+                    </li>
+                    <li><a href="#n-encoding"><span class="topics__num">04</span>Character encoding</a></li>
+                    <li><a href="#n-memory"><span class="topics__num">05</span>Memory hierarchy</a></li>
+                    <li><a href="#n-storage"><span class="topics__num">06</span>Storage devices and units</a></li>
+                    <li><a href="#n-io"><span class="topics__num">07</span>Input and output devices</a></li>
+                    <li><a href="#n-ports"><span class="topics__num">08</span>Ports, buses and the motherboard</a></li>
+                    <li><a href="#n-software"><span class="topics__num">09</span>Software and translators</a></li>
+                    <li><a href="#n-malware"><span class="topics__num">10</span>Malware and antivirus</a></li>
+                    <li><a href="#n-ethics"><span class="topics__num">11</span>Ethics and environment</a></li>
+                </ul>
+
+                <!-- 1 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-generations">
+                    <h3>1. Computer generations</h3>
+
+                    <p>
+                        A "generation" is defined by its switching element — the component
+                        that represents a 0 or a 1 inside the machine. Each generation made
+                        this element smaller, faster and cheaper, which is the only reason
+                        computing moved from one room-sized calculator to the phone in your
+                        pocket.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Gen</th>
+                                    <th scope="col">Period</th>
+                                    <th scope="col">Switch</th>
+                                    <th scope="col">Speed</th>
+                                    <th scope="col">Language</th>
+                                    <th scope="col">Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1st</th>
+                                    <td>1940–56</td>
+                                    <td>Vacuum tube</td>
+                                    <td>ms</td>
+                                    <td>Machine code</td>
+                                    <td>ENIAC, UNIVAC I</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2nd</th>
+                                    <td>1956–63</td>
+                                    <td>Transistor</td>
+                                    <td>µs</td>
+                                    <td>Assembly, FORTRAN, COBOL</td>
+                                    <td>IBM 7094</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3rd</th>
+                                    <td>1964–71</td>
+                                    <td>Integrated circuit (IC)</td>
+                                    <td>ns</td>
+                                    <td>C, BASIC</td>
+                                    <td>IBM 360</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4th</th>
+                                    <td>1971–present</td>
+                                    <td>Microprocessor (VLSI)</td>
+                                    <td>ps</td>
+                                    <td>C++, Java, Python</td>
+                                    <td>Intel 4004, modern PCs</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5th</th>
+                                    <td>present–future</td>
+                                    <td>AI / parallel</td>
+                                    <td>—</td>
+                                    <td>Prolog, natural language</td>
+                                    <td>Watson, quantum prototypes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Pattern</span><span class="calc__math">Each
+                                generation reduced size by ~10×, speed by ~100×, and cost by ~10×.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Moore's law</span><span
+                                class="calc__math">Transistor count on a chip doubles roughly every 2 years — that is
+                                the engine behind generations 3 → 4 → 5.</span></div>
+                    </div>
+
+                    <div class="insight">
+                        <div>
+                            <strong>Why the generation question keeps appearing.</strong> The
+                            examiner wants you to link <em>technology → speed unit → language
+                                level → example machine</em>. Fill in the table row by row and
+                            you have the full answer.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-classification">
+                    <h3>2. Classification</h3>
+
+                    <p>
+                        Computers are classified along two independent axes — <strong>by
+                            signal type</strong> and <strong>by size / purpose</strong>. The
+                        first axis is a design choice (analog vs digital); the second is a
+                        market segmentation that matters for exam questions about "which
+                        type of computer is used for X."
+                    </p>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 620 220" width="620" role="img"
+                            aria-label="Classification tree: by signal (analog, digital, hybrid) and by size (micro, mini, mainframe, super)">
+                            <rect class="dg-node-solid" x="220" y="10" width="180" height="32" rx="4" />
+                            <text class="dg-text-on-ink" x="310" y="26">Computer</text>
+                            <!-- By signal -->
+                            <line class="dg-stroke-ink" x1="260" y1="42" x2="120" y2="72" />
+                            <rect class="dg-node" x="40" y="72" width="160" height="28" rx="4" />
+                            <text class="dg-text" x="120" y="86">By signal type</text>
+                            <line class="dg-stroke-ink" x1="80" y1="100" x2="30" y2="130" />
+                            <line class="dg-stroke-ink" x1="120" y1="100" x2="120" y2="130" />
+                            <line class="dg-stroke-ink" x1="160" y1="100" x2="210" y2="130" />
+                            <rect class="dg-node" x="0" y="130" width="70" height="26" rx="4" /><text class="dg-text"
+                                x="35" y="143">Analog</text>
+                            <rect class="dg-node" x="85" y="130" width="70" height="26" rx="4" /><text class="dg-text"
+                                x="120" y="143">Digital</text>
+                            <rect class="dg-node" x="175" y="130" width="70" height="26" rx="4" /><text class="dg-text"
+                                x="210" y="143">Hybrid</text>
+                            <text class="dg-label-start" x="0" y="174">Continuous signals</text>
+                            <text class="dg-label" x="120" y="174">Discrete 0/1</text>
+                            <text class="dg-label" x="210" y="174">Both</text>
+                            <!-- By size -->
+                            <line class="dg-stroke-ink" x1="360" y1="42" x2="460" y2="72" />
+                            <rect class="dg-node" x="380" y="72" width="160" height="28" rx="4" />
+                            <text class="dg-text" x="460" y="86">By size / purpose</text>
+                            <line class="dg-stroke-ink" x1="410" y1="100" x2="330" y2="130" />
+                            <line class="dg-stroke-ink" x1="440" y1="100" x2="410" y2="130" />
+                            <line class="dg-stroke-ink" x1="480" y1="100" x2="500" y2="130" />
+                            <line class="dg-stroke-ink" x1="510" y1="100" x2="590" y2="130" />
+                            <rect class="dg-node" x="295" y="130" width="70" height="26" rx="4" /><text class="dg-text"
+                                x="330" y="143">Micro</text>
+                            <rect class="dg-node" x="375" y="130" width="70" height="26" rx="4" /><text class="dg-text"
+                                x="410" y="143">Mini</text>
+                            <rect class="dg-node" x="455" y="130" width="90" height="26" rx="4" /><text class="dg-text"
+                                x="500" y="143">Mainframe</text>
+                            <rect class="dg-node" x="555" y="130" width="60" height="26" rx="4" /><text class="dg-text"
+                                x="585" y="143">Super</text>
+                            <text class="dg-label" x="330" y="174">PC, laptop</text>
+                            <text class="dg-label" x="410" y="174">PDP-11</text>
+                            <text class="dg-label" x="500" y="174">IBM z15</text>
+                            <text class="dg-label" x="585" y="174">Fugaku</text>
+                        </svg>
+                        <figcaption>The two axes are independent — a supercomputer is digital, a speedometer is analog,
+                            and an ICU patient monitor is hybrid.</figcaption>
+                    </figure>
+
+                    <p>
+                        <strong>Embedded systems</strong> (ATMs, routers, washing machines)
+                        and <strong>workstations</strong> (CAD, animation) sit between micro
+                        and mini. <strong>Servers</strong> range from micro to mainframe
+                        depending on what they serve.
+                    </p>
+                </div>
+
+                <!-- 3 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-number-systems">
+                    <h3>3. Number systems and arithmetic <span class="flag"></span></h3>
+
+                    <p>
+                        Four bases appear on every paper: binary (2), octal (8), decimal
+                        (10) and hexadecimal (16). The exam asks you to convert a concrete
+                        number — so below we convert the <em>same</em> number through
+                        every direction, showing every intermediate step.
+                    </p>
+
+                    <h5>Decimal 173 → binary, octal, hex</h5>
+                    <p>Repeatedly divide by the target base and collect remainders bottom-up:</p>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">→ Binary</span><span class="calc__math">173 ÷ 2
+                                = 86 r <span class="sub">1</span> → 86 ÷ 2 = 43 r <span class="sub">0</span> → 43 ÷ 2 =
+                                21 r <span class="sub">1</span> → 21 ÷ 2 = 10 r <span class="sub">1</span> → 10 ÷ 2 = 5
+                                r <span class="sub">0</span> → 5 ÷ 2 = 2 r <span class="sub">1</span> → 2 ÷ 2 = 1 r
+                                <span class="sub">0</span> → 1 ÷ 2 = 0 r <span class="sub">1</span></span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Result</span><span
+                                class="calc__math">Read remainders bottom-up: <strong>10101101₂</strong></span></div>
+                    </div>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">→ Octal</span><span class="calc__math">173 ÷ 8
+                                = 21 r <span class="sub">5</span> → 21 ÷ 8 = 2 r <span class="sub">5</span> → 2 ÷ 8 = 0
+                                r <span class="sub">2</span></span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Result</span><span
+                                class="calc__math"><strong>255₈</strong></span></div>
+                    </div>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">→ Hex</span><span class="calc__math">173 ÷ 16 =
+                                10 r <span class="sub">13 = D</span> → 10 ÷ 16 = 0 r <span class="sub">10 =
+                                    A</span></span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Result</span><span
+                                class="calc__math"><strong>AD₁₆</strong></span></div>
+                    </div>
+
+                    <h5>Binary ↔ Octal ↔ Hex — the shortcut</h5>
+                    <p>
+                        Because 8 = 2³ and 16 = 2⁴, you can group binary digits instead of
+                        dividing. Take our binary <code>10101101</code>:
+                    </p>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">→ Octal</span><span class="calc__math">Group in
+                                3s from right: <span class="sub">10</span> <span class="sub">101</span> <span
+                                    class="sub">101</span> → pad left group: <span class="sub">010</span> <span
+                                    class="sub">101</span> <span class="sub">101</span> → <strong>255₈</strong> ✓</span>
+                        </div>
+                        <div class="calc__row"><span class="calc__label">→ Hex</span><span class="calc__math">Group in
+                                4s from right: <span class="sub">1010</span> <span class="sub">1101</span> → A D →
+                                <strong>AD₁₆</strong> ✓</span></div>
+                    </div>
+
+                    <h5>Binary arithmetic</h5>
+                    <p>Add 10101101 + 01110010 (173 + 114 = 287):</p>
+                    <figure class="figure">
+                        <svg viewBox="0 0 400 130" width="400" role="img"
+                            aria-label="Binary addition of 10101101 + 01110010 with carries shown above each column">
+                            <text class="dg-label" x="80" y="20">carries:</text>
+                            <text class="dg-text" font-family="monospace" x="200" y="20">1 1 1 1 1 1 1 0</text>
+                            <text class="dg-text" font-family="monospace" x="200" y="50">1 0 1 0 1 1 0 1</text>
+                            <text class="dg-label" x="130" y="50">+</text>
+                            <text class="dg-text" font-family="monospace" x="200" y="72">0 1 1 1 0 0 1 0</text>
+                            <line class="dg-stroke-ink" x1="130" y1="80" x2="330" y2="80" />
+                            <text class="dg-text" font-family="monospace" x="190" y="102">1 0 0 0 1 1 1 1 1</text>
+                            <text class="dg-label" x="340" y="102">= 287₁₀ ✓</text>
+                        </svg>
+                        <figcaption>Column-by-column: 1+0=1, 0+1=1, 1+0=1, 1+0+carry=10 write 0 carry 1, and so on —
+                            identical to decimal addition with a smaller table.</figcaption>
+                    </figure>
+
+                    <h5>Complements</h5>
+                    <p>
+                        Subtraction in hardware is done by <strong>adding the complement</strong>.
+                        For an 8-bit number:
+                    </p>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">1's complement</span><span
+                                class="calc__math">Flip every bit. For 01110010 (114): <strong>10001101</strong></span>
+                        </div>
+                        <div class="calc__row"><span class="calc__label">2's complement</span><span
+                                class="calc__math">1's complement + 1 = 10001101 + 1 = <strong>10001110</strong></span>
+                        </div>
+                        <div class="calc__row"><span class="calc__label">Check</span><span class="calc__math">01110010 +
+                                10001110 = 1 00000000 — the carry-out is discarded, leaving 00000000 (zero), confirming
+                                they are additive inverses.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Why</span><span
+                                class="calc__math">2's complement lets the same adder circuit handle both addition and
+                                subtraction — no separate subtractor needed.</span></div>
+                    </div>
+
+                    <div class="callout callout--trap">
+                        <span class="callout__title">Overflow detection</span>
+                        <p class="mb-0">
+                            In signed 2's complement, overflow occurs when two positive numbers
+                            produce a negative result (or two negatives produce positive). The
+                            rule: <strong>overflow = carry into MSB ⊕ carry out of MSB</strong>.
+                            If these two carries differ, the result is wrong.
+                        </p>
+                    </div>
+
+                    <h4>Other codes</h4>
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Code</th>
+                                    <th scope="col">Rule</th>
+                                    <th scope="col">Example for decimal 5</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">BCD (8421)</th>
+                                    <td>Each decimal digit → 4 binary bits</td>
+                                    <td>0101</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Excess-3</th>
+                                    <td>BCD + 0011</td>
+                                    <td>1000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Gray code</th>
+                                    <td>Adjacent values differ by 1 bit</td>
+                                    <td>0111</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        <strong>BCD</strong> is used in financial calculations where decimal
+                        rounding must be exact. <strong>Gray code</strong> prevents glitches
+                        in rotary encoders and Karnaugh maps.
+                    </p>
+                </div>
+
+                <!-- 4 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-encoding">
+                    <h3>4. Character encoding</h3>
+
+                    <p>
+                        A character encoding maps each symbol to a number. The exam
+                        typically asks for a comparison, so here is the timeline and the
+                        contrast:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Encoding</th>
+                                    <th scope="col">Bits / char</th>
+                                    <th scope="col">Characters</th>
+                                    <th scope="col">Use</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">ASCII</th>
+                                    <td>7 (stored in 8)</td>
+                                    <td>128</td>
+                                    <td>English-only text, protocols</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extended ASCII</th>
+                                    <td>8</td>
+                                    <td>256</td>
+                                    <td>Western European accents</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">EBCDIC</th>
+                                    <td>8</td>
+                                    <td>256</td>
+                                    <td>IBM mainframes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Unicode</th>
+                                    <td>variable</td>
+                                    <td>149,813+</td>
+                                    <td>Every script, including Bangla</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">UTF-8</span><span class="calc__math">1–4 bytes
+                                per character. ASCII characters use 1 byte (backward compatible). Bangla uses 3 bytes.
+                                Dominant on the web (&gt;98%).</span></div>
+                        <div class="calc__row"><span class="calc__label">UTF-16</span><span class="calc__math">2 or 4
+                                bytes. Used internally by Java and Windows. Bangla uses 2 bytes.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Bangla</span><span
+                                class="calc__math">Bijoy uses a non-standard font mapping (not true encoding). Unicode
+                                Bangla (U+0980–U+09FF) is the standard — government and banking systems require
+                                it.</span></div>
+                    </div>
+                </div>
+
+                <!-- 5 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-memory">
+                    <h3>5. Memory hierarchy <span class="flag"></span></h3>
+                    <p>Every level trades <strong>speed for capacity</strong>. The processor needs data in nanoseconds;
+                        disk delivers in milliseconds — a million-fold gap. The hierarchy bridges it by keeping
+                        frequently used data close to the CPU.</p>
+                    <figure class="figure">
+                        <svg viewBox="0 0 500 260" width="500" role="img"
+                            aria-label="Memory hierarchy pyramid from registers at top to tape at bottom">
+                            <polygon class="dg-node-solid" points="250,10 310,60 190,60" />
+                            <text class="dg-text-on-ink" x="250" y="47">Registers</text>
+                            <polygon class="dg-node" points="190,62 310,62 340,100 160,100" />
+                            <text class="dg-text" x="250" y="85">Cache L1/L2/L3</text>
+                            <polygon class="dg-node" points="160,102 340,102 370,140 130,140" />
+                            <text class="dg-text" x="250" y="125">Main memory (RAM)</text>
+                            <polygon class="dg-node" points="130,142 370,142 400,180 100,180" />
+                            <text class="dg-text" x="250" y="165">SSD / HDD</text>
+                            <polygon class="dg-node" points="100,182 400,182 430,220 70,220" />
+                            <text class="dg-text" x="250" y="205">Optical / Tape</text>
+                            <text class="dg-label-start" x="10" y="60">← Faster, smaller, costlier</text>
+                            <text class="dg-label-start" x="10" y="220">← Slower, larger, cheaper</text>
+                        </svg>
+                        <figcaption>Each level is roughly 10× slower and 10–100× larger than the one above.</figcaption>
+                    </figure>
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Volatile?</th>
+                                    <th scope="col">Speed</th>
+                                    <th scope="col">Typical size</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">SRAM</th>
+                                    <td>Yes</td>
+                                    <td>~1 ns (cache)</td>
+                                    <td>KB–MB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">DRAM (DDR4/5)</th>
+                                    <td>Yes</td>
+                                    <td>~10 ns</td>
+                                    <td>GB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">ROM / PROM / EPROM</th>
+                                    <td>No</td>
+                                    <td>~50 ns</td>
+                                    <td>KB–MB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">EEPROM / Flash</th>
+                                    <td>No</td>
+                                    <td>~25 µs</td>
+                                    <td>GB–TB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="insight">
+                        <div><strong>SRAM vs DRAM.</strong> SRAM uses 6 transistors per bit, holds data as long as power
+                            is on. DRAM uses 1 transistor + 1 capacitor, must be refreshed every ~64 ms. SRAM is faster
+                            → cache; DRAM is denser → main memory.</div>
+                    </div>
+                </div>
+
+                <!-- 6 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-storage">
+                    <h3>6. Storage devices and units <span class="flag"></span></h3>
+                    <p>Storage-unit arithmetic is a near-certain question. The chain is powers of 2 for memory or powers
+                        of 10 for disk marketing.</p>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Binary</span><span class="calc__math">1 KiB =
+                                2¹⁰ = 1,024 B · 1 MiB = 2²⁰ · 1 GiB = 2³⁰ · 1 TiB = 2⁴⁰</span></div>
+                        <div class="calc__row"><span class="calc__label">SI</span><span class="calc__math">1 KB = 10³ =
+                                1,000 B · 1 MB = 10⁶ · 1 GB = 10⁹ · 1 TB = 10¹²</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Rule</span><span
+                                class="calc__math">Unless stated, use 2¹⁰ = 1024. A "500 GB" HDD = 500 × 10⁹ ÷ 2³⁰ ≈
+                                <strong>465 GiB</strong>.</span></div>
+                    </div>
+                    <h5>HDD geometry</h5>
+                    <p>Platters with concentric <strong>tracks</strong>, each split into <strong>sectors</strong> (512
+                        B). Same-radius tracks across platters form a <strong>cylinder</strong>.</p>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Capacity</span><span class="calc__math">=
+                                cylinders × heads × sectors/track × bytes/sector</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Example</span><span
+                                class="calc__math">10,000 × 8 × 200 × 512 = 8,192,000,000 B ≈ <strong>7.63
+                                    GiB</strong></span></div>
+                    </div>
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Medium</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Capacity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">HDD</th>
+                                    <td>Magnetic</td>
+                                    <td>1–20 TB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">SSD (NVMe)</th>
+                                    <td>Flash</td>
+                                    <td>256 GB – 8 TB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">CD / DVD / Blu-ray</th>
+                                    <td>Optical</td>
+                                    <td>700 MB / 4.7 GB / 25 GB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">LTO-9 tape</th>
+                                    <td>Magnetic</td>
+                                    <td>18 TB native</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 7 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-io">
+                    <h3>7. Input and output devices</h3>
+                    <p>The exam asks you to name devices and compare similar ones — especially OCR vs OMR vs MICR.</p>
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Input devices — the comparison the exam wants</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Device</th>
+                                    <th scope="col">Reads</th>
+                                    <th scope="col">Used for</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">OCR</th>
+                                    <td>Printed / handwritten chars</td>
+                                    <td>Postal sorting, forms</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">OMR</th>
+                                    <td>Pencil marks on fixed positions</td>
+                                    <td>MCQ sheets, lottery</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">MICR</th>
+                                    <td>Magnetic-ink characters</td>
+                                    <td>Bank cheques (fast, tamper-proof)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Barcode / QR</th>
+                                    <td>1D bars / 2D matrix</td>
+                                    <td>Retail, Bangla QR payments</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Biometric</th>
+                                    <td>Fingerprint, iris, face</td>
+                                    <td>Authentication, e-KYC</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="calc">
+                        <div class="calc__row calc__row--result"><span class="calc__label">MICR vs OCR</span><span
+                                class="calc__math">MICR is faster, more accurate and fraud-resistant (magnetic ink
+                                survives overwriting). Banks choose MICR for cheques precisely for this tamper
+                                resistance.</span></div>
+                    </div>
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Output — monitors and printers</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Technology</th>
+                                    <th scope="col">Key point</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">CRT → LCD → LED → OLED</th>
+                                    <td>Phosphor → liquid crystal → LED backlight → self-emitting</td>
+                                    <td>Each step: thinner, less power, better contrast</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dot matrix</th>
+                                    <td>Impact, pin-and-ribbon</td>
+                                    <td>Multi-part carbon copies</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Inkjet</th>
+                                    <td>Non-impact, liquid ink</td>
+                                    <td>Photo quality, costly ink</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Laser</th>
+                                    <td>Non-impact, toner + heat</td>
+                                    <td>Fast, crisp text, office standard</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 8 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-ports">
+                    <h3>8. Ports, buses and the motherboard <span class="flag"></span></h3>
+                    <p>The <strong>system bus</strong> has three channels: <em>data bus</em> (the value), <em>address
+                            bus</em> (where), <em>control bus</em> (read/write). The address-bus width determines
+                        addressable memory:</p>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Formula</span><span
+                                class="calc__math">Addressable memory = 2ⁿ bytes, n = address-bus width</span></div>
+                        <div class="calc__row"><span class="calc__label">32-bit</span><span class="calc__math">2³² =
+                                4,294,967,296 B = <strong>4 GiB</strong></span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">64-bit</span><span
+                                class="calc__math">2⁶⁴ = 16 EiB — far beyond any current physical install</span></div>
+                    </div>
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Port generations</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Port</th>
+                                    <th scope="col">Speed</th>
+                                    <th scope="col">Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">USB 2.0</th>
+                                    <td>480 Mbps</td>
+                                    <td>Hi-Speed</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">USB 3.0</th>
+                                    <td>5 Gbps</td>
+                                    <td>SuperSpeed, blue port</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">USB4 / TB4</th>
+                                    <td>40 Gbps</td>
+                                    <td>Type-C</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">HDMI 2.1</th>
+                                    <td>48 Gbps</td>
+                                    <td>Video + audio, 8K</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">BIOS vs UEFI</span><span
+                                class="calc__math">BIOS: 16-bit, MBR, 2 TB limit. UEFI: 32/64-bit, GPT, no size limit,
+                                Secure Boot.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Boot</span><span
+                                class="calc__math">Power → POST → BIOS/UEFI → bootloader → OS kernel → drivers and
+                                services.</span></div>
+                    </div>
+                </div>
+
+                <!-- 9 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-software">
+                    <h3>9. Software and translators <span class="flag"></span></h3>
+                    <p>Software divides into <strong>system</strong> (OS, utilities, drivers, firmware) and
+                        <strong>application</strong> (word processor, browser, banking app). The exam's favourite
+                        question in this topic is the <em>translator comparison</em>.
+                    </p>
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Translator</th>
+                                    <th scope="col">Input</th>
+                                    <th scope="col">Output</th>
+                                    <th scope="col">Execution</th>
+                                    <th scope="col">Error report</th>
+                                    <th scope="col">Speed</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Assembler</th>
+                                    <td>Assembly</td>
+                                    <td>Machine code</td>
+                                    <td>After full translation</td>
+                                    <td>All at once</td>
+                                    <td>Fastest output</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Compiler</th>
+                                    <td>High-level (C, Java)</td>
+                                    <td>Machine / bytecode</td>
+                                    <td>After full translation</td>
+                                    <td>All at once</td>
+                                    <td>Slow compile, fast run</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Interpreter</th>
+                                    <td>High-level (Python)</td>
+                                    <td>No stored output</td>
+                                    <td>Line by line</td>
+                                    <td>Stops at first error</td>
+                                    <td>Slow run each time</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="insight">
+                        <div><strong>Java uses both.</strong> <code>javac</code> compiles source to bytecode (.class);
+                            the JVM then <em>interprets</em> bytecode and JIT-compiles hot paths to native code. This is
+                            why Java is called "compile once, run anywhere."</div>
+                    </div>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Language gens</span><span
+                                class="calc__math">1GL: machine code · 2GL: assembly · 3GL: C, Java, Python · 4GL: SQL,
+                                MATLAB · 5GL: Prolog, AI</span></div>
+                        <div class="calc__row"><span class="calc__label">Licensing</span><span class="calc__math">GPL:
+                                share-alike · MIT: do anything · Apache: patent grant · Proprietary: no source · FOSS:
+                                free + open source</span></div>
+                    </div>
+                </div>
+
+                <!-- 10 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-malware">
+                    <h3>10. Malware and antivirus <span class="flag"></span></h3>
+                    <p>Malware is software written to damage, disrupt or gain unauthorised access. The exam asks you to
+                        <strong>name the type from a description</strong> — so the table below is organised by the
+                        distinguishing behaviour.
+                    </p>
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Distinguishing behaviour</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Virus</th>
+                                    <td>Attaches to a host file; spreads when the host runs</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Worm</th>
+                                    <td>Self-replicates over networks — no host file needed</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Trojan</th>
+                                    <td>Disguised as legitimate software; does not replicate</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Ransomware</th>
+                                    <td>Encrypts files, demands payment for the key</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Spyware</th>
+                                    <td>Silently collects user data (keystrokes, browsing)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Rootkit</th>
+                                    <td>Hides deep in the OS to maintain persistent access</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Logic bomb</th>
+                                    <td>Dormant code that triggers on a condition (date, event)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Adware</th>
+                                    <td>Forces unwanted advertisements</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5>Virus sub-types</h5>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Boot sector</span><span
+                                class="calc__math">Infects the MBR/VBR; runs before the OS loads</span></div>
+                        <div class="calc__row"><span class="calc__label">Macro</span><span class="calc__math">VBA inside
+                                Office documents; spreads when document is opened</span></div>
+                        <div class="calc__row"><span class="calc__label">Polymorphic</span><span
+                                class="calc__math">Encrypts itself with a different key each copy → defeats signature
+                                detection</span></div>
+                        <div class="calc__row"><span class="calc__label">Metamorphic</span><span
+                                class="calc__math">Rewrites its own code without encryption → even harder to
+                                detect</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Stealth</span><span
+                                class="calc__math">Intercepts OS calls to hide itself — e.g. shows the original file
+                                size</span></div>
+                    </div>
+                    <h5>Antivirus detection</h5>
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Technique</th>
+                                    <th scope="col">How it works</th>
+                                    <th scope="col">Limitation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Signature</th>
+                                    <td>Matches known byte patterns</td>
+                                    <td>Cannot detect new (zero-day) malware</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Heuristic</th>
+                                    <td>Analyses code structure for suspicious patterns</td>
+                                    <td>False positives</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Behavioural</th>
+                                    <td>Monitors runtime actions (file encryption, keylogging)</td>
+                                    <td>Some damage may occur before detection</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sandboxing</th>
+                                    <td>Runs suspect code in an isolated environment</td>
+                                    <td>Slow; malware may detect the sandbox</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>Common products:</strong> Kaspersky, Norton, Bitdefender, ESET NOD32, McAfee, Avast, AVG,
+                        Avira, Trend Micro, Windows Defender.</p>
+                </div>
+
+                <!-- 11 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-ethics">
+                    <h3>11. Ethics and environment</h3>
+                    <p>Brief but examinable: <strong>e-waste</strong> is discarded electronics containing lead, mercury
+                        and cadmium — improper disposal contaminates soil and water. <strong>Green computing</strong>
+                        addresses this through energy-efficient hardware, virtualisation (fewer physical servers), cloud
+                        consolidation, proper recycling and e-waste legislation.</p>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Ergonomics</span><span
+                                class="calc__math">Screen at arm's length, top of screen at eye level, feet flat, wrists
+                                neutral — prevents RSI and eye strain.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Digital divide</span><span
+                                class="calc__math">The gap between those with and without access to ICT. In Bangladesh,
+                                union digital centres and a2i bridge this gap for rural populations.</span></div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================================================================
+             SOLVED PAST QUESTIONS
+             ================================================================ -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <p class="intro">
+                    Work each question on paper first, then open the solution and compare
+                    your <em>steps</em>, not just your final number.
+                </p>
+
+                <div class="expand-controls">
+                    <button type="button" class="btn btn--sm btn--ghost" data-expand-all="#solved">Expand all</button>
+                    <button type="button" class="btn btn--sm btn--ghost" data-collapse-all="#solved">Collapse
+                        all</button>
+                </div>
+
+                <!-- S1 -->
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">Convert 245₁₀ to binary, octal, and hexadecimal.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">→ Binary</span><span class="calc__math">245
+                                    ÷ 2 → 122 r1 → 61 r0 → 30 r1 → 15 r0 → 7 r1 → 3 r1 → 1 r1 → 0 r1</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Binary</span><span
+                                    class="calc__math"><strong>11110101₂</strong></span></div>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">→ Octal</span><span class="calc__math">245
+                                    ÷ 8 = 30 r5 → 30 ÷ 8 = 3 r6 → 3 ÷ 8 = 0 r3</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Octal</span><span
+                                    class="calc__math"><strong>365₈</strong></span></div>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">→ Hex</span><span class="calc__math">245 ÷
+                                    16 = 15 r5 → 15 ÷ 16 = 0 r15(=F)</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Hex</span><span
+                                    class="calc__math"><strong>F5₁₆</strong></span></div>
+                        </div>
+                        <p><strong>Verification:</strong> Binary 11110101 → group in 3s: 011 110 101 = 365₈ ✓ · group in
+                            4s: 1111 0101 = F5₁₆ ✓</p>
+                    </div>
+                </details>
+
+                <!-- S2 -->
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">Arrange the following in order from fastest to slowest: HDD, L1
+                            cache, Registers, Main memory, SSD, L2 cache.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Order</span><span
+                                    class="calc__math"><strong>Registers</strong> (~0.3 ns) → <strong>L1 cache</strong>
+                                    (~1 ns) → <strong>L2 cache</strong> (~3–10 ns) → <strong>Main memory</strong>
+                                    (~50–100 ns) → <strong>SSD</strong> (~25–100 µs) → <strong>HDD</strong> (~5–10
+                                    ms)</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Pattern</span><span
+                                    class="calc__math">Each level is roughly 10× slower. Registers are ~10⁷ times faster
+                                    than HDD.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S3 -->
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">A system has a 20-bit address bus and 8-bit data bus. What is the
+                            maximum addressable memory?</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Formula</span><span class="calc__math">Max
+                                    memory = 2ⁿ × (data bus width / 8) bytes. Here data bus = 8 bits = 1 byte per
+                                    address, so max = 2²⁰ locations × 1 byte.</span></div>
+                            <div class="calc__row"><span class="calc__label">Compute</span><span class="calc__math">2²⁰
+                                    = 1,048,576 bytes</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Answer</span><span
+                                    class="calc__math"><strong>1 MiB</strong> (1,048,576 bytes)</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S4 -->
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">Differentiate between compiler, interpreter, and assembler.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Feature</th>
+                                        <th scope="col">Assembler</th>
+                                        <th scope="col">Compiler</th>
+                                        <th scope="col">Interpreter</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Input</th>
+                                        <td>Assembly language</td>
+                                        <td>High-level source (C, Java)</td>
+                                        <td>High-level source (Python)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Output</th>
+                                        <td>Machine code</td>
+                                        <td>Machine code / bytecode</td>
+                                        <td>No stored output</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Translation</th>
+                                        <td>Entire program at once</td>
+                                        <td>Entire program at once</td>
+                                        <td>Line by line</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Errors</th>
+                                        <td>Lists all errors</td>
+                                        <td>Lists all errors</td>
+                                        <td>Stops at first error</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Execution speed</th>
+                                        <td>Fastest (direct mapping)</td>
+                                        <td>Fast (after compilation)</td>
+                                        <td>Slowest (re-translates each run)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Re-compilation</th>
+                                        <td>No (unless source changes)</td>
+                                        <td>No (unless source changes)</td>
+                                        <td>Every time</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Key insight:</strong> Java uses both — <code>javac</code> compiles to bytecode, then
+                            the JVM interprets or JIT-compiles to native code at runtime.</p>
+                    </div>
+                </details>
+
+                <!-- S5 -->
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">A program starts deleting files after a specific date. What type of
+                            malware is this? Explain three other types.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>This is a <strong>logic bomb</strong> — dormant malicious code that triggers when a
+                            predefined condition (here, a date) is met.</p>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Virus</span><span
+                                    class="calc__math">Attaches to a host program; replicates when the host executes.
+                                    Cannot spread on its own without a carrier file.</span></div>
+                            <div class="calc__row"><span class="calc__label">Worm</span><span
+                                    class="calc__math">Self-replicating across networks without needing a host file.
+                                    Example: Stuxnet spread via USB and network shares.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Trojan</span><span
+                                    class="calc__math">Disguised as legitimate software (e.g. a "free game"). Does not
+                                    replicate, but provides backdoor access.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S6 -->
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">Convert 10110011₂ to decimal and hexadecimal.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">→ Decimal</span><span
+                                    class="calc__math">1×2⁷ + 0×2⁶ + 1×2⁵ + 1×2⁴ + 0×2³ + 0×2² + 1×2¹ + 1×2⁰ = 128 + 32
+                                    + 16 + 2 + 1 = <strong>179₁₀</strong></span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">→ Hex</span><span
+                                    class="calc__math">Group in 4s: 1011 0011 → B 3 → <strong>B3₁₆</strong></span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S7 -->
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">A disk has 5,000 cylinders, 4 heads, 400 sectors per track, and a
+                            sector size of 512 bytes. Calculate the disk capacity in GiB.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Given</span><span class="calc__math">C =
+                                    5,000 · H = 4 · S = 400 · B = 512</span></div>
+                            <div class="calc__row"><span class="calc__label">Total bytes</span><span
+                                    class="calc__math">5,000 × 4 × 400 × 512 = 4,096,000,000 bytes</span></div>
+                            <div class="calc__row"><span class="calc__label">→ GiB</span><span
+                                    class="calc__math">4,096,000,000 ÷ 2³⁰ = 4,096,000,000 ÷ 1,073,741,824</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Answer</span><span
+                                    class="calc__math"><strong>≈ 3.81 GiB</strong></span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S8 -->
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">Compare SRAM and DRAM in terms of speed, cost, use, and need for
+                            refresh.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Feature</th>
+                                        <th scope="col">SRAM</th>
+                                        <th scope="col">DRAM</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Circuit</th>
+                                        <td>6 transistors per bit (flip-flop)</td>
+                                        <td>1 transistor + 1 capacitor per bit</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Speed</th>
+                                        <td>~1 ns (faster)</td>
+                                        <td>~10 ns (slower)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Cost per bit</th>
+                                        <td>Higher (more transistors)</td>
+                                        <td>Lower (denser)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Refresh</th>
+                                        <td>Not needed</td>
+                                        <td>Needs refresh every ~64 ms</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Primary use</th>
+                                        <td>CPU cache (L1, L2, L3)</td>
+                                        <td>Main memory (RAM sticks)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Density</th>
+                                        <td>Low (large area per bit)</td>
+                                        <td>High (small area per bit)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Bottom line:</strong> SRAM's speed makes it ideal for cache but its cost limits it to
+                            small sizes. DRAM's density makes it practical for gigabytes of main memory despite needing
+                            periodic refresh.</p>
+                    </div>
+                </details>
+
+                <!-- S9 -->
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">Represent decimal 83 in BCD and Excess-3 code.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">BCD</span><span class="calc__math">Digit 8
+                                    → 1000 · Digit 3 → 0011 → <strong>1000 0011</strong></span></div>
+                            <div class="calc__row"><span class="calc__label">Excess-3</span><span class="calc__math">Add
+                                    3 to each digit then encode: (8+3)=11→1011 · (3+3)=6→0110 → <strong>1011
+                                        0110</strong></span></div>
+                        </div>
+                        <p><strong>Verification (Excess-3):</strong> 1011₂ = 11, minus 3 = 8 ✓ · 0110₂ = 6, minus 3 = 3
+                            ✓</p>
+                    </div>
+                </details>
+
+                <!-- S10 -->
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">Subtract 45₁₀ from 92₁₀ using 2's complement (8-bit).</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Step 1</span><span class="calc__math">92₁₀
+                                    = 01011100₂ · 45₁₀ = 00101101₂</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 2</span><span class="calc__math">1's
+                                    complement of 45: 11010010</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 3</span><span class="calc__math">2's
+                                    complement = 11010010 + 1 = 11010011</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 4</span><span
+                                    class="calc__math">01011100 + 11010011 = 1 00101111</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 5</span><span
+                                    class="calc__math">Discard the carry-out (9th bit): 00101111₂</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Answer</span><span
+                                    class="calc__math">00101111₂ = 32 + 8 + 4 + 2 + 1 = <strong>47₁₀</strong> ✓ (92 − 45
+                                    = 47)</span></div>
+                        </div>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- ================================================================
+             PRACTICE QUESTIONS
+             ================================================================ -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <p class="intro">
+                    Original questions written in the same style and difficulty as the
+                    real papers. Every one has a full worked solution.
+                </p>
+
+                <div class="expand-controls">
+                    <button type="button" class="btn btn--sm btn--ghost" data-expand-all="#practice">Expand all</button>
+                    <button type="button" class="btn btn--sm btn--ghost" data-collapse-all="#practice">Collapse
+                        all</button>
+                </div>
+
+                <!-- P1 -->
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">Convert 0.6875₁₀ to binary (up to 4 fractional bits).</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Method</span><span
+                                    class="calc__math">Multiply by 2 and collect integer parts top-down:</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 1</span><span
+                                    class="calc__math">0.6875 × 2 = <strong>1</strong>.375</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 2</span><span class="calc__math">0.375
+                                    × 2 = <strong>0</strong>.75</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 3</span><span class="calc__math">0.75
+                                    × 2 = <strong>1</strong>.5</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 4</span><span class="calc__math">0.5 ×
+                                    2 = <strong>1</strong>.0 (terminates)</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Answer</span><span
+                                    class="calc__math"><strong>0.1011₂</strong>. Check: ½ + ⅛ + 1⁄16 = 0.5 + 0.125 +
+                                    0.0625 = 0.6875 ✓</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P2 -->
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">Convert the binary sequence 0110 to Gray code. Then convert Gray
+                            code 1011 back to binary.</span>
+                    </summary>
+                    <div class="question__body">
+                        <h5>Binary → Gray</h5>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Rule</span><span class="calc__math">MSB
+                                    stays. Each subsequent bit = current binary bit XOR previous binary bit.</span>
+                            </div>
+                            <div class="calc__row"><span class="calc__label">Trace</span><span class="calc__math">Binary
+                                    0110: G₃=0, G₂=0⊕1=1, G₁=1⊕1=0, G₀=1⊕0=1</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Gray</span><span
+                                    class="calc__math"><strong>0101</strong></span></div>
+                        </div>
+                        <h5>Gray → Binary</h5>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Rule</span><span class="calc__math">MSB
+                                    stays. Each subsequent bit = current Gray bit XOR previous <em>binary</em> (output)
+                                    bit.</span></div>
+                            <div class="calc__row"><span class="calc__label">Trace</span><span class="calc__math">Gray
+                                    1011: B₃=1, B₂=1⊕0=1, B₁=1⊕1=0, B₀=0⊕1=1</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Binary</span><span
+                                    class="calc__math"><strong>1101</strong> (= 13₁₀)</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P3 -->
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">Name the five computer generations. For each, state the switching
+                            technology and give one example machine.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Gen</th>
+                                        <th scope="col">Switch</th>
+                                        <th scope="col">Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1st (1940–56)</th>
+                                        <td>Vacuum tube</td>
+                                        <td>ENIAC</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2nd (1956–63)</th>
+                                        <td>Transistor</td>
+                                        <td>IBM 7094</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3rd (1964–71)</th>
+                                        <td>IC (SSI/MSI)</td>
+                                        <td>IBM 360</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4th (1971–now)</th>
+                                        <td>Microprocessor (VLSI)</td>
+                                        <td>Intel 4004</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5th (now–future)</th>
+                                        <td>AI / parallel processing</td>
+                                        <td>IBM Watson</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P4 -->
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">How long does it take to transfer a 2 GiB file over USB 3.0 (5
+                            Gbps)? Assume no overhead.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Size</span><span class="calc__math">2 GiB =
+                                    2 × 2³⁰ bytes = 2 × 2³⁰ × 8 bits = 2³⁴ bits = 17,179,869,184 bits</span></div>
+                            <div class="calc__row"><span class="calc__label">Rate</span><span class="calc__math">5 Gbps
+                                    = 5 × 10⁹ bps</span></div>
+                            <div class="calc__row"><span class="calc__label">Time</span><span
+                                    class="calc__math">17,179,869,184 ÷ 5,000,000,000</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Answer</span><span
+                                    class="calc__math"><strong>≈ 3.44 seconds</strong></span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P5 -->
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">Describe the boot process of a computer from power-on to OS
+                            loading.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Step 1</span><span
+                                    class="calc__math"><strong>Power supply</strong> sends a "power good" signal once
+                                    voltages stabilise.</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 2</span><span
+                                    class="calc__math"><strong>POST</strong> (Power-On Self-Test) checks CPU, RAM, GPU,
+                                    keyboard. Failures produce beep codes.</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 3</span><span
+                                    class="calc__math"><strong>BIOS/UEFI</strong> loads from ROM/flash. Initialises
+                                    hardware, reads boot order from CMOS/NVRAM.</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 4</span><span
+                                    class="calc__math"><strong>Bootloader</strong> (GRUB or Windows Boot Manager) is
+                                    loaded from the boot device's MBR/EFI partition.</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 5</span><span
+                                    class="calc__math"><strong>OS kernel</strong> is loaded into RAM. Kernel initialises
+                                    drivers, file systems, and system services.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Step 6</span><span
+                                    class="calc__math"><strong>Login screen</strong> appears. User-space processes start
+                                    (shell, GUI, services).</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P6 -->
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">What is the ASCII value of 'A'? What is 'A' + 5 in ASCII? What is
+                            the difference between 'a' and 'A' in ASCII?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">'A'</span><span class="calc__math">ASCII 65
+                                    (binary: 01000001)</span></div>
+                            <div class="calc__row"><span class="calc__label">'A' + 5</span><span class="calc__math">65 +
+                                    5 = 70 = <strong>'F'</strong></span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">'a' − 'A'</span><span
+                                    class="calc__math">97 − 65 = <strong>32</strong>. To convert uppercase → lowercase,
+                                    add 32. This 32 = 2⁵, which means only bit 5 differs.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P7 -->
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">A file is 750 MB. Can it fit on a CD (700 MB)? On a single-layer
+                            DVD (4.7 GB)? Calculate remaining space on the DVD.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">CD</span><span class="calc__math">750 MB >
+                                    700 MB → <strong>No</strong>, does not fit.</span></div>
+                            <div class="calc__row"><span class="calc__label">DVD</span><span class="calc__math">750 MB <
+                                        4,700 MB → <strong>Yes</strong>, fits.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Remaining</span><span
+                                    class="calc__math">4,700 − 750 = <strong>3,950 MB</strong> ≈ 3.86 GB
+                                    remaining.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P8 -->
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">Differentiate between impact and non-impact printers. Name two
+                            examples of each.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Feature</th>
+                                        <th scope="col">Impact</th>
+                                        <th scope="col">Non-impact</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Mechanism</th>
+                                        <td>Physical strike (pin/hammer hits ribbon onto paper)</td>
+                                        <td>No contact (ink spray, toner heat, or thermal)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Noise</th>
+                                        <td>Loud</td>
+                                        <td>Quiet</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Carbon copies</th>
+                                        <td>Yes (multipart forms)</td>
+                                        <td>No</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Speed</th>
+                                        <td>Slow</td>
+                                        <td>Fast (laser) or medium (inkjet)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Examples</th>
+                                        <td><strong>Dot matrix, daisy wheel</strong></td>
+                                        <td><strong>Laser, inkjet</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P9 -->
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">Add the signed 8-bit numbers +120 and +15 using 2's complement.
+                            Does overflow occur?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Given</span><span class="calc__math">+120 =
+                                    01111000 · +15 = 00001111</span></div>
+                            <div class="calc__row"><span class="calc__label">Add</span><span class="calc__math">01111000
+                                    + 00001111 = 10000111</span></div>
+                            <div class="calc__row"><span class="calc__label">Check MSB</span><span
+                                    class="calc__math">Result MSB = 1 → interpreted as <em>negative</em> (−121 in 2's
+                                    complement)</span></div>
+                            <div class="calc__row"><span class="calc__label">Overflow?</span><span
+                                    class="calc__math">Carry into MSB = 1, carry out of MSB = 0 → 1 ⊕ 0 = 1 →
+                                    <strong>overflow detected</strong></span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Explanation</span><span
+                                    class="calc__math">120 + 15 = 135, but 8-bit signed range is −128 to +127. Since 135
+                                    > 127, the result <strong>overflows</strong>. The hardware produces the wrong answer
+                                    (−121).</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P10 -->
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">What is e-waste? List four ways to practise green computing.</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>E-waste</strong> is discarded electronic equipment — computers, phones, printers —
+                            that contain hazardous materials (lead, mercury, cadmium, BFRs). Improper disposal
+                            contaminates soil, water and air.</p>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">1</span><span
+                                    class="calc__math"><strong>Energy-efficient hardware</strong> — use Energy Star
+                                    certified devices, enable power management (sleep/hibernate).</span></div>
+                            <div class="calc__row"><span class="calc__label">2</span><span
+                                    class="calc__math"><strong>Virtualisation</strong> — run multiple virtual servers on
+                                    one physical machine, reducing hardware count by 10–20×.</span></div>
+                            <div class="calc__row"><span class="calc__label">3</span><span
+                                    class="calc__math"><strong>Proper recycling</strong> — certified e-waste recyclers
+                                    recover metals and safely handle toxics. Legislation: EU WEEE Directive, Basel
+                                    Convention.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">4</span><span
+                                    class="calc__math"><strong>Cloud consolidation</strong> — shared data centres
+                                    achieve higher utilisation rates than on-premise servers, reducing per-workload
+                                    energy.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="../index.html">
+                        <span class="pager__dir">Back to</span>
+                        <span class="pager__name">All subjects</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="c-programming.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">C Programming</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>
+                Bangladesh Bank Assistant Director (ICT) written preparation. Subject 01
+                of 18 — Computer Fundamentals.
+            </p>
+            <p class="small">
+                Coverage checklist: <code>SYLLABUS.md</code> §1.
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

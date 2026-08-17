@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="database"
+    data-subject-name="Database">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Database — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice questions on ER modelling, relational model, SQL, normalization, transactions, RAID, indexing and NoSQL." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+
+            <div class="header__spacer"></div>
+
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database" aria-current="page"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 05</span><span aria-hidden="true">·</span><span>Phase 2</span>
+                </p>
+                <h1>Database</h1>
+                <p class="page-head__lede">
+                    This subject covers the full database stack — from conceptual design
+                    (ER diagrams) through logical design (normalization) to physical
+                    storage (indexing, RAID). The exam tests all of it, with
+                    <strong>normalization</strong>, <strong>SQL queries</strong> and
+                    <strong>ACID properties</strong> appearing in nearly every paper.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
+             NOTES
+             ================================================================ -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">13 topics</span>
+                </div>
+
+                <p class="intro">
+                    Each topic walks through its concept on a concrete running example.
+                    The same tiny university database — <code>Student</code>,
+                    <code>Course</code>, <code>Enrolment</code> — recurs throughout so
+                    that each mechanism is demonstrated on familiar data.
+                </p>
+
+                <ul class="topics">
+                    <li><a href="#n-fundamentals"><span class="topics__num">01</span>Fundamentals and three-schema architecture</a></li>
+                    <li><a href="#n-er"><span class="topics__num">02</span>ER modelling</a></li>
+                    <li><a href="#n-relational"><span class="topics__num">03</span>Relational model and keys</a></li>
+                    <li><a href="#n-algebra"><span class="topics__num">04</span>Relational algebra</a></li>
+                    <li><a href="#n-sql"><span class="topics__num">05</span>SQL</a></li>
+                    <li><a href="#n-normalization"><span class="topics__num">06</span>Normalization</a></li>
+                    <li><a href="#n-transactions"><span class="topics__num">07</span>Transactions and ACID</a></li>
+                    <li><a href="#n-concurrency"><span class="topics__num">08</span>Concurrency control</a></li>
+                    <li><a href="#n-recovery"><span class="topics__num">09</span>Recovery</a></li>
+                    <li><a href="#n-indexing"><span class="topics__num">10</span>Storage and indexing</a></li>
+                    <li><a href="#n-raid"><span class="topics__num">11</span>RAID</a></li>
+                    <li><a href="#n-triggers"><span class="topics__num">12</span>Triggers, views and programmability</a></li>
+                    <li><a href="#n-nosql"><span class="topics__num">13</span>NoSQL, OLAP and CAP theorem</a></li>
+                </ul>
+
+                <!-- 1 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-fundamentals">
+                    <h3>1. Fundamentals and three-schema architecture</h3>
+
+                    <p>
+                        A database is a structured collection of related data managed by a
+                        <strong>DBMS</strong> (Database Management System). Before DBMS,
+                        applications used flat files — each program maintained its own
+                        data, leading to redundancy, inconsistency and no concurrent
+                        access. The DBMS solves all three by sitting between the
+                        application and the data.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">File system</th><th scope="col">DBMS</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Data redundancy</th><td>High — each program stores its own copy</td><td>Minimal — single store, shared access</td></tr>
+                                <tr><th scope="row">Data consistency</th><td>Hard to maintain</td><td>Enforced by integrity constraints</td></tr>
+                                <tr><th scope="row">Concurrent access</th><td>No built-in support</td><td>Locking + transaction isolation</td></tr>
+                                <tr><th scope="row">Security</th><td>OS-level file permissions only</td><td>Fine-grained (table/row/column)</td></tr>
+                                <tr><th scope="row">Crash recovery</th><td>Manual</td><td>Automatic via logging/checkpoints</td></tr>
+                                <tr><th scope="row">Data independence</th><td>None — structure changes break programs</td><td>Logical and physical independence</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 420 200" width="420" role="img"
+                            aria-label="Three-schema architecture: external, conceptual, internal levels">
+                            <defs><marker id="arr-db1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <rect class="dg-node" x="120" y="5" width="180" height="30" rx="4" />
+                            <text class="dg-text" x="210" y="20">External level (views)</text>
+                            <text class="dg-label" x="330" y="20">User A sees StudentView</text>
+                            <line class="dg-stroke-ink" x1="210" y1="35" x2="210" y2="65" marker-end="url(#arr-db1)" />
+                            <text class="dg-label" x="230" y="55">logical data independence</text>
+                            <rect class="dg-node-solid" x="120" y="70" width="180" height="30" rx="4" />
+                            <text class="dg-text-on-ink" x="210" y="85">Conceptual level (schema)</text>
+                            <text class="dg-label" x="330" y="85">Tables, constraints, FKs</text>
+                            <line class="dg-stroke-ink" x1="210" y1="100" x2="210" y2="130" marker-end="url(#arr-db1)" />
+                            <text class="dg-label" x="230" y="120">physical data independence</text>
+                            <rect class="dg-node" x="120" y="135" width="180" height="30" rx="4" />
+                            <text class="dg-text" x="210" y="150">Internal level (storage)</text>
+                            <text class="dg-label" x="330" y="150">Files, indexes, blocks</text>
+                            <line class="dg-stroke-ink" x1="210" y1="165" x2="210" y2="195" marker-end="url(#arr-db1)" />
+                            <text class="dg-label" x="210" y="195">Physical disk</text>
+                        </svg>
+                        <figcaption>Changing an index (internal) does not affect the schema; adding a view (external) does not change the tables. That is data independence.</figcaption>
+                    </figure>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Instance</span><span class="calc__math">The data stored at a particular moment — a snapshot of the database.</span></div>
+                        <div class="calc__row"><span class="calc__label">Schema</span><span class="calc__math">The structure — table names, columns, types, constraints. Changes rarely.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Data models</span><span class="calc__math">Relational (tables), hierarchical (tree), network (graph), object-oriented, document. Exam: relational is the focus.</span></div>
+                    </div>
+                </div>
+
+                <!-- 2 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-er">
+                    <h3>2. ER modelling <span class="flag"></span></h3>
+
+                    <p>
+                        An Entity-Relationship diagram is the first design step — it
+                        captures entities (things), attributes (properties) and
+                        relationships (connections) before any table is created. The exam
+                        asks you to draw ER diagrams or convert them to tables.
+                    </p>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 540 170" width="540" role="img"
+                            aria-label="ER diagram: Student enrolls in Course, with attributes">
+                            <defs><marker id="arr-er" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <!-- Student entity -->
+                            <rect class="dg-node-solid" x="10" y="60" width="110" height="35" rx="4" />
+                            <text class="dg-text-on-ink" x="65" y="78">Student</text>
+                            <!-- Student attributes -->
+                            <ellipse class="dg-node" cx="35" cy="20" rx="30" ry="14" />
+                            <text class="dg-text" x="35" y="23" font-size="10" text-decoration="underline">SID</text>
+                            <line class="dg-stroke-mid" x1="45" y1="34" x2="55" y2="60" />
+                            <ellipse class="dg-node" cx="115" cy="20" rx="30" ry="14" />
+                            <text class="dg-text" x="115" y="23" font-size="10">Name</text>
+                            <line class="dg-stroke-mid" x1="105" y1="34" x2="85" y2="60" />
+                            <!-- Relationship diamond -->
+                            <polygon class="dg-node" points="250,77 300,55 350,77 300,99" />
+                            <text class="dg-text" x="300" y="80" font-size="11">Enrols</text>
+                            <line class="dg-stroke-ink" x1="120" y1="77" x2="250" y2="77" />
+                            <text class="dg-label" x="170" y="72">M</text>
+                            <!-- Course entity -->
+                            <rect class="dg-node-solid" x="400" y="60" width="110" height="35" rx="4" />
+                            <text class="dg-text-on-ink" x="455" y="78">Course</text>
+                            <line class="dg-stroke-ink" x1="350" y1="77" x2="400" y2="77" />
+                            <text class="dg-label" x="370" y="72">N</text>
+                            <!-- Course attributes -->
+                            <ellipse class="dg-node" cx="430" cy="20" rx="30" ry="14" />
+                            <text class="dg-text" x="430" y="23" font-size="10" text-decoration="underline">CID</text>
+                            <line class="dg-stroke-mid" x1="435" y1="34" x2="445" y2="60" />
+                            <ellipse class="dg-node" cx="500" cy="20" rx="32" ry="14" />
+                            <text class="dg-text" x="500" y="23" font-size="10">Title</text>
+                            <line class="dg-stroke-mid" x1="490" y1="34" x2="475" y2="60" />
+                            <!-- Relationship attribute -->
+                            <ellipse class="dg-node" cx="300" cy="130" rx="30" ry="14" />
+                            <text class="dg-text" x="300" y="133" font-size="10">Grade</text>
+                            <line class="dg-stroke-mid" x1="300" y1="116" x2="300" y2="99" />
+                        </svg>
+                        <figcaption>M:N relationship — one student enrols in many courses, one course has many students. Grade belongs to the <em>relationship</em>, not to either entity.</figcaption>
+                    </figure>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Attribute types</span><span class="calc__math">Simple (atomic), composite (sub-parts), derived (calculated), multivalued (multiple values), key (underlined).</span></div>
+                        <div class="calc__row"><span class="calc__label">Cardinality</span><span class="calc__math">1:1, 1:N, M:N. Determines how the relationship maps to tables.</span></div>
+                        <div class="calc__row"><span class="calc__label">Participation</span><span class="calc__math">Total (double line — every entity must participate) vs partial (single line — optional).</span></div>
+                        <div class="calc__row"><span class="calc__label">Weak entity</span><span class="calc__math">Has no key of its own; depends on a strong entity (identifying relationship, double diamond). Example: Dependent of Employee.</span></div>
+                    </div>
+
+                    <h4>ER-to-relational mapping</h4>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">1:1</span><span class="calc__math">Add the primary key of one side as a foreign key in the other (prefer the side with total participation).</span></div>
+                        <div class="calc__row"><span class="calc__label">1:N</span><span class="calc__math">Add the primary key of the "1" side as a foreign key in the "N" side.</span></div>
+                        <div class="calc__row"><span class="calc__label">M:N</span><span class="calc__math">Create a new table with the primary keys of both entities as a composite key. Relationship attributes go here.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Weak entity</span><span class="calc__math">Create a table whose primary key = owner's PK + partial key. Add FK to the owner.</span></div>
+                    </div>
+                </div>
+
+                <!-- 3 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-relational">
+                    <h3>3. Relational model and keys <span class="flag"></span></h3>
+
+                    <p>
+                        The relational model represents data as tables (<em>relations</em>).
+                        Each row is a <em>tuple</em>, each column is an <em>attribute</em>.
+                        The key system is how we identify rows and link tables.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Running example — three tables</span>
+<pre><code>Student (SID, Name, Dept)
+  (101, 'Rahim',  'CSE')
+  (102, 'Karim',  'EEE')
+  (103, 'Fatima', 'CSE')
+
+Course (CID, Title, Credits)
+  ('CS101', 'DBMS',    3)
+  ('CS201', 'Algo',    3)
+  ('EE101', 'Circuits',3)
+
+Enrolment (SID, CID, Grade)
+  (101, 'CS101', 'A')
+  (101, 'CS201', 'B+')
+  (102, 'CS101', 'A-')
+  (103, 'EE101', 'B')</code></pre>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Key type</th><th scope="col">Definition</th><th scope="col">Example</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Super key</th><td>Any set of attributes that uniquely identifies a tuple</td><td>{SID}, {SID, Name}, {SID, Dept}</td></tr>
+                                <tr><th scope="row">Candidate key</th><td>Minimal super key (remove any attribute and it stops being unique)</td><td>{SID}</td></tr>
+                                <tr><th scope="row">Primary key</th><td>The chosen candidate key</td><td>SID (underlined)</td></tr>
+                                <tr><th scope="row">Alternate key</th><td>Candidate keys not chosen as primary</td><td>If Name were unique, it would be alternate</td></tr>
+                                <tr><th scope="row">Foreign key</th><td>Attribute referencing another table's primary key</td><td>Enrolment.SID → Student.SID</td></tr>
+                                <tr><th scope="row">Composite key</th><td>Key made of two or more attributes</td><td>Enrolment: (SID, CID)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Entity integrity</span><span class="calc__math">Primary key cannot be NULL — every row must be identifiable.</span></div>
+                        <div class="calc__row"><span class="calc__label">Referential integrity</span><span class="calc__math">A foreign key value must either be NULL or match an existing primary key in the referenced table.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Domain constraint</span><span class="calc__math">Each attribute value must belong to its declared domain (e.g. Grade must be a valid letter grade).</span></div>
+                    </div>
+                </div>
+
+                <!-- 4 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-algebra">
+                    <h3>4. Relational algebra</h3>
+
+                    <p>
+                        Relational algebra is a procedural query language — you specify
+                        <em>how</em> to get the data step by step. Every SQL query is
+                        internally converted to a relational algebra expression by the
+                        query optimiser.
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">σ (Select)</span><span class="calc__math">Filter rows: σ<sub>Dept='CSE'</sub>(Student) → {Rahim, Fatima}</span></div>
+                        <div class="calc__row"><span class="calc__label">π (Project)</span><span class="calc__math">Pick columns: π<sub>Name</sub>(Student) → {Rahim, Karim, Fatima}</span></div>
+                        <div class="calc__row"><span class="calc__label">∪ (Union)</span><span class="calc__math">All rows from both (same schema). Duplicates removed.</span></div>
+                        <div class="calc__row"><span class="calc__label">− (Difference)</span><span class="calc__math">Rows in A but not in B.</span></div>
+                        <div class="calc__row"><span class="calc__label">× (Cartesian)</span><span class="calc__math">Every row of A paired with every row of B. |A| × |B| rows.</span></div>
+                        <div class="calc__row"><span class="calc__label">ρ (Rename)</span><span class="calc__math">Give a relation or attribute a new name.</span></div>
+                    </div>
+
+                    <h4>Joins</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">Natural join — match on common attribute names</span>
+<pre><code>Student ⋈ Enrolment  (join on SID)
+→ (101, 'Rahim', 'CSE', 'CS101', 'A')
+  (101, 'Rahim', 'CSE', 'CS201', 'B+')
+  (102, 'Karim', 'EEE', 'CS101', 'A-')
+  (103, 'Fatima','CSE', 'EE101', 'B')</code></pre>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Join types</caption>
+                            <thead>
+                                <tr><th scope="col">Join</th><th scope="col">Keeps</th><th scope="col">Unmatched rows?</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Inner / Natural</th><td>Only matching rows</td><td>Discarded</td></tr>
+                                <tr><th scope="row">Left outer</th><td>All left + matching right</td><td>Left kept, right filled with NULL</td></tr>
+                                <tr><th scope="row">Right outer</th><td>Matching left + all right</td><td>Right kept, left filled with NULL</td></tr>
+                                <tr><th scope="row">Full outer</th><td>All from both</td><td>Both sides filled with NULL</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 5 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-sql">
+                    <h3>5. SQL <span class="flag"></span></h3>
+
+                    <p>
+                        SQL is the <em>declarative</em> counterpart to relational algebra —
+                        you say <em>what</em> you want, the DBMS decides how to get it.
+                        The exam tests both reading and writing queries, using
+                        <code>JOIN</code>, <code>GROUP BY</code>, <code>HAVING</code>,
+                        subqueries and set operations.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>SQL sub-language categories</caption>
+                            <thead>
+                                <tr><th scope="col">Category</th><th scope="col">Commands</th><th scope="col">Purpose</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">DDL</th><td><code>CREATE, ALTER, DROP, TRUNCATE</code></td><td>Define/modify structure</td></tr>
+                                <tr><th scope="row">DML</th><td><code>SELECT, INSERT, UPDATE, DELETE</code></td><td>Manipulate data</td></tr>
+                                <tr><th scope="row">DCL</th><td><code>GRANT, REVOKE</code></td><td>Control access</td></tr>
+                                <tr><th scope="row">TCL</th><td><code>COMMIT, ROLLBACK, SAVEPOINT</code></td><td>Transaction control</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Query 1 — students in CSE who scored an A in any course</span>
+<pre><code>SELECT s.Name, e.CID, e.Grade
+FROM   Student s
+JOIN   Enrolment e ON s.SID = e.SID
+WHERE  s.Dept = 'CSE' AND e.Grade = 'A';</code></pre>
+                    </div>
+                    <div class="output"><code>Rahim | CS101 | A</code></div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Query 2 — count of enrolments per student, only those with 2+</span>
+<pre><code>SELECT   s.Name, COUNT(*) AS cnt
+FROM     Student s
+JOIN     Enrolment e ON s.SID = e.SID
+GROUP BY s.Name
+HAVING   COUNT(*) >= 2;</code></pre>
+                    </div>
+                    <div class="output"><code>Rahim | 2</code></div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">WHERE vs HAVING</span><span class="calc__math"><code>WHERE</code> filters rows <em>before</em> grouping. <code>HAVING</code> filters groups <em>after</em> aggregation.</span></div>
+                        <div class="calc__row"><span class="calc__label">Execution order</span><span class="calc__math">FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT</span></div>
+                        <div class="calc__row"><span class="calc__label">Subquery</span><span class="calc__math"><code>WHERE SID IN (SELECT SID FROM Enrolment WHERE Grade = 'A')</code> — nested query returns a set.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Correlated</span><span class="calc__math">Inner query references outer query: <code>WHERE EXISTS (SELECT 1 FROM ... WHERE e.SID = s.SID)</code>. Re-evaluated for each outer row.</span></div>
+                    </div>
+                </div>
+
+                <!-- 6 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-normalization">
+                    <h3>6. Normalization <span class="flag"></span></h3>
+
+                    <p>
+                        Normalization removes redundancy by decomposing a table until each
+                        fact is stored exactly once. The process is driven by
+                        <strong>functional dependencies</strong> — if knowing X lets you
+                        determine Y, then X → Y is an FD.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">An unnormalised student-course table</span>
+<pre><code>StudentCourse (SID, SName, CID, CTitle, Credits, Grade)
+  (101, 'Rahim', 'CS101', 'DBMS',  3, 'A')
+  (101, 'Rahim', 'CS201', 'Algo',  3, 'B+')
+  (102, 'Karim', 'CS101', 'DBMS',  3, 'A-')
+
+FDs:
+  SID → SName             (student name depends on SID only)
+  CID → CTitle, Credits   (course info depends on CID only)
+  SID, CID → Grade        (grade depends on both)</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Candidate key</span><span class="calc__math">{SID, CID} — the only minimal set that determines all attributes (use attribute closure to verify).</span></div>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>Normal forms — what each fixes</caption>
+                            <thead>
+                                <tr><th scope="col">NF</th><th scope="col">Rule</th><th scope="col">Anomaly removed</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">1NF</th><td>All attributes are atomic (no repeating groups, no multivalued)</td><td>Structural irregularity</td></tr>
+                                <tr><th scope="row">2NF</th><td>1NF + no <strong>partial dependency</strong> (no non-key attribute depends on part of the composite key)</td><td>Redundancy from partial keys</td></tr>
+                                <tr><th scope="row">3NF</th><td>2NF + no <strong>transitive dependency</strong> (no non-key attribute depends on another non-key)</td><td>Redundancy from indirect deps</td></tr>
+                                <tr><th scope="row">BCNF</th><td>Every determinant is a candidate key (stricter than 3NF)</td><td>Remaining key-based anomalies</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4>Decomposition of the example</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">Step-by-step normalization to 3NF</span>
+<pre><code>Original: StudentCourse (SID, SName, CID, CTitle, Credits, Grade)
+Key: {SID, CID}
+
+-- Partial dependencies violate 2NF:
+--   SID → SName            (SID is part of key)
+--   CID → CTitle, Credits  (CID is part of key)
+
+Decompose → 2NF:
+  Student    (SID, SName)
+  Course     (CID, CTitle, Credits)
+  Enrolment  (SID, CID, Grade)
+
+-- No transitive dependencies remain → already in 3NF ✓
+-- Every determinant is a candidate key → also in BCNF ✓</code></pre>
+                    </div>
+
+                    <div class="insight">
+                        <div><strong>Why normalize?</strong> In the original table, if we update Rahim's name, we must find and update every row with SID=101 — miss one and the data is inconsistent. After decomposition, Rahim's name lives in exactly one row in the Student table. One update, no risk.</div>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Armstrong's axioms</span><span class="calc__math">Reflexivity: X ⊇ Y → X→Y. Augmentation: X→Y → XZ→YZ. Transitivity: X→Y ∧ Y→Z → X→Z.</span></div>
+                        <div class="calc__row"><span class="calc__label">Attribute closure</span><span class="calc__math">Start with a set X. Apply FDs to add everything X determines. If the closure X⁺ = all attributes, X is a super key.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Lossless join</span><span class="calc__math">A decomposition is lossless if joining the pieces back gives exactly the original — no spurious tuples.</span></div>
+                    </div>
+                </div>
+
+                <!-- 7 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-transactions">
+                    <h3>7. Transactions and ACID <span class="flag"></span></h3>
+
+                    <p>
+                        A transaction is a logical unit of work — a sequence of operations
+                        that either all succeed or all fail. The classic example is a bank
+                        transfer: debit one account and credit another. If the system
+                        crashes between the two, the DBMS must undo the partial work.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Transfer ৳5000 from account A to B</span>
+<pre><code>BEGIN TRANSACTION;
+  UPDATE Account SET balance = balance - 5000 WHERE id = 'A';
+  UPDATE Account SET balance = balance + 5000 WHERE id = 'B';
+COMMIT;</code></pre>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>ACID properties</caption>
+                            <thead>
+                                <tr><th scope="col">Property</th><th scope="col">Meaning</th><th scope="col">Enforced by</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Atomicity</th><td>All or nothing — partial results are undone</td><td>Logging + rollback</td></tr>
+                                <tr><th scope="row">Consistency</th><td>Database moves from one valid state to another</td><td>Constraints + application logic</td></tr>
+                                <tr><th scope="row">Isolation</th><td>Concurrent transactions don't interfere</td><td>Locking / MVCC</td></tr>
+                                <tr><th scope="row">Durability</th><td>Once committed, data survives crashes</td><td>Write-ahead log + checkpoints</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 520 70" width="520" role="img"
+                            aria-label="Transaction states: active, partially committed, committed, failed, aborted">
+                            <defs><marker id="arr-tx" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <rect class="dg-node" x="0" y="15" width="70" height="25" rx="4" />
+                            <text class="dg-text" x="35" y="28" font-size="10">Active</text>
+                            <line class="dg-stroke-ink" x1="70" y1="27" x2="100" y2="27" marker-end="url(#arr-tx)" />
+                            <rect class="dg-node" x="105" y="15" width="100" height="25" rx="4" />
+                            <text class="dg-text" x="155" y="28" font-size="9">Partly committed</text>
+                            <line class="dg-stroke-ink" x1="205" y1="27" x2="235" y2="27" marker-end="url(#arr-tx)" />
+                            <rect class="dg-node-solid" x="240" y="15" width="85" height="25" rx="4" />
+                            <text class="dg-text-on-ink" x="282" y="28" font-size="10">Committed</text>
+                            <!-- Failure path -->
+                            <line class="dg-stroke-dash" x1="155" y1="40" x2="155" y2="58" marker-end="url(#arr-tx)" />
+                            <rect class="dg-node" x="120" y="45" width="70" height="25" rx="4" />
+                            <text class="dg-text" x="155" y="58" font-size="10">Failed</text>
+                            <line class="dg-stroke-ink" x1="190" y1="57" x2="235" y2="57" marker-end="url(#arr-tx)" />
+                            <rect class="dg-node" x="240" y="45" width="85" height="25" rx="4" />
+                            <text class="dg-text" x="282" y="58" font-size="10">Aborted</text>
+                        </svg>
+                        <figcaption>A transaction reaches "committed" only after the log is flushed to disk. If it fails, it moves to "aborted" and all changes are rolled back.</figcaption>
+                    </figure>
+
+                    <h4>Serializability</h4>
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Schedule</span><span class="calc__math">An ordering of operations from multiple concurrent transactions.</span></div>
+                        <div class="calc__row"><span class="calc__label">Serial schedule</span><span class="calc__math">Transactions execute one after another — always correct, but slow.</span></div>
+                        <div class="calc__row"><span class="calc__label">Conflict serializable</span><span class="calc__math">A schedule is CS if it can be transformed into a serial schedule by swapping non-conflicting operations. Test via a precedence graph — if acyclic, CS.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Conflict</span><span class="calc__math">Two operations conflict if they are from different transactions, on the same data item, and at least one is a write.</span></div>
+                    </div>
+                </div>
+
+                <!-- 8 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-concurrency">
+                    <h3>8. Concurrency control</h3>
+
+                    <p>
+                        When multiple transactions run concurrently, the DBMS must prevent
+                        anomalies — lost updates, dirty reads, unrepeatable reads and
+                        phantom reads. The main mechanism is <strong>locking</strong>.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Lock types</caption>
+                            <thead>
+                                <tr><th scope="col">Lock</th><th scope="col">Also called</th><th scope="col">Allows concurrent</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Shared (S)</th><td>Read lock</td><td>Other S locks — yes. X lock — no.</td></tr>
+                                <tr><th scope="row">Exclusive (X)</th><td>Write lock</td><td>Nothing — only the holder can access the item.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Two-phase locking (2PL) — the standard protocol</span>
+<pre><code>Phase 1: Growing   — acquire locks, never release any.
+Phase 2: Shrinking — release locks, never acquire new ones.
+
+T1: lock-S(A), lock-X(B), read(A), write(B), unlock(A), unlock(B)
+     ←——— growing ———→  ←——— shrinking ———→
+
+2PL guarantees conflict-serializability.</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Strict 2PL</span><span class="calc__math">Hold all X locks until commit/abort. Prevents cascading rollbacks.</span></div>
+                        <div class="calc__row"><span class="calc__label">Rigorous 2PL</span><span class="calc__math">Hold <em>all</em> locks (S and X) until commit/abort. Simplest, strictest.</span></div>
+                    </div>
+
+                    <h4>Deadlock</h4>
+                    <figure class="figure">
+                        <svg viewBox="0 0 260 100" width="260" role="img"
+                            aria-label="Wait-for graph: T1 waits for T2, T2 waits for T1 — cycle means deadlock">
+                            <defs><marker id="arr-dl" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <rect class="dg-node-solid" x="10" y="30" width="60" height="30" rx="15" />
+                            <text class="dg-text-on-ink" x="40" y="45">T1</text>
+                            <rect class="dg-node-solid" x="170" y="30" width="60" height="30" rx="15" />
+                            <text class="dg-text-on-ink" x="200" y="45">T2</text>
+                            <path d="M70,38 Q120,10 170,38" class="dg-stroke-ink" fill="none" marker-end="url(#arr-dl)" />
+                            <text class="dg-label" x="120" y="18">waits for</text>
+                            <path d="M170,52 Q120,80 70,52" class="dg-stroke-ink" fill="none" marker-end="url(#arr-dl)" />
+                            <text class="dg-label" x="120" y="82">waits for</text>
+                        </svg>
+                        <figcaption>The cycle in the wait-for graph means deadlock. Resolution: abort one transaction (the victim).</figcaption>
+                    </figure>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Wait-die</span><span class="calc__math">Older waits, younger aborts (dies). No younger-waits-for-older → no deadlock.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Wound-wait</span><span class="calc__math">Older wounds (aborts) younger. Younger waits for older. Opposite policy.</span></div>
+                    </div>
+                </div>
+
+                <!-- 9 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-recovery">
+                    <h3>9. Recovery</h3>
+
+                    <p>
+                        When a crash occurs, the DBMS must restore the database to a
+                        consistent state. The mechanism is <strong>write-ahead logging
+                        (WAL)</strong>: before any change reaches the database, the log
+                        record is written to disk.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Log records for the transfer example</span>
+<pre><code>[LSN 1] &lt;T1, START&gt;
+[LSN 2] &lt;T1, A, old=10000, new=5000&gt;
+[LSN 3] &lt;T1, B, old=20000, new=25000&gt;
+[LSN 4] &lt;T1, COMMIT&gt;
+
+If crash before LSN 4 → UNDO T1: restore A=10000, B=20000.
+If crash after  LSN 4 → REDO T1: ensure A=5000, B=25000 on disk.</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">UNDO</span><span class="calc__math">Reverse uncommitted changes using old values from the log. Needed for atomicity.</span></div>
+                        <div class="calc__row"><span class="calc__label">REDO</span><span class="calc__math">Re-apply committed changes using new values from the log. Needed for durability.</span></div>
+                        <div class="calc__row"><span class="calc__label">Checkpoint</span><span class="calc__math">A point where all committed data is flushed to disk. Recovery only needs to process log records after the last checkpoint.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Shadow paging</span><span class="calc__math">Alternative to logging: maintain two page tables (current and shadow). On commit, swap pointers. No UNDO/REDO needed but poor for large DBs.</span></div>
+                    </div>
+                </div>
+
+                <!-- 10 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-indexing">
+                    <h3>10. Storage and indexing <span class="flag"></span></h3>
+
+                    <p>
+                        Without an index, finding a row requires scanning every page on
+                        disk — a <em>full table scan</em>. An index is a separate
+                        structure that maps search-key values to the disk location of the
+                        matching rows, just like a textbook index maps topics to page
+                        numbers.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>Index classification</caption>
+                            <thead>
+                                <tr><th scope="col">Dimension</th><th scope="col">Types</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Ordering</th><td><strong>Primary</strong> (on ordering key of a sorted file), <strong>Clustering</strong> (on non-key ordering field), <strong>Secondary</strong> (on any field, file may be unsorted)</td></tr>
+                                <tr><th scope="row">Density</th><td><strong>Dense</strong> (one entry per record), <strong>Sparse</strong> (one entry per block)</td></tr>
+                                <tr><th scope="row">Structure</th><td><strong>B-tree</strong>, <strong>B+ tree</strong>, hash index</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4>B+ tree</h4>
+                    <figure class="figure">
+                        <svg viewBox="0 0 500 140" width="500" role="img"
+                            aria-label="B+ tree of order 3: root [30], internal [10,20] and [40,50], leaf nodes linked">
+                            <defs><marker id="arr-bp" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" class="dg-stroke-ink" fill="none" /></marker></defs>
+                            <!-- Root -->
+                            <rect class="dg-node-solid" x="200" y="5" width="60" height="25" rx="3" />
+                            <text class="dg-text-on-ink" x="230" y="18" font-size="11">30</text>
+                            <!-- Left internal -->
+                            <rect class="dg-node" x="80" y="50" width="80" height="25" rx="3" />
+                            <text class="dg-text" x="120" y="63" font-size="11">10 | 20</text>
+                            <line class="dg-stroke-ink" x1="215" y1="30" x2="140" y2="50" marker-end="url(#arr-bp)" />
+                            <!-- Right internal -->
+                            <rect class="dg-node" x="300" y="50" width="80" height="25" rx="3" />
+                            <text class="dg-text" x="340" y="63" font-size="11">40 | 50</text>
+                            <line class="dg-stroke-ink" x1="245" y1="30" x2="320" y2="50" marker-end="url(#arr-bp)" />
+                            <!-- Leaf nodes -->
+                            <rect class="dg-node" x="10" y="100" width="55" height="25" rx="3" />
+                            <text class="dg-text" x="37" y="113" font-size="10">5,8</text>
+                            <rect class="dg-node" x="75" y="100" width="55" height="25" rx="3" />
+                            <text class="dg-text" x="102" y="113" font-size="10">10,15</text>
+                            <rect class="dg-node" x="140" y="100" width="55" height="25" rx="3" />
+                            <text class="dg-text" x="167" y="113" font-size="10">20,25</text>
+                            <rect class="dg-node" x="245" y="100" width="55" height="25" rx="3" />
+                            <text class="dg-text" x="272" y="113" font-size="10">30,35</text>
+                            <rect class="dg-node" x="310" y="100" width="55" height="25" rx="3" />
+                            <text class="dg-text" x="337" y="113" font-size="10">40,45</text>
+                            <rect class="dg-node" x="375" y="100" width="55" height="25" rx="3" />
+                            <text class="dg-text" x="402" y="113" font-size="10">50,55</text>
+                            <!-- Leaf links -->
+                            <line class="dg-stroke-dash" x1="65" y1="112" x2="75" y2="112" />
+                            <line class="dg-stroke-dash" x1="130" y1="112" x2="140" y2="112" />
+                            <line class="dg-stroke-dash" x1="195" y1="112" x2="245" y2="112" />
+                            <line class="dg-stroke-dash" x1="300" y1="112" x2="310" y2="112" />
+                            <line class="dg-stroke-dash" x1="365" y1="112" x2="375" y2="112" />
+                            <!-- Internal to leaf lines -->
+                            <line class="dg-stroke-mid" x1="95" y1="75" x2="37" y2="100" />
+                            <line class="dg-stroke-mid" x1="115" y1="75" x2="102" y2="100" />
+                            <line class="dg-stroke-mid" x1="145" y1="75" x2="167" y2="100" />
+                            <line class="dg-stroke-mid" x1="315" y1="75" x2="272" y2="100" />
+                            <line class="dg-stroke-mid" x1="340" y1="75" x2="337" y2="100" />
+                            <line class="dg-stroke-mid" x1="365" y1="75" x2="402" y2="100" />
+                        </svg>
+                        <figcaption>In a B+ tree, all data pointers are at the leaves, and leaves are linked for efficient range scans. Internal nodes contain only separator keys.</figcaption>
+                    </figure>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">B-tree</span><span class="calc__math">Data pointers at every node (internal + leaf). Fewer levels but complex deletion.</span></div>
+                        <div class="calc__row"><span class="calc__label">B+ tree</span><span class="calc__math">Data pointers only at leaves. Leaves linked → efficient range queries. This is what all real DBMS use.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Lookup cost</span><span class="calc__math">O(log<sub>n</sub> N) where n is the order and N is the number of keys. Typically 3–4 disk reads even for millions of rows.</span></div>
+                    </div>
+                </div>
+
+                <!-- 11 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-raid">
+                    <h3>11. RAID <span class="flag"></span></h3>
+
+                    <p>
+                        RAID (Redundant Array of Independent Disks) combines multiple
+                        physical disks to achieve higher performance, higher reliability,
+                        or both. The exam asks for level descriptions, usable capacity and
+                        fault tolerance.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>RAID levels — n = number of disks</caption>
+                            <thead>
+                                <tr><th scope="col">Level</th><th scope="col">Technique</th><th scope="col">Min disks</th><th scope="col">Usable capacity</th><th scope="col">Fault tolerance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">0</th><td>Striping only</td><td>2</td><td>n × disk</td><td>0 disks</td></tr>
+                                <tr><th scope="row">1</th><td>Mirroring</td><td>2</td><td>n/2 × disk</td><td>1 disk per pair</td></tr>
+                                <tr><th scope="row">5</th><td>Striping + distributed parity</td><td>3</td><td>(n−1) × disk</td><td>1 disk</td></tr>
+                                <tr><th scope="row">6</th><td>Striping + double parity</td><td>4</td><td>(n−2) × disk</td><td>2 disks</td></tr>
+                                <tr><th scope="row">10</th><td>Mirrored stripes (1+0)</td><td>4</td><td>n/2 × disk</td><td>1 per mirror pair</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Example</span><span class="calc__math">6 disks × 1 TB each, RAID 5: usable = (6−1) × 1 = <strong>5 TB</strong>. One disk can fail.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">RAID 10 same</span><span class="calc__math">6 disks × 1 TB, RAID 10: usable = 6/2 × 1 = <strong>3 TB</strong>. Better write performance than RAID 5.</span></div>
+                    </div>
+
+                    <figure class="figure">
+                        <svg viewBox="0 0 380 80" width="380" role="img"
+                            aria-label="RAID 5 with 4 disks: parity block rotates across disks">
+                            <text class="dg-label" x="15" y="12">RAID 5 — distributed parity</text>
+                            <rect class="dg-node" x="10" y="20" width="70" height="50" rx="3" />
+                            <text class="dg-text" x="45" y="37" font-size="10">A1</text>
+                            <text class="dg-text" x="45" y="57" font-size="10">B1</text>
+                            <rect class="dg-node" x="90" y="20" width="70" height="50" rx="3" />
+                            <text class="dg-text" x="125" y="37" font-size="10">A2</text>
+                            <text class="dg-text-on-ink" x="125" y="57" font-size="10">Bp</text>
+                            <rect class="dg-node-solid" x="103" y="47" width="44" height="16" rx="2" />
+                            <text class="dg-text-on-ink" x="125" y="57" font-size="10">Bp</text>
+                            <rect class="dg-node" x="170" y="20" width="70" height="50" rx="3" />
+                            <text class="dg-text-on-ink" x="205" y="37" font-size="10">Ap</text>
+                            <rect class="dg-node-solid" x="183" y="27" width="44" height="16" rx="2" />
+                            <text class="dg-text-on-ink" x="205" y="37" font-size="10">Ap</text>
+                            <text class="dg-text" x="205" y="57" font-size="10">B3</text>
+                            <rect class="dg-node" x="250" y="20" width="70" height="50" rx="3" />
+                            <text class="dg-text" x="285" y="37" font-size="10">A4</text>
+                            <text class="dg-text" x="285" y="57" font-size="10">B4</text>
+                            <text class="dg-label" x="45" y="80">Disk 0</text>
+                            <text class="dg-label" x="125" y="80">Disk 1</text>
+                            <text class="dg-label" x="205" y="80">Disk 2</text>
+                            <text class="dg-label" x="285" y="80">Disk 3</text>
+                        </svg>
+                        <figcaption>The parity block rotates: stripe A's parity is on Disk 2, stripe B's on Disk 1. This avoids a single parity-disk bottleneck (which RAID 4 has).</figcaption>
+                    </figure>
+                </div>
+
+                <!-- 12 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-triggers">
+                    <h3>12. Triggers, views and programmability</h3>
+
+                    <p>
+                        A <strong>trigger</strong> is a stored procedure that fires
+                        automatically when a specified event occurs on a table. The exam
+                        asks you to write simple triggers and to distinguish row-level from
+                        statement-level.
+                    </p>
+
+                    <div class="code-block">
+                        <span class="code-block__label">Trigger — log every grade update</span>
+<pre><code>CREATE TRIGGER trg_grade_audit
+AFTER UPDATE OF Grade ON Enrolment
+FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (SID, CID, OldGrade, NewGrade, ChangedAt)
+    VALUES (OLD.SID, OLD.CID, OLD.Grade, NEW.Grade, CURRENT_TIMESTAMP);
+END;</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Row-level</span><span class="calc__math"><code>FOR EACH ROW</code> — fires once per affected row. Has access to <code>OLD</code> and <code>NEW</code> row values.</span></div>
+                        <div class="calc__row"><span class="calc__label">Statement-level</span><span class="calc__math"><code>FOR EACH STATEMENT</code> — fires once per SQL statement, regardless of rows affected.</span></div>
+                        <div class="calc__row"><span class="calc__label">BEFORE vs AFTER</span><span class="calc__math">BEFORE triggers can modify the new row before it is written. AFTER triggers see the final state.</span></div>
+                    </div>
+
+                    <h4>Views</h4>
+                    <div class="code-block">
+                        <span class="code-block__label">A view — a named query treated as a virtual table</span>
+<pre><code>CREATE VIEW CSE_Students AS
+SELECT SID, Name FROM Student WHERE Dept = 'CSE';
+
+-- Now: SELECT * FROM CSE_Students;
+-- Returns: (101, 'Rahim'), (103, 'Fatima')</code></pre>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">Updatable?</span><span class="calc__math">A view is updatable if it maps to a single base table with no aggregates, no DISTINCT, no GROUP BY, and includes the primary key.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Materialized view</span><span class="calc__math">Stores the result physically (like a cache). Must be refreshed when base data changes. Useful for expensive analytical queries.</span></div>
+                    </div>
+                </div>
+
+                <!-- 13 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-nosql">
+                    <h3>13. NoSQL, OLAP and CAP theorem</h3>
+
+                    <p>
+                        Relational databases assume structured data with strong consistency.
+                        When data is unstructured, semi-structured, or distributed at
+                        massive scale, <strong>NoSQL</strong> databases trade some ACID
+                        guarantees for flexibility and performance.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <caption>NoSQL data models</caption>
+                            <thead>
+                                <tr><th scope="col">Model</th><th scope="col">Structure</th><th scope="col">Example</th><th scope="col">Best for</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Key-value</th><td>Simple key → value pairs</td><td>Redis, DynamoDB</td><td>Caching, sessions</td></tr>
+                                <tr><th scope="row">Document</th><td>JSON/BSON documents</td><td>MongoDB, CouchDB</td><td>Content management, catalogs</td></tr>
+                                <tr><th scope="row">Column-family</th><td>Rows with variable columns</td><td>Cassandra, HBase</td><td>Time series, analytics</td></tr>
+                                <tr><th scope="row">Graph</th><td>Nodes + edges</td><td>Neo4j, ArangoDB</td><td>Social networks, recommendations</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <caption>OLTP vs OLAP</caption>
+                            <thead>
+                                <tr><th scope="col">Feature</th><th scope="col">OLTP</th><th scope="col">OLAP</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Purpose</th><td>Day-to-day transactions</td><td>Analysis and reporting</td></tr>
+                                <tr><th scope="row">Operations</th><td>INSERT, UPDATE, DELETE</td><td>Complex SELECT, aggregations</td></tr>
+                                <tr><th scope="row">Design</th><td>Normalized (3NF/BCNF)</td><td>Denormalized (star/snowflake)</td></tr>
+                                <tr><th scope="row">Response time</th><td>Milliseconds</td><td>Seconds to minutes</td></tr>
+                                <tr><th scope="row">Data size</th><td>Current data (GBs)</td><td>Historical data (TBs)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row"><span class="calc__label">CAP theorem</span><span class="calc__math">A distributed system can guarantee at most two of: <strong>C</strong>onsistency, <strong>A</strong>vailability, <strong>P</strong>artition tolerance. Since network partitions are inevitable, the real choice is CP (consistent but may reject requests) vs AP (available but may serve stale data).</span></div>
+                        <div class="calc__row"><span class="calc__label">BASE</span><span class="calc__math"><strong>B</strong>asically <strong>A</strong>vailable, <strong>S</strong>oft state, <strong>E</strong>ventually consistent. The NoSQL alternative to ACID — data converges over time.</span></div>
+                        <div class="calc__row calc__row--result"><span class="calc__label">Star schema</span><span class="calc__math">Central fact table (sales, transactions) surrounded by dimension tables (product, time, location). The standard OLAP design.</span></div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================================================================
+             SOLVED PAST QUESTIONS
+             ================================================================ -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <p class="intro">
+                    Work each question on paper first, then open the solution and compare
+                    your <em>steps</em>.
+                </p>
+
+                <div class="expand-controls">
+                    <button type="button" class="btn btn--sm btn--ghost" data-expand-all="#solved">Expand all</button>
+                    <button type="button" class="btn btn--sm btn--ghost" data-collapse-all="#solved">Collapse all</button>
+                </div>
+
+                <!-- S1 -->
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">Explain the ACID properties with examples.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>Consider a bank transfer of ৳5,000 from account A (balance ৳10,000) to account B (balance ৳20,000):</p>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Atomicity</span><span class="calc__math">Both the debit (A → ৳5,000) and credit (B → ৳25,000) must execute, or neither does. If the system crashes after the debit but before the credit, the DBMS rolls back the debit.</span></div>
+                            <div class="calc__row"><span class="calc__label">Consistency</span><span class="calc__math">The sum A + B must remain ৳30,000 before and after. No constraint is violated — the database moves from one valid state to another.</span></div>
+                            <div class="calc__row"><span class="calc__label">Isolation</span><span class="calc__math">If another transaction reads A and B while the transfer is in progress, it must not see the intermediate state (A debited, B not yet credited). It sees either the before or after state.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Durability</span><span class="calc__math">Once the transfer commits, the new balances survive even if the server loses power immediately. The DBMS ensures this by flushing the log to disk before acknowledging the commit.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S2 -->
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">What are the differences between DDL and DML? Give examples.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">DDL</th><th scope="col">DML</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Full form</th><td>Data Definition Language</td><td>Data Manipulation Language</td></tr>
+                                    <tr><th scope="row">Purpose</th><td>Define/modify schema (structure)</td><td>Query/modify data (content)</td></tr>
+                                    <tr><th scope="row">Commands</th><td><code>CREATE, ALTER, DROP, TRUNCATE</code></td><td><code>SELECT, INSERT, UPDATE, DELETE</code></td></tr>
+                                    <tr><th scope="row">Auto-commit?</th><td>Yes (implicit commit)</td><td>No (needs explicit COMMIT)</td></tr>
+                                    <tr><th scope="row">Rollback?</th><td>Cannot be rolled back</td><td>Can be rolled back</td></tr>
+                                    <tr><th scope="row">WHERE clause?</th><td>Not used</td><td>Used for filtering</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code-block">
+                            <span class="code-block__label">DDL vs DML examples</span>
+<pre><code>-- DDL: creates the table structure
+CREATE TABLE Student (
+    SID   INT PRIMARY KEY,
+    Name  VARCHAR(50) NOT NULL,
+    Dept  VARCHAR(10)
+);
+
+-- DML: inserts data into the table
+INSERT INTO Student VALUES (101, 'Rahim', 'CSE');</code></pre>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S3 -->
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">Normalize the following relation to 3NF: <code>Order(OrderID, CustomerName, CustomerCity, ProductID, ProductName, Qty, Price)</code> with FDs: OrderID → CustomerName, CustomerCity; ProductID → ProductName, Price; OrderID, ProductID → Qty.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Candidate key</span><span class="calc__math">{OrderID, ProductID} — the only minimal set whose closure is all attributes.</span></div>
+                        </div>
+                        <div class="code-block">
+                            <span class="code-block__label">Step-by-step decomposition</span>
+<pre><code>1NF: Already in 1NF (all atomic values, no repeating groups).
+
+Check 2NF — partial dependencies:
+  OrderID → CustomerName, CustomerCity    (part of key)
+  ProductID → ProductName, Price          (part of key)
+  → Violates 2NF. Decompose:
+
+  Customer    (OrderID, CustomerName, CustomerCity)
+  Product     (ProductID, ProductName, Price)
+  OrderItem   (OrderID, ProductID, Qty)
+
+Check 3NF — transitive dependencies:
+  No non-key → non-key dependencies remain.
+  → Already in 3NF ✓</code></pre>
+                        </div>
+                        <p><strong>Result:</strong> Three relations, each in 3NF. The original anomalies are gone — updating a customer's city requires changing one row in Customer, not every order row.</p>
+                    </div>
+                </details>
+
+                <!-- S4 -->
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">Compare the different types of keys in RDBMS.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Key</th><th scope="col">Definition</th><th scope="col">Example</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Super key</th><td>Any set of attributes that uniquely identifies rows</td><td>{SID}, {SID, Name}</td></tr>
+                                    <tr><th scope="row">Candidate key</th><td>Minimal super key — remove any attribute and it stops being unique</td><td>{SID}, {Email} (if unique)</td></tr>
+                                    <tr><th scope="row">Primary key</th><td>The chosen candidate key — NOT NULL, immutable</td><td>SID</td></tr>
+                                    <tr><th scope="row">Alternate key</th><td>Candidate keys not chosen as primary</td><td>Email</td></tr>
+                                    <tr><th scope="row">Foreign key</th><td>Attribute referencing another table's primary key</td><td>Enrolment.SID → Student.SID</td></tr>
+                                    <tr><th scope="row">Composite key</th><td>Key consisting of two or more attributes</td><td>Enrolment: (SID, CID)</td></tr>
+                                    <tr><th scope="row">Surrogate key</th><td>System-generated artificial key (auto-increment)</td><td>id = 1, 2, 3…</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S5 -->
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">What is a trigger? Write a trigger that prevents inserting a student with GPA below 2.0.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>A trigger is a stored block of SQL that executes automatically in response to an INSERT, UPDATE or DELETE event on a table.</p>
+                        <div class="code-block">
+<pre><code>CREATE TRIGGER check_gpa
+BEFORE INSERT ON Student
+FOR EACH ROW
+BEGIN
+    IF NEW.GPA &lt; 2.0 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'GPA must be at least 2.0';
+    END IF;
+END;</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">BEFORE</span><span class="calc__math">Fires before the row is inserted — can reject or modify the incoming data.</span></div>
+                            <div class="calc__row"><span class="calc__label">NEW</span><span class="calc__math">Refers to the row being inserted. <code>OLD</code> is available for UPDATE and DELETE (the row before the change).</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">SIGNAL</span><span class="calc__math">Raises an error and aborts the INSERT. The row is not added to the table.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S6 -->
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">Explain RAID levels 0, 1, 5 and 10. If you have 8 disks of 500 GB each, calculate usable capacity for each level.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">RAID 0</span><span class="calc__math">Striping only. Usable = 8 × 500 GB = <strong>4000 GB (4 TB)</strong>. No fault tolerance.</span></div>
+                            <div class="calc__row"><span class="calc__label">RAID 1</span><span class="calc__math">Mirroring. Usable = 8/2 × 500 GB = <strong>2000 GB (2 TB)</strong>. Tolerates 1 disk failure per pair.</span></div>
+                            <div class="calc__row"><span class="calc__label">RAID 5</span><span class="calc__math">Striping + distributed parity. Usable = (8−1) × 500 GB = <strong>3500 GB (3.5 TB)</strong>. Tolerates 1 disk failure.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">RAID 10</span><span class="calc__math">Mirrored stripes. Usable = 8/2 × 500 GB = <strong>2000 GB (2 TB)</strong>. Tolerates 1 per mirror pair. Best write performance.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S7 -->
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">Write SQL queries: (a) find all students in CSE department, (b) find the average grade per course, (c) find courses with more than 5 enrolments.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>-- (a) Students in CSE
+SELECT * FROM Student WHERE Dept = 'CSE';
+
+-- (b) Average grade per course (assuming numeric grades)
+SELECT   CID, AVG(Grade) AS avg_grade
+FROM     Enrolment
+GROUP BY CID;
+
+-- (c) Courses with more than 5 enrolments
+SELECT   CID, COUNT(*) AS enrolment_count
+FROM     Enrolment
+GROUP BY CID
+HAVING   COUNT(*) > 5;</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">(a)</span><span class="calc__math">Simple SELECT + WHERE filter. No join needed — all data is in the Student table.</span></div>
+                            <div class="calc__row"><span class="calc__label">(b)</span><span class="calc__math">GROUP BY CID groups all enrolments per course. AVG computes the mean within each group.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">(c)</span><span class="calc__math">HAVING filters <em>after</em> grouping — WHERE cannot reference aggregate functions.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S8 -->
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">Differentiate between B-tree and B+ tree indexing.</span>
+                        <span class="chip chip--past">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">B-tree</th><th scope="col">B+ tree</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Data pointers</th><td>At internal and leaf nodes</td><td>Only at leaf nodes</td></tr>
+                                    <tr><th scope="row">Leaf linkage</th><td>No linked list</td><td>Leaves are linked (doubly)</td></tr>
+                                    <tr><th scope="row">Duplicate keys</th><td>No (key appears once)</td><td>Separator keys copied in internal nodes</td></tr>
+                                    <tr><th scope="row">Range queries</th><td>Requires tree traversal</td><td>Sequential scan of linked leaves — efficient</td></tr>
+                                    <tr><th scope="row">Fan-out</th><td>Lower (data pointers at internal nodes take space)</td><td>Higher (internal nodes hold only keys)</td></tr>
+                                    <tr><th scope="row">Usage</th><td>General-purpose</td><td>All modern RDBMS (MySQL, PostgreSQL, Oracle)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Key insight:</strong> B+ tree's higher fan-out means fewer tree levels — a B+ tree with order 200 and 10 million keys needs only 3 levels (200 → 40,000 → 8,000,000). This means at most 3 disk reads per lookup.</p>
+                    </div>
+                </details>
+
+                <!-- S9 -->
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">What is deadlock in a DBMS? How is it detected and prevented?</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>A deadlock occurs when two or more transactions are waiting for each other to release locks, forming a cycle — none can proceed.</p>
+                        <div class="code-block">
+                            <span class="code-block__label">Deadlock scenario</span>
+<pre><code>T1: lock-X(A), waiting for lock-X(B)
+T2: lock-X(B), waiting for lock-X(A)
+→ Neither can proceed. Deadlock.</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Detection</span><span class="calc__math">Build a wait-for graph periodically. If it contains a cycle → deadlock. Abort one transaction (the victim — typically the youngest or least-work-done).</span></div>
+                            <div class="calc__row"><span class="calc__label">Prevention (wait-die)</span><span class="calc__math">Older transaction waits; younger one is aborted (dies). No younger-waits-for-older edges → no cycles.</span></div>
+                            <div class="calc__row"><span class="calc__label">Prevention (wound-wait)</span><span class="calc__math">Older transaction "wounds" (forces abort of) younger one. Younger transaction waits for older. No cycles.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Timeout</span><span class="calc__math">Simple alternative: if a transaction waits longer than a threshold, abort it. May abort non-deadlocked transactions unnecessarily.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S10 -->
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">Compare file system and DBMS.</span>
+                        <span class="chip chip--past">past paper</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Aspect</th><th scope="col">File system</th><th scope="col">DBMS</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Data redundancy</th><td>High — each application has its own file</td><td>Minimal — single source of truth</td></tr>
+                                    <tr><th scope="row">Data integrity</th><td>No built-in constraints</td><td>Enforced via CHECK, FK, UNIQUE</td></tr>
+                                    <tr><th scope="row">Concurrent access</th><td>OS-level file locking only</td><td>Sophisticated locking + transactions</td></tr>
+                                    <tr><th scope="row">Security</th><td>File-level permissions (rwx)</td><td>Row/column-level GRANT/REVOKE</td></tr>
+                                    <tr><th scope="row">Crash recovery</th><td>Manual backup/restore</td><td>Automatic (WAL + checkpoints)</td></tr>
+                                    <tr><th scope="row">Query capability</th><td>Custom parsing per application</td><td>SQL — standard, declarative</td></tr>
+                                    <tr><th scope="row">Data independence</th><td>None — format changes break programs</td><td>Logical and physical independence</td></tr>
+                                    <tr><th scope="row">Overhead</th><td>Low — just file I/O</td><td>Higher — DBMS engine, buffer pool, logs</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- ================================================================
+             PRACTICE QUESTIONS
+             ================================================================ -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <p class="intro">
+                    Original questions written in exam style. Full worked solutions
+                    inside.
+                </p>
+
+                <div class="expand-controls">
+                    <button type="button" class="btn btn--sm btn--ghost" data-expand-all="#practice">Expand all</button>
+                    <button type="button" class="btn btn--sm btn--ghost" data-collapse-all="#practice">Collapse all</button>
+                </div>
+
+                <!-- P1 -->
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">Given the relation <code>R(A, B, C, D, E)</code> with FDs: A→B, BC→D, D→E, find all candidate keys.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Step 1</span><span class="calc__math">Attributes that never appear on the RHS of any FD: {A, C}. These must be in every candidate key.</span></div>
+                            <div class="calc__row"><span class="calc__label">Step 2</span><span class="calc__math">Compute {A, C}⁺: A→B gives {A, B, C}. BC→D gives {A, B, C, D}. D→E gives {A, B, C, D, E}. Closure = all attributes. ✓</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Result</span><span class="calc__math">{A, C} is a candidate key (and the only one, since both A and C must be included and their closure already covers everything).</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P2 -->
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">Write a SQL query to find the second highest salary from an Employee table.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+                            <span class="code-block__label">Method 1 — subquery</span>
+<pre><code>SELECT MAX(Salary) AS SecondHighest
+FROM   Employee
+WHERE  Salary &lt; (SELECT MAX(Salary) FROM Employee);</code></pre>
+                        </div>
+                        <div class="code-block">
+                            <span class="code-block__label">Method 2 — LIMIT/OFFSET</span>
+<pre><code>SELECT DISTINCT Salary
+FROM   Employee
+ORDER BY Salary DESC
+LIMIT 1 OFFSET 1;</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Method 1</span><span class="calc__math">Inner query finds the max salary. Outer query finds the max among the rest — which is the second highest.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Method 2</span><span class="calc__math">DISTINCT removes duplicates, ORDER BY DESC sorts highest first, OFFSET 1 skips the top salary, LIMIT 1 picks the next.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P3 -->
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">Explain the difference between HAVING and WHERE with an example.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">WHERE</th><th scope="col">HAVING</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Filters</th><td>Individual rows</td><td>Groups (after GROUP BY)</td></tr>
+                                    <tr><th scope="row">Aggregates?</th><td>Cannot use aggregate functions</td><td>Can use COUNT, SUM, AVG, etc.</td></tr>
+                                    <tr><th scope="row">Executes</th><td>Before grouping</td><td>After grouping</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code-block">
+<pre><code>-- Find departments with more than 3 CSE students
+SELECT   Dept, COUNT(*) AS cnt
+FROM     Student
+WHERE    Dept = 'CSE'    -- filters rows first
+GROUP BY Dept
+HAVING   COUNT(*) > 3;  -- then filters groups</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Execution</span><span class="calc__math">WHERE removes non-CSE rows → GROUP BY groups the remaining → HAVING checks if the count exceeds 3.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Common mistake</span><span class="calc__math"><code>WHERE COUNT(*) > 3</code> is a syntax error. Aggregates can only appear in HAVING or SELECT.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P4 -->
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">Compare the four types of SQL joins with example output.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+                            <span class="code-block__label">Setup — two tiny tables</span>
+<pre><code>Student: (1, 'Rahim'), (2, 'Karim'), (3, 'Fatima')
+Enrolment: (1, 'CS101'), (2, 'CS101'), (4, 'EE101')
+-- Note: Student 3 has no enrolment; Enrolment has SID=4 with no student</code></pre>
+                        </div>
+                        <div class="code-block">
+<pre><code>-- INNER JOIN: only matching rows
+SELECT * FROM Student s INNER JOIN Enrolment e ON s.SID = e.SID;
+→ (1, Rahim, CS101), (2, Karim, CS101)
+
+-- LEFT JOIN: all left + matching right (NULLs for no match)
+SELECT * FROM Student s LEFT JOIN Enrolment e ON s.SID = e.SID;
+→ (1, Rahim, CS101), (2, Karim, CS101), (3, Fatima, NULL)
+
+-- RIGHT JOIN: matching left + all right
+SELECT * FROM Student s RIGHT JOIN Enrolment e ON s.SID = e.SID;
+→ (1, Rahim, CS101), (2, Karim, CS101), (NULL, NULL, EE101)
+
+-- FULL OUTER JOIN: all from both sides
+→ all of the above: 4 rows</code></pre>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P5 -->
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">Explain the CAP theorem. Which guarantee does each of the following databases prioritize: MongoDB, Cassandra, MySQL?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">C (Consistency)</span><span class="calc__math">Every read returns the most recent write. All nodes see the same data at the same time.</span></div>
+                            <div class="calc__row"><span class="calc__label">A (Availability)</span><span class="calc__math">Every request gets a response (success or failure), even during failures.</span></div>
+                            <div class="calc__row"><span class="calc__label">P (Partition tolerance)</span><span class="calc__math">System continues to operate despite network partitions between nodes.</span></div>
+                        </div>
+                        <p>Since network partitions are unavoidable in distributed systems, the real trade-off is between C and A:</p>
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr><th scope="col">Database</th><th scope="col">CAP choice</th><th scope="col">Behaviour during partition</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">MySQL (single node)</th><td>CA</td><td>No partition to tolerate — single node gives both C and A</td></tr>
+                                    <tr><th scope="row">MongoDB</th><td>CP</td><td>Elects a new primary → consistent but temporarily unavailable during election</td></tr>
+                                    <tr><th scope="row">Cassandra</th><td>AP</td><td>All nodes accept writes → available but may serve stale data (eventual consistency)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P6 -->
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">What is the difference between a view and a materialized view?</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">View</th><th scope="col">Materialized view</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Storage</th><td>No — query is re-executed each time</td><td>Yes — result is stored on disk</td></tr>
+                                    <tr><th scope="row">Performance</th><td>Same as the underlying query</td><td>Fast reads (pre-computed)</td></tr>
+                                    <tr><th scope="row">Freshness</th><td>Always up-to-date</td><td>May be stale — must be refreshed</td></tr>
+                                    <tr><th scope="row">Storage cost</th><td>Zero</td><td>Same as query result size</td></tr>
+                                    <tr><th scope="row">Use case</th><td>Security (restrict columns), simplify queries</td><td>Dashboards, expensive aggregations</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code-block">
+<pre><code>-- View (virtual — no storage)
+CREATE VIEW ActiveStudents AS
+SELECT * FROM Student WHERE Status = 'active';
+
+-- Materialized view (physical — stored)
+CREATE MATERIALIZED VIEW MonthlySales AS
+SELECT Month, SUM(Amount) FROM Sales GROUP BY Month;</code></pre>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P7 -->
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">Given 10 disks of 2 TB each, calculate usable storage and fault tolerance for RAID 0, 1, 5, 6 and 10.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">RAID 0</span><span class="calc__math">10 × 2 = <strong>20 TB</strong>. 0 disk failures tolerated.</span></div>
+                            <div class="calc__row"><span class="calc__label">RAID 1</span><span class="calc__math">10/2 × 2 = <strong>10 TB</strong>. 1 failure per mirror pair.</span></div>
+                            <div class="calc__row"><span class="calc__label">RAID 5</span><span class="calc__math">(10−1) × 2 = <strong>18 TB</strong>. 1 disk failure.</span></div>
+                            <div class="calc__row"><span class="calc__label">RAID 6</span><span class="calc__math">(10−2) × 2 = <strong>16 TB</strong>. 2 disk failures.</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">RAID 10</span><span class="calc__math">10/2 × 2 = <strong>10 TB</strong>. 1 per mirror pair (up to 5 if one from each pair).</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P8 -->
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">Explain conflict serializability. Is the following schedule conflict-serializable?<br>T1: R(A), W(A), R(B), W(B)<br>T2: R(A), W(A), R(B), W(B)<br>Schedule: R1(A), R2(A), W1(A), W2(A), R1(B), R2(B), W1(B), W2(B)</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+                            <span class="code-block__label">Step 1 — find conflicting pairs</span>
+<pre><code>On item A:
+  R1(A) vs W2(A): T1 before T2 → T1 → T2
+  R2(A) vs W1(A): T2 before T1 → T2 → T1
+  W1(A) vs W2(A): T1 before T2 → T1 → T2
+
+On item B:
+  R1(B) vs W2(B): T1 → T2
+  R2(B) vs W1(B): T2 → T1
+  W1(B) vs W2(B): T1 → T2</code></pre>
+                        </div>
+                        <div class="code-block">
+                            <span class="code-block__label">Step 2 — precedence graph</span>
+<pre><code>T1 → T2  (from R1(A) before W2(A))
+T2 → T1  (from R2(A) before W1(A))
+→ Cycle: T1 → T2 → T1</code></pre>
+                        </div>
+                        <div class="calc">
+                            <div class="calc__row calc__row--result"><span class="calc__label">Result</span><span class="calc__math">The precedence graph has a <strong>cycle</strong>. Therefore, the schedule is <strong>NOT conflict-serializable</strong>.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P9 -->
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">Compare OLTP and OLAP systems.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">OLTP</th><th scope="col">OLAP</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Full form</th><td>Online Transaction Processing</td><td>Online Analytical Processing</td></tr>
+                                    <tr><th scope="row">Purpose</th><td>Day-to-day business transactions</td><td>Decision support, reporting</td></tr>
+                                    <tr><th scope="row">Operations</th><td>INSERT, UPDATE, DELETE</td><td>Complex SELECT with aggregations</td></tr>
+                                    <tr><th scope="row">Users</th><td>Clerks, customers (thousands)</td><td>Analysts, managers (few)</td></tr>
+                                    <tr><th scope="row">Design</th><td>Highly normalized (3NF)</td><td>Denormalized (star schema)</td></tr>
+                                    <tr><th scope="row">Data</th><td>Current, operational (GBs)</td><td>Historical, consolidated (TBs)</td></tr>
+                                    <tr><th scope="row">Response</th><td>Milliseconds</td><td>Seconds to minutes</td></tr>
+                                    <tr><th scope="row">Example</th><td>Banking transaction system</td><td>Data warehouse for quarterly reports</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P10 -->
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">Write SQL to create a Student table with constraints, insert two rows, and write a query using a subquery.</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="code-block">
+<pre><code>-- Create table with constraints
+CREATE TABLE Student (
+    SID     INT          PRIMARY KEY,
+    Name    VARCHAR(50)  NOT NULL,
+    Dept    VARCHAR(10)  DEFAULT 'CSE',
+    GPA     DECIMAL(3,2) CHECK (GPA BETWEEN 0.00 AND 4.00),
+    Email   VARCHAR(100) UNIQUE
+);
+
+-- Insert rows
+INSERT INTO Student VALUES (101, 'Rahim',  'CSE', 3.85, 'rahim@ku.ac.bd');
+INSERT INTO Student VALUES (102, 'Karim',  'EEE', 3.50, 'karim@ku.ac.bd');
+
+-- Subquery: find students whose GPA is above average
+SELECT Name, GPA
+FROM   Student
+WHERE  GPA > (SELECT AVG(GPA) FROM Student);</code></pre>
+                        </div>
+                        <div class="output"><code>Rahim | 3.85</code></div>
+                        <div class="calc">
+                            <div class="calc__row"><span class="calc__label">Constraints used</span><span class="calc__math">PRIMARY KEY (SID), NOT NULL (Name), DEFAULT (Dept), CHECK (GPA range), UNIQUE (Email).</span></div>
+                            <div class="calc__row calc__row--result"><span class="calc__label">Subquery</span><span class="calc__math">AVG(GPA) = (3.85 + 3.50) / 2 = 3.675. Rahim's 3.85 > 3.675. Karim's 3.50 < 3.675.</span></div>
+                        </div>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="algorithms.html">
+                        <span class="pager__dir">Previous</span>
+                        <span class="pager__name">Algorithms</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="oop-java.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">OOP (Java)</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>
+                Bangladesh Bank Assistant Director (ICT) written preparation. Subject 05
+                of 18 — Database.
+            </p>
+            <p class="small">
+                Coverage checklist: <code>SYLLABUS.md</code> §5.
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

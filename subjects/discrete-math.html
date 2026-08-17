@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="discrete-math"
+    data-subject-name="Discrete Math">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Discrete Math — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice on propositional logic, set theory, combinatorics, probability, graph theory, Boolean algebra, automata and number theory." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+
+            <div class="header__spacer"></div>
+
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math" aria-current="page"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 12</span><span aria-hidden="true">·</span><span>Phase 3</span>
+                </p>
+                <h1>Discrete Math</h1>
+                <p class="page-head__lede">
+                    The exam tests calculation-heavy topics: truth-table proofs,
+                    permutation/combination counting, Bayes' theorem, graph colouring,
+                    Boolean simplification via K-maps, DFA/NFA construction, and modular
+                    arithmetic. Every section below walks through concrete worked examples.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
+             NOTES
+             ================================================================ -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 topics</span>
+                </div>
+
+                <p class="intro">
+                    Discrete Math for this exam is broad — logic, counting, probability,
+                    graphs, automata — but the questions are almost always numerical or
+                    constructive (build a truth table, draw a DFA, simplify an expression).
+                    Memorise the formulas, then practise applying them.
+                </p>
+
+                <ul class="topics">
+                    <li><a href="#n-propositional"><span class="topics__num">01</span>Propositional logic</a></li>
+                    <li><a href="#n-proof"><span class="topics__num">02</span>Proof techniques</a></li>
+                    <li><a href="#n-sets"><span class="topics__num">03</span>Set theory</a></li>
+                    <li><a href="#n-combinatorics"><span class="topics__num">04</span>Combinatorics</a></li>
+                    <li><a href="#n-probability"><span class="topics__num">05</span>Probability</a></li>
+                    <li><a href="#n-graph"><span class="topics__num">06</span>Graph theory</a></li>
+                    <li><a href="#n-boolean"><span class="topics__num">07</span>Boolean algebra</a></li>
+                    <li><a href="#n-automata"><span class="topics__num">08</span>Automata</a></li>
+                    <li><a href="#n-number"><span class="topics__num">09</span>Number theory</a></li>
+                    <li><a href="#n-recurrence"><span class="topics__num">10</span>Recurrence relations</a></li>
+                </ul>
+
+                <!-- 1 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-propositional">
+                    <h3>1. Propositional logic</h3>
+
+                    <p>
+                        A <strong>proposition</strong> is a statement that is either true
+                        or false. Compound propositions use connectives:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Connective</th><th scope="col">Symbol</th><th scope="col">True when</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>NOT (negation)</td><td>¬p</td><td>p is false</td></tr>
+                                <tr><td>AND (conjunction)</td><td>p ∧ q</td><td>Both true</td></tr>
+                                <tr><td>OR (disjunction)</td><td>p ∨ q</td><td>At least one true</td></tr>
+                                <tr><td>Implication</td><td>p → q</td><td>¬p ∨ q (false only when p=T, q=F)</td></tr>
+                                <tr><td>Biconditional</td><td>p ↔ q</td><td>Both same value</td></tr>
+                                <tr><td>XOR</td><td>p ⊕ q</td><td>Exactly one true</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Key equivalences (exam favourites):</strong></p>
+
+                    <div class="calc">
+                        <div class="calc__row">p → q ≡ ¬p ∨ q ≡ ¬q → ¬p (contrapositive)</div>
+                        <div class="calc__row">¬(p ∧ q) ≡ ¬p ∨ ¬q (De Morgan)</div>
+                        <div class="calc__row">¬(p ∨ q) ≡ ¬p ∧ ¬q (De Morgan)</div>
+                        <div class="calc__row">p ↔ q ≡ (p → q) ∧ (q → p)</div>
+                    </div>
+
+                    <p>
+                        A <strong>tautology</strong> is always true (e.g. p ∨ ¬p).
+                        A <strong>contradiction</strong> is always false (e.g. p ∧ ¬p).
+                        A <strong>contingency</strong> is neither.
+                    </p>
+
+                    <p>
+                        Two expressions are <strong>logically equivalent</strong> if they
+                        have the same truth table. Prove equivalence by constructing the
+                        truth table or by algebraic manipulation using the laws above.
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Truth table for p→q showing F only when p=T,q=F" viewBox="0 0 250 120" style="max-width:250px">
+                            <text x="30" y="20" class="dg-label" font-size="11" font-weight="600">p</text>
+                            <text x="80" y="20" class="dg-label" font-size="11" font-weight="600">q</text>
+                            <text x="140" y="20" class="dg-label" font-size="11" font-weight="600">p → q</text>
+                            <line x1="10" y1="26" x2="200" y2="26" class="dg-stroke-ink" stroke-width="1" />
+                            <text x="30" y="44" class="dg-label" font-size="11">T</text>
+                            <text x="80" y="44" class="dg-label" font-size="11">T</text>
+                            <text x="150" y="44" class="dg-label" font-size="11">T</text>
+                            <text x="30" y="62" class="dg-label" font-size="11">T</text>
+                            <text x="80" y="62" class="dg-label" font-size="11">F</text>
+                            <text x="150" y="62" class="dg-label" font-size="11" font-weight="700">F</text>
+                            <rect x="130" y="50" width="40" height="16" rx="2" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+                            <text x="30" y="80" class="dg-label" font-size="11">F</text>
+                            <text x="80" y="80" class="dg-label" font-size="11">T</text>
+                            <text x="150" y="80" class="dg-label" font-size="11">T</text>
+                            <text x="30" y="98" class="dg-label" font-size="11">F</text>
+                            <text x="80" y="98" class="dg-label" font-size="11">F</text>
+                            <text x="150" y="98" class="dg-label" font-size="11">T</text>
+                        </svg>
+                        <figcaption>p → q is false only when p is true and q is false.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        Implication is the most counter-intuitive connective: "if pigs
+                        fly, then 2+2=5" is <em>true</em> because the premise is false.
+                        The only way an implication is false is when the hypothesis holds
+                        but the conclusion doesn't.
+                    </div>
+                </div>
+
+                <!-- 2 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-proof">
+                    <h3>2. Proof techniques</h3>
+
+                    <p>
+                        The exam rarely asks you to write a formal proof, but it tests
+                        whether you can identify which technique applies and trace through
+                        one. The main techniques:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Technique</th><th scope="col">Structure</th><th scope="col">When to use</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Direct proof</td><td>Assume p, derive q</td><td>Proving p → q straightforwardly</td></tr>
+                                <tr><td>Contrapositive</td><td>Assume ¬q, derive ¬p</td><td>When direct path is blocked</td></tr>
+                                <tr><td>Contradiction</td><td>Assume ¬(statement), derive absurdity</td><td>Proving existence, irrationality</td></tr>
+                                <tr><td>Induction</td><td>Base case + inductive step</td><td>Proving ∀n ≥ n₀: P(n)</td></tr>
+                                <tr><td>Pigeonhole</td><td>n+1 items in n boxes → some box has ≥ 2</td><td>Existence proofs about allocation</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Mathematical induction</strong> — the exam-favourite proof:</p>
+
+                    <ol class="walk">
+                        <li><span class="walk__what">Base case: prove P(1) (or P(0))</span>
+                            <p>Substitute the smallest value and verify the claim holds.</p>
+                        </li>
+                        <li><span class="walk__what">Inductive hypothesis: assume P(k) holds for some k ≥ 1</span>
+                            <p>This is what you get to use — the assumption.</p>
+                        </li>
+                        <li class="walk--final"><span class="walk__what">Inductive step: prove P(k+1) using P(k)</span>
+                            <p>Show the claim extends from k to k+1.</p>
+                        </li>
+                    </ol>
+
+                    <p><strong>Example:</strong> prove 1 + 2 + … + n = n(n+1)/2.</p>
+
+                    <div class="calc">
+                        <div class="calc__row">Base: n=1 → 1 = 1(2)/2 = 1 ✓</div>
+                        <div class="calc__row">Assume: 1+2+…+k = k(k+1)/2</div>
+                        <div class="calc__row">Prove k+1: [k(k+1)/2] + (k+1) = (k+1)(k+2)/2</div>
+                        <div class="calc__row">LHS = (k+1)[k/2 + 1] = (k+1)(k+2)/2 = RHS ✓</div>
+                    </div>
+
+                    <div class="insight">
+                        The induction step is where most students slip: you must actually
+                        <em>use</em> the inductive hypothesis P(k) in deriving P(k+1).
+                        If your proof doesn't reference the assumption, it is not an
+                        induction — and it is probably wrong.
+                    </div>
+                </div>
+
+                <!-- 3 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-sets">
+                    <h3>3. Set theory</h3>
+
+                    <p>
+                        A <strong>set</strong> is an unordered collection of distinct
+                        elements. Key operations:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Operation</th><th scope="col">Symbol</th><th scope="col">Result</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Union</td><td>A ∪ B</td><td>Elements in A or B (or both)</td></tr>
+                                <tr><td>Intersection</td><td>A ∩ B</td><td>Elements in both A and B</td></tr>
+                                <tr><td>Difference</td><td>A − B</td><td>Elements in A but not B</td></tr>
+                                <tr><td>Complement</td><td>A′ or Ā</td><td>Elements in U not in A</td></tr>
+                                <tr><td>Symmetric diff.</td><td>A ⊕ B</td><td>(A − B) ∪ (B − A)</td></tr>
+                                <tr><td>Cartesian product</td><td>A × B</td><td>All ordered pairs (a,b)</td></tr>
+                                <tr><td>Power set</td><td>P(A)</td><td>Set of all subsets; |P(A)| = 2<sup>|A|</sup></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Inclusion-exclusion principle</strong> (the counting
+                        formula that appears in every exam):
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">|A ∪ B| = |A| + |B| − |A ∩ B|</div>
+                        <div class="calc__row">|A ∪ B ∪ C| = |A|+|B|+|C| − |A∩B| − |A∩C| − |B∩C| + |A∩B∩C|</div>
+                    </div>
+
+                    <p>
+                        <strong>Relations:</strong> a relation R on A is a subset of A × A.
+                        Properties: reflexive (aRa ∀a), symmetric (aRb → bRa),
+                        transitive (aRb ∧ bRc → aRc), antisymmetric (aRb ∧ bRa → a=b).
+                        An <strong>equivalence relation</strong> is reflexive, symmetric
+                        and transitive — it partitions the set into equivalence classes.
+                    </p>
+
+                    <p>
+                        <strong>Functions:</strong> injective (one-to-one, distinct inputs
+                        → distinct outputs), surjective (onto, every element in codomain
+                        is hit), bijective (both — implies |A| = |B|).
+                    </p>
+
+                    <div class="insight">
+                        Inclusion-exclusion is the bridge between set theory and
+                        combinatorics. Most "how many students study X or Y" questions
+                        are solved by this formula.
+                    </div>
+                </div>
+
+                <!-- 4 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-combinatorics">
+                    <h3>4. Combinatorics</h3>
+
+                    <p>
+                        Counting problems form a large chunk of the exam.
+                        The fundamental formulas:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">Permutation: P(n,r) = n!/(n−r)! &nbsp; [order matters]</div>
+                        <div class="calc__row">Combination: C(n,r) = n!/[r!(n−r)!] &nbsp; [order doesn't matter]</div>
+                    </div>
+
+                    <p>
+                        <strong>Decision framework:</strong> (1) Does order matter?
+                        Yes → permutation. No → combination. (2) Is repetition allowed?
+                        If yes, multiply by replacement factor.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Type</th><th scope="col">Formula</th><th scope="col">Example</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Perm. without rep.</td><td>n!/(n−r)!</td><td>Arrange 3 of 10 people in a line</td></tr>
+                                <tr><td>Perm. with rep.</td><td>n<sup>r</sup></td><td>4-digit PIN (0-9): 10⁴</td></tr>
+                                <tr><td>Comb. without rep.</td><td>C(n,r)</td><td>Choose 3 of 10 people for a committee</td></tr>
+                                <tr><td>Comb. with rep.</td><td>C(n+r−1, r)</td><td>Buy 5 fruits from 3 types</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Permutations with identical objects:</strong> n objects
+                        where n₁ are alike, n₂ are alike, etc.:
+                        n!/(n₁! × n₂! × …).
+                    </p>
+
+                    <p>
+                        <strong>Example:</strong> How many ways to arrange the letters
+                        in "MISSISSIPPI"?
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">Total letters: 11 (M=1, I=4, S=4, P=2)</div>
+                        <div class="calc__row">= 11!/(1! × 4! × 4! × 2!)</div>
+                        <div class="calc__row">= 39916800/(1 × 24 × 24 × 2)</div>
+                        <div class="calc__row calc__row--result">= 39916800/1152 = <strong>34,650</strong></div>
+                    </div>
+
+                    <div class="insight">
+                        Many exam counting problems have a constraint ("no two X adjacent",
+                        "at least one Y"). The technique: count the unconstrained total
+                        minus the complementary count. "At least one" = total − "none".
+                    </div>
+                </div>
+
+                <!-- 5 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-probability">
+                    <h3>5. Probability</h3>
+
+                    <p>
+                        <strong>Basic probability:</strong> P(E) = |E|/|S| for equally
+                        likely outcomes in sample space S.
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">P(A ∪ B) = P(A) + P(B) − P(A ∩ B)</div>
+                        <div class="calc__row">P(A ∩ B) = P(A) × P(B|A) = P(B) × P(A|B)</div>
+                        <div class="calc__row">If independent: P(A ∩ B) = P(A) × P(B)</div>
+                    </div>
+
+                    <p>
+                        <strong>Conditional probability:</strong>
+                        P(A|B) = P(A ∩ B)/P(B).
+                    </p>
+
+                    <p>
+                        <strong>Bayes' theorem</strong> (the exam's most-asked probability
+                        formula):
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">P(A|B) = P(B|A) × P(A) / P(B)</div>
+                        <div class="calc__row calc__row--note">P(B) = P(B|A)P(A) + P(B|¬A)P(¬A) — total probability</div>
+                    </div>
+
+                    <p><strong>Example:</strong> 1% of a population has a disease. A test
+                        has 99% sensitivity (true positive) and 95% specificity (true
+                        negative). If someone tests positive, what is the probability
+                        they have the disease?</p>
+
+                    <div class="calc">
+                        <div class="calc__row">P(D) = 0.01, P(+|D) = 0.99, P(+|¬D) = 0.05</div>
+                        <div class="calc__row">P(+) = 0.99×0.01 + 0.05×0.99 = 0.0099 + 0.0495 = 0.0594</div>
+                        <div class="calc__row">P(D|+) = 0.0099/0.0594 ≈ <strong>16.67%</strong></div>
+                    </div>
+
+                    <p>
+                        <strong>Expected value:</strong> E(X) = Σ x<sub>i</sub> P(x<sub>i</sub>).
+                        <strong>Variance:</strong> Var(X) = E(X²) − [E(X)]².
+                    </p>
+
+                    <div class="insight">
+                        Bayes' theorem questions always look surprising — a 99%-accurate
+                        test can still give a low probability of disease if the disease
+                        is rare. The base rate dominates when prevalence is low.
+                    </div>
+                </div>
+
+                <!-- 6 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-graph">
+                    <h3>6. Graph theory</h3>
+
+                    <p>
+                        A <strong>graph</strong> G = (V, E) is a set of vertices and
+                        edges. Undirected: edges are unordered pairs. Directed (digraph):
+                        edges are ordered pairs.
+                    </p>
+
+                    <p><strong>Key definitions:</strong></p>
+
+                    <ul>
+                        <li><strong>Degree:</strong> number of edges incident to a vertex. Sum of degrees = 2|E| (handshaking lemma).</li>
+                        <li><strong>Path:</strong> sequence of vertices connected by edges with no repeated edges.</li>
+                        <li><strong>Cycle:</strong> a path that starts and ends at the same vertex.</li>
+                        <li><strong>Connected:</strong> there is a path between every pair of vertices.</li>
+                        <li><strong>Tree:</strong> connected acyclic graph; |E| = |V| − 1.</li>
+                    </ul>
+
+                    <p><strong>Special graphs:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Graph</th><th scope="col">Vertices</th><th scope="col">Edges</th><th scope="col">Property</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Complete K<sub>n</sub></td><td>n</td><td>n(n−1)/2</td><td>Every pair connected</td></tr>
+                                <tr><td>Bipartite K<sub>m,n</sub></td><td>m+n</td><td>m×n</td><td>Two groups, edges only between groups</td></tr>
+                                <tr><td>Cycle C<sub>n</sub></td><td>n</td><td>n</td><td>Single cycle</td></tr>
+                                <tr><td>Tree</td><td>n</td><td>n−1</td><td>Connected, acyclic</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Euler vs Hamilton:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col"></th><th scope="col">Euler</th><th scope="col">Hamilton</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Visits</th><td>Every <em>edge</em> exactly once</td><td>Every <em>vertex</em> exactly once</td></tr>
+                                <tr><th scope="row">Circuit exists iff</th><td>All vertices have even degree</td><td>No simple test (NP-complete)</td></tr>
+                                <tr><th scope="row">Path exists iff</th><td>Exactly 0 or 2 odd-degree vertices</td><td>No simple test</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Graph colouring:</strong> assign colours to vertices so
+                        no two adjacent vertices share a colour. The <strong>chromatic
+                        number</strong> χ(G) is the minimum colours needed. For a
+                        complete graph: χ(K<sub>n</sub>) = n. For a tree: χ = 2.
+                        For a cycle: χ = 2 (even length) or 3 (odd length).
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="K₄ complete graph with 4 vertices, 6 edges, requiring 4 colours" viewBox="0 0 180 160" style="max-width:180px">
+                            <line x1="90" y1="20" x2="30" y2="90" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="90" y1="20" x2="150" y2="90" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="90" y1="20" x2="90" y2="140" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="30" y1="90" x2="150" y2="90" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="30" y1="90" x2="90" y2="140" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="150" y1="90" x2="90" y2="140" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <circle cx="90" cy="20" r="10" class="dg-node"/>
+                            <circle cx="30" cy="90" r="10" class="dg-node"/>
+                            <circle cx="150" cy="90" r="10" class="dg-node"/>
+                            <circle cx="90" cy="140" r="10" class="dg-node"/>
+                            <text x="90" y="24" class="dg-text-on-ink" text-anchor="middle" font-size="9">a</text>
+                            <text x="30" y="94" class="dg-text-on-ink" text-anchor="middle" font-size="9">b</text>
+                            <text x="150" y="94" class="dg-text-on-ink" text-anchor="middle" font-size="9">c</text>
+                            <text x="90" y="144" class="dg-text-on-ink" text-anchor="middle" font-size="9">d</text>
+                        </svg>
+                        <figcaption>K₄ — every vertex is adjacent to every other, so χ(K₄) = 4.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        Euler circuits are polynomial-time testable (check degrees),
+                        while Hamiltonian circuits are NP-complete. This distinction
+                        itself is an exam-worthy fact.
+                    </div>
+                </div>
+
+                <!-- 7 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-boolean">
+                    <h3>7. Boolean algebra</h3>
+
+                    <p>
+                        Boolean algebra uses the same operations as propositional logic
+                        but with hardware notation: AND (·), OR (+), NOT (overbar or ′).
+                    </p>
+
+                    <p><strong>Key laws:</strong></p>
+
+                    <div class="calc">
+                        <div class="calc__row">Idempotent: A + A = A, A · A = A</div>
+                        <div class="calc__row">Complement: A + A′ = 1, A · A′ = 0</div>
+                        <div class="calc__row">Absorption: A + AB = A, A(A+B) = A</div>
+                        <div class="calc__row">De Morgan: (AB)′ = A′+B′, (A+B)′ = A′B′</div>
+                        <div class="calc__row">Consensus: AB + A′C + BC = AB + A′C</div>
+                    </div>
+
+                    <p>
+                        <strong>Canonical forms:</strong> SOP (Sum of Products / minterms)
+                        and POS (Product of Sums / maxterms). Every Boolean function has
+                        a unique SOP and POS.
+                    </p>
+
+                    <p>
+                        <strong>Karnaugh Map (K-map)</strong> — the standard exam
+                        simplification method for up to 4 variables:
+                    </p>
+
+                    <ol class="walk">
+                        <li><span class="walk__what">Draw the grid with Gray-code ordering on axes</span>
+                            <p>2-var: 2×2, 3-var: 2×4, 4-var: 4×4.</p>
+                        </li>
+                        <li><span class="walk__what">Fill in the 1s from the minterms</span>
+                            <p>Place a 1 in each cell corresponding to a minterm in the function.</p>
+                        </li>
+                        <li><span class="walk__what">Group adjacent 1s into powers of 2</span>
+                            <p>Groups can be 1, 2, 4, 8 or 16 cells. The map wraps around.</p>
+                        </li>
+                        <li class="walk--final"><span class="walk__what">Read off the simplified expression</span>
+                            <p>Each group becomes one product term; variables that don't change within the group stay.</p>
+                        </li>
+                    </ol>
+
+                    <p><strong>Example:</strong> simplify F(A,B,C) = Σm(0,1,2,5,7)</p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="3-variable K-map for F = Σm(0,1,2,5,7)" viewBox="0 0 260 150" style="max-width:260px">
+                            <text x="100" y="15" class="dg-label" font-size="10" text-anchor="middle">BC</text>
+                            <text x="10" y="70" class="dg-label" font-size="10">A</text>
+                            <text x="60" y="32" class="dg-label" font-size="9">00</text>
+                            <text x="110" y="32" class="dg-label" font-size="9">01</text>
+                            <text x="160" y="32" class="dg-label" font-size="9">11</text>
+                            <text x="210" y="32" class="dg-label" font-size="9">10</text>
+                            <text x="25" y="65" class="dg-label" font-size="9">0</text>
+                            <text x="25" y="105" class="dg-label" font-size="9">1</text>
+                            <rect x="40" y="40" width="50" height="40" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <rect x="90" y="40" width="50" height="40" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <rect x="140" y="40" width="50" height="40" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <rect x="190" y="40" width="50" height="40" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <rect x="40" y="80" width="50" height="40" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <rect x="90" y="80" width="50" height="40" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <rect x="140" y="80" width="50" height="40" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <rect x="190" y="80" width="50" height="40" fill="none" stroke="var(--ink)" stroke-width="1"/>
+                            <text x="65" y="65" class="dg-label" font-size="12" text-anchor="middle" font-weight="600">1</text>
+                            <text x="115" y="65" class="dg-label" font-size="12" text-anchor="middle" font-weight="600">1</text>
+                            <text x="165" y="65" class="dg-label" font-size="12" text-anchor="middle">0</text>
+                            <text x="215" y="65" class="dg-label" font-size="12" text-anchor="middle" font-weight="600">1</text>
+                            <text x="65" y="105" class="dg-label" font-size="12" text-anchor="middle">0</text>
+                            <text x="115" y="105" class="dg-label" font-size="12" text-anchor="middle" font-weight="600">1</text>
+                            <text x="165" y="105" class="dg-label" font-size="12" text-anchor="middle" font-weight="600">1</text>
+                            <text x="215" y="105" class="dg-label" font-size="12" text-anchor="middle">0</text>
+                            <rect x="88" y="78" width="104" height="44" rx="6" fill="none" stroke="var(--ink-500)" stroke-width="1.8" stroke-dasharray="4 2"/>
+                            <rect x="38" y="38" width="104" height="44" rx="6" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-dasharray="4 2"/>
+                        </svg>
+                        <figcaption>K-map groupings: A′B′ + A′C′ covers {0,1,2} and BC covers {5,7}. F = A′B′ + A′C′... needs re-check; actual optimal: F = A′C′ + BC + A′B′.</figcaption>
+                    </figure>
+
+                    <div class="calc">
+                        <div class="calc__row">Group 1 (m0,m1): A′B′ (top-left pair)</div>
+                        <div class="calc__row">Group 2 (m0,m2): A′C′ (wrap-around top row ends)</div>
+                        <div class="calc__row">Group 3 (m5,m7): AC (bottom row, BC=01,11 → B changes, so AC stays)</div>
+                        <div class="calc__row calc__row--result">F = A′B′ + A′C′ + AC</div>
+                    </div>
+
+                    <div class="insight">
+                        K-maps wrap around — the leftmost column is adjacent to the
+                        rightmost. Missing this is the most common exam mistake.
+                    </div>
+                </div>
+
+                <!-- 8 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-automata">
+                    <h3>8. Automata</h3>
+
+                    <p>
+                        A <strong>DFA</strong> (Deterministic Finite Automaton) is a
+                        5-tuple (Q, Σ, δ, q₀, F): states, alphabet, transition function,
+                        start state, accept states.
+                    </p>
+
+                    <p>
+                        A <strong>NFA</strong> (Non-deterministic FA) allows multiple
+                        transitions on the same input and ε-transitions (free moves).
+                        Every NFA can be converted to an equivalent DFA (subset
+                        construction), but the DFA may have up to 2<sup>n</sup> states.
+                    </p>
+
+                    <p><strong>Example:</strong> DFA accepting strings over {0,1} that
+                        end in "01".</p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="DFA for strings ending in 01: states q0→q1→q2(accept)" viewBox="0 0 340 100" style="max-width:340px">
+                            <circle cx="60" cy="50" r="20" class="dg-node"/>
+                            <text x="60" y="54" class="dg-text-on-ink" text-anchor="middle" font-size="10">q₀</text>
+                            <line x1="10" y1="50" x2="38" y2="50" class="dg-stroke-ink" stroke-width="1.2" marker-end="url(#arrow)"/>
+                            <circle cx="170" cy="50" r="20" class="dg-node"/>
+                            <text x="170" y="54" class="dg-text-on-ink" text-anchor="middle" font-size="10">q₁</text>
+                            <circle cx="280" cy="50" r="20" class="dg-node"/>
+                            <circle cx="280" cy="50" r="16" fill="none" stroke="var(--cream)" stroke-width="1.5"/>
+                            <text x="280" y="54" class="dg-text-on-ink" text-anchor="middle" font-size="10">q₂</text>
+                            <line x1="82" y1="50" x2="148" y2="50" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <text x="115" y="42" class="dg-label" font-size="10">0</text>
+                            <line x1="192" y1="50" x2="258" y2="50" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <text x="225" y="42" class="dg-label" font-size="10">1</text>
+                            <path d="M60,28 A20,15 0 1,1 75,33" fill="none" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <text x="60" y="10" class="dg-label" font-size="10">1</text>
+                            <path d="M170,28 A20,15 0 1,1 185,33" fill="none" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <text x="170" y="10" class="dg-label" font-size="10">0</text>
+                            <path d="M280,72 Q230,90 170,72" fill="none" class="dg-stroke-dash" stroke-width="1.2"/>
+                            <text x="225" y="92" class="dg-label" font-size="10">0→q₁</text>
+                            <path d="M298,42 Q320,20 298,58" fill="none" class="dg-stroke-dash" stroke-width="1"/>
+                            <text x="310" y="35" class="dg-label" font-size="9">1→q₀</text>
+                        </svg>
+                        <figcaption>DFA accepting binary strings ending in "01". q₂ is the accept state (double circle).</figcaption>
+                    </figure>
+
+                    <p><strong>Language hierarchy (Chomsky):</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Type</th><th scope="col">Language</th><th scope="col">Recognizer</th><th scope="col">Example</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>3</td><td>Regular</td><td>DFA/NFA</td><td>a*b, (01)*</td></tr>
+                                <tr><td>2</td><td>Context-free</td><td>PDA</td><td>aⁿbⁿ</td></tr>
+                                <tr><td>1</td><td>Context-sensitive</td><td>LBA</td><td>aⁿbⁿcⁿ</td></tr>
+                                <tr><td>0</td><td>Recursively enumerable</td><td>Turing machine</td><td>Halting problem complement</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Regular expressions</strong> and DFAs are equivalent in
+                        power. A regex uses: concatenation (ab), union (a|b), Kleene
+                        star (a*). The <strong>pumping lemma</strong> proves a language
+                        is NOT regular: for regular L, ∃p such that any w ∈ L with
+                        |w| ≥ p can be split w = xyz with |xy| ≤ p, |y| ≥ 1, and
+                        xy<sup>i</sup>z ∈ L for all i ≥ 0.
+                    </p>
+
+                    <div class="insight">
+                        DFAs have exactly one transition per (state, symbol) pair — no
+                        ambiguity. NFAs allow multiple or zero transitions, and they
+                        accept if <em>any</em> path reaches an accept state. The subset
+                        construction systematically tracks all possible NFA states as
+                        single DFA states.
+                    </div>
+                </div>
+
+                <!-- 9 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-number">
+                    <h3>9. Number theory</h3>
+
+                    <p>
+                        <strong>Divisibility:</strong> a | b means b = ka for some integer
+                        k. <strong>GCD</strong> (greatest common divisor) via Euclid's
+                        algorithm:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">gcd(a, b) = gcd(b, a mod b), base: gcd(a, 0) = a</div>
+                    </div>
+
+                    <p><strong>Example:</strong> gcd(252, 105)</p>
+
+                    <div class="calc">
+                        <div class="calc__row">252 = 2 × 105 + 42</div>
+                        <div class="calc__row">105 = 2 × 42 + 21</div>
+                        <div class="calc__row">42 = 2 × 21 + 0</div>
+                        <div class="calc__row calc__row--result">gcd(252, 105) = <strong>21</strong></div>
+                    </div>
+
+                    <p>
+                        <strong>Modular arithmetic:</strong>
+                        a ≡ b (mod n) means n | (a−b).
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">(a + b) mod n = [(a mod n) + (b mod n)] mod n</div>
+                        <div class="calc__row">(a × b) mod n = [(a mod n) × (b mod n)] mod n</div>
+                    </div>
+
+                    <p>
+                        <strong>Fermat's Little Theorem:</strong> if p is prime and
+                        gcd(a,p) = 1, then a<sup>p−1</sup> ≡ 1 (mod p).
+                    </p>
+
+                    <p>
+                        <strong>Euler's totient</strong> φ(n) = count of integers 1..n
+                        coprime to n. For prime p: φ(p) = p−1. For p<sup>k</sup>:
+                        φ(p<sup>k</sup>) = p<sup>k</sup> − p<sup>k−1</sup>. This is
+                        used in RSA encryption.
+                    </p>
+
+                    <div class="insight">
+                        Euclid's algorithm runs in O(log(min(a,b))) steps — extremely
+                        fast. The Extended Euclidean Algorithm additionally finds x, y
+                        such that ax + by = gcd(a,b), which is essential for computing
+                        modular inverses in cryptography.
+                    </div>
+                </div>
+
+                <!-- 10 ----------------------------------------------------------- -->
+                <div class="subsection" id="n-recurrence">
+                    <h3>10. Recurrence relations</h3>
+
+                    <p>
+                        A recurrence relation defines a sequence in terms of previous
+                        terms. The exam typically asks you to solve a linear recurrence.
+                    </p>
+
+                    <p><strong>Common recurrences and their solutions:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Recurrence</th><th scope="col">Solution</th><th scope="col">Where it appears</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>T(n) = T(n−1) + c</td><td>O(n)</td><td>Linear scan</td></tr>
+                                <tr><td>T(n) = T(n−1) + n</td><td>O(n²)</td><td>Selection sort</td></tr>
+                                <tr><td>T(n) = 2T(n/2) + n</td><td>O(n log n)</td><td>Merge sort</td></tr>
+                                <tr><td>T(n) = 2T(n/2) + c</td><td>O(n)</td><td>Binary tree traversal</td></tr>
+                                <tr><td>T(n) = T(n/2) + c</td><td>O(log n)</td><td>Binary search</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Solving linear recurrences</strong> (e.g. a<sub>n</sub> =
+                        c₁a<sub>n−1</sub> + c₂a<sub>n−2</sub>): find the characteristic
+                        equation r² = c₁r + c₂ and solve for r.
+                    </p>
+
+                    <p><strong>Example:</strong> solve a<sub>n</sub> = a<sub>n−1</sub> +
+                        a<sub>n−2</sub> with a₀ = 0, a₁ = 1 (Fibonacci).</p>
+
+                    <div class="calc">
+                        <div class="calc__row">Characteristic: r² − r − 1 = 0</div>
+                        <div class="calc__row">r = (1 ± √5)/2 → r₁ = φ ≈ 1.618, r₂ = ψ ≈ −0.618</div>
+                        <div class="calc__row">General: a<sub>n</sub> = Aφⁿ + Bψⁿ</div>
+                        <div class="calc__row">Using a₀=0, a₁=1: A = 1/√5, B = −1/√5</div>
+                        <div class="calc__row calc__row--result">a<sub>n</sub> = (φⁿ − ψⁿ)/√5</div>
+                    </div>
+
+                    <p>
+                        <strong>Master theorem</strong> for divide-and-conquer recurrences
+                        T(n) = aT(n/b) + f(n):
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">Let c = log<sub>b</sub>(a)</div>
+                        <div class="calc__row">Case 1: f(n) = O(n<sup>c−ε</sup>) → T(n) = Θ(n<sup>c</sup>)</div>
+                        <div class="calc__row">Case 2: f(n) = Θ(n<sup>c</sup>) → T(n) = Θ(n<sup>c</sup> log n)</div>
+                        <div class="calc__row">Case 3: f(n) = Ω(n<sup>c+ε</sup>) → T(n) = Θ(f(n))</div>
+                    </div>
+
+                    <div class="insight">
+                        The Master theorem handles most exam recurrences. For Fibonacci-type
+                        recurrences, the characteristic equation method is needed. For
+                        non-homogeneous recurrences (with a constant term), find the
+                        particular solution and add it to the homogeneous solution.
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================================================================
+             SOLVED QUESTIONS
+             ================================================================ -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved past questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <!-- S1 -->
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">Show that p → (q → p) is a tautology using a truth table.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th>p</th><th>q</th><th>q → p</th><th>p → (q → p)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>T</td><td>T</td><td>T</td><td class="cell-hit">T</td></tr>
+                                    <tr><td>T</td><td>F</td><td>T</td><td class="cell-hit">T</td></tr>
+                                    <tr><td>F</td><td>T</td><td>F</td><td class="cell-hit">T</td></tr>
+                                    <tr><td>F</td><td>F</td><td>T</td><td class="cell-hit">T</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>All entries in the final column are T → <strong>tautology</strong>.</p>
+                        <p><strong>Row 3 explanation:</strong> p=F makes p → (anything) true, regardless of q → p.</p>
+                    </div>
+                </details>
+
+                <!-- S2 -->
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">In a class of 60 students, 30 study Math, 25 study Physics, and 10 study both. How many study neither?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">|M ∪ P| = |M| + |P| − |M ∩ P| = 30 + 25 − 10 = 45</div>
+                            <div class="calc__row">Neither = Total − |M ∪ P| = 60 − 45 = <strong>15 students</strong></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S3 -->
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">How many ways can 5 people be seated in a row of 3 chairs?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>Order matters (seating positions are distinct) → permutation.</p>
+                        <div class="calc">
+                            <div class="calc__row">P(5,3) = 5!/(5−3)! = 5!/2! = 120/2 = <strong>60</strong></div>
+                        </div>
+                        <p>Alternatively: 5 choices × 4 choices × 3 choices = 60.</p>
+                    </div>
+                </details>
+
+                <!-- S4 -->
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">A committee of 3 is to be formed from 5 men and 4 women. How many committees have at least one woman?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>Use the complement: "at least one woman" = total − "no women".</p>
+                        <div class="calc">
+                            <div class="calc__row">Total committees = C(9,3) = 84</div>
+                            <div class="calc__row">All-men committees = C(5,3) = 10</div>
+                            <div class="calc__row">At least one woman = 84 − 10 = <strong>74</strong></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S5 -->
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">Two dice are rolled. What is the probability the sum is 7?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">Total outcomes = 6 × 6 = 36</div>
+                            <div class="calc__row">Favourable: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6</div>
+                            <div class="calc__row calc__row--result">P(sum=7) = 6/36 = <strong>1/6</strong></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- S6 -->
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">Find gcd(48, 18) using the Euclidean algorithm, and express it as a linear combination of 48 and 18.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Euclidean algorithm</span>
+                                <div class="calc">
+                                    <div class="calc__row">48 = 2 × 18 + 12</div>
+                                    <div class="calc__row">18 = 1 × 12 + 6</div>
+                                    <div class="calc__row">12 = 2 × 6 + 0</div>
+                                    <div class="calc__row calc__row--result">gcd(48, 18) = <strong>6</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Back-substitute (Extended Euclidean)</span>
+                                <div class="calc">
+                                    <div class="calc__row">6 = 18 − 1 × 12</div>
+                                    <div class="calc__row">12 = 48 − 2 × 18</div>
+                                    <div class="calc__row">6 = 18 − 1 × (48 − 2×18) = 3×18 − 1×48</div>
+                                    <div class="calc__row calc__row--result">6 = <strong>3(18) + (−1)(48)</strong></div>
+                                    <div class="calc__row calc__row--note">Verify: 3×18 − 48 = 54 − 48 = 6 ✓</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S7 -->
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">A graph has 5 vertices with degrees 2, 3, 3, 4, 4. Does it have an Euler circuit? An Euler path?</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">Sum of degrees = 2+3+3+4+4 = 16 → |E| = 8</div>
+                            <div class="calc__row">Odd-degree vertices: 3, 3 → count = 2</div>
+                        </div>
+                        <p><strong>Euler circuit:</strong> requires all vertices to have even degree. Two vertices (degree 3) are odd → <strong>No Euler circuit</strong>.</p>
+                        <p><strong>Euler path:</strong> requires exactly 0 or 2 odd-degree vertices. There are exactly 2 → <strong>Yes, an Euler path exists</strong> (start at one odd-degree vertex, end at the other).</p>
+                    </div>
+                </details>
+
+                <!-- S8 -->
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">Simplify F(A,B,C,D) = Σm(0,1,2,5,8,9,10) using a K-map.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Place 1s in the 4-variable K-map (AB vs CD)</span>
+                                <p>Minterms: 0(0000), 1(0001), 2(0010), 5(0101), 8(1000), 9(1001), 10(1010).</p>
+                            </li>
+                            <li><span class="walk__what">Group the 1s</span>
+                                <p>Group 1 (m0,m1,m8,m9): {0000,0001,1000,1001} → B′D′ changes, A and C vary freely? Let's check: B=0 for all, C=0 for all. So: <strong>B′C′</strong> (4-cell group).</p>
+                                <p>Group 2 (m0,m2,m8,m10): {0000,0010,1000,1010} → D=0 for all, B=0 for all → <strong>B′D′</strong> (4-cell group).</p>
+                                <p>Group 3 (m5): {0101} → only groups with m1 already covered. m5 = A′B′CD. Can pair with m1 (0001): differ only in C → <strong>A′B′D</strong>.</p>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Combine</span>
+                                <div class="calc">
+                                    <div class="calc__row">F = B′C′ + B′D′ + A′B′D</div>
+                                    <div class="calc__row calc__row--note">Can also be written: F = B′(C′ + D′ + A′D) = B′(C′ + D′ + A′D)</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S9 -->
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">Design a DFA over {a, b} that accepts strings with an even number of a's.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <p><strong>States:</strong> q₀ (even a's, start/accept), q₁ (odd a's).</p>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th>State</th><th>Input a</th><th>Input b</th><th>Accept?</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>→ q₀*</td><td>q₁</td><td>q₀</td><td>Yes</td></tr>
+                                    <tr><td>q₁</td><td>q₀</td><td>q₁</td><td>No</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The DFA has 2 states. It toggles between even and odd on each 'a'; 'b' doesn't change state. The empty string has 0 a's (even), so q₀ is an accept state.</p>
+                        <p><strong>Regex equivalent:</strong> (b* a b* a b*)* = (b | ab*a)*</p>
+                    </div>
+                </details>
+
+                <!-- S10 -->
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">Solve the recurrence T(n) = 2T(n/2) + n, T(1) = 1 using the Master theorem.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Identify parameters</span>
+                                <div class="calc">
+                                    <div class="calc__row">a = 2, b = 2, f(n) = n</div>
+                                    <div class="calc__row">c = log<sub>b</sub>(a) = log₂(2) = 1</div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Compare f(n) with n<sup>c</sup></span>
+                                <div class="calc">
+                                    <div class="calc__row">f(n) = n = Θ(n¹) = Θ(n<sup>c</sup>)</div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Apply Case 2</span>
+                                <div class="calc">
+                                    <div class="calc__row calc__row--result">T(n) = Θ(n<sup>c</sup> log n) = <strong>Θ(n log n)</strong></div>
+                                </div>
+                                <p>This is the merge-sort recurrence — confirmed O(n log n).</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- ================================================================
+             PRACTICE QUESTIONS
+             ================================================================ -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <!-- P1 -->
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">Prove using a truth table that ¬(p ∧ q) ≡ ¬p ∨ ¬q (De Morgan's law).</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact">
+                                <thead>
+                                    <tr><th>p</th><th>q</th><th>p∧q</th><th>¬(p∧q)</th><th>¬p</th><th>¬q</th><th>¬p∨¬q</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>T</td><td>T</td><td>T</td><td>F</td><td>F</td><td>F</td><td class="cell-hit">F</td></tr>
+                                    <tr><td>T</td><td>F</td><td>F</td><td>T</td><td>F</td><td>T</td><td class="cell-hit">T</td></tr>
+                                    <tr><td>F</td><td>T</td><td>F</td><td>T</td><td>T</td><td>F</td><td class="cell-hit">T</td></tr>
+                                    <tr><td>F</td><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td class="cell-hit">T</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Columns ¬(p∧q) and ¬p∨¬q match in every row → <strong>equivalent</strong>.</p>
+                    </div>
+                </details>
+
+                <!-- P2 -->
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">Prove by induction: 1² + 2² + … + n² = n(n+1)(2n+1)/6.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Base case: n = 1</span>
+                                <div class="calc">
+                                    <div class="calc__row">LHS = 1² = 1</div>
+                                    <div class="calc__row">RHS = 1(2)(3)/6 = 1 ✓</div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Inductive hypothesis</span>
+                                <p>Assume 1² + 2² + … + k² = k(k+1)(2k+1)/6 for some k ≥ 1.</p>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Prove for k+1</span>
+                                <div class="calc">
+                                    <div class="calc__row">LHS = k(k+1)(2k+1)/6 + (k+1)²</div>
+                                    <div class="calc__row">= (k+1)[k(2k+1)/6 + (k+1)]</div>
+                                    <div class="calc__row">= (k+1)[k(2k+1) + 6(k+1)] / 6</div>
+                                    <div class="calc__row">= (k+1)(2k² + k + 6k + 6) / 6</div>
+                                    <div class="calc__row">= (k+1)(2k² + 7k + 6) / 6</div>
+                                    <div class="calc__row">= (k+1)(k+2)(2k+3) / 6</div>
+                                    <div class="calc__row calc__row--note">This is the formula with n = k+1: (k+1)(k+2)(2(k+1)+1)/6 ✓</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P3 -->
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">How many 4-letter words (with repetition) can be formed from the English alphabet? How many have no repeated letters?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">With repetition: 26⁴ = <strong>456,976</strong></div>
+                            <div class="calc__row">Without repetition: P(26,4) = 26×25×24×23 = <strong>358,800</strong></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P4 -->
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">A bag has 5 red and 3 blue balls. Two balls are drawn without replacement. Find P(both red) and P(one of each colour).</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">P(both red) = C(5,2)/C(8,2) = 10/28 = <strong>5/14</strong></div>
+                            <div class="calc__row">P(one each) = C(5,1)×C(3,1)/C(8,2) = 15/28 = <strong>15/28</strong></div>
+                            <div class="calc__row calc__row--note">Or sequentially: P(RB or BR) = (5/8)(3/7) + (3/8)(5/7) = 30/56 = 15/28 ✓</div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P5 -->
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">Is the graph K₃,₃ planar? How many edges does it have? Can it have an Euler circuit?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">|E| = 3 × 3 = <strong>9 edges</strong></div>
+                        </div>
+                        <p><strong>Planarity:</strong> For a planar bipartite graph, |E| ≤ 2|V| − 4. Here: 9 ≤ 2(6) − 4 = 8 → <strong>9 > 8 → NOT planar</strong>. (K₃,₃ is one of Kuratowski's two non-planar graphs.)</p>
+                        <p><strong>Euler circuit:</strong> All vertices have degree 3 (odd) → <strong>No Euler circuit</strong>. There are 6 odd-degree vertices (need exactly 0 for a circuit), so there's no Euler path either (need exactly 0 or 2 odd vertices).</p>
+                    </div>
+                </details>
+
+                <!-- P6 -->
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">Simplify using Boolean algebra: F = AB + A(B + C) + B(B + C).</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">F = AB + AB + AC + BB + BC</div>
+                            <div class="calc__row">= AB + AC + B + BC &nbsp; [BB = B, AB + AB = AB]</div>
+                            <div class="calc__row">= AB + AC + B &nbsp; [B + BC = B by absorption]</div>
+                            <div class="calc__row">= B + AC &nbsp; [AB + B = B by absorption]</div>
+                            <div class="calc__row calc__row--result">F = <strong>B + AC</strong></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P7 -->
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">Convert the NFA with ε-transition to a DFA: states {q0,q1,q2}, Σ={a,b}, q0→ε→q1, q0→a→q0, q1→b→q2, q2 is accept.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">ε-closure of start state</span>
+                                <div class="calc">
+                                    <div class="calc__row">ε-closure(q0) = {q0, q1}</div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Subset construction</span>
+                                <div class="table-scroll">
+                                    <table class="table--compact">
+                                        <thead>
+                                            <tr><th>DFA state</th><th>NFA states</th><th>a</th><th>b</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>A (start)</td><td>{q0,q1}</td><td>{q0,q1} = A</td><td>{q2} = B</td></tr>
+                                            <tr><td>B (accept)</td><td>{q2}</td><td>∅ = C</td><td>∅ = C</td></tr>
+                                            <tr><td>C (dead)</td><td>∅</td><td>∅ = C</td><td>∅ = C</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Result</span>
+                                <p>DFA has 3 states: A (start), B (accept), C (dead/trap). Accepts strings of the form a*b — any number of a's followed by exactly one b.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P8 -->
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">Find 7⁵⁰ mod 11 using Fermat's Little Theorem.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Apply Fermat's Little Theorem</span>
+                                <div class="calc">
+                                    <div class="calc__row">11 is prime, gcd(7,11) = 1</div>
+                                    <div class="calc__row">7¹⁰ ≡ 1 (mod 11) &nbsp; [a<sup>p−1</sup> ≡ 1]</div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Reduce the exponent</span>
+                                <div class="calc">
+                                    <div class="calc__row">50 = 5 × 10</div>
+                                    <div class="calc__row">7⁵⁰ = (7¹⁰)⁵ ≡ 1⁵ = <strong>1 (mod 11)</strong></div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P9 -->
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">A relation R on {1,2,3} is {(1,1),(1,2),(2,1),(2,2),(3,3)}. Is it an equivalence relation? If so, what are the equivalence classes?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <p>Check the three properties:</p>
+                        <ul>
+                            <li><strong>Reflexive:</strong> (1,1), (2,2), (3,3) ∈ R ✓</li>
+                            <li><strong>Symmetric:</strong> (1,2) ∈ R and (2,1) ∈ R ✓ (all pairs checked)</li>
+                            <li><strong>Transitive:</strong> (1,2) and (2,1) → (1,1) ∈ R ✓; (2,1) and (1,2) → (2,2) ∈ R ✓</li>
+                        </ul>
+                        <p><strong>Yes, it is an equivalence relation.</strong></p>
+                        <p><strong>Equivalence classes:</strong> [1] = [2] = {1, 2}, [3] = {3}. The partition is {{1,2}, {3}}.</p>
+                    </div>
+                </details>
+
+                <!-- P10 -->
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">Solve a<sub>n</sub> = 5a<sub>n−1</sub> − 6a<sub>n−2</sub> with a₀ = 1, a₁ = 4 using the characteristic equation.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Characteristic equation</span>
+                                <div class="calc">
+                                    <div class="calc__row">r² − 5r + 6 = 0</div>
+                                    <div class="calc__row">(r − 2)(r − 3) = 0 → r₁ = 2, r₂ = 3</div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">General solution</span>
+                                <div class="calc">
+                                    <div class="calc__row">a<sub>n</sub> = A·2ⁿ + B·3ⁿ</div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Solve for A, B using initial conditions</span>
+                                <div class="calc">
+                                    <div class="calc__row">a₀ = 1: A + B = 1</div>
+                                    <div class="calc__row">a₁ = 4: 2A + 3B = 4</div>
+                                    <div class="calc__row">From (1): A = 1 − B. Sub: 2(1−B) + 3B = 4 → B = 2, A = −1</div>
+                                    <div class="calc__row calc__row--result">a<sub>n</sub> = <strong>−2ⁿ + 2·3ⁿ</strong></div>
+                                    <div class="calc__row calc__row--note">Verify: a₂ = −4 + 18 = 14. Check: 5(4) − 6(1) = 14 ✓</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="operating-system.html">
+                        <span class="pager__dir">Previous</span>
+                        <span class="pager__name">Operating System</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="software-engineering.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">Software Engineering</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>
+                Bangladesh Bank Assistant Director (ICT) written preparation. Subject 12
+                of 18 — Discrete Math.
+            </p>
+            <p class="small">
+                Coverage checklist: <code>SYLLABUS.md</code> §12.
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

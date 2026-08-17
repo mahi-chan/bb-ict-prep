@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="circuit-analysis"
+    data-subject-name="Circuit Analysis">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Circuit Analysis — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice on Ohm's law, KCL/KVL, Thevenin/Norton, AC power factor, diodes, rectifiers, clippers, clampers, Zener, BJT and op-amps." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+
+            <div class="header__spacer"></div>
+
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis" aria-current="page"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 10</span><span aria-hidden="true">·</span><span>Phase 3</span>
+                </p>
+                <h1>Circuit Analysis</h1>
+                <p class="page-head__lede">
+                    The exam questions here are numerical — Ohm's law, KCL/KVL mesh
+                    analysis, Thevenin equivalent, AC power factor, Zener regulator
+                    design, clipper and clamper output waveforms, and BJT region
+                    identification. Every topic below walks the math on a concrete circuit.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
+             NOTES
+             ================================================================ -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">8 topics</span>
+                </div>
+
+                <p class="intro">
+                    Circuit Analysis for this exam sits at the intersection of physics
+                    and electronics. DC fundamentals (Ohm's, Kirchhoff's, Thevenin) and
+                    semiconductor devices (diodes, transistors, op-amps) dominate the
+                    questions. AC analysis appears as power-factor and resonance
+                    calculations.
+                </p>
+
+                <ul class="topics">
+                    <li><a href="#n-dc"><span class="topics__num">01</span>DC fundamentals</a></li>
+                    <li><a href="#n-theorems"><span class="topics__num">02</span>Network theorems</a></li>
+                    <li><a href="#n-energy"><span class="topics__num">03</span>Energy storage elements</a></li>
+                    <li><a href="#n-ac"><span class="topics__num">04</span>AC analysis</a></li>
+                    <li><a href="#n-diodes"><span class="topics__num">05</span>Diodes and rectifiers</a></li>
+                    <li><a href="#n-clippers"><span class="topics__num">06</span>Clippers and clampers</a></li>
+                    <li><a href="#n-transistors"><span class="topics__num">07</span>Transistors</a></li>
+                    <li><a href="#n-opamp"><span class="topics__num">08</span>Operational amplifiers</a></li>
+                </ul>
+
+                <!-- 1 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-dc">
+                    <h3>1. DC fundamentals</h3>
+
+                    <p>
+                        <strong>Ohm's law</strong> is the starting point: V = IR.
+                        Current flows from higher to lower potential, and the
+                        voltage drop across a resistor equals the product of current
+                        through it and its resistance. For a concrete circuit:
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Simple series circuit: 12V source, R1=2Ω, R2=4Ω" viewBox="0 0 320 140" style="max-width:320px">
+                            <rect x="40" y="20" width="240" height="100" rx="0" fill="none" stroke="var(--ink)" stroke-width="1.5" />
+                            <text x="20" y="75" class="dg-label" font-size="11">12V</text>
+                            <text x="120" y="15" class="dg-label" text-anchor="middle" font-size="11">R₁ = 2Ω</text>
+                            <text x="220" y="15" class="dg-label" text-anchor="middle" font-size="11">R₂ = 4Ω</text>
+                            <rect x="90" y="18" width="60" height="6" class="dg-node" />
+                            <rect x="190" y="18" width="60" height="6" class="dg-node" />
+                        </svg>
+                        <figcaption>Series circuit — current is the same through both resistors.</figcaption>
+                    </figure>
+
+                    <div class="calc">
+                        <div class="calc__row">R<sub>total</sub> = R₁ + R₂ = 2 + 4 = 6 Ω</div>
+                        <div class="calc__row">I = V / R<sub>total</sub> = 12 / 6 = <strong>2 A</strong></div>
+                        <div class="calc__row">V<sub>R1</sub> = 2 × 2 = 4 V, V<sub>R2</sub> = 2 × 4 = 8 V</div>
+                        <div class="calc__row calc__row--note">Check: 4 + 8 = 12 V ✓ (KVL)</div>
+                    </div>
+
+                    <p>
+                        <strong>Series resistors</strong> add: R<sub>eq</sub> = R₁ + R₂ + … .
+                        <strong>Parallel resistors</strong> combine as:
+                        1/R<sub>eq</sub> = 1/R₁ + 1/R₂ + … . For two in parallel:
+                        R<sub>eq</sub> = R₁R₂/(R₁+R₂).
+                    </p>
+
+                    <p>
+                        <strong>Kirchhoff's Current Law (KCL):</strong> the sum of currents
+                        entering a node equals the sum leaving. This is conservation of charge.
+                    </p>
+
+                    <p>
+                        <strong>Kirchhoff's Voltage Law (KVL):</strong> the sum of all voltages
+                        around a closed loop is zero. This is conservation of energy.
+                    </p>
+
+                    <p>
+                        <strong>Voltage divider:</strong> V<sub>out</sub> = V<sub>in</sub> × R₂/(R₁+R₂).
+                        <strong>Current divider:</strong> for two parallel branches,
+                        I₁ = I<sub>total</sub> × R₂/(R₁+R₂).
+                    </p>
+
+                    <p>
+                        <strong>Delta-wye (star-delta) transformation</strong> converts
+                        three resistors in a triangle (delta) to three in a Y (star)
+                        or vice versa:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">R<sub>Y</sub> = (adjacent pair product) / (sum of delta)</div>
+                        <div class="calc__row">R<sub>Δ</sub> = (sum of Y pair products) / (opposite Y resistor)</div>
+                    </div>
+
+                    <div class="insight">
+                        KVL and KCL are all you need to solve any resistive circuit —
+                        the network theorems (Thevenin, Norton, superposition) are
+                        shortcuts that reduce the work for specific question types.
+                    </div>
+                </div>
+
+                <!-- 2 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-theorems">
+                    <h3>2. Network theorems</h3>
+
+                    <p>
+                        <strong>Thevenin's theorem:</strong> any linear two-terminal
+                        network can be replaced by a voltage source V<sub>th</sub> in
+                        series with a resistance R<sub>th</sub>. To find them:
+                    </p>
+
+                    <ol class="walk">
+                        <li><span class="walk__what">Remove the load and find V<sub>oc</sub> across the terminals</span>
+                            <p>This is V<sub>th</sub> — the open-circuit voltage.</p>
+                        </li>
+                        <li><span class="walk__what">Deactivate all independent sources and find R looking into the terminals</span>
+                            <p>Short voltage sources, open current sources. The resulting resistance is R<sub>th</sub>.</p>
+                        </li>
+                        <li class="walk--final"><span class="walk__what">Reconnect the load to the Thevenin equivalent</span>
+                            <p>I<sub>load</sub> = V<sub>th</sub> / (R<sub>th</sub> + R<sub>load</sub>).</p>
+                        </li>
+                    </ol>
+
+                    <p>
+                        <strong>Norton's theorem:</strong> same idea but with a current
+                        source I<sub>N</sub> = V<sub>th</sub>/R<sub>th</sub> in parallel
+                        with R<sub>N</sub> = R<sub>th</sub>. Thevenin and Norton are
+                        source transformations of each other.
+                    </p>
+
+                    <p>
+                        <strong>Superposition:</strong> in a linear circuit with multiple
+                        sources, the response (voltage or current) is the sum of responses
+                        due to each source acting alone, with all other independent sources
+                        deactivated.
+                    </p>
+
+                    <p>
+                        <strong>Maximum power transfer:</strong> a load receives maximum
+                        power when R<sub>load</sub> = R<sub>th</sub>. The maximum power is
+                        P<sub>max</sub> = V<sub>th</sub>²/(4R<sub>th</sub>). The efficiency
+                        at this point is only 50%.
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">P<sub>max</sub> = V<sub>th</sub>² / (4 R<sub>th</sub>)</div>
+                    </div>
+
+                    <div class="insight">
+                        Thevenin is the exam's most-asked theorem because the method is
+                        mechanical and the answer is numerical. The typical question gives
+                        a circuit, asks for V<sub>th</sub> and R<sub>th</sub>, then asks
+                        for load current or maximum power.
+                    </div>
+                </div>
+
+                <!-- 3 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-energy">
+                    <h3>3. Energy storage elements</h3>
+
+                    <p>
+                        <strong>Capacitors</strong> store energy in an electric field.
+                        C = Q/V (farads). Series: 1/C<sub>eq</sub> = 1/C₁ + 1/C₂.
+                        Parallel: C<sub>eq</sub> = C₁ + C₂. Energy: E = ½CV².
+                    </p>
+
+                    <p>
+                        <strong>Inductors</strong> store energy in a magnetic field.
+                        V = L(di/dt). Series: L<sub>eq</sub> = L₁ + L₂.
+                        Parallel: 1/L<sub>eq</sub> = 1/L₁ + 1/L₂. Energy: E = ½LI².
+                    </p>
+
+                    <p>
+                        <strong>RC transients:</strong> when a capacitor charges through
+                        a resistor from voltage V<sub>s</sub>:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">v(t) = V<sub>s</sub>(1 − e<sup>−t/τ</sup>) &nbsp; [charging]</div>
+                        <div class="calc__row">v(t) = V₀ e<sup>−t/τ</sup> &nbsp; [discharging]</div>
+                        <div class="calc__row calc__row--note">τ = RC is the time constant; after 5τ the transient is essentially complete</div>
+                    </div>
+
+                    <p>
+                        At t = τ, charging reaches 63.2% of V<sub>s</sub>; discharging
+                        drops to 36.8% of V₀. These percentages come from
+                        1 − e<sup>−1</sup> ≈ 0.632 and e<sup>−1</sup> ≈ 0.368.
+                    </p>
+
+                    <div class="insight">
+                        Capacitors combine like parallel resistors (series adds reciprocals),
+                        inductors combine like series resistors (series adds directly).
+                        This is the opposite of resistors — a common exam trap.
+                    </div>
+                </div>
+
+                <!-- 4 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-ac">
+                    <h3>4. AC analysis</h3>
+
+                    <p>
+                        In AC circuits, voltage and current are sinusoidal. The key
+                        relationships:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">V<sub>rms</sub> = V<sub>peak</sub> / √2 ≈ 0.707 V<sub>peak</sub></div>
+                        <div class="calc__row">V<sub>avg</sub> = 2V<sub>peak</sub> / π ≈ 0.637 V<sub>peak</sub> (full-wave rectified)</div>
+                    </div>
+
+                    <p>
+                        <strong>Impedance</strong> extends resistance to AC:
+                        Z<sub>R</sub> = R, Z<sub>L</sub> = jωL, Z<sub>C</sub> = 1/(jωC).
+                        For a series RLC: Z = R + j(ωL − 1/ωC).
+                    </p>
+
+                    <p>
+                        <strong>Resonance</strong> occurs when the imaginary part of
+                        impedance is zero — the inductive and capacitive reactances
+                        cancel:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">ωL = 1/(ωC) → f<sub>0</sub> = 1/(2π√(LC))</div>
+                    </div>
+
+                    <p>
+                        At resonance, impedance is purely resistive (Z = R), current is
+                        maximum (series) or minimum (parallel), and the circuit can
+                        amplify voltage across L or C by the <strong>Q-factor</strong>:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">Q = ω₀L/R = 1/(ω₀CR) = f₀/BW</div>
+                        <div class="calc__row calc__row--note">Higher Q = sharper resonance peak = more selective</div>
+                    </div>
+
+                    <p><strong>Power in AC circuits:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Power</th><th scope="col">Formula</th><th scope="col">Unit</th><th scope="col">What it represents</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Real (P)</td><td>VI cos φ</td><td>W</td><td>Actual power consumed</td></tr>
+                                <tr><td>Reactive (Q)</td><td>VI sin φ</td><td>VAR</td><td>Power stored/returned by L and C</td></tr>
+                                <tr><td>Apparent (S)</td><td>VI</td><td>VA</td><td>Total power delivered</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calc">
+                        <div class="calc__row">Power factor = cos φ = P/S = R/|Z|</div>
+                        <div class="calc__row calc__row--note">φ is the phase angle between voltage and current</div>
+                    </div>
+
+                    <p>
+                        <strong>Power factor correction:</strong> most industrial loads
+                        are inductive (motors), giving a lagging power factor. Adding a
+                        parallel capacitor reduces the reactive power, bringing cos φ
+                        closer to 1 and reducing the current drawn from the supply for
+                        the same real power.
+                    </p>
+
+                    <div class="insight">
+                        The power triangle relates P, Q and S:
+                        S² = P² + Q². The angle φ is the same as the impedance angle.
+                        A purely resistive load has pf = 1; a purely reactive load has
+                        pf = 0.
+                    </div>
+                </div>
+
+                <!-- 5 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-diodes">
+                    <h3>5. Diodes and rectifiers</h3>
+
+                    <p>
+                        A <strong>PN junction diode</strong> conducts in forward bias
+                        (anode positive) with a turn-on voltage of ~0.7 V (Si) or
+                        ~0.3 V (Ge), and blocks in reverse bias until the breakdown
+                        voltage.
+                    </p>
+
+                    <p>
+                        <strong>Rectifiers</strong> convert AC to pulsating DC:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Type</th><th scope="col">Diodes</th><th scope="col">V<sub>dc</sub></th><th scope="col">Ripple freq</th><th scope="col">PIV</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Half-wave</td><td>1</td><td>V<sub>m</sub>/π</td><td>f</td><td>V<sub>m</sub></td></tr>
+                                <tr><td>Full-wave (centre-tap)</td><td>2</td><td>2V<sub>m</sub>/π</td><td>2f</td><td>2V<sub>m</sub></td></tr>
+                                <tr><td>Bridge</td><td>4</td><td>2V<sub>m</sub>/π</td><td>2f</td><td>V<sub>m</sub></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        The bridge rectifier is most common because it has the same output
+                        as centre-tap but needs no centre-tapped transformer and has
+                        lower PIV (peak inverse voltage). A capacitor filter smooths the
+                        output: larger C → lower ripple.
+                    </p>
+
+                    <p>
+                        <strong>Zener diode</strong> operates in reverse breakdown at a
+                        well-defined voltage V<sub>Z</sub>. Used as a voltage regulator:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">R<sub>s</sub> = (V<sub>in</sub> − V<sub>Z</sub>) / (I<sub>Z</sub> + I<sub>L</sub>)</div>
+                        <div class="calc__row calc__row--note">R<sub>s</sub> = series resistor, I<sub>L</sub> = load current</div>
+                    </div>
+
+                    <div class="insight">
+                        The bridge rectifier's PIV advantage is the reason it dominates.
+                        In a centre-tap rectifier, when one diode conducts, the
+                        non-conducting diode sees V<sub>m</sub> from the conducting half
+                        plus V<sub>m</sub> from the non-conducting half = 2V<sub>m</sub>.
+                        In a bridge, each diode only sees V<sub>m</sub>.
+                    </div>
+                </div>
+
+                <!-- 6 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-clippers">
+                    <h3>6. Clippers and clampers</h3>
+
+                    <p>
+                        <strong>Clippers</strong> (limiters) cut off part of a waveform.
+                        <strong>Clampers</strong> (DC restorers) shift the entire waveform
+                        up or down without changing its shape. These are high-frequency
+                        exam questions — the typical format shows a circuit and asks you
+                        to draw the output waveform.
+                    </p>
+
+                    <p>
+                        <strong>Clipper types:</strong>
+                    </p>
+
+                    <ul>
+                        <li><strong>Positive clipper:</strong> diode clips the positive portion. With a bias voltage V<sub>B</sub>, it clips above V<sub>B</sub> + 0.7.</li>
+                        <li><strong>Negative clipper:</strong> clips the negative portion. With bias, clips below −(V<sub>B</sub> + 0.7).</li>
+                        <li><strong>Combination clipper:</strong> two diodes with biases clip both positive and negative peaks.</li>
+                    </ul>
+
+                    <p>
+                        The method for solving any clipper: for each half-cycle, determine
+                        if the diode is forward-biased. If yes, the output is clamped to
+                        the bias + diode drop. If no, the output follows the input.
+                    </p>
+
+                    <p>
+                        <strong>Clamper types:</strong>
+                    </p>
+
+                    <ul>
+                        <li><strong>Positive clamper:</strong> shifts the waveform up so its negative peak sits at 0 V (or at a bias level).</li>
+                        <li><strong>Negative clamper:</strong> shifts the waveform down so its positive peak sits at 0 V.</li>
+                    </ul>
+
+                    <p>
+                        The clamper works through a capacitor: during the first half-cycle,
+                        the capacitor charges to the peak value. Then the capacitor voltage
+                        adds to (or subtracts from) the input, shifting the entire waveform.
+                        For an ideal clamper (no load), the peak-to-peak output equals
+                        the peak-to-peak input.
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Positive clamper input and output: input swings ±Vm, output swings 0 to 2Vm" viewBox="0 0 400 150" style="max-width:400px">
+                            <text x="10" y="15" class="dg-label" font-size="10">Input</text>
+                            <line x1="10" y1="75" x2="180" y2="75" class="dg-stroke-mid" stroke-width="1" />
+                            <path d="M10,75 Q50,25 90,75 Q130,125 170,75" fill="none" stroke="var(--ink)" stroke-width="1.5" />
+                            <text x="175" y="30" class="dg-label" font-size="9">+V<tspan font-size="7" dy="-3">m</tspan></text>
+                            <text x="175" y="130" class="dg-label" font-size="9">−V<tspan font-size="7" dy="-3">m</tspan></text>
+                            <text x="220" y="15" class="dg-label" font-size="10">Output (pos. clamper)</text>
+                            <line x1="220" y1="130" x2="390" y2="130" class="dg-stroke-mid" stroke-width="1" />
+                            <path d="M220,130 Q260,30 300,130 Q340,130 340,130" fill="none" stroke="var(--ink-500)" stroke-width="1.5" />
+                            <path d="M300,130 Q340,30 380,130" fill="none" stroke="var(--ink-500)" stroke-width="1.5" />
+                            <text x="385" y="35" class="dg-label" font-size="9">+2V<tspan font-size="7" dy="-3">m</tspan></text>
+                            <text x="385" y="127" class="dg-label" font-size="9">0</text>
+                        </svg>
+                        <figcaption>A positive clamper shifts the waveform up — the negative peak becomes 0.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        The quick rules: a clipper <em>changes the shape</em> (removes
+                        peaks). A clamper <em>preserves the shape</em> but <em>moves
+                        the DC level</em>. If the exam shows a capacitor in series with
+                        the signal and a diode to ground, it is a clamper. If the diode
+                        is in series or parallel with the signal path (no coupling
+                        capacitor), it is a clipper.
+                    </div>
+                </div>
+
+                <!-- 7 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-transistors">
+                    <h3>7. Transistors</h3>
+
+                    <p>
+                        A <strong>BJT (Bipolar Junction Transistor)</strong> is a
+                        current-controlled device with three terminals: Base, Collector,
+                        Emitter. Two types: NPN (current flows C→E, conventional) and
+                        PNP (current flows E→C).
+                    </p>
+
+                    <p>
+                        <strong>Three regions of operation:</strong>
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact">
+                            <thead>
+                                <tr><th scope="col">Region</th><th scope="col">BE junction</th><th scope="col">BC junction</th><th scope="col">Behaves as</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Cut-off</td><td>Reverse</td><td>Reverse</td><td>Open switch (I<sub>C</sub> ≈ 0)</td></tr>
+                                <tr><td>Active</td><td>Forward</td><td>Reverse</td><td>Amplifier (I<sub>C</sub> = βI<sub>B</sub>)</td></tr>
+                                <tr><td>Saturation</td><td>Forward</td><td>Forward</td><td>Closed switch (V<sub>CE</sub> ≈ 0.2 V)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        The current relationships:
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">I<sub>E</sub> = I<sub>C</sub> + I<sub>B</sub></div>
+                        <div class="calc__row">I<sub>C</sub> = β I<sub>B</sub> = α I<sub>E</sub></div>
+                        <div class="calc__row">α = β/(β+1), β = α/(1−α)</div>
+                        <div class="calc__row calc__row--note">α ≈ 0.95–0.99, β ≈ 20–500</div>
+                    </div>
+
+                    <p>
+                        <strong>Configurations</strong> — common base (voltage gain,
+                        no current gain), common emitter (both voltage and current gain,
+                        most used), common collector/emitter follower (current gain,
+                        voltage gain ≈ 1, buffer).
+                    </p>
+
+                    <p>
+                        <strong>Biasing:</strong> voltage-divider bias is the most stable
+                        configuration. The Q-point (operating point) is set on the load
+                        line; for a good amplifier, it should be in the middle of the
+                        active region.
+                    </p>
+
+                    <p>
+                        <strong>FET and MOSFET</strong> are voltage-controlled devices.
+                        JFET has a channel controlled by a gate-source voltage; MOSFET
+                        (enhancement and depletion types) is the building block of
+                        digital ICs. Key advantage over BJT: very high input impedance,
+                        lower power consumption, easier to fabricate in VLSI.
+                    </p>
+
+                    <div class="insight">
+                        For the exam, the most common question is: given a circuit,
+                        determine if the BJT is in cut-off, active or saturation.
+                        Check V<sub>BE</sub>: if &lt; 0.5 V → cut-off. If ≥ 0.7 V,
+                        check V<sub>CE</sub>: if > 0.2 V → active, if ≤ 0.2 V →
+                        saturation.
+                    </div>
+                </div>
+
+                <!-- 8 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-opamp">
+                    <h3>8. Operational amplifiers</h3>
+
+                    <p>
+                        An ideal op-amp has infinite input impedance (no current flows
+                        into inputs), zero output impedance, infinite open-loop gain
+                        and infinite bandwidth. Two key analysis rules follow:
+                    </p>
+
+                    <ul>
+                        <li><strong>Virtual short:</strong> with negative feedback, V<sup>+</sup> = V<sup>−</sup>.</li>
+                        <li><strong>No input current:</strong> I<sup>+</sup> = I<sup>−</sup> = 0.</li>
+                    </ul>
+
+                    <p>
+                        The two fundamental amplifier configurations:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Config</th><th scope="col">Gain (A<sub>v</sub>)</th><th scope="col">Input</th><th scope="col">Phase</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Inverting</td><td>−R<sub>f</sub>/R<sub>in</sub></td><td>To V<sup>−</sup> via R<sub>in</sub></td><td>180° inverted</td></tr>
+                                <tr><td>Non-inverting</td><td>1 + R<sub>f</sub>/R<sub>in</sub></td><td>To V<sup>+</sup> directly</td><td>In-phase</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Voltage follower:</strong> non-inverting with R<sub>f</sub> = 0
+                        and R<sub>in</sub> = ∞ → gain = 1. Used as a buffer (high
+                        impedance in, low impedance out).
+                    </p>
+
+                    <p>
+                        Other common op-amp circuits: <strong>summing amplifier</strong>
+                        (V<sub>out</sub> = −R<sub>f</sub>(V₁/R₁ + V₂/R₂ + …)),
+                        <strong>difference amplifier</strong>,
+                        <strong>integrator</strong> (R<sub>f</sub> replaced by C),
+                        <strong>differentiator</strong> (R<sub>in</sub> replaced by C),
+                        <strong>comparator</strong> (no feedback, output swings to ±V<sub>sat</sub>).
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">CMRR = 20 log₁₀(A<sub>d</sub>/A<sub>cm</sub>) dB</div>
+                        <div class="calc__row calc__row--note">Higher CMRR → better rejection of common-mode noise</div>
+                    </div>
+
+                    <div class="insight">
+                        The two rules (virtual short + no input current) solve every
+                        op-amp circuit in the exam. Write KCL at the inverting input
+                        node and substitute V<sup>−</sup> = V<sup>+</sup>.
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================================================================
+             SOLVED QUESTIONS
+             ================================================================ -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved past questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <!-- S1 -->
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">Find the equivalent resistance between terminals A and B for the circuit: R₁=6Ω and R₂=3Ω in parallel, in series with R₃=4Ω.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Parallel combination of R₁ and R₂</span>
+                                <div class="calc">
+                                    <div class="calc__row">R<sub>12</sub> = (6 × 3)/(6 + 3) = 18/9 = <strong>2 Ω</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Series with R₃</span>
+                                <div class="calc">
+                                    <div class="calc__row">R<sub>eq</sub> = R<sub>12</sub> + R₃ = 2 + 4 = <strong>6 Ω</strong></div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S2 -->
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">Using KVL, find the current in a circuit with a 24V source, R₁=4Ω, R₂=8Ω in series. Verify with KCL at the junction.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Apply KVL around the loop</span>
+                                <div class="calc">
+                                    <div class="calc__row">−24 + I×4 + I×8 = 0</div>
+                                    <div class="calc__row">12I = 24</div>
+                                    <div class="calc__row calc__row--result">I = <strong>2 A</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Voltage drops</span>
+                                <div class="calc">
+                                    <div class="calc__row">V<sub>R1</sub> = 2 × 4 = 8 V</div>
+                                    <div class="calc__row">V<sub>R2</sub> = 2 × 8 = 16 V</div>
+                                    <div class="calc__row calc__row--note">Check: 8 + 16 = 24 V ✓</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S3 -->
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">Find the Thevenin equivalent across R<sub>L</sub> in a circuit with V<sub>s</sub>=20V, R₁=5Ω, R₂=15Ω (voltage divider), R<sub>L</sub>=10Ω.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Remove R<sub>L</sub>, find V<sub>th</sub> (open-circuit voltage across R₂)</span>
+                                <div class="calc">
+                                    <div class="calc__row">V<sub>th</sub> = 20 × 15/(5+15) = 20 × 0.75 = <strong>15 V</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Deactivate V<sub>s</sub> (short it), find R<sub>th</sub></span>
+                                <div class="calc">
+                                    <div class="calc__row">R<sub>th</sub> = R₁ ∥ R₂ = (5 × 15)/(5 + 15) = 75/20 = <strong>3.75 Ω</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Load current</span>
+                                <div class="calc">
+                                    <div class="calc__row">I<sub>L</sub> = V<sub>th</sub>/(R<sub>th</sub> + R<sub>L</sub>) = 15/(3.75 + 10) = 15/13.75</div>
+                                    <div class="calc__row calc__row--result">= <strong>1.091 A</strong></div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S4 -->
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">A Zener diode has V<sub>Z</sub>=5.1V and the load draws 20 mA. Input voltage is 12V. Design the series resistor R<sub>s</sub> assuming minimum Zener current of 5 mA.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Total current through R<sub>s</sub></span>
+                                <div class="calc">
+                                    <div class="calc__row">I<sub>s</sub> = I<sub>Z</sub> + I<sub>L</sub> = 5 + 20 = <strong>25 mA</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Calculate R<sub>s</sub></span>
+                                <div class="calc">
+                                    <div class="calc__row">R<sub>s</sub> = (V<sub>in</sub> − V<sub>Z</sub>) / I<sub>s</sub> = (12 − 5.1) / 0.025</div>
+                                    <div class="calc__row calc__row--result">= 6.9 / 0.025 = <strong>276 Ω</strong></div>
+                                    <div class="calc__row calc__row--note">Standard value: use 270 Ω (I<sub>Z</sub> will be slightly above 5 mA)</div>
+                                </div>
+                            </li>
+                        </ol>
+                        <p><strong>Power in R<sub>s</sub>:</strong> P = I²R = 0.025² × 276 = 0.173 W → use a ¼ W resistor.</p>
+                    </div>
+                </details>
+
+                <!-- S5 -->
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">Compare half-wave and full-wave (bridge) rectifiers in terms of Vdc, ripple frequency, and PIV.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="given">
+                            <p><strong>Given:</strong> Input: V<sub>m</sub> sin(ωt), supply frequency f</p>
+                        </div>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Parameter</th><th scope="col">Half-wave</th><th scope="col">Bridge (full-wave)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Diodes needed</th><td>1</td><td>4</td></tr>
+                                    <tr><th scope="row">V<sub>dc</sub></th><td>V<sub>m</sub>/π = 0.318 V<sub>m</sub></td><td>2V<sub>m</sub>/π = 0.636 V<sub>m</sub></td></tr>
+                                    <tr><th scope="row">Ripple frequency</th><td>f</td><td>2f</td></tr>
+                                    <tr><th scope="row">Ripple factor</th><td>1.21 (121%)</td><td>0.48 (48%)</td></tr>
+                                    <tr><th scope="row">PIV per diode</th><td>V<sub>m</sub></td><td>V<sub>m</sub></td></tr>
+                                    <tr><th scope="row">Efficiency</th><td>40.6%</td><td>81.2%</td></tr>
+                                    <tr><th scope="row">Transformer</th><td>Simple</td><td>Simple (no centre tap)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Key advantage of bridge:</strong> twice the DC output, lower ripple, same PIV — at the cost of two extra diodes (cheap). The centre-tap rectifier matches the bridge output but requires a centre-tapped transformer and has PIV = 2V<sub>m</sub>.</p>
+                    </div>
+                </details>
+
+                <!-- S6 -->
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">A series RLC circuit has R=10Ω, L=0.1H, C=100µF. Find the resonant frequency, Q-factor and bandwidth.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Resonant frequency</span>
+                                <div class="calc">
+                                    <div class="calc__row">f₀ = 1/(2π√(LC)) = 1/(2π√(0.1 × 100×10⁻⁶))</div>
+                                    <div class="calc__row">= 1/(2π√(10⁻⁵)) = 1/(2π × 3.162×10⁻³)</div>
+                                    <div class="calc__row calc__row--result">= 1/0.01987 ≈ <strong>50.33 Hz</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Q-factor</span>
+                                <div class="calc">
+                                    <div class="calc__row">Q = ω₀L/R = 2π × 50.33 × 0.1 / 10</div>
+                                    <div class="calc__row">= 31.63 × 0.1 / 10 = 3.163 / 10</div>
+                                    <div class="calc__row calc__row--result">≈ <strong>3.16</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Bandwidth</span>
+                                <div class="calc">
+                                    <div class="calc__row">BW = f₀/Q = 50.33/3.16 ≈ <strong>15.93 Hz</strong></div>
+                                    <div class="calc__row calc__row--note">Or directly: BW = R/(2πL) = 10/(2π×0.1) = 15.92 Hz ✓</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S7 -->
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">Draw the output waveform for a positive clipper with a bias of 3V, given a 10V peak sine wave input. Assume Si diode (0.7V drop).</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Determine the clipping level</span>
+                                <div class="calc">
+                                    <div class="calc__row">Clip level = V<sub>bias</sub> + V<sub>diode</sub> = 3 + 0.7 = <strong>3.7 V</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Analyse each half-cycle</span>
+                                <p><strong>Positive half:</strong> when input > 3.7 V, the diode conducts and clamps the output to 3.7 V. When input ≤ 3.7 V, the diode is off and the output follows the input.</p>
+                                <p><strong>Negative half:</strong> the diode is always reverse-biased, so the output follows the input down to −10 V.</p>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Output description</span>
+                                <p>The output is a sine wave that follows the input from −10 V up to +3.7 V, then is flat at +3.7 V for the portion where the input exceeds 3.7 V. The positive peak is clipped from 10 V to 3.7 V.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S8 -->
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">An inverting op-amp has R<sub>in</sub>=10kΩ and R<sub>f</sub>=100kΩ. Find the gain, and the output for V<sub>in</sub>=0.5V.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Voltage gain</span>
+                                <div class="calc">
+                                    <div class="calc__row">A<sub>v</sub> = −R<sub>f</sub>/R<sub>in</sub> = −100k/10k = <strong>−10</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Output voltage</span>
+                                <div class="calc">
+                                    <div class="calc__row">V<sub>out</sub> = A<sub>v</sub> × V<sub>in</sub> = −10 × 0.5 = <strong>−5 V</strong></div>
+                                    <div class="calc__row calc__row--note">The negative sign means the output is inverted (180° phase shift).</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S9 -->
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">An NPN transistor has β=100. Base current is 50 µA. Find I<sub>C</sub>, I<sub>E</sub> and α.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Collector current</span>
+                                <div class="calc">
+                                    <div class="calc__row">I<sub>C</sub> = β × I<sub>B</sub> = 100 × 50 µA = <strong>5 mA</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Emitter current</span>
+                                <div class="calc">
+                                    <div class="calc__row">I<sub>E</sub> = I<sub>C</sub> + I<sub>B</sub> = 5 + 0.05 = <strong>5.05 mA</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Alpha</span>
+                                <div class="calc">
+                                    <div class="calc__row">α = β/(β+1) = 100/101 = <strong>0.99</strong></div>
+                                    <div class="calc__row calc__row--note">Verify: α = I<sub>C</sub>/I<sub>E</sub> = 5/5.05 = 0.99 ✓</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- S10 -->
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">Calculate the power factor and real power for a load drawing 5A from a 230V supply with a phase angle of 37°.</span>
+                        <span class="chip">standard repeat</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Power factor</span>
+                                <div class="calc">
+                                    <div class="calc__row">pf = cos 37° = <strong>0.8 lagging</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Apparent power</span>
+                                <div class="calc">
+                                    <div class="calc__row">S = V × I = 230 × 5 = <strong>1150 VA</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Real power</span>
+                                <div class="calc">
+                                    <div class="calc__row">P = S × cos φ = 1150 × 0.8 = <strong>920 W</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Reactive power</span>
+                                <div class="calc">
+                                    <div class="calc__row">Q = S × sin φ = 1150 × sin 37° = 1150 × 0.6 = <strong>690 VAR</strong></div>
+                                    <div class="calc__row calc__row--note">Check: √(920² + 690²) = √(846400 + 476100) = √1322500 = 1150 VA ✓</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- ================================================================
+             PRACTICE QUESTIONS
+             ================================================================ -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <!-- P1 -->
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">Three resistors (10Ω, 15Ω, 30Ω) are connected in parallel to a 30V source. Find the equivalent resistance, total current and individual branch currents.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Equivalent resistance</span>
+                                <div class="calc">
+                                    <div class="calc__row">1/R<sub>eq</sub> = 1/10 + 1/15 + 1/30 = 3/30 + 2/30 + 1/30 = 6/30</div>
+                                    <div class="calc__row calc__row--result">R<sub>eq</sub> = 30/6 = <strong>5 Ω</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Total current</span>
+                                <div class="calc">
+                                    <div class="calc__row">I<sub>total</sub> = V/R<sub>eq</sub> = 30/5 = <strong>6 A</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Branch currents</span>
+                                <div class="calc">
+                                    <div class="calc__row">I₁ = 30/10 = 3 A, I₂ = 30/15 = 2 A, I₃ = 30/30 = 1 A</div>
+                                    <div class="calc__row calc__row--note">Check: 3 + 2 + 1 = 6 A ✓ (KCL)</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P2 -->
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">Find the Norton equivalent for a circuit with V<sub>s</sub>=30V, R₁=6Ω in series with the source, R₂=12Ω as the load.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Short-circuit current (short the load terminals)</span>
+                                <div class="calc">
+                                    <div class="calc__row">I<sub>N</sub> = V<sub>s</sub>/R₁ = 30/6 = <strong>5 A</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Norton resistance</span>
+                                <div class="calc">
+                                    <div class="calc__row">R<sub>N</sub> = R₁ = <strong>6 Ω</strong> (looking into terminals with V<sub>s</sub> shorted)</div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Load current</span>
+                                <div class="calc">
+                                    <div class="calc__row">I<sub>L</sub> = I<sub>N</sub> × R<sub>N</sub>/(R<sub>N</sub>+R<sub>L</sub>) = 5 × 6/(6+12) = 30/18</div>
+                                    <div class="calc__row calc__row--result">= <strong>1.667 A</strong></div>
+                                    <div class="calc__row calc__row--note">Verify via Thevenin: V<sub>th</sub>=I<sub>N</sub>×R<sub>N</sub>=30V, I<sub>L</sub>=30/18=1.667A ✓</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P3 -->
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">An RC circuit has R=100kΩ, C=10µF. Find the time constant, and the capacitor voltage after 1s if charged from a 10V source.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Time constant</span>
+                                <div class="calc">
+                                    <div class="calc__row">τ = RC = 100×10³ × 10×10⁻⁶ = <strong>1 s</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Voltage at t = 1s = 1τ</span>
+                                <div class="calc">
+                                    <div class="calc__row">v(1) = 10 × (1 − e⁻¹) = 10 × 0.6321 = <strong>6.321 V</strong></div>
+                                    <div class="calc__row calc__row--note">At 5τ (5s): v = 10 × (1 − e⁻⁵) = 10 × 0.9933 ≈ 9.93 V (essentially fully charged)</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P4 -->
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">A load of impedance Z = 30 + j40 Ω is connected to a 240V AC supply. Find the current, power factor, real power and reactive power.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Impedance magnitude and angle</span>
+                                <div class="calc">
+                                    <div class="calc__row">|Z| = √(30² + 40²) = √(900 + 1600) = √2500 = <strong>50 Ω</strong></div>
+                                    <div class="calc__row">φ = arctan(40/30) = arctan(1.333) = <strong>53.13°</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Current</span>
+                                <div class="calc">
+                                    <div class="calc__row">I = V/|Z| = 240/50 = <strong>4.8 A</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Power factor</span>
+                                <div class="calc">
+                                    <div class="calc__row">pf = cos 53.13° = R/|Z| = 30/50 = <strong>0.6 lagging</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Powers</span>
+                                <div class="calc">
+                                    <div class="calc__row">S = 240 × 4.8 = 1152 VA</div>
+                                    <div class="calc__row">P = 1152 × 0.6 = <strong>691.2 W</strong></div>
+                                    <div class="calc__row">Q = 1152 × sin 53.13° = 1152 × 0.8 = <strong>921.6 VAR</strong></div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P5 -->
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">Find the maximum power that can be delivered to a load from a source with V<sub>th</sub>=48V and R<sub>th</sub>=12Ω. What load resistance is needed?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Load for maximum power transfer</span>
+                                <div class="calc">
+                                    <div class="calc__row">R<sub>L</sub> = R<sub>th</sub> = <strong>12 Ω</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Maximum power</span>
+                                <div class="calc">
+                                    <div class="calc__row">P<sub>max</sub> = V<sub>th</sub>²/(4R<sub>th</sub>) = 48²/(4×12) = 2304/48</div>
+                                    <div class="calc__row calc__row--result">= <strong>48 W</strong></div>
+                                    <div class="calc__row calc__row--note">Efficiency = 50% (half the power is dissipated in R<sub>th</sub>)</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P6 -->
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">Draw the output waveform for a negative clamper with an ideal diode, given a 5V peak sine wave input.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">First positive half-cycle: capacitor charges</span>
+                                <p>During the first positive peak, the diode conducts (forward biased). The capacitor charges to V<sub>m</sub> = 5 V with the polarity that opposes the input.</p>
+                            </li>
+                            <li><span class="walk__what">Subsequent cycles: capacitor voltage adds</span>
+                                <p>The output = input − V<sub>cap</sub> = input − 5 V (the capacitor holds its charge since the diode prevents discharge).</p>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Output range</span>
+                                <div class="calc">
+                                    <div class="calc__row">Positive peak: 5 − 5 = <strong>0 V</strong></div>
+                                    <div class="calc__row">Negative peak: −5 − 5 = <strong>−10 V</strong></div>
+                                </div>
+                                <p>The waveform shape is preserved, but shifted down so the positive peak sits at 0 V.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P7 -->
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">Compare BJT and MOSFET. When would you prefer each?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead>
+                                    <tr><th scope="col">Feature</th><th scope="col">BJT</th><th scope="col">MOSFET</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Control</th><td>Current-controlled (I<sub>B</sub>)</td><td>Voltage-controlled (V<sub>GS</sub>)</td></tr>
+                                    <tr><th scope="row">Input impedance</th><td>Low (kΩ range)</td><td>Very high (10¹² Ω+)</td></tr>
+                                    <tr><th scope="row">Switching speed</th><td>Slower (minority carriers)</td><td>Faster (majority carriers only)</td></tr>
+                                    <tr><th scope="row">Power consumption</th><td>Higher (base current)</td><td>Lower (no gate current)</td></tr>
+                                    <tr><th scope="row">VLSI suitability</th><td>Difficult to scale</td><td>Excellent — basis of CMOS</td></tr>
+                                    <tr><th scope="row">Analog amplification</th><td>Higher g<sub>m</sub>, better for linear amps</td><td>Lower g<sub>m</sub> at low currents</td></tr>
+                                    <tr><th scope="row">Best for</th><td>Analog circuits, current driving</td><td>Digital ICs, power switching, VLSI</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- P8 -->
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">A non-inverting op-amp has R<sub>f</sub>=47kΩ and R<sub>1</sub>=10kΩ. Find the gain and output for V<sub>in</sub>=0.8V.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Gain</span>
+                                <div class="calc">
+                                    <div class="calc__row">A<sub>v</sub> = 1 + R<sub>f</sub>/R₁ = 1 + 47k/10k = 1 + 4.7 = <strong>5.7</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Output</span>
+                                <div class="calc">
+                                    <div class="calc__row">V<sub>out</sub> = 5.7 × 0.8 = <strong>4.56 V</strong></div>
+                                    <div class="calc__row calc__row--note">In-phase with input (no inversion).</div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P9 -->
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">A BJT CE amplifier has V<sub>CC</sub>=12V, R<sub>C</sub>=2kΩ, R<sub>B</sub>=200kΩ, β=100. Find I<sub>B</sub>, I<sub>C</sub>, V<sub>CE</sub>. Is it in active or saturation?</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Base current (assume V<sub>BE</sub>=0.7V)</span>
+                                <div class="calc">
+                                    <div class="calc__row">I<sub>B</sub> = (V<sub>CC</sub> − V<sub>BE</sub>) / R<sub>B</sub> = (12 − 0.7) / 200k</div>
+                                    <div class="calc__row calc__row--result">= 11.3/200000 = <strong>56.5 µA</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">Collector current</span>
+                                <div class="calc">
+                                    <div class="calc__row">I<sub>C</sub> = β × I<sub>B</sub> = 100 × 56.5 µA = <strong>5.65 mA</strong></div>
+                                </div>
+                            </li>
+                            <li><span class="walk__what">V<sub>CE</sub></span>
+                                <div class="calc">
+                                    <div class="calc__row">V<sub>CE</sub> = V<sub>CC</sub> − I<sub>C</sub> × R<sub>C</sub> = 12 − 5.65×10⁻³ × 2000</div>
+                                    <div class="calc__row">= 12 − 11.3 = <strong>0.7 V</strong></div>
+                                </div>
+                            </li>
+                            <li class="walk--final"><span class="walk__what">Region check</span>
+                                <p>V<sub>CE</sub> = 0.7 V > 0.2 V (saturation threshold), so the transistor is in the <strong>active region</strong> — but barely. It is close to the edge of saturation.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+                <!-- P10 -->
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">A summing amplifier has R<sub>f</sub>=20kΩ, R₁=10kΩ, R₂=20kΩ. Inputs V₁=2V, V₂=3V. Find V<sub>out</sub>.</span>
+                        <span class="chip">practice</span>
+                    </summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li class="walk--final"><span class="walk__what">Apply summing amplifier formula</span>
+                                <div class="calc">
+                                    <div class="calc__row">V<sub>out</sub> = −R<sub>f</sub>(V₁/R₁ + V₂/R₂)</div>
+                                    <div class="calc__row">= −20k × (2/10k + 3/20k)</div>
+                                    <div class="calc__row">= −20k × (0.0002 + 0.00015)</div>
+                                    <div class="calc__row">= −20k × 0.00035</div>
+                                    <div class="calc__row calc__row--result">= <strong>−7 V</strong></div>
+                                </div>
+                                <p>The output is the inverted weighted sum: V₁ gets weight 20k/10k = 2, V₂ gets weight 20k/20k = 1. So V<sub>out</sub> = −(2×2 + 1×3) = −7 V.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="telecommunication.html">
+                        <span class="pager__dir">Previous</span>
+                        <span class="pager__name">Telecommunication</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="operating-system.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">Operating System</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>
+                Bangladesh Bank Assistant Director (ICT) written preparation. Subject 10
+                of 18 — Circuit Analysis.
+            </p>
+            <p class="small">
+                Coverage checklist: <code>SYLLABUS.md</code> §10.
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

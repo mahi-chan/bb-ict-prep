@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="subject" data-subject="security"
+    data-subject-name="Security">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Security — BB AD (ICT) Written Prep</title>
+    <meta name="description"
+        content="Exam notes, solved questions and practice on CIA triad, symmetric/asymmetric cryptography, hashing, digital signatures, network defence, authentication and governance." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="subject-nav"
+                aria-label="Toggle subject list">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <a class="brand" href="../index.html">
+                <span class="brand__mark" aria-hidden="true">BB</span>
+                <span class="brand__text">
+                    <span class="brand__title">AD (ICT) Written Prep</span>
+                    <span class="brand__sub">Bangladesh Bank</span>
+                </span>
+            </a>
+
+            <div class="search">
+                <label class="visually-hidden" for="site-search">Search the site</label>
+                <div class="search__field">
+                    <svg class="search__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M11 11l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                    <input id="site-search" class="search__input" type="search"
+                        placeholder="Search topics, questions, formulas…" autocomplete="off" role="combobox"
+                        aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
+                    <span class="search__kbd" aria-hidden="true">/</span>
+                </div>
+                <ul class="search__results" id="search-results" role="listbox" aria-label="Search results"
+                    data-open="false"></ul>
+            </div>
+
+            <div class="header__spacer"></div>
+
+            <div class="header__progress">
+                <span>Revised <strong data-progress-count>0 / 18</strong></span>
+                <span class="meter" role="presentation">
+                    <span class="meter__fill" data-progress-fill data-value="0"></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="shell">
+        <nav class="site-nav" id="subject-nav" aria-label="Subjects" data-open="false">
+            <p class="site-nav__heading">All subjects</p>
+            <ul class="subject-list">
+                <li><a class="subject-link" href="computer-fundamentals.html" data-slug="computer-fundamentals"><span class="subject-link__num">01</span>Computer Fundamentals</a></li>
+                <li><a class="subject-link" href="c-programming.html" data-slug="c-programming"><span class="subject-link__num">02</span>C Programming</a></li>
+                <li><a class="subject-link" href="data-structures.html" data-slug="data-structures"><span class="subject-link__num">03</span>Data Structures</a></li>
+                <li><a class="subject-link" href="algorithms.html" data-slug="algorithms"><span class="subject-link__num">04</span>Algorithms</a></li>
+                <li><a class="subject-link" href="database.html" data-slug="database"><span class="subject-link__num">05</span>Database</a></li>
+                <li><a class="subject-link" href="oop-java.html" data-slug="oop-java"><span class="subject-link__num">06</span>OOP (Java)</a></li>
+                <li><a class="subject-link" href="networking.html" data-slug="networking"><span class="subject-link__num">07</span>Networking</a></li>
+                <li><a class="subject-link" href="computer-architecture.html" data-slug="computer-architecture"><span class="subject-link__num">08</span>Computer Architecture</a></li>
+                <li><a class="subject-link" href="telecommunication.html" data-slug="telecommunication"><span class="subject-link__num">09</span>Telecommunication</a></li>
+                <li><a class="subject-link" href="circuit-analysis.html" data-slug="circuit-analysis"><span class="subject-link__num">10</span>Circuit Analysis</a></li>
+                <li><a class="subject-link" href="operating-system.html" data-slug="operating-system"><span class="subject-link__num">11</span>Operating System</a></li>
+                <li><a class="subject-link" href="discrete-math.html" data-slug="discrete-math"><span class="subject-link__num">12</span>Discrete Math</a></li>
+                <li><a class="subject-link" href="software-engineering.html" data-slug="software-engineering"><span class="subject-link__num">13</span>Software Engineering</a></li>
+                <li><a class="subject-link" href="security.html" data-slug="security" aria-current="page"><span class="subject-link__num">14</span>Security</a></li>
+                <li><a class="subject-link" href="other-topics.html" data-slug="other-topics"><span class="subject-link__num">15</span>Other Topics</a></li>
+                <li><a class="subject-link" href="banking-ict.html" data-slug="banking-ict"><span class="subject-link__num">16</span>Banking ICT</a></li>
+                <li><a class="subject-link" href="emerging-tech.html" data-slug="emerging-tech"><span class="subject-link__num">17</span>Emerging Tech</a></li>
+                <li><a class="subject-link" href="focus-writing.html" data-slug="focus-writing"><span class="subject-link__num">18</span>Focus Writing</a></li>
+            </ul>
+            <div data-toc></div>
+        </nav>
+
+        <main class="site-main" id="main">
+            <div class="page-head">
+                <p class="page-head__eyebrow">
+                    <span>Subject 14</span><span aria-hidden="true">·</span><span>Phase 3</span>
+                </p>
+                <h1>Security</h1>
+                <p class="page-head__lede">
+                    This subject spans the CIA triad, malware taxonomy, attack
+                    types (network/application/social engineering), cryptographic
+                    algorithms (AES, RSA, SHA, digital signatures), authentication
+                    factors, firewalls, IDS/IPS, and governance frameworks. Many
+                    questions relate directly to banking security.
+                </p>
+                <div class="page-head__meta">
+                    <a class="btn btn--sm" href="#notes">Notes</a>
+                    <a class="btn btn--sm" href="#solved">Solved questions</a>
+                    <a class="btn btn--sm" href="#practice">Practice</a>
+                    <button class="btn btn--sm btn--ghost" type="button" data-mark-revised aria-pressed="false">
+                        <span data-mark-label>Mark as revised</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ================================================================
+             NOTES
+             ================================================================ -->
+            <section class="section" id="notes" aria-labelledby="notes-h">
+                <div class="section__head">
+                    <h2 id="notes-h">Notes</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 topics</span>
+                </div>
+
+                <ul class="topics">
+                    <li><a href="#n-cia"><span class="topics__num">01</span>CIA triad and security goals</a></li>
+                    <li><a href="#n-malware"><span class="topics__num">02</span>Malware types</a></li>
+                    <li><a href="#n-network-attacks"><span class="topics__num">03</span>Network attacks</a></li>
+                    <li><a href="#n-app-attacks"><span class="topics__num">04</span>Application attacks</a></li>
+                    <li><a href="#n-social"><span class="topics__num">05</span>Social engineering</a></li>
+                    <li><a href="#n-symmetric"><span class="topics__num">06</span>Symmetric cryptography</a></li>
+                    <li><a href="#n-asymmetric"><span class="topics__num">07</span>Asymmetric cryptography</a></li>
+                    <li><a href="#n-hash"><span class="topics__num">08</span>Hashing and digital signatures</a></li>
+                    <li><a href="#n-auth"><span class="topics__num">09</span>Authentication and access control</a></li>
+                    <li><a href="#n-defence"><span class="topics__num">10</span>Network defence and governance</a></li>
+                </ul>
+
+                <!-- 1 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-cia">
+                    <h3>1. CIA triad and security goals</h3>
+
+                    <p>
+                        The <strong>CIA triad</strong> is the foundation of information
+                        security:
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Goal</th><th scope="col">Meaning</th><th scope="col">Threat</th><th scope="col">Control</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Confidentiality</td><td>Only authorised parties access data</td><td>Eavesdropping, data breach</td><td>Encryption, access control</td></tr>
+                                <tr><td>Integrity</td><td>Data is not altered unauthorised</td><td>Tampering, MITM</td><td>Hashing, digital signatures</td></tr>
+                                <tr><td>Availability</td><td>System is accessible when needed</td><td>DoS, hardware failure</td><td>Redundancy, backups, DDoS protection</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>Additional security properties:</p>
+                    <ul>
+                        <li><strong>Authentication:</strong> verifying identity (who are you?)</li>
+                        <li><strong>Authorisation:</strong> what are you allowed to do?</li>
+                        <li><strong>Non-repudiation:</strong> sender cannot deny sending (digital signatures)</li>
+                        <li><strong>Accountability:</strong> actions can be traced to an entity (audit logs)</li>
+                    </ul>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="CIA triad triangle: Confidentiality, Integrity, Availability" viewBox="0 0 240 180" style="max-width:240px">
+                            <polygon points="120,15 20,155 220,155" fill="none" stroke="var(--ink)" stroke-width="1.8"/>
+                            <circle cx="120" cy="15" r="6" class="dg-node-solid"/>
+                            <circle cx="20" cy="155" r="6" class="dg-node-solid"/>
+                            <circle cx="220" cy="155" r="6" class="dg-node-solid"/>
+                            <text x="120" y="8" class="dg-label" text-anchor="middle" font-size="10" font-weight="600">Confidentiality</text>
+                            <text x="20" y="172" class="dg-label" text-anchor="middle" font-size="10" font-weight="600">Integrity</text>
+                            <text x="220" y="172" class="dg-label" text-anchor="middle" font-size="10" font-weight="600">Availability</text>
+                        </svg>
+                        <figcaption>The CIA triad — the three fundamental security goals.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        The three goals often conflict. Maximum confidentiality (encrypt
+                        everything, restrict access) can reduce availability. Maximum
+                        availability (public, always-on) reduces confidentiality. Security
+                        design is about balancing these trade-offs for the specific context.
+                    </div>
+                </div>
+
+                <!-- 2 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-malware">
+                    <h3>2. Malware types</h3>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Type</th><th scope="col">How it works</th><th scope="col">Key characteristic</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Virus</td><td>Attaches to host file; executes when file runs</td><td>Needs host program; self-replicating</td></tr>
+                                <tr><td>Worm</td><td>Self-replicates across networks</td><td>No host needed; spreads autonomously</td></tr>
+                                <tr><td>Trojan</td><td>Disguised as legitimate software</td><td>No self-replication; relies on user to install</td></tr>
+                                <tr><td>Ransomware</td><td>Encrypts files; demands ransom for decryption key</td><td>Major threat to banking; WannaCry, Petya</td></tr>
+                                <tr><td>Spyware</td><td>Silently monitors and collects user data</td><td>Keyloggers, screen capture</td></tr>
+                                <tr><td>Rootkit</td><td>Hides itself and other malware deep in OS</td><td>Very hard to detect; often kernel-level</td></tr>
+                                <tr><td>Adware</td><td>Displays unwanted advertisements</td><td>Usually bundled with free software</td></tr>
+                                <tr><td>Logic bomb</td><td>Triggers malicious action on a condition (date, event)</td><td>Dormant until triggered</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Malware taxonomy: self-replicating (virus, worm) vs non-replicating (trojan, ransomware)" viewBox="0 0 360 150" style="max-width:360px">
+                            <rect x="130" y="5" width="100" height="26" rx="4" class="dg-node-solid"/>
+                            <text x="180" y="22" class="dg-text-on-ink" text-anchor="middle" font-size="10" font-weight="600">Malware</text>
+                            <line x1="155" y1="31" x2="90" y2="52" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="205" y1="31" x2="270" y2="52" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <rect x="20" y="52" width="140" height="24" rx="4" class="dg-node"/>
+                            <text x="90" y="68" class="dg-label" font-size="9" font-weight="600">Self-replicating</text>
+                            <rect x="200" y="52" width="140" height="24" rx="4" class="dg-node"/>
+                            <text x="270" y="68" class="dg-label" font-size="9" font-weight="600">Non-replicating</text>
+                            <line x1="55" y1="76" x2="50" y2="98" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="125" y1="76" x2="130" y2="98" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="235" y1="76" x2="230" y2="98" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="305" y1="76" x2="310" y2="98" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <rect x="15" y="98" width="70" height="22" rx="4" class="dg-node"/>
+                            <text x="50" y="113" class="dg-label" font-size="9">Virus</text>
+                            <rect x="95" y="98" width="70" height="22" rx="4" class="dg-node"/>
+                            <text x="130" y="113" class="dg-label" font-size="9">Worm</text>
+                            <rect x="195" y="98" width="70" height="22" rx="4" class="dg-node"/>
+                            <text x="230" y="113" class="dg-label" font-size="9">Trojan</text>
+                            <rect x="270" y="98" width="80" height="22" rx="4" class="dg-node"/>
+                            <text x="310" y="113" class="dg-label" font-size="9">Ransomware</text>
+                            <text x="50" y="133" class="dg-label" font-size="7">needs host</text>
+                            <text x="130" y="133" class="dg-label" font-size="7">standalone</text>
+                            <text x="230" y="133" class="dg-label" font-size="7">disguised</text>
+                            <text x="310" y="133" class="dg-label" font-size="7">encrypts files</text>
+                        </svg>
+                        <figcaption>Malware taxonomy — the key split is whether the malware self-replicates.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        The critical distinction: a <em>virus</em> needs a host program to
+                        attach to, a <em>worm</em> is standalone and self-propagating, and
+                        a <em>Trojan</em> neither replicates nor infects — it tricks the
+                        user into running it. This is the most-asked malware question.
+                    </div>
+                </div>
+
+                <!-- 3 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-network-attacks">
+                    <h3>3. Network attacks</h3>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Attack</th><th scope="col">Mechanism</th><th scope="col">Defence</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>DoS / DDoS</td><td>Flood target with traffic to exhaust resources</td><td>Rate limiting, CDN, DDoS mitigation services</td></tr>
+                                <tr><td>Man-in-the-Middle</td><td>Intercept and possibly alter communication</td><td>TLS/SSL, certificate pinning</td></tr>
+                                <tr><td>ARP spoofing</td><td>Fake ARP replies to associate attacker MAC with target IP</td><td>Dynamic ARP inspection, static ARP entries</td></tr>
+                                <tr><td>DNS spoofing</td><td>Redirect DNS queries to malicious IP</td><td>DNSSEC, DoH/DoT</td></tr>
+                                <tr><td>IP spoofing</td><td>Forge source IP in packets</td><td>Ingress filtering, authentication protocols</td></tr>
+                                <tr><td>Replay attack</td><td>Capture and retransmit valid data</td><td>Timestamps, nonces, sequence numbers</td></tr>
+                                <tr><td>Session hijacking</td><td>Steal session token to impersonate user</td><td>Secure cookies (HttpOnly, Secure), session rotation</td></tr>
+                                <tr><td>Packet sniffing</td><td>Capture unencrypted network traffic</td><td>Encryption (TLS), VPN</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="SYN flood: attacker sends SYN packets without completing the handshake, exhausting server connections" viewBox="0 0 310 165" style="max-width:310px">
+                            <defs><marker id="syn-arw" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><polygon points="0,0 7,2.5 0,5" fill="#013e37"/></marker></defs>
+                            <text x="50" y="12" class="dg-label" font-size="10" font-weight="600">Attacker</text>
+                            <text x="230" y="12" class="dg-label" font-size="10" font-weight="600">Server</text>
+                            <line x1="50" y1="18" x2="50" y2="155" stroke="#013e37" stroke-width="1.6"/>
+                            <line x1="230" y1="18" x2="230" y2="155" stroke="#013e37" stroke-width="1.6"/>
+                            <line x1="52" y1="35" x2="228" y2="35" stroke="#013e37" stroke-width="1.2" marker-end="url(#syn-arw)"/>
+                            <text x="140" y="31" class="dg-label" font-size="8">SYN</text>
+                            <line x1="228" y1="47" x2="52" y2="47" stroke="#013e37" stroke-width="1.2" stroke-dasharray="4 2" marker-end="url(#syn-arw)"/>
+                            <text x="140" y="44" class="dg-label" font-size="8">SYN-ACK</text>
+                            <text x="70" y="59" class="dg-label" font-size="7" text-anchor="start">no ACK</text>
+                            <text x="260" y="47" class="dg-label" font-size="7" text-anchor="start">half-open 1</text>
+                            <line x1="52" y1="75" x2="228" y2="75" stroke="#013e37" stroke-width="1.2" marker-end="url(#syn-arw)"/>
+                            <text x="140" y="71" class="dg-label" font-size="8">SYN</text>
+                            <line x1="228" y1="87" x2="52" y2="87" stroke="#013e37" stroke-width="1.2" stroke-dasharray="4 2" marker-end="url(#syn-arw)"/>
+                            <text x="140" y="84" class="dg-label" font-size="8">SYN-ACK</text>
+                            <text x="70" y="99" class="dg-label" font-size="7" text-anchor="start">no ACK</text>
+                            <text x="260" y="87" class="dg-label" font-size="7" text-anchor="start">half-open 2</text>
+                            <line x1="52" y1="115" x2="228" y2="115" stroke="#013e37" stroke-width="1.2" marker-end="url(#syn-arw)"/>
+                            <text x="140" y="111" class="dg-label" font-size="8">SYN</text>
+                            <line x1="228" y1="127" x2="52" y2="127" stroke="#013e37" stroke-width="1.2" stroke-dasharray="4 2" marker-end="url(#syn-arw)"/>
+                            <text x="140" y="124" class="dg-label" font-size="8">SYN-ACK</text>
+                            <text x="70" y="139" class="dg-label" font-size="7" text-anchor="start">no ACK</text>
+                            <text x="260" y="127" class="dg-label" font-size="7" text-anchor="start">half-open 3</text>
+                            <text x="230" y="152" class="dg-label" font-size="9" font-weight="600">TABLE FULL</text>
+                        </svg>
+                        <figcaption>SYN flood — attacker never sends ACK, exhausting the server's half-open connection table.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        DDoS uses a <em>botnet</em> (thousands of compromised machines)
+                        to generate traffic. The SYN flood specifically exploits the TCP
+                        three-way handshake — the attacker sends SYN but never completes
+                        with ACK, filling the target's half-open connection table.
+                    </div>
+                </div>
+
+                <!-- 4 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-app-attacks">
+                    <h3>4. Application attacks</h3>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Attack</th><th scope="col">Target</th><th scope="col">Example</th><th scope="col">Defence</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>SQL injection</td><td>Database</td><td><code>' OR 1=1 --</code></td><td>Parameterised queries, input validation</td></tr>
+                                <tr><td>XSS (Cross-site scripting)</td><td>User's browser</td><td><code>&lt;script&gt;steal(cookie)&lt;/script&gt;</code></td><td>Output encoding, CSP headers</td></tr>
+                                <tr><td>CSRF (Cross-site request forgery)</td><td>User's session</td><td>Forged form submission</td><td>Anti-CSRF tokens, SameSite cookies</td></tr>
+                                <tr><td>Buffer overflow</td><td>Memory</td><td>Overwrite return address on stack</td><td>Bounds checking, ASLR, DEP</td></tr>
+                                <tr><td>Directory traversal</td><td>File system</td><td><code>../../etc/passwd</code></td><td>Path canonicalisation, chroot</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="code-block">
+                        <span class="code-block__label">SQL injection — vulnerable vs safe query</span>
+<pre><code>-- Vulnerable: user input concatenated into SQL
+SELECT * FROM users WHERE name='' OR 1=1 --' AND pass=''
+-- OR 1=1 is always true → returns ALL rows → authentication bypass
+
+-- Safe: parameterised query (prepared statement)
+PreparedStatement ps = conn.prepareStatement(
+    "SELECT * FROM users WHERE name=? AND pass=?");
+ps.setString(1, username);   // bound separately, never parsed as SQL
+ps.setString(2, password);</code></pre>
+                    </div>
+
+                    <p><strong>OWASP Top 10 (2021):</strong></p>
+                    <ol>
+                        <li>Broken Access Control</li>
+                        <li>Cryptographic Failures</li>
+                        <li>Injection (SQL, XSS, etc.)</li>
+                        <li>Insecure Design</li>
+                        <li>Security Misconfiguration</li>
+                        <li>Vulnerable and Outdated Components</li>
+                        <li>Identification and Authentication Failures</li>
+                        <li>Software and Data Integrity Failures</li>
+                        <li>Security Logging and Monitoring Failures</li>
+                        <li>Server-Side Request Forgery (SSRF)</li>
+                    </ol>
+
+                    <div class="insight">
+                        SQL injection remains the most dangerous and most-asked
+                        application attack. The defence is simple: <em>never</em>
+                        concatenate user input into SQL strings — always use
+                        parameterised queries (prepared statements).
+                    </div>
+                </div>
+
+                <!-- 5 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-social">
+                    <h3>5. Social engineering</h3>
+
+                    <p>
+                        Social engineering exploits human psychology rather than
+                        technical vulnerabilities.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Technique</th><th scope="col">How it works</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Phishing</td><td>Fake emails/websites mimicking legitimate ones to steal credentials</td></tr>
+                                <tr><td>Spear phishing</td><td>Targeted phishing aimed at a specific person/organisation</td></tr>
+                                <tr><td>Whaling</td><td>Phishing targeting executives (CEO, CFO)</td></tr>
+                                <tr><td>Vishing</td><td>Voice-based phishing (phone calls)</td></tr>
+                                <tr><td>Smishing</td><td>SMS-based phishing</td></tr>
+                                <tr><td>Pretexting</td><td>Fabricated scenario to gain trust and extract information</td></tr>
+                                <tr><td>Baiting</td><td>Leaving malware-infected media (USB) for victim to find</td></tr>
+                                <tr><td>Tailgating</td><td>Following authorised person through secured entrance</td></tr>
+                                <tr><td>Shoulder surfing</td><td>Watching someone enter credentials or PINs</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Phishing attack chain: fake email, victim clicks, fake login page, credentials stolen" viewBox="0 0 400 75" style="max-width:400px">
+                            <defs><marker id="ph-arw" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0,0 6,2.5 0,5" fill="#013e37"/></marker></defs>
+                            <text x="49" y="14" class="dg-label" font-size="7">1. Craft</text>
+                            <rect x="5" y="20" width="88" height="28" rx="4" class="dg-node"/>
+                            <text x="49" y="38" class="dg-label" font-size="8">Fake email</text>
+                            <line x1="95" y1="34" x2="106" y2="34" stroke="#013e37" stroke-width="1.2" marker-end="url(#ph-arw)"/>
+                            <text x="152" y="14" class="dg-label" font-size="7">2. Lure</text>
+                            <rect x="108" y="20" width="88" height="28" rx="4" class="dg-node"/>
+                            <text x="152" y="38" class="dg-label" font-size="8">Victim clicks</text>
+                            <line x1="198" y1="34" x2="209" y2="34" stroke="#013e37" stroke-width="1.2" marker-end="url(#ph-arw)"/>
+                            <text x="255" y="14" class="dg-label" font-size="7">3. Capture</text>
+                            <rect x="211" y="20" width="88" height="28" rx="4" class="dg-node"/>
+                            <text x="255" y="38" class="dg-label" font-size="8">Fake login page</text>
+                            <line x1="301" y1="34" x2="312" y2="34" stroke="#013e37" stroke-width="1.2" marker-end="url(#ph-arw)"/>
+                            <text x="358" y="14" class="dg-label" font-size="7">4. Exploit</text>
+                            <rect x="314" y="20" width="88" height="28" rx="4" class="dg-node-solid"/>
+                            <text x="358" y="38" class="dg-text-on-ink" text-anchor="middle" font-size="8">Creds stolen</text>
+                            <text x="200" y="65" class="dg-label" font-size="7">Entire chain exploits human trust — no technical vulnerability needed</text>
+                        </svg>
+                        <figcaption>Phishing attack chain — each step exploits human trust, not a technical flaw.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        Social engineering is the hardest attack to defend against
+                        technically because it targets people, not systems. The primary
+                        defence is <em>security awareness training</em>. For banking,
+                        the Bangladesh Bank SWIFT heist (2016, $81M stolen) used spear
+                        phishing as the initial entry point.
+                    </div>
+                </div>
+
+                <!-- 6 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-symmetric">
+                    <h3>6. Symmetric cryptography</h3>
+
+                    <p>
+                        <strong>Symmetric encryption</strong> uses the same key for
+                        encryption and decryption. Fast, but the key must be shared
+                        securely.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Algorithm</th><th scope="col">Key size</th><th scope="col">Block size</th><th scope="col">Status</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>DES</td><td>56 bits</td><td>64 bits</td><td>Broken — brute-forceable</td></tr>
+                                <tr><td>3DES (Triple DES)</td><td>112/168 bits</td><td>64 bits</td><td>Legacy; being deprecated</td></tr>
+                                <tr><td>AES</td><td>128/192/256 bits</td><td>128 bits</td><td>Current standard</td></tr>
+                                <tr><td>Blowfish</td><td>32–448 bits</td><td>64 bits</td><td>Legacy; replaced by Twofish</td></tr>
+                                <tr><td>RC4</td><td>Variable</td><td>Stream cipher</td><td>Broken; removed from TLS</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>AES (Advanced Encryption Standard)</strong> is the gold
+                        standard. It uses substitution-permutation network (SPN)
+                        structure with 10/12/14 rounds for 128/192/256-bit keys.
+                    </p>
+
+                    <p><strong>Block cipher modes:</strong></p>
+                    <ul>
+                        <li><strong>ECB:</strong> each block encrypted independently — insecure (patterns visible)</li>
+                        <li><strong>CBC:</strong> each block XORed with previous ciphertext — needs IV</li>
+                        <li><strong>CTR:</strong> turns block cipher into stream cipher — parallelisable</li>
+                        <li><strong>GCM:</strong> CTR + authentication tag — provides both encryption and integrity</li>
+                    </ul>
+
+                    <div class="calc">
+                        <div class="calc__row">Number of keys needed for n parties (symmetric): n(n−1)/2</div>
+                        <div class="calc__row calc__row--note">10 users → 10×9/2 = 45 keys needed</div>
+                    </div>
+
+                    <div class="insight">
+                        The key distribution problem is symmetric crypto's Achilles heel:
+                        10 users need 45 keys, 1000 users need ~500,000 keys. This is
+                        why asymmetric crypto was invented — to solve key distribution.
+                    </div>
+                </div>
+
+                <!-- 7 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-asymmetric">
+                    <h3>7. Asymmetric cryptography</h3>
+
+                    <p>
+                        <strong>Asymmetric (public-key) encryption</strong> uses a key
+                        pair: public key (shared) and private key (secret). What one key
+                        encrypts, only the other can decrypt.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Algorithm</th><th scope="col">Based on</th><th scope="col">Key size</th><th scope="col">Use</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>RSA</td><td>Integer factorisation</td><td>2048+ bits</td><td>Encryption, digital signatures</td></tr>
+                                <tr><td>Diffie-Hellman</td><td>Discrete logarithm</td><td>2048+ bits</td><td>Key exchange only</td></tr>
+                                <tr><td>ECC</td><td>Elliptic curve discrete log</td><td>256+ bits</td><td>Encryption, signatures (smaller keys)</td></tr>
+                                <tr><td>DSA</td><td>Discrete logarithm</td><td>1024–3072 bits</td><td>Digital signatures only</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>RSA key generation (simplified):</strong></p>
+
+                    <ol class="walk">
+                        <li><span class="walk__what">Choose two large primes p, q</span>
+                            <p>n = p × q (modulus), φ(n) = (p−1)(q−1)</p>
+                        </li>
+                        <li><span class="walk__what">Choose e such that 1 &lt; e &lt; φ(n) and gcd(e, φ(n)) = 1</span>
+                            <p>Common choice: e = 65537. Public key = (n, e).</p>
+                        </li>
+                        <li class="walk--final"><span class="walk__what">Compute d = e⁻¹ mod φ(n)</span>
+                            <p>Private key = (n, d). Encrypt: C = M<sup>e</sup> mod n. Decrypt: M = C<sup>d</sup> mod n.</p>
+                        </li>
+                    </ol>
+
+                    <div class="calc">
+                        <div class="calc__row">Number of keys for n parties (asymmetric): 2n</div>
+                        <div class="calc__row calc__row--note">10 users → 20 keys (vs 45 for symmetric)</div>
+                    </div>
+
+                    <p>
+                        <strong>Hybrid encryption</strong> (used in TLS/SSL): use
+                        asymmetric to exchange a session key, then use symmetric
+                        (AES) for the bulk data. Combines the best of both worlds.
+                    </p>
+
+                    <div class="insight">
+                        Asymmetric crypto is ~1000× slower than symmetric. That's why
+                        real systems never encrypt bulk data with RSA — they use hybrid
+                        encryption. TLS handshake = RSA/ECDH for key exchange, then
+                        AES-GCM for the session.
+                    </div>
+                </div>
+
+                <!-- 8 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-hash">
+                    <h3>8. Hashing and digital signatures</h3>
+
+                    <p>
+                        A <strong>hash function</strong> maps arbitrary-length input to a
+                        fixed-length digest. Properties: deterministic, fast, one-way
+                        (pre-image resistant), collision-resistant.
+                    </p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Algorithm</th><th scope="col">Output</th><th scope="col">Status</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>MD5</td><td>128 bits</td><td>Broken — collisions found</td></tr>
+                                <tr><td>SHA-1</td><td>160 bits</td><td>Deprecated — collisions demonstrated</td></tr>
+                                <tr><td>SHA-256</td><td>256 bits</td><td>Current standard (SHA-2 family)</td></tr>
+                                <tr><td>SHA-3</td><td>Variable</td><td>Latest standard (Keccak-based)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Digital signature</strong> process:</p>
+
+                    <ol class="walk">
+                        <li><span class="walk__what">Sender hashes the message → digest</span>
+                            <p>H(M) = digest (e.g. 256-bit SHA-256 hash)</p>
+                        </li>
+                        <li><span class="walk__what">Sender encrypts digest with their private key → signature</span>
+                            <p>S = E<sub>private</sub>(digest)</p>
+                        </li>
+                        <li><span class="walk__what">Sender sends message + signature</span></li>
+                        <li class="walk--final"><span class="walk__what">Receiver decrypts signature with sender's public key → digest', then hashes the received message → digest''</span>
+                            <p>If digest' = digest'' → message is authentic and unaltered.</p>
+                        </li>
+                    </ol>
+
+                    <p>
+                        <strong>Digital signature provides:</strong> authentication
+                        (verifies sender), integrity (detects tampering),
+                        non-repudiation (sender cannot deny). It does <em>not</em>
+                        provide confidentiality — the message is not encrypted.
+                    </p>
+
+                    <p>
+                        <strong>MAC (Message Authentication Code)</strong>: uses a shared
+                        secret key + hash (HMAC). Provides integrity and authentication
+                        but NOT non-repudiation (both parties know the key).
+                    </p>
+
+                    <div class="calc">
+                        <div class="calc__row">HMAC(K, M) = H( (K XOR opad) || H( (K XOR ipad) || M ) )</div>
+                        <div class="calc__row calc__row--note">opad = 0x5c repeated to block size, ipad = 0x36 repeated</div>
+                        <div class="calc__row calc__row--note">Digital signature (private key) = authentication + integrity + non-repudiation</div>
+                        <div class="calc__row calc__row--note">HMAC (shared key) = authentication + integrity, but NO non-repudiation</div>
+                    </div>
+
+                    <div class="insight">
+                        Digital signatures = hash + asymmetric encryption of the hash.
+                        They prove WHO sent a message and that it wasn't CHANGED. HMAC
+                        proves integrity but not identity (both sides have the same key,
+                        so either could have created it).
+                    </div>
+                </div>
+
+                <!-- 9 ------------------------------------------------------------ -->
+                <div class="subsection" id="n-auth">
+                    <h3>9. Authentication and access control</h3>
+
+                    <p><strong>Authentication factors:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Factor</th><th scope="col">Type</th><th scope="col">Examples</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Something you know</td><td>Knowledge</td><td>Password, PIN, security question</td></tr>
+                                <tr><td>Something you have</td><td>Possession</td><td>Smart card, OTP token, phone</td></tr>
+                                <tr><td>Something you are</td><td>Inherence</td><td>Fingerprint, retina, face</td></tr>
+                                <tr><td>Somewhere you are</td><td>Location</td><td>GPS, IP geolocation</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Multi-factor authentication (MFA)</strong> requires two
+                        or more different factors. Using two passwords is NOT MFA (same
+                        factor type). Password + OTP IS MFA (knowledge + possession).
+                    </p>
+
+                    <p><strong>Access control models:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Model</th><th scope="col">Access based on</th><th scope="col">Example</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>DAC (Discretionary)</td><td>Owner's discretion</td><td>File permissions in Unix</td></tr>
+                                <tr><td>MAC (Mandatory)</td><td>Security labels/clearance</td><td>Military: Top Secret, Secret, Confidential</td></tr>
+                                <tr><td>RBAC (Role-based)</td><td>User's role in organisation</td><td>Banking: Teller, Manager, Auditor</td></tr>
+                                <tr><td>ABAC (Attribute-based)</td><td>Attributes (user, resource, environment)</td><td>Access during business hours only</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <strong>Password storage:</strong> never store plaintext passwords.
+                        Hash with a salt (random per-user value) using a slow hash function
+                        (bcrypt, scrypt, Argon2). The salt prevents rainbow table attacks.
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="Multi-factor authentication: three factor types converge for verification" viewBox="0 0 350 100" style="max-width:350px">
+                            <defs><marker id="mfa-arw" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0,0 6,2.5 0,5" fill="#013e37"/></marker></defs>
+                            <rect x="5" y="5" width="120" height="22" rx="3" class="dg-node"/>
+                            <text x="65" y="20" class="dg-label" font-size="8">Know: password, PIN</text>
+                            <rect x="5" y="37" width="120" height="22" rx="3" class="dg-node"/>
+                            <text x="65" y="52" class="dg-label" font-size="8">Have: OTP, smart card</text>
+                            <rect x="5" y="69" width="120" height="22" rx="3" class="dg-node"/>
+                            <text x="65" y="84" class="dg-label" font-size="8">Are: fingerprint, iris</text>
+                            <line x1="127" y1="16" x2="175" y2="48" stroke="#013e37" stroke-width="1.2"/>
+                            <line x1="127" y1="48" x2="175" y2="48" stroke="#013e37" stroke-width="1.2"/>
+                            <line x1="127" y1="80" x2="175" y2="48" stroke="#013e37" stroke-width="1.2"/>
+                            <line x1="175" y1="48" x2="183" y2="48" stroke="#013e37" stroke-width="1.2" marker-end="url(#mfa-arw)"/>
+                            <rect x="185" y="35" width="80" height="26" rx="4" class="dg-node-solid"/>
+                            <text x="225" y="52" class="dg-text-on-ink" text-anchor="middle" font-size="8">Verify 2+</text>
+                            <line x1="267" y1="48" x2="278" y2="48" stroke="#013e37" stroke-width="1.2" marker-end="url(#mfa-arw)"/>
+                            <rect x="280" y="35" width="65" height="26" rx="4" class="dg-node"/>
+                            <text x="312" y="52" class="dg-label" font-size="9" font-weight="600">Access</text>
+                        </svg>
+                        <figcaption>MFA requires two or more different factor types — two passwords (same type) is NOT MFA.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        RBAC is the most relevant model for banking exams. Bangladesh
+                        Bank uses role-based access: a teller can process transactions
+                        but cannot approve loans; a manager can approve within limits;
+                        an auditor has read-only access to all records.
+                    </div>
+                </div>
+
+                <!-- 10 ----------------------------------------------------------- -->
+                <div class="subsection" id="n-defence">
+                    <h3>10. Network defence and governance</h3>
+
+                    <p><strong>Defensive technologies:</strong></p>
+
+                    <div class="table-scroll">
+                        <table class="table--compact table--strong">
+                            <thead>
+                                <tr><th scope="col">Technology</th><th scope="col">Function</th><th scope="col">Placement</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Firewall</td><td>Filter traffic based on rules (IP, port, protocol)</td><td>Network perimeter</td></tr>
+                                <tr><td>IDS (Intrusion Detection)</td><td>Detect and alert on suspicious activity</td><td>Network or host</td></tr>
+                                <tr><td>IPS (Intrusion Prevention)</td><td>Detect AND block suspicious activity</td><td>Inline (can drop packets)</td></tr>
+                                <tr><td>WAF (Web Application Firewall)</td><td>Filter HTTP traffic; block SQL injection, XSS</td><td>In front of web servers</td></tr>
+                                <tr><td>VPN</td><td>Encrypted tunnel over public network</td><td>Site-to-site or remote access</td></tr>
+                                <tr><td>DMZ</td><td>Buffer zone between public and private networks</td><td>Between two firewalls</td></tr>
+                                <tr><td>SIEM</td><td>Centralized log collection, correlation and alerting</td><td>Security operations centre</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p><strong>Security governance frameworks:</strong></p>
+
+                    <ul>
+                        <li><strong>ISO 27001:</strong> Information Security Management System (ISMS) standard</li>
+                        <li><strong>NIST Cybersecurity Framework:</strong> Identify, Protect, Detect, Respond, Recover</li>
+                        <li><strong>PCI-DSS:</strong> Payment Card Industry Data Security Standard</li>
+                        <li><strong>COBIT:</strong> IT governance framework</li>
+                    </ul>
+
+                    <p>
+                        <strong>PKI (Public Key Infrastructure)</strong> manages digital
+                        certificates. Components: Certificate Authority (CA), Registration
+                        Authority (RA), Certificate Revocation List (CRL). The CA signs
+                        certificates binding a public key to an identity.
+                    </p>
+
+                    <figure class="figure">
+                        <svg role="img" aria-label="DMZ architecture: Internet → Firewall1 → DMZ (web server) → Firewall2 → Internal network" viewBox="0 0 400 80" style="max-width:400px">
+                            <rect x="5" y="25" width="60" height="30" rx="4" class="dg-node"/>
+                            <text x="35" y="44" class="dg-text-on-ink" text-anchor="middle" font-size="8">Internet</text>
+                            <rect x="85" y="25" width="50" height="30" rx="4" class="dg-node-solid"/>
+                            <text x="110" y="44" class="dg-text-on-ink" text-anchor="middle" font-size="7">FW1</text>
+                            <rect x="155" y="15" width="80" height="50" rx="4" fill="none" stroke="var(--ink)" stroke-width="1.2" stroke-dasharray="4 2"/>
+                            <text x="195" y="35" class="dg-label" text-anchor="middle" font-size="8">DMZ</text>
+                            <text x="195" y="50" class="dg-label" text-anchor="middle" font-size="7">(Web server)</text>
+                            <rect x="255" y="25" width="50" height="30" rx="4" class="dg-node-solid"/>
+                            <text x="280" y="44" class="dg-text-on-ink" text-anchor="middle" font-size="7">FW2</text>
+                            <rect x="325" y="25" width="70" height="30" rx="4" class="dg-node"/>
+                            <text x="360" y="44" class="dg-text-on-ink" text-anchor="middle" font-size="7">Internal Net</text>
+                            <line x1="67" y1="40" x2="83" y2="40" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="137" y1="40" x2="153" y2="40" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="237" y1="40" x2="253" y2="40" class="dg-stroke-ink" stroke-width="1.2"/>
+                            <line x1="307" y1="40" x2="323" y2="40" class="dg-stroke-ink" stroke-width="1.2"/>
+                        </svg>
+                        <figcaption>DMZ sits between two firewalls — public-facing servers isolated from internal network.</figcaption>
+                    </figure>
+
+                    <div class="insight">
+                        IDS detects but doesn't act; IPS detects and blocks. A common
+                        analogy: IDS is a security camera (alerts you), IPS is a security
+                        guard (stops the intruder). WAF is specifically for web
+                        application attacks (Layer 7).
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ================================================================
+             SOLVED QUESTIONS
+             ================================================================ -->
+            <section class="section" id="solved" aria-labelledby="solved-h">
+                <div class="section__head">
+                    <h2 id="solved-h">Solved past questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <details class="question" id="s1">
+                    <summary class="question__summary"><span class="question__num">S1</span>
+                        <span class="question__text">Explain the CIA triad with examples from a banking context.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <ul>
+                            <li><strong>Confidentiality:</strong> Customer account data encrypted with AES-256; only authorised staff can view balances. Violated by: data breach leaking customer records.</li>
+                            <li><strong>Integrity:</strong> Transaction amounts verified with checksums/digital signatures; audit logs are tamper-proof. Violated by: attacker modifying a transfer amount in transit.</li>
+                            <li><strong>Availability:</strong> Core banking system has 99.99% uptime with redundant servers, DR site. Violated by: DDoS attack taking the internet banking portal offline.</li>
+                        </ul>
+                        <p><strong>Banking-specific additions:</strong> Non-repudiation (digital signatures on SWIFT messages), Accountability (all transactions logged with user ID, timestamp).</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s2">
+                    <summary class="question__summary"><span class="question__num">S2</span>
+                        <span class="question__text">Compare symmetric and asymmetric encryption.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Feature</th><th scope="col">Symmetric</th><th scope="col">Asymmetric</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Keys</th><td>One shared key</td><td>Key pair (public + private)</td></tr>
+                                    <tr><th scope="row">Speed</th><td>Fast (~1000× faster)</td><td>Slow</td></tr>
+                                    <tr><th scope="row">Key distribution</th><td>Requires secure channel</td><td>Public key can be shared openly</td></tr>
+                                    <tr><th scope="row">Keys for n users</th><td>n(n−1)/2</td><td>2n</td></tr>
+                                    <tr><th scope="row">Example</th><td>AES-256</td><td>RSA-2048</td></tr>
+                                    <tr><th scope="row">Best for</th><td>Bulk data encryption</td><td>Key exchange, digital signatures</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>In practice:</strong> TLS uses asymmetric (RSA/ECDH) for key exchange, then symmetric (AES) for session data — hybrid encryption.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s3">
+                    <summary class="question__summary"><span class="question__num">S3</span>
+                        <span class="question__text">How does a digital signature work? What security properties does it provide?</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Signing</span><p>Sender: Hash(message) → digest → Encrypt(digest, private_key) → signature. Send message + signature.</p></li>
+                            <li class="walk--final"><span class="walk__what">Verification</span><p>Receiver: Decrypt(signature, sender's public_key) → digest₁. Hash(received message) → digest₂. If digest₁ = digest₂ → valid.</p></li>
+                        </ol>
+                        <p><strong>Properties provided:</strong></p>
+                        <ul>
+                            <li><strong>Authentication:</strong> only the private key holder could have signed</li>
+                            <li><strong>Integrity:</strong> any change to the message changes the hash → verification fails</li>
+                            <li><strong>Non-repudiation:</strong> signer cannot deny signing (only they have the private key)</li>
+                        </ul>
+                        <p>Note: digital signatures do NOT provide confidentiality — the message is sent in plaintext.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s4">
+                    <summary class="question__summary"><span class="question__num">S4</span>
+                        <span class="question__text">What is SQL injection? How can it be prevented?</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <p><strong>SQL injection</strong> inserts malicious SQL into user input that gets executed by the database.</p>
+                        <p><strong>Example:</strong> Login form with:</p>
+                        <pre><code>SELECT * FROM users WHERE name='$input' AND pass='$pass'</code></pre>
+                        <p>If input = <code>' OR 1=1 --</code>, the query becomes:</p>
+                        <pre><code>SELECT * FROM users WHERE name='' OR 1=1 --' AND pass=''</code></pre>
+                        <p>This returns all users → attacker bypasses authentication.</p>
+                        <p><strong>Prevention:</strong></p>
+                        <ul>
+                            <li><strong>Parameterised queries</strong> (prepared statements) — the #1 defence</li>
+                            <li>Input validation and sanitisation</li>
+                            <li>Stored procedures with parameterised inputs</li>
+                            <li>Least privilege database accounts</li>
+                            <li>WAF to detect and block SQLi patterns</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="question" id="s5">
+                    <summary class="question__summary"><span class="question__num">S5</span>
+                        <span class="question__text">Differentiate between IDS and IPS. Where is each deployed?</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Feature</th><th scope="col">IDS</th><th scope="col">IPS</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Action</th><td>Detects and alerts</td><td>Detects, alerts AND blocks</td></tr>
+                                    <tr><th scope="row">Deployment</th><td>Passive (mirror port / tap)</td><td>Inline (traffic passes through)</td></tr>
+                                    <tr><th scope="row">Impact on traffic</th><td>None — copies traffic</td><td>Can add latency; can drop packets</td></tr>
+                                    <tr><th scope="row">False positive impact</th><td>Alert fatigue only</td><td>Can block legitimate traffic</td></tr>
+                                    <tr><th scope="row">Types</th><td>NIDS (network), HIDS (host)</td><td>NIPS (network), HIPS (host)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Detection methods:</strong> signature-based (matches known attack patterns — fast but misses zero-days), anomaly-based (flags deviations from baseline — catches novel attacks but more false positives).</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s6">
+                    <summary class="question__summary"><span class="question__num">S6</span>
+                        <span class="question__text">Compare virus, worm and Trojan horse.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Property</th><th scope="col">Virus</th><th scope="col">Worm</th><th scope="col">Trojan</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Host program</th><td>Needs one (attaches to files)</td><td>No — standalone</td><td>Disguises as legitimate program</td></tr>
+                                    <tr><th scope="row">Self-replication</th><td>Yes (when host executes)</td><td>Yes (autonomous, over network)</td><td>No</td></tr>
+                                    <tr><th scope="row">Spread mechanism</th><td>User shares infected file</td><td>Exploits network vulnerabilities</td><td>User downloads/installs it</td></tr>
+                                    <tr><th scope="row">Example</th><td>ILOVEYOU, CIH</td><td>Morris, Code Red, WannaCry</td><td>Zeus, Back Orifice</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="s7">
+                    <summary class="question__summary"><span class="question__num">S7</span>
+                        <span class="question__text">What are the three authentication factors? Give examples of MFA.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <ul>
+                            <li><strong>Something you know:</strong> password, PIN, mother's maiden name</li>
+                            <li><strong>Something you have:</strong> smart card, OTP token, mobile phone</li>
+                            <li><strong>Something you are:</strong> fingerprint, iris scan, voice recognition</li>
+                        </ul>
+                        <p><strong>MFA examples (banking):</strong></p>
+                        <ul>
+                            <li>ATM: debit card (have) + PIN (know) = 2FA</li>
+                            <li>Internet banking: password (know) + OTP to phone (have) = 2FA</li>
+                            <li>SWIFT transfer: smart card (have) + PIN (know) + fingerprint (are) = 3FA</li>
+                        </ul>
+                        <p><strong>NOT MFA:</strong> password + security question = single factor (both are "something you know").</p>
+                    </div>
+                </details>
+
+                <details class="question" id="s8">
+                    <summary class="question__summary"><span class="question__num">S8</span>
+                        <span class="question__text">Explain phishing and its variants (spear phishing, whaling, vishing, smishing).</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <p><strong>Phishing:</strong> fraudulent attempt to steal sensitive information by masquerading as a trustworthy entity in electronic communication.</p>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Variant</th><th scope="col">Channel</th><th scope="col">Target</th><th scope="col">Example</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Phishing</td><td>Email</td><td>Mass / general</td><td>"Your account is suspended, click here to verify"</td></tr>
+                                    <tr><td>Spear phishing</td><td>Email</td><td>Specific person/org</td><td>Email crafted for a specific bank employee</td></tr>
+                                    <tr><td>Whaling</td><td>Email</td><td>Executives (CEO/CFO)</td><td>"Urgent wire transfer request from the board"</td></tr>
+                                    <tr><td>Vishing</td><td>Voice (phone)</td><td>Any</td><td>"This is your bank, please confirm your OTP"</td></tr>
+                                    <tr><td>Smishing</td><td>SMS</td><td>Any</td><td>"Your bKash account is locked. Click: [link]"</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="s9">
+                    <summary class="question__summary"><span class="question__num">S9</span>
+                        <span class="question__text">What is a firewall? Compare packet-filtering, stateful and application-layer firewalls.</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Type</th><th scope="col">Inspects</th><th scope="col">OSI Layer</th><th scope="col">Pro/Con</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Packet filtering</td><td>IP, port, protocol (header only)</td><td>3–4</td><td>Fast but cannot inspect payload</td></tr>
+                                    <tr><td>Stateful</td><td>Header + connection state</td><td>3–4</td><td>Tracks sessions; blocks out-of-state packets</td></tr>
+                                    <tr><td>Application (proxy)</td><td>Full payload (HTTP, SQL, etc.)</td><td>7</td><td>Can block SQLi/XSS but slower</td></tr>
+                                    <tr><td>Next-gen (NGFW)</td><td>All + application awareness + threat intelligence</td><td>3–7</td><td>Most comprehensive; most expensive</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="s10">
+                    <summary class="question__summary"><span class="question__num">S10</span>
+                        <span class="question__text">Explain the Diffie-Hellman key exchange. Why is it vulnerable to MITM?</span>
+                        <span class="chip">standard repeat</span></summary>
+                    <div class="question__body">
+                        <ol class="walk">
+                            <li><span class="walk__what">Agree on public values p (prime) and g (generator)</span></li>
+                            <li><span class="walk__what">Alice picks secret a, sends A = g<sup>a</sup> mod p</span></li>
+                            <li><span class="walk__what">Bob picks secret b, sends B = g<sup>b</sup> mod p</span></li>
+                            <li class="walk--final"><span class="walk__what">Both compute shared secret: Alice: B<sup>a</sup> mod p = g<sup>ab</sup> mod p. Bob: A<sup>b</sup> mod p = g<sup>ab</sup> mod p</span></li>
+                        </ol>
+                        <p><strong>MITM vulnerability:</strong> Diffie-Hellman has no authentication. An attacker (Eve) can perform two separate DH exchanges — one with Alice, one with Bob — establishing different shared secrets with each. Eve then relays and reads all traffic.</p>
+                        <p><strong>Fix:</strong> authenticate the key exchange — sign the DH parameters with RSA/ECDSA certificates (as done in TLS).</p>
+                    </div>
+                </details>
+
+            </section>
+
+            <!-- ================================================================
+             PRACTICE QUESTIONS
+             ================================================================ -->
+            <section class="section" id="practice" aria-labelledby="practice-h">
+                <div class="section__head">
+                    <h2 id="practice-h">Practice questions</h2>
+                    <span class="section__rule"></span>
+                    <span class="section__count">10 questions</span>
+                </div>
+
+                <details class="question" id="p1">
+                    <summary class="question__summary"><span class="question__num">P1</span>
+                        <span class="question__text">How many symmetric keys are needed for 50 users to communicate securely? How many asymmetric key pairs?</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">Symmetric: n(n−1)/2 = 50 × 49 / 2 = <strong>1,225 keys</strong></div>
+                            <div class="calc__row">Asymmetric: 2n = 2 × 50 = <strong>100 keys</strong> (50 pairs)</div>
+                        </div>
+                        <p>This dramatic difference is the key distribution advantage of asymmetric cryptography.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p2">
+                    <summary class="question__summary"><span class="question__num">P2</span>
+                        <span class="question__text">RSA key generation: p=7, q=11. Find n, φ(n), and if e=13, find d.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <div class="calc">
+                            <div class="calc__row">n = p × q = 7 × 11 = <strong>77</strong></div>
+                            <div class="calc__row">φ(n) = (p−1)(q−1) = 6 × 10 = <strong>60</strong></div>
+                            <div class="calc__row">Find d: e × d ≡ 1 (mod 60) → 13d ≡ 1 (mod 60)</div>
+                            <div class="calc__row">13 × 37 = 481 = 8 × 60 + 1 → d = <strong>37</strong></div>
+                        </div>
+                        <p><strong>Public key:</strong> (77, 13). <strong>Private key:</strong> (77, 37).</p>
+                        <p><strong>Encrypt M=2:</strong> C = 2<sup>13</sup> mod 77 = 8192 mod 77 = 30.</p>
+                        <p><strong>Decrypt:</strong> M = 30<sup>37</sup> mod 77 = 2 ✓</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p3">
+                    <summary class="question__summary"><span class="question__num">P3</span>
+                        <span class="question__text">Explain XSS (Cross-Site Scripting). Differentiate between stored and reflected XSS.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p><strong>XSS</strong> injects malicious scripts into web pages viewed by other users, executing in their browsers.</p>
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Type</th><th scope="col">How</th><th scope="col">Persistence</th><th scope="col">Example</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Stored (persistent)</td><td>Script saved in database/server</td><td>Permanent — affects all viewers</td><td>Malicious script in a forum post</td></tr>
+                                    <tr><td>Reflected</td><td>Script in URL parameter, reflected back</td><td>Temporary — only that request</td><td>Crafted link with script in search query</td></tr>
+                                    <tr><td>DOM-based</td><td>Client-side JS modifies DOM unsafely</td><td>Client-side only</td><td>JS reads URL fragment and writes to innerHTML</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Prevention:</strong> output encoding/escaping, Content Security Policy (CSP), input validation, HttpOnly cookies (prevents JS from reading them).</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p4">
+                    <summary class="question__summary"><span class="question__num">P4</span>
+                        <span class="question__text">What is a DMZ? Why is it important for banking networks?</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p>A <strong>DMZ (Demilitarised Zone)</strong> is a network segment between two firewalls that hosts public-facing services (web servers, email gateways) while isolating the internal network.</p>
+                        <p><strong>Architecture:</strong> Internet → Firewall 1 → DMZ → Firewall 2 → Internal Network</p>
+                        <p><strong>Why it matters for banking:</strong></p>
+                        <ul>
+                            <li>Internet banking portal sits in DMZ — accessible to customers but isolated from core banking</li>
+                            <li>If DMZ is compromised, attacker still faces Firewall 2 before reaching internal systems</li>
+                            <li>Email servers in DMZ prevent direct external access to internal mail systems</li>
+                            <li>Regulatory compliance (PCI-DSS) requires network segmentation</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="question" id="p5">
+                    <summary class="question__summary"><span class="question__num">P5</span>
+                        <span class="question__text">Explain DAC, MAC and RBAC access control models with banking examples.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Model</th><th scope="col">Who decides</th><th scope="col">Banking example</th></tr></thead>
+                                <tbody>
+                                    <tr><td>DAC</td><td>Resource owner</td><td>A manager shares a report file with specific colleagues</td></tr>
+                                    <tr><td>MAC</td><td>System policy (labels)</td><td>"Top Secret" SWIFT operation data — only cleared personnel, no exceptions regardless of role</td></tr>
+                                    <tr><td>RBAC</td><td>Administrator (by role)</td><td>Teller: process deposits; Manager: approve loans ≤10L; Branch Head: approve loans ≤1Cr</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>RBAC</strong> is most common in banking because it maps directly to the organisational hierarchy and makes auditing straightforward.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p6">
+                    <summary class="question__summary"><span class="question__num">P6</span>
+                        <span class="question__text">What is ransomware? Describe the WannaCry attack and its impact.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p><strong>Ransomware</strong> encrypts the victim's files with a key only the attacker holds, then demands payment (usually cryptocurrency) for the decryption key.</p>
+                        <p><strong>WannaCry (May 2017):</strong></p>
+                        <ul>
+                            <li><strong>Exploit:</strong> EternalBlue (SMBv1 vulnerability in Windows, MS17-010)</li>
+                            <li><strong>Spread:</strong> Self-propagating worm — spread across networks without user interaction</li>
+                            <li><strong>Impact:</strong> 200,000+ computers in 150 countries; NHS (UK) hospitals disrupted</li>
+                            <li><strong>Ransom:</strong> $300 in Bitcoin per machine</li>
+                            <li><strong>Kill switch:</strong> discovered by a researcher who registered the domain the malware checked</li>
+                        </ul>
+                        <p><strong>Prevention:</strong> patch management, offline backups, network segmentation, email filtering, user training.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p7">
+                    <summary class="question__summary"><span class="question__num">P7</span>
+                        <span class="question__text">Compare DES, 3DES and AES encryption algorithms.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Feature</th><th scope="col">DES</th><th scope="col">3DES</th><th scope="col">AES</th></tr></thead>
+                                <tbody>
+                                    <tr><th scope="row">Key length</th><td>56 bits</td><td>112 or 168 bits</td><td>128/192/256 bits</td></tr>
+                                    <tr><th scope="row">Block size</th><td>64 bits</td><td>64 bits</td><td>128 bits</td></tr>
+                                    <tr><th scope="row">Rounds</th><td>16</td><td>48 (3×16)</td><td>10/12/14</td></tr>
+                                    <tr><th scope="row">Structure</th><td>Feistel</td><td>Feistel</td><td>SPN</td></tr>
+                                    <tr><th scope="row">Speed</th><td>Fast</td><td>3× slower than DES</td><td>Fast (hardware accelerated)</td></tr>
+                                    <tr><th scope="row">Security</th><td>Broken</td><td>Adequate but deprecated</td><td>Secure (current standard)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="p8">
+                    <summary class="question__summary"><span class="question__num">P8</span>
+                        <span class="question__text">What is PKI? Explain the role of Certificate Authority, digital certificate and CRL.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p><strong>PKI (Public Key Infrastructure)</strong> is the framework that manages digital certificates and public-key encryption.</p>
+                        <ul>
+                            <li><strong>Certificate Authority (CA):</strong> trusted entity that issues and signs digital certificates. Verifies the identity of the certificate requester.</li>
+                            <li><strong>Digital Certificate (X.509):</strong> binds a public key to an identity. Contains: subject name, public key, CA's signature, validity period, serial number.</li>
+                            <li><strong>Registration Authority (RA):</strong> verifies identity before CA issues certificate.</li>
+                            <li><strong>Certificate Revocation List (CRL):</strong> list of certificates revoked before expiry. Alternative: OCSP (Online Certificate Status Protocol) for real-time checking.</li>
+                        </ul>
+                        <p><strong>Trust chain:</strong> Root CA → Intermediate CA → End-entity certificate. Browsers trust root CAs pre-installed in their certificate store.</p>
+                    </div>
+                </details>
+
+                <details class="question" id="p9">
+                    <summary class="question__summary"><span class="question__num">P9</span>
+                        <span class="question__text">Explain the NIST Cybersecurity Framework's five functions.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <div class="table-scroll">
+                            <table class="table--compact table--strong">
+                                <thead><tr><th scope="col">Function</th><th scope="col">Purpose</th><th scope="col">Example activities</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Identify</td><td>Understand assets, risks, governance</td><td>Asset inventory, risk assessment, business environment</td></tr>
+                                    <tr><td>Protect</td><td>Safeguards to ensure service delivery</td><td>Access control, encryption, training, data security</td></tr>
+                                    <tr><td>Detect</td><td>Identify cybersecurity events timely</td><td>IDS/IPS, SIEM, continuous monitoring, anomaly detection</td></tr>
+                                    <tr><td>Respond</td><td>Act on detected incidents</td><td>Incident response plan, analysis, mitigation, communication</td></tr>
+                                    <tr><td>Recover</td><td>Restore capabilities after incident</td><td>Recovery planning, improvements, DR/BCP execution</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="question" id="p10">
+                    <summary class="question__summary"><span class="question__num">P10</span>
+                        <span class="question__text">Why should passwords never be stored in plaintext? Explain salted hashing.</span>
+                        <span class="chip">practice</span></summary>
+                    <div class="question__body">
+                        <p><strong>Why not plaintext:</strong> if the database is breached, all passwords are immediately compromised. Users often reuse passwords across services, so one breach cascades.</p>
+                        <p><strong>Hashing:</strong> store H(password) instead. Even if breached, the attacker only gets hashes, which are one-way (cannot reverse to get the password).</p>
+                        <p><strong>Problem with plain hashing:</strong> attackers pre-compute hashes of common passwords (rainbow tables). Two users with the same password have the same hash.</p>
+                        <p><strong>Salted hashing:</strong> generate a random salt per user, store H(salt + password) along with the salt. Even identical passwords produce different hashes.</p>
+                        <div class="calc">
+                            <div class="calc__row">User A: salt=x7k2, stored = H("x7k2" + "password123")</div>
+                            <div class="calc__row">User B: salt=m9p1, stored = H("m9p1" + "password123")</div>
+                            <div class="calc__row calc__row--note">Same password → completely different stored hashes</div>
+                        </div>
+                        <p><strong>Best practice:</strong> use bcrypt, scrypt or Argon2 — intentionally slow hash functions that make brute-force attacks impractical.</p>
+                    </div>
+                </details>
+
+            </section>
+
+            <footer>
+                <nav class="pager" aria-label="Subject navigation">
+                    <a class="pager__link" href="software-engineering.html">
+                        <span class="pager__dir">Previous</span>
+                        <span class="pager__name">Software Engineering</span>
+                    </a>
+                    <a class="pager__link pager__link--next" href="other-topics.html">
+                        <span class="pager__dir">Next subject</span>
+                        <span class="pager__name">Other Topics</span>
+                    </a>
+                </nav>
+            </footer>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <p>
+                Bangladesh Bank Assistant Director (ICT) written preparation. Subject 14
+                of 18 — Security.
+            </p>
+            <p class="small">
+                Coverage checklist: <code>SYLLABUS.md</code> §14.
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" data-show="false">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="../js/search-index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
